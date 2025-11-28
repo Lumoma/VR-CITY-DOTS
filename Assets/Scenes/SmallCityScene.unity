@@ -12699,20 +12699,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28d6be13fbf41328a84aecf483a5b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 40
+  spawnCount: 20
   areaSize: {x: 25, y: 2, z: 25}
-  countText: {fileID: 1922719584}
+  maxPlacementAttempts: 10
+  countDisplay: {fileID: 0}
   malePrefab: {fileID: 310842560370151955, guid: af76fc606f95a4ceba2fbb480ff054ba, type: 3}
   femalePrefab: {fileID: 8948500104783781202, guid: c90074d4484bf47918357c51f24eaf0e, type: 3}
   agentScale: 1
   minSpeed: 0.5
   maxSpeed: 2
-  parentForAgents: {fileID: 0}
-  overlapMask:
+  randomizeRotationY: 1
+  agentContainer: {fileID: 0}
+  collisionCheckLayer:
     serializedVersion: 2
     m_Bits: 4294967295
-  maxPlacementAttempts: 10
-  randomizeRotY: 1
 --- !u!4 &1794148181
 Transform:
   m_ObjectHideFlags: 0
@@ -12796,7 +12796,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -13622,17 +13622,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6345562874480820532, guid: e1f0d4bc2d67ddb4295e73f51f3ca4f7, type: 3}
   m_PrefabInstance: {fileID: 1922097271}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1922719584 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7081840892729805100, guid: 41d89b59fe3e9964a83686ff24b7d0c5, type: 3}
-  m_PrefabInstance: {fileID: 422328596}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1941775764
 GameObject:
   m_ObjectHideFlags: 0
