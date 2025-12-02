@@ -63,7 +63,7 @@ public class VRSceneSwitcher : MonoBehaviour
         }
     }
 
-    private void SwitchScene()
+    public void SwitchScene()
     {
         // Sicherheitscheck, ob ein Szenenname eingetragen wurde
         if (!string.IsNullOrEmpty(targetSceneName))
