@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/DOTS-OOP-Scenes/BigCityScene.unity
     guid: dfbbee9b6b5e046018d4f6bf0d6dd94b
+  - enabled: 1
+    path: Assets/DOTS-OOP-Scenes/DOTS/DOTS-SmallCityScene.unity
+    guid: e4467f111f7454667b96485d2e702851
+  - enabled: 1
+    path: Assets/DOTS-OOP-Scenes/DOTS/DOTS-BigCityScene.unity
+    guid: 6ee8ffd30b96f413cb7fd2604f51150d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: dc5a169419fa04987b057f65238cf3ba, type: 2}
