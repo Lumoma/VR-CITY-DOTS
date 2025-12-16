@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SmallCityScene.unity
+    path: Assets/DOTS-OOP-Scenes/SmallCityScene.unity
     guid: 55daccc09a3b69647bbab145b54a3ab3
   - enabled: 1
-    path: Assets/Scenes/BigCityScene.unity
+    path: Assets/DOTS-OOP-Scenes/BigCityScene.unity
     guid: dfbbee9b6b5e046018d4f6bf0d6dd94b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: bfa1182bd221b4ca89619141f66f1260, type: 2}

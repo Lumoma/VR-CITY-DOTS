@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using TMPro;
+using UnityEngine.UI;
 
 namespace OOP_Scripts
 {
@@ -38,19 +39,68 @@ namespace OOP_Scripts
         private LayerMask collisionCheckLayer = ~0;
 
         private readonly List<GameObject> _spawnedAgents = new List<GameObject>();
+        [Header("Optional UI")]
+        [SerializeField, Tooltip("Optional: UI Slider, damit Start-Wert synchronisiert wird.")]
+        private Slider countSlider;
 
         private void Start()
         {
+            // Sorge dafür, dass der Slider beim Start mit dem aktuellen spawnCount synchronisiert wird
+            // ohne das OnValueChanged-Event auszulösen (falls ein Slider referenziert wurde).
+            if (countSlider != null)
+            {
+                countSlider.SetValueWithoutNotify(spawnCount);
+            }
+
             RespawnAllAgents();
         }
 
+        // Neue inkrementelle Variante: fügt nur Differenz hinzu oder entfernt sie.
         public void SetCountFromSlider(float sliderValue)
         {
-            int newCount = Mathf.RoundToInt(sliderValue);
-            if (spawnCount != newCount)
+            int newCount = Mathf.Max(0, Mathf.RoundToInt(sliderValue));
+            if (spawnCount == newCount) return;
+
+            if (newCount > spawnCount)
             {
-                spawnCount = newCount;
-                RespawnAllAgents();
+                int toAdd = newCount - spawnCount;
+                AddAgents(toAdd);
+            }
+            else
+            {
+                int toRemove = spawnCount - newCount;
+                RemoveAgents(toRemove);
+            }
+
+            spawnCount = newCount;
+            UpdateUiText();
+        }
+
+        // Fügt eine Anzahl von Agenten hinzu (benutzt die aktuelle Liste-Größe als Indexbasis)
+        private void AddAgents(int countToAdd)
+        {
+            if (!HasValidPrefabs())
+            {
+                Debug.LogWarning("Spawner: Keine Prefabs zugewiesen! Keine Agenten hinzugefügt.");
+                return;
+            }
+
+            for (int i = 0; i < countToAdd; i++)
+            {
+                // Verwende die aktuelle Anzahl der vorhandenen Agenten als Basis für den Index
+                SpawnSingleAgent(_spawnedAgents.Count);
+            }
+        }
+
+        // Entfernt die letzten N Agenten (sofern vorhanden)
+        private void RemoveAgents(int countToRemove)
+        {
+            for (int i = 0; i < countToRemove && _spawnedAgents.Count > 0; i++)
+            {
+                int lastIndex = _spawnedAgents.Count - 1;
+                GameObject agent = _spawnedAgents[lastIndex];
+                if (agent != null) Destroy(agent);
+                _spawnedAgents.RemoveAt(lastIndex);
             }
         }
 
@@ -148,10 +198,10 @@ namespace OOP_Scripts
 
         private float GetPrefabRadius(GameObject prefab)
         {
-            var renderer = prefab.GetComponentInChildren<Renderer>();
-            if (renderer != null)
+            var rend = prefab.GetComponentInChildren<Renderer>();
+            if (rend != null)
             {
-                return renderer.bounds.extents.magnitude * agentScale;
+                return rend.bounds.extents.magnitude * agentScale;
             }
             return 0.5f * agentScale; 
         }
@@ -187,7 +237,7 @@ namespace OOP_Scripts
         {
             if (countDisplay != null)
             {
-                countDisplay.text = $"Count: {spawnCount}";
+                countDisplay.text = $"{spawnCount}";
             }
         }
 
