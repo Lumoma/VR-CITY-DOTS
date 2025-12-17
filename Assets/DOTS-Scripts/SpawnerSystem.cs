@@ -24,9 +24,22 @@ namespace DOTS_Scripts
 
             // 2. Alte Agenten löschen
             // Wir suchen alle Entities, die den "SpawnedAgentTag" haben
+            
+            //Version 1 Die einfach nur das Entity löscht
+            //var oldAgentsQuery = SystemAPI.QueryBuilder().WithAll<SpawnedAgentTag>().Build();
+            //state.EntityManager.DestroyEntity(oldAgentsQuery);
+            
+            //Version 2 Die auch alle Child Objekte mit Löscht
             var oldAgentsQuery = SystemAPI.QueryBuilder().WithAll<SpawnedAgentTag>().Build();
-            state.EntityManager.DestroyEntity(oldAgentsQuery);
-
+            var oldAgents = oldAgentsQuery.ToEntityArray(Allocator.Temp);
+            for (int i = 0; i < oldAgents.Length; i++)
+            {
+                var entity = oldAgents[i];
+                // Optional: zusätzliche Prüfungen möglich, z.B. auf LinkedEntityGroup
+                state.EntityManager.DestroyEntity(entity);
+            }
+            oldAgents.Dispose();
+            
             // 3. Neue Agenten erstellen
             var instances = state.EntityManager.Instantiate(config.PrefabEntity, config.Count, Allocator.Temp);
             var random = new Unity.Mathematics.Random((uint)SystemAPI.Time.ElapsedTime + 1);
