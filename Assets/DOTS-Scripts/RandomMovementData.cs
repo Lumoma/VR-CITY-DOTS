@@ -4,7 +4,7 @@ using Unity.Mathematics;
 namespace DOTS_Scripts
 {
     // IComponentData ist das Interface für ECS-Daten
-    public struct RandomWalkerData : IComponentData
+    public struct RandomMovementData : IComponentData
     {
         public float MovementSpeed;
         public float BounceNudge;

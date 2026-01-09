@@ -7,7 +7,7 @@ namespace DOTS_Scripts
     // WICHTIG: Diese Zeile wieder reinnehmen!
     // Sie garantiert, dass dein Prefab einen Rigidbody hat, den Unity "baken" kann.
     [RequireComponent(typeof(Rigidbody))]
-    public class RandomWalkerAuthoring : MonoBehaviour
+    public class RandomMovementAuthoring : MonoBehaviour
     {
         [Header("Settings")]
         public float movementSpeed = 5f;
@@ -19,14 +19,14 @@ namespace DOTS_Scripts
         public Vector3 areaSize = new Vector3(20, 2, 20);
 
         // Der Baker konvertiert die Inspector-Daten in ECS-Daten
-        class Baker : Baker<RandomWalkerAuthoring>
+        class Baker : Baker<RandomMovementAuthoring>
         {
-            public override void Bake(RandomWalkerAuthoring authoring)
+            public override void Bake(RandomMovementAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
 
                 // Initialisierung der Component Data
-                AddComponent(entity, new RandomWalkerData
+                AddComponent(entity, new RandomMovementData
                 {
                     MovementSpeed = authoring.movementSpeed,
                     BounceNudge = authoring.bounceNudge,

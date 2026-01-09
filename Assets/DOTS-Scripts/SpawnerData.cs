@@ -3,7 +3,7 @@ using Unity.Mathematics;
 
 namespace DOTS_Scripts
 {
-    // Die Konfiguration (bleibt wie vorher)
+    // Daten des Spawners
     public struct SpawnerData : IComponentData
     {
         public Entity PrefabEntity;

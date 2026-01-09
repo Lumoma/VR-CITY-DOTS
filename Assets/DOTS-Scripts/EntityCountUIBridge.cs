@@ -4,7 +4,7 @@ using TMPro; // Wichtig für TextMeshPro
 
 namespace DOTS_Scripts
 {
-    public class EntityCountDisplay : MonoBehaviour
+    public class EntityCountUIBridge : MonoBehaviour
     {
         [Tooltip("Zieh hier dein TextMeshPro Textfeld rein")]
         public TMP_Text textDisplay;

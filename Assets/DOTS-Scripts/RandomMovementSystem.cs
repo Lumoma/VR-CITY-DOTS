@@ -7,7 +7,7 @@ using Unity.Mathematics;
 namespace DOTS_Scripts
 {
     [BurstCompile]
-    public partial struct RandomWalkerSystem : ISystem
+    public partial struct RandomMovementSystem : ISystem
     {
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
@@ -28,7 +28,7 @@ namespace DOTS_Scripts
         public double CurrentTime;
         public float DeltaTime;
 
-        private void Execute(ref RandomWalkerData data, ref LocalTransform transform, ref PhysicsVelocity velocity)
+        private void Execute(ref RandomMovementData data, ref LocalTransform transform, ref PhysicsVelocity velocity)
         {
             // --- 1. Rotation korrigieren (Der Zombie-Fix) ---
             // Wir zwingen die Entity, absolut aufrecht zu stehen.
@@ -59,7 +59,7 @@ namespace DOTS_Scripts
             }
         }
 
-        private void HandleOutOfBounds(ref RandomWalkerData data, ref LocalTransform transform, float3 forward)
+        private void HandleOutOfBounds(ref RandomMovementData data, ref LocalTransform transform, float3 forward)
         {
             if (CurrentTime - data.LastCollisionTime < data.CooldownDuration) return;
 

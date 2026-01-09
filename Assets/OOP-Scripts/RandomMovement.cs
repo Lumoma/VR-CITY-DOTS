@@ -4,7 +4,7 @@ namespace OOP_Scripts
 {
     // Stellt sicher, dass automatisch ein Rigidbody hinzugefügt wird
     [RequireComponent(typeof(Rigidbody))]
-    public class RandomWalker : MonoBehaviour
+    public class RandomMovement : MonoBehaviour
     {
         [Header("Bewegungseinstellungen")]
         [SerializeField, Tooltip("Geschwindigkeit der Vorwärtsbewegung.")]

@@ -29,7 +29,7 @@ namespace DOTS_Scripts
             //var oldAgentsQuery = SystemAPI.QueryBuilder().WithAll<SpawnedAgentTag>().Build();
             //state.EntityManager.DestroyEntity(oldAgentsQuery);
             
-            //Version 2 Die auch alle Child Objekte mit Löscht
+            //Version 2 Die auch alle Child Objekte mit Löscht (wegen Auto GameObject)
             var oldAgentsQuery = SystemAPI.QueryBuilder().WithAll<SpawnedAgentTag>().Build();
             var oldAgents = oldAgentsQuery.ToEntityArray(Allocator.Temp);
             for (int i = 0; i < oldAgents.Length; i++)
@@ -62,13 +62,13 @@ namespace DOTS_Scripts
                 state.EntityManager.SetComponentData(entity, transform);
 
                 // RandomWalker Daten setzen
-                if (state.EntityManager.HasComponent<RandomWalkerData>(entity))
+                if (state.EntityManager.HasComponent<RandomMovementData>(entity))
                 {
-                    var walkerData = state.EntityManager.GetComponentData<RandomWalkerData>(entity);
-                    walkerData.AreaSize = config.AreaSize;
-                    walkerData.AreaCenter = config.SpawnCenter;
-                    walkerData.RandomGenerator = new Unity.Mathematics.Random(random.NextUInt());
-                    state.EntityManager.SetComponentData(entity, walkerData);
+                    var movementData = state.EntityManager.GetComponentData<RandomMovementData>(entity);
+                    movementData.AreaSize = config.AreaSize;
+                    movementData.AreaCenter = config.SpawnCenter;
+                    movementData.RandomGenerator = new Unity.Mathematics.Random(random.NextUInt());
+                    state.EntityManager.SetComponentData(entity, movementData);
                 }
 
                 // WICHTIG: Den Tag hinzufügen, damit wir sie beim nächsten Mal löschen können

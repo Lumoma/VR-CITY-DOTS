@@ -1,11 +1,9 @@
 using UnityEngine;
 using Unity.Entities;
-using Unity.Collections;
-using Unity.Mathematics;
 
 namespace DOTS_Scripts
 {
-    public class DOTSSpawner : MonoBehaviour
+    public class SpawnerAuthoring : MonoBehaviour
     {
         [Header("DOTS Settings")]
         public GameObject prefabToBake;
@@ -17,12 +15,11 @@ namespace DOTS_Scripts
         private EntityManager _entityManager;
 
         // Baker: Wandelt das GameObject beim Start in eine Entity um
-        class SpawnerBaker : Baker<DOTSSpawner>
+        class SpawnerBaker : Baker<SpawnerAuthoring>
         {
-            public override void Bake(DOTSSpawner authoring)
+            public override void Bake(SpawnerAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.None);
-                
                 AddComponent(entity, new SpawnerData
                 {
                     PrefabEntity = GetEntity(authoring.prefabToBake, TransformUsageFlags.Dynamic),
@@ -58,7 +55,7 @@ namespace DOTS_Scripts
 
         private void TriggerRespawn()
         {
-            // 1. Wir müssen die Spawner-Entity in der ECS-Welt finden
+            // 1. Finde Spawner-Entity in der ECS-Welt
             if (_spawnerEntity == Entity.Null)
             {
                 var query = _entityManager.CreateEntityQuery(typeof(SpawnerData));
@@ -70,13 +67,13 @@ namespace DOTS_Scripts
                 else return; // Noch nicht initialisiert
             }
 
-            // 2. Wir aktualisieren die Daten (Count) auf der Entity
+            // 2. Aktualisieren der Daten (Count) auf der Entity
             var data = _entityManager.GetComponentData<SpawnerData>(_spawnerEntity);
             data.Count = spawnCount;
             _entityManager.SetComponentData(_spawnerEntity, data);
 
-            // 3. WICHTIG: Wir fügen die "RespawnRequest"-Komponente hinzu
-            // Das System sieht das im nächsten Frame und reagiert.
+            // 3. Hinzufügen der "RespawnRequest"-Komponente
+            // Das System sieht das im nächsten Frame und reagiert (aktualisiert die Anzahl).
             if (!_entityManager.HasComponent<RespawnRequest>(_spawnerEntity))
             {
                 _entityManager.AddComponent<RespawnRequest>(_spawnerEntity);

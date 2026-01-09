@@ -221,9 +221,9 @@ namespace OOP_Scripts
         {
             // Holt die Komponente oder fügt sie hinzu.
             // Durch [RequireComponent] am Walker wird hier automatisch auch ein Rigidbody erzeugt/geprüft.
-            if (!agent.TryGetComponent(out RandomWalker walker))
+            if (!agent.TryGetComponent(out RandomMovement walker))
             {
-                walker = agent.AddComponent<RandomWalker>();
+                walker = agent.AddComponent<RandomMovement>();
             }
 
             // Hier nutzen wir nun die saubere Public API statt direkt auf private Felder zuzugreifen
