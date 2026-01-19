@@ -1315,8 +1315,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabToBake: {fileID: 9079544459953215176, guid: 47c31f2ec34194fb8a1d3d5c28e39a12, type: 3}
-  spawnCount: 80
-  spawnAreaSize: {x: 60, y: 2, z: 40}
+  spawnCount: 10
+  spawnAreaSize: {x: 80, y: 2, z: 40}
 --- !u!4 &1343450536
 Transform:
   m_ObjectHideFlags: 0

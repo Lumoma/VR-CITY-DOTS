@@ -8513,10 +8513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febfb7f3798af42908a67a5045550e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableAutoSwitching: 1
-  scenesToTest:
-  - DOTS-Cars
-  agentCounts: 19000000320000004b000000640000007d00000096000000c8000000
+  agentCounts: 19000000320000004b000000640000007d00000096000000af000000c8000000
   warmupTime: 2
   measureTime: 5
   baseFileName: BenchmarkResult
@@ -9008,7 +9005,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3199508834110206841, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
       propertyPath: m_text
-      value: Switch Scene
+      value: Start FPS Benchmark
       objectReference: {fileID: 0}
     - target: {fileID: 3199508834110206841, guid: fa5ef3b56cfeb4f4ba855cdf2610a578, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -15048,7 +15045,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f28d6be13fbf41328a84aecf483a5b04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnCount: 20
+  spawnCount: 10
   areaSize: {x: 80, y: 2, z: 40}
   maxPlacementAttempts: 10
   countDisplay: {fileID: 1154015089}

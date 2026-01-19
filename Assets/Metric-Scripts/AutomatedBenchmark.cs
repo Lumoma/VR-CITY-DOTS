@@ -1,5 +1,5 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Wichtig für Szenenwechsel
+using UnityEngine.SceneManagement; // Wichtig für Szenenname
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -15,11 +15,8 @@ public class AutomatedBenchmark : MonoBehaviour
     public enum BenchmarkState { Idle, Running, Finished }
 
     [Header("Benchmark Einstellungen")]
-    [Tooltip("Soll nach Abschluss automatisch die nächste Szene geladen werden?")]
-    public bool enableAutoSwitching = true;
-
-    [Tooltip("Liste der Szenennamen, die nacheinander abgearbeitet werden sollen (exakt wie im Build Settings).")]
-    public List<string> scenesToTest = new List<string>();
+    [Tooltip("Liste der Szenennamen wird nicht mehr automatisch durchlaufen - bitte starte das Benchmark in der gewünschten Szene.")]
+    // ...existing code...
 
     [Header("Metrik Konfiguration")]
     public int[] agentCounts = { 100, 500, 1000, 2500, 5000, 7500, 10000 };
@@ -34,7 +31,7 @@ public class AutomatedBenchmark : MonoBehaviour
     private Spawner _currentOopSpawner;
     private SpawnerUIBridge _currentDotsBridge;
     private BenchmarkState _state = BenchmarkState.Idle;
-    private int _currentSceneIndex = 0;
+    // _currentSceneIndex entfernt - wir testen nur noch die aktuelle Szene
     
     // Damit wir wissen, was wir gerade testen (wird automatisch erkannt)
     private string _currentTypeString = "Unknown"; 
@@ -57,25 +54,7 @@ public class AutomatedBenchmark : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void OnEnable()
-    {
-        // Registriere dich für das Event, wenn eine Szene fertig geladen ist
-        SceneManager.sceneLoaded += OnSceneLoaded;
-    }
-
-    private void OnDisable()
-    {
-        SceneManager.sceneLoaded -= OnSceneLoaded;
-    }
-
-    // Wird von Unity automatisch aufgerufen, wenn eine neue Szene fertig geladen ist
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        // Wenn wir nicht im "Running" Modus sind, machen wir nichts (verhindert Start beim ersten Spielstart)
-        if (_state != BenchmarkState.Running) return;
-
-        StartCoroutine(InitAndRunSequence());
-    }
+    // Szene-Load-Handler entfernt (kein automatischer Szenenwechsel mehr)
 
     // Button-Methode zum Starten des gesamten Prozesses
     public void StartFullBenchmarkChain()
@@ -83,23 +62,8 @@ public class AutomatedBenchmark : MonoBehaviour
         if (_state == BenchmarkState.Running) return;
         
         _state = BenchmarkState.Running;
-        _currentSceneIndex = 0;
 
-        // Falls wir eine Szenenliste haben, fangen wir mit der ersten an,
-        // falls wir nicht schon zufällig in der richtigen sind.
-        if (enableAutoSwitching && scenesToTest.Count > 0)
-        {
-            string currentSceneName = SceneManager.GetActiveScene().name;
-            string firstTarget = scenesToTest[0];
-
-            if (currentSceneName != firstTarget)
-            {
-                LoadNextTargetScene(0);
-                return; 
-            }
-        }
-
-        // Wenn wir schon in der richtigen Szene sind oder keine Liste haben -> direkt loslegen
+        // Wir messen nur die aktuell geladene Szene. Einfach Start der Messroutine.
         StartCoroutine(InitAndRunSequence());
     }
 
@@ -122,16 +86,9 @@ public class AutomatedBenchmark : MonoBehaviour
             Debug.LogError("Keinen Spawner (weder OOP noch DOTS) in dieser Szene gefunden!");
         }
 
-        // Benchmark in dieser Szene fertig. Was nun?
-        if (enableAutoSwitching)
-        {
-            ProceedToNextScene();
-        }
-        else
-        {
-            _state = BenchmarkState.Finished;
-            LogStatus("Benchmark beendet (AutoSwitch aus).");
-        }
+        // Benchmark in dieser Szene fertig.
+        _state = BenchmarkState.Finished;
+        LogStatus("Benchmark beendet.");
     }
 
     private bool FindReferencesInScene()
@@ -199,33 +156,10 @@ public class AutomatedBenchmark : MonoBehaviour
         
         // Aufräumen: Agenten auf 0 setzen
         SetAgentCount(0);
-        yield return new WaitForSeconds(1.0f); // Kurze Pause vorm Wechsel
+        yield return new WaitForSeconds(1.0f); // Kurze Pause vorm Abschluss
     }
 
-    private void ProceedToNextScene()
-    {
-        _currentSceneIndex++;
-
-        if (_currentSceneIndex < scenesToTest.Count)
-        {
-            LoadNextTargetScene(_currentSceneIndex);
-        }
-        else
-        {
-            _state = BenchmarkState.Finished;
-            LogStatus("ALLE Szenen erfolgreich getestet!");
-            
-            // Optional: Manager zerstören, wenn alles fertig ist
-            // Destroy(gameObject); 
-        }
-    }
-
-    private void LoadNextTargetScene(int index)
-    {
-        string nextScene = scenesToTest[index];
-        LogStatus($"Lade nächste Szene: {nextScene}...");
-        SceneManager.LoadScene(nextScene);
-    }
+    // ProceedToNextScene und LoadNextTargetScene entfernt
 
     // --- Hilfsfunktionen ---
 
