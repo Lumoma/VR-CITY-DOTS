@@ -15046,7 +15046,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnCount: 10
-  areaSize: {x: 80, y: 2, z: 40}
+  areaSize: {x: 60, y: 2, z: 40}
   maxPlacementAttempts: 10
   countDisplay: {fileID: 1154015089}
   malePrefab: {fileID: 310842560370151955, guid: af76fc606f95a4ceba2fbb480ff054ba, type: 3}

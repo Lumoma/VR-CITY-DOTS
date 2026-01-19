@@ -14485,8 +14485,8 @@ MonoBehaviour:
   areaSize: {x: 200, y: 2, z: 200}
   maxPlacementAttempts: 10
   countDisplay: {fileID: 1849330991}
-  malePrefab: {fileID: 52932905164622209, guid: 640b94cf88de4ef459ce14645b2736d9, type: 3}
-  femalePrefab: {fileID: 6797269430195769530, guid: 0f2505a3f5e77fa44a6703470cc30543, type: 3}
+  malePrefab: {fileID: 52932905164622209, guid: 6aa881414079f489aa986f018f397d10, type: 3}
+  femalePrefab: {fileID: 52932905164622209, guid: 6aa881414079f489aa986f018f397d10, type: 3}
   agentScale: 1
   minSpeed: 5
   maxSpeed: 10
