@@ -14488,8 +14488,8 @@ MonoBehaviour:
   malePrefab: {fileID: 52932905164622209, guid: 640b94cf88de4ef459ce14645b2736d9, type: 3}
   femalePrefab: {fileID: 6797269430195769530, guid: 0f2505a3f5e77fa44a6703470cc30543, type: 3}
   agentScale: 1
-  minSpeed: 0.5
-  maxSpeed: 2
+  minSpeed: 5
+  maxSpeed: 10
   randomizeRotationY: 1
   agentContainer: {fileID: 0}
   collisionCheckLayer:

@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fadac27bbd654e8ba087c566aa37e11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 2
+  movementSpeed: 10
   bounceNudge: 0.5
   cooldown: 0.15
   areaCenter: {x: 0, y: 0, z: 0}
