@@ -178,12 +178,20 @@ public class AutomatedBenchmark : MonoBehaviour
         // Prüfen, ob wir auf Android (Quest 3) sind
         if (Application.platform == RuntimePlatform.Android)
         {
-            // Pfad: /storage/emulated/0/Android/data/<PackageName>/files/
-            path = Path.Combine(Application.persistentDataPath, fileName);
+            // Wir erstellen einen Unterordner "BenchmarkResults"
+            string folder = Path.Combine(Application.persistentDataPath, "BenchmarkResults");
+            
+            // Falls der Ordner noch nicht existiert -> erstellen
+            if (!Directory.Exists(folder)) 
+            {
+                Directory.CreateDirectory(folder);
+            }
+
+            path = Path.Combine(folder, fileName);
         }
         else
         {
-            // Pfad: Im Projektordner (neben dem Assets Ordner)
+            // PC-Pfad: Im Projektordner (neben dem Assets Ordner)
             path = Path.Combine(Application.dataPath, "../", fileName);
         }
 
@@ -196,7 +204,6 @@ public class AutomatedBenchmark : MonoBehaviour
         catch (Exception e)
         {
             Debug.LogError($"Fehler beim Speichern: {e.Message}");
-            LogStatus("Fehler beim Speichern (siehe Logs)");
         }
     }
 
