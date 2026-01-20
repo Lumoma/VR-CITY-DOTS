@@ -1,13 +1,13 @@
 using UnityEngine;
-using UnityEngine.SceneManagement; // Wichtig für Szenenname
+using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using TMPro;
-using OOP_Scripts;
-using DOTS_Scripts;
+using OOP_Scripts;  
+using DOTS_Scripts; 
 using System;
 
 public class AutomatedBenchmark : MonoBehaviour
@@ -15,8 +15,7 @@ public class AutomatedBenchmark : MonoBehaviour
     public enum BenchmarkState { Idle, Running, Finished }
 
     [Header("Benchmark Einstellungen")]
-    [Tooltip("Liste der Szenennamen wird nicht mehr automatisch durchlaufen - bitte starte das Benchmark in der gewünschten Szene.")]
-    // ...existing code...
+    // Wir testen nur die aktuelle Szene
 
     [Header("Metrik Konfiguration")]
     public int[] agentCounts = { 100, 500, 1000, 2500, 5000, 7500, 10000 };
@@ -31,48 +30,25 @@ public class AutomatedBenchmark : MonoBehaviour
     private Spawner _currentOopSpawner;
     private SpawnerUIBridge _currentDotsBridge;
     private BenchmarkState _state = BenchmarkState.Idle;
-    // _currentSceneIndex entfernt - wir testen nur noch die aktuelle Szene
     
     // Damit wir wissen, was wir gerade testen (wird automatisch erkannt)
     private string _currentTypeString = "Unknown"; 
 
-    private void Awake()
-    {
-        // 1. Singleton-Check & Überleben sichern
-        // Wir suchen, ob es schon einen BenchmarkManager gibt
-        var existingManagers = FindObjectsOfType<AutomatedBenchmark>();
-        
-        if (existingManagers.Length > 1)
-        {
-            // Wenn wir neu in eine Szene geladen werden, aber schon ein Manager aus der alten Szene da ist:
-            // Zerstöre diesen neuen hier, damit der alte weitermachen kann.
-            Destroy(gameObject);
-            return;
-        }
-
-        // Mache dieses Objekt unsterblich
-        DontDestroyOnLoad(gameObject);
-    }
-
-    // Szene-Load-Handler entfernt (kein automatischer Szenenwechsel mehr)
-
-    // Button-Methode zum Starten des gesamten Prozesses
+    // Button-Methode zum Starten des Benchmarks in der aktuellen Szene
     public void StartFullBenchmarkChain()
     {
         if (_state == BenchmarkState.Running) return;
         
         _state = BenchmarkState.Running;
-
-        // Wir messen nur die aktuell geladene Szene. Einfach Start der Messroutine.
         StartCoroutine(InitAndRunSequence());
     }
 
     private IEnumerator InitAndRunSequence()
     {
-        // Warte kurz einen Frame, damit alle anderen Scripts in der Szene ihre Awake/Start fertig haben
+        // Warte kurz einen Frame, damit alle anderen Scripts bereit sind
         yield return null;
 
-        LogStatus($"Szene geladen: {SceneManager.GetActiveScene().name}. Suche Referenzen...");
+        LogStatus($"Szene: {SceneManager.GetActiveScene().name}. Suche Spawner...");
 
         // AUTOMATISCHE ERKENNUNG: OOP oder DOTS?
         bool foundTarget = FindReferencesInScene();
@@ -83,22 +59,22 @@ public class AutomatedBenchmark : MonoBehaviour
         }
         else
         {
-            Debug.LogError("Keinen Spawner (weder OOP noch DOTS) in dieser Szene gefunden!");
+            Debug.LogError("Keinen Spawner (weder OOP noch DOTS) gefunden!");
+            LogStatus("Fehler: Kein Spawner gefunden.");
         }
 
-        // Benchmark in dieser Szene fertig.
         _state = BenchmarkState.Finished;
-        LogStatus("Benchmark beendet.");
+        LogStatus("Benchmark beendet. Datei gespeichert.");
     }
 
     private bool FindReferencesInScene()
     {
-        // Reset
         _currentOopSpawner = null;
         _currentDotsBridge = null;
 
         // Versuch 1: OOP Spawner finden
-        _currentOopSpawner = FindFirstObjectByType<Spawner>(); // Unity 2023+ (sonst FindObjectOfType)
+        // Hinweis: FindFirstObjectByType ist performanter ab Unity 2023, sonst FindObjectOfType nutzen
+        _currentOopSpawner = FindFirstObjectByType<Spawner>(); 
         if (_currentOopSpawner != null)
         {
             _currentTypeString = "OOP";
@@ -123,7 +99,7 @@ public class AutomatedBenchmark : MonoBehaviour
         StringBuilder csv = new StringBuilder();
         string sceneName = SceneManager.GetActiveScene().name;
 
-        // Header inklusive Szenen-Name
+        // CSV Header
         csv.AppendLine("Scene;Type;AgentCount;AvgFPS;MinFPS;MaxFPS;1PercentLowFPS;AvgFrameTime_ms");
 
         foreach (int count in agentCounts)
@@ -147,21 +123,17 @@ public class AutomatedBenchmark : MonoBehaviour
                 yield return null;
             }
 
-            // 4. Daten speichern
+            // 4. Daten temporär erfassen
             RecordMetric(csv, sceneName, count, frames);
         }
 
-        // Datei speichern (Pro Szene eine Datei ist sicherer, falls was abstürzt)
+        // Speichern
         SaveFile(sceneName, csv.ToString());
         
         // Aufräumen: Agenten auf 0 setzen
         SetAgentCount(0);
-        yield return new WaitForSeconds(1.0f); // Kurze Pause vorm Abschluss
+        yield return new WaitForSeconds(1.0f);
     }
-
-    // ProceedToNextScene und LoadNextTargetScene entfernt
-
-    // --- Hilfsfunktionen ---
 
     private void SetAgentCount(int count)
     {
@@ -184,7 +156,7 @@ public class AutomatedBenchmark : MonoBehaviour
         float minFPS = 1.0f / frameTimes.Max();
         float maxFPS = 1.0f / frameTimes.Min();
 
-        // 1% Low
+        // 1% Low Berechnung
         frameTimes.Sort((a, b) => b.CompareTo(a)); 
         int index1Percent = Mathf.CeilToInt(frameTimes.Count * 0.01f);
         float p1Low = 1.0f / frameTimes[Mathf.Clamp(index1Percent, 0, frameTimes.Count - 1)];
@@ -196,14 +168,36 @@ public class AutomatedBenchmark : MonoBehaviour
         csv.AppendLine(line);
     }
 
+    // SPEICHERFUNKTION FÜR QUEST 3 / ANDROID & PC
     private void SaveFile(string sceneName, string content)
     {
-        // Füge einen Zeitstempel zum Dateinamen hinzu (sicheres Format für Dateinamen)
         string timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
         string fileName = $"{baseFileName}_{sceneName}_{_currentTypeString}_{timestamp}.csv";
-        string path = Path.Combine(Application.dataPath, "../", fileName);
-        File.WriteAllText(path, content);
-        Debug.Log($"<color=green>Gespeichert: {path}</color>");
+        string path;
+
+        // Prüfen, ob wir auf Android (Quest 3) sind
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            // Pfad: /storage/emulated/0/Android/data/<PackageName>/files/
+            path = Path.Combine(Application.persistentDataPath, fileName);
+        }
+        else
+        {
+            // Pfad: Im Projektordner (neben dem Assets Ordner)
+            path = Path.Combine(Application.dataPath, "../", fileName);
+        }
+
+        try
+        {
+            File.WriteAllText(path, content);
+            Debug.Log($"<color=green>Gespeichert: {path}</color>");
+            LogStatus("CSV gespeichert!");
+        }
+        catch (Exception e)
+        {
+            Debug.LogError($"Fehler beim Speichern: {e.Message}");
+            LogStatus("Fehler beim Speichern (siehe Logs)");
+        }
     }
 
     private void LogStatus(string msg)
