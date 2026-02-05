@@ -38,6 +38,9 @@ Desktop.ini
 # Visual Studio cache directory
 .vs/
 
+# Rider / IntelliJ
+.idea/
+
 # Gradle cache directory
 .gradle/
 
