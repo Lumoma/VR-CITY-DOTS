@@ -293,7 +293,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **Lumoma**  
 Bachelor Thesis Project - SRH University & Karlsruhe Institute of Technology (KIT)
   
-🔗 LinkedIn: [Lumoma Profile](www.linkedin.com/in/lukasmorawietz)
+🔗 LinkedIn: [Lumoma Profile](https://www.linkedin.com/in/lukasmorawietz)
 
 ---
 
