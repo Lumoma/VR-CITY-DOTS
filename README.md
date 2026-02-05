@@ -102,7 +102,7 @@ This project simulates urban traffic scenarios (vehicles and pedestrians) in VR 
 
 ### Option 1: Download Pre-built APK (Recommended)
 
-1. Go to [**Releases**](https://github.com/lumoma/VR-Traffic-Simulation-Benchmark/releases)
+1. Go to [**Releases**](https://github.com/lumoma/VR-CITY-DOTS/releases)
 2. Download the latest `.apk` file
 3. Install on Meta Quest:
    ```bash
@@ -299,7 +299,7 @@ Bachelor Thesis Project - SRH University & Karlsruhe Institute of Technology (KI
 
 ## 🎥 Demo Video
 
-[![VR Traffic Benchmark Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+[![VR Traffic Benchmark Demo](https://img.youtube.com/vi/hGeLczTzLNM/maxresdefault.jpg)](https://youtu.be/hGeLczTzLNM)
 
 *Watch the full benchmark comparison: OOP vs DOTS with 6,000+ entities on Meta Quest 3*
 
