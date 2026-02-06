@@ -7,6 +7,9 @@
 
 A comprehensive performance comparison between Unity's traditional **Object-Oriented Programming (OOP)** and **Data-Oriented Technology Stack (DOTS/ECS)** in a virtual reality environment, measuring simulation performance of autonomous agents in an urban setting.
 
+![Screenshot 1](Assets/Screenshots/Screenshot_1.png)
+*DOTS Performance Test - Shot on MacBook Pro M5*
+
 ---
 
 ## 📋 Table of Contents
@@ -76,20 +79,28 @@ This project simulates urban traffic scenarios (vehicles and pedestrians) in VR 
 - **Default spawn:** 25 agents
 - T-pose characters moving randomly, avoiding collisions
 
+![Screenshot 2](Assets/Screenshots/com.lumo.citytrafficbenchmark-20260206-105232.jpg)
+
 ### 2. **OOP-Cars** *(Bigger Map)*
 - Traditional GameObject-based vehicle simulation
 - **Recommended max entities:** 2,000
 - Larger urban environment for vehicle movement
+
+![Screenshot 3](Assets/Screenshots/com.lumo.citytrafficbenchmark-20260206-105259.jpg)
 
 ### 3. **DOTS-People**
 - ECS-based pedestrian simulation with Burst compilation
 - **Max entities:** 10,000
 - Same behavior as OOP-People, massively optimized
 
+![Screenshot 4](Assets/Screenshots/com.lumo.citytrafficbenchmark-20260206-105345.jpg)
+
 ### 4. **DOTS-Cars** *(Bigger Map)*
 - ECS-based vehicle simulation
 - **Max entities:** 10,000
 - Same map as OOP-Cars, DOTS-optimized
+
+![Screenshot 5](Assets/Screenshots/com.lumo.citytrafficbenchmark-20260206-105409.jpg)
 
 **Agent Behavior:**
 - Randomized movement patterns
@@ -143,6 +154,9 @@ This project simulates urban traffic scenarios (vehicles and pedestrians) in VR 
 
 ## 🚀 Usage
 
+### Hands-On Video
+[![Hands-On Video](https://img.youtube.com/vi/7R1KaIC8_kw/maxresdefault.jpg)](https://youtu.be/7R1KaIC8_kw)
+
 ### Running Automated Benchmarks
 
 1. **Launch the app** on your Meta Quest
@@ -152,7 +166,7 @@ This project simulates urban traffic scenarios (vehicles and pedestrians) in VR 
    - DOTS-People
    - DOTS-Cars
 3. **Start Benchmark:**
-   - The system automatically spawns **25 agents** initially
+   - The system automatically spawns **10 agents** initially
    - Every **5 seconds**, **+25 agents** are added
    - Stops at **200 agents** (default max for automated benchmark)
    - FPS and entity count are recorded
