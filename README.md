@@ -238,21 +238,25 @@ adb shell rm "/sdcard/Android/data/com.lumoma.citytrafficbenchmark/files/Benchma
 ## 📂 Project Structure
 
 ```
-VR-Traffic-Simulation-Benchmark/
+VR-CITY-DOTS/
 ├── Assets/
 │   ├── Scenes/
 │   │   ├── OOP-People.unity
 │   │   ├── OOP-Cars.unity
 │   │   ├── DOTS-People.unity
-│   │   └── DOTS-Cars.unity
+│   │   ├── DOTS-Cars.unity
+│   │   └── DOTS-Subscenes/
 │   ├── Scripts/
 │   │   ├── OOP/
-│   │   └── DOTS/
+│   │   ├── DOTS/
+│   │   └── Metric/
 │   ├── Prefabs/
-│   └── UI/
+│   ├── Samples/
+│   ├── ThirdPartyAssets/
+│   ├── XR/
+│   └── Screenshots/        # App screenshots
 ├── Packages/
-├── SampleResults/          # Example CSV files
-├── Screenshots/            # App screenshots
+├── SampleResults/          # Example CSV files           
 ├── README.md
 └── LICENSE
 ```
