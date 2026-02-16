@@ -206,17 +206,17 @@ BenchmarkResult_OOP-Cars_OOP_2026-01-20_10-52-43.csv
 
 #### 1. List CSV Files
 ```bash
-adb shell ls -l /sdcard/Android/data/com.lumoma.citytrafficbenchmark/files | grep BenchmarkResult || true
+adb shell ls -l /sdcard/Android/data/com.lumo.citytrafficbenchmark/files | grep BenchmarkResult || true
 ```
 
 #### 2. Download CSV Files to Desktop
 ```bash
-adb pull /sdcard/Android/data/com.lumoma.citytrafficbenchmark/files/BenchmarkResults/. ~/Desktop/
+adb pull /sdcard/Android/data/com.lumo.citytrafficbenchmark/files/BenchmarkResults/. ~/Desktop/
 ```
 
 #### 3. Delete CSV Files (Cleanup)
 ```bash
-adb shell rm "/sdcard/Android/data/com.lumoma.citytrafficbenchmark/files/BenchmarkResults/*.csv"
+adb shell rm "/sdcard/Android/data/com.lumo.citytrafficbenchmark/files/BenchmarkResults/*.csv"
 ```
 
 ### Example CSV Data
