@@ -202,7 +202,7 @@ BenchmarkResult_OOP-Cars_OOP_2026-01-20_10-52-43.csv
 
 ### ADB Commands
 
-**Package Name:** `com.lumoma.citytrafficbenchmark`
+**Package Name:** `com.lumo.citytrafficbenchmark`
 
 #### 1. List CSV Files
 ```bash
@@ -308,10 +308,10 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ## 👤 Author
 
-**Lumoma**  
+****  
 Bachelor Thesis Project - SRH University & Karlsruhe Institute of Technology (KIT)
   
-🔗 LinkedIn: [Lumoma Profile](https://www.linkedin.com/in/lukasmorawietz)
+🔗 LinkedIn: [ Profile](https://www.linkedin.com/in/lukasmorawietz)
 
 ---
 
@@ -346,7 +346,7 @@ While this is primarily an academic project, suggestions and improvements are we
 - Check Quest thermal throttling (let device cool down)
 
 ### CSV Files Not Found
-- Verify package name: `com.lumoma.citytrafficbenchmark`
+- Verify package name: `com.lumo.citytrafficbenchmark`
 - Ensure it is a debug build
 - Chec if ADB Debug Bridge is allowed
 - Ensure benchmark completed at least one cycle
