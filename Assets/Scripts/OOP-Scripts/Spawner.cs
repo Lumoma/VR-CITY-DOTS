@@ -22,8 +22,7 @@ namespace OOP_Scripts
         private TMP_Text countDisplay;
 
         [Header("Visuals")]
-        [SerializeField] private GameObject malePrefab;
-        [SerializeField] private GameObject femalePrefab;
+        [SerializeField] private GameObject testPrefab;
         [SerializeField] private float agentScale = 1f;
 
         [Header("Agenten Konfiguration")]
@@ -79,7 +78,7 @@ namespace OOP_Scripts
         // Fügt eine Anzahl von Agenten hinzu (benutzt die aktuelle Liste-Größe als Indexbasis)
         private void AddAgents(int countToAdd)
         {
-            if (!HasValidPrefabs())
+            if (!HasValidPrefab())
             {
                 Debug.LogWarning("Spawner: Keine Prefabs zugewiesen! Keine Agenten hinzugefügt.");
                 return;
@@ -108,7 +107,7 @@ namespace OOP_Scripts
         {
             ClearExistingAgents();
 
-            if (!HasValidPrefabs())
+            if (!HasValidPrefab())
             {
                 Debug.LogWarning("Spawner: Keine Prefabs zugewiesen!");
                 return;
@@ -133,7 +132,7 @@ namespace OOP_Scripts
 
         private void SpawnSingleAgent(int index)
         {
-            GameObject prefabToSpawn = SelectPrefab(index);
+            GameObject prefabToSpawn = testPrefab;
             if (prefabToSpawn == null) return;
 
             float radius = GetPrefabRadius(prefabToSpawn);
@@ -152,18 +151,9 @@ namespace OOP_Scripts
             _spawnedAgents.Add(newAgent);
         }
 
-        private bool HasValidPrefabs()
+        private bool HasValidPrefab()
         {
-            return malePrefab != null || femalePrefab != null;
-        }
-
-        private GameObject SelectPrefab(int index)
-        {
-            if (malePrefab != null && femalePrefab != null)
-            {
-                return (index % 2 == 0) ? malePrefab : femalePrefab;
-            }
-            return malePrefab != null ? malePrefab : femalePrefab;
+            return testPrefab != null;
         }
 
         private Vector3 TryFindSpawnPosition(float agentRadius)

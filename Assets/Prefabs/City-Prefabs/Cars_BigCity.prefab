@@ -794,7 +794,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6255842174951107668}
   m_Layer: 0
-  m_Name: BigCity
+  m_Name: Cars_BigCity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
