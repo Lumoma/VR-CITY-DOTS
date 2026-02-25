@@ -261,7 +261,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081840892515873890, guid: 41d89b59fe3e9964a83686ff24b7d0c5, type: 3}
       propertyPath: m_MaxValue
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7081840892515873890, guid: 41d89b59fe3e9964a83686ff24b7d0c5, type: 3}
       propertyPath: m_WholeNumbers
@@ -321,7 +321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7081840893024566376, guid: 41d89b59fe3e9964a83686ff24b7d0c5, type: 3}
       propertyPath: m_text
-      value: 20
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7081840893024566376, guid: 41d89b59fe3e9964a83686ff24b7d0c5, type: 3}
       propertyPath: 'm_ActiveFontFeatures.Array.data[0]'
@@ -945,7 +945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: febfb7f3798af42908a67a5045550e3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentCounts: 00000000020000000400000006000000080000000a0000000c0000000e000000100000001200000014000000
+  agentCounts: 00000000050000000a0000000f00000014000000190000001e00000023000000280000002d00000032000000
   warmupTime: 2
   measureTime: 5
   baseFileName: BenchmarkResult
@@ -3639,7 +3639,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnCount: 10
-  areaSize: {x: 100, y: 2, z: 100}
+  areaSize: {x: 80, y: 2, z: 80}
   maxPlacementAttempts: 10
   countDisplay: {fileID: 1849330991}
   testPrefab: {fileID: 793685457875359081, guid: 45a5d887deb354b599e74c5f6b57c250, type: 3}
