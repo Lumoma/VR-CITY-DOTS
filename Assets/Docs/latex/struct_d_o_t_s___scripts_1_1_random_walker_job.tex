@@ -1,0 +1,177 @@
+\doxysection{DOTS\+\_\+\+Scripts.\+Random\+Walker\+Job Strukturreferenz}
+\hypertarget{struct_d_o_t_s___scripts_1_1_random_walker_job}{}\label{struct_d_o_t_s___scripts_1_1_random_walker_job}\index{DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}}
+
+
+Job zur Steuerung der Bewegung und Bounds-\/\+Prüfung für jede Entität.  
+
+
+Klassendiagramm für DOTS\+\_\+\+Scripts.\+Random\+Walker\+Job:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_d_o_t_s___scripts_1_1_random_walker_job}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+double \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_random_walker_job_a760d6c3a3ac678cce5a5609644930c9f}{Current\+Time}}
+\begin{DoxyCompactList}\small\item\em Aktuelle Zeit (für Cooldown). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_random_walker_job_a012565fc0512ec7962779e9bdf542717}{Delta\+Time}}
+\begin{DoxyCompactList}\small\item\em Delta\+Time für die Bewegung. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_random_walker_job_ae8590014727f08a9bb167879e3e6ca89}{Execute}} (ref \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_random_movement_data}{Random\+Movement\+Data}} data, ref Local\+Transform transform, ref Physics\+Velocity velocity)
+\begin{DoxyCompactList}\small\item\em Führt die Bewegungs-\/ und Bounds-\/\+Logik für eine Entität aus. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_random_walker_job_a287fa450d5442146bff4f07423a8c00e}{Handle\+Out\+Of\+Bounds}} (ref \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_random_movement_data}{Random\+Movement\+Data}} data, ref Local\+Transform transform, float3 forward)
+\begin{DoxyCompactList}\small\item\em Reagiert auf das Verlassen des Bereichs mit Drehung und Nudge. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_random_walker_job_ab244e43abfacf45c75061f58dc01a855}{Is\+Out\+Of\+Bounds}} (float3 pos, float3 center, float3 size)
+\begin{DoxyCompactList}\small\item\em Prüft, ob die Entität außerhalb des erlaubten Bereichs ist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Job zur Steuerung der Bewegung und Bounds-\/\+Prüfung für jede Entität. 
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_system_8cs_source_l00042}{42}} der Datei \doxymbox{\hyperlink{_random_movement_system_8cs_source}{Random\+Movement\+System.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{struct_d_o_t_s___scripts_1_1_random_walker_job_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{struct_d_o_t_s___scripts_1_1_random_walker_job_ae8590014727f08a9bb167879e3e6ca89}\index{DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}!Execute@{Execute}}
+\index{Execute@{Execute}!DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \label{struct_d_o_t_s___scripts_1_1_random_walker_job_ae8590014727f08a9bb167879e3e6ca89} 
+void DOTS\+\_\+\+Scripts.\+Random\+Walker\+Job.\+Execute (\begin{DoxyParamCaption}\item[{ref \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_random_movement_data}{Random\+Movement\+Data}}}]{data}{, }\item[{ref Local\+Transform}]{transform}{, }\item[{ref Physics\+Velocity}]{velocity}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Führt die Bewegungs-\/ und Bounds-\/\+Logik für eine Entität aus. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_system_8cs_source_l00056}{56}} der Datei \doxymbox{\hyperlink{_random_movement_system_8cs_source}{Random\+Movement\+System.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ 1.\ Rotation\ korrigieren\ (Der\ Zombie-\/Fix)\ -\/-\/-\/}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wir\ zwingen\ die\ Entity,\ absolut\ aufrecht\ zu\ stehen.}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wir\ nehmen\ die\ aktuelle\ Rotation,\ aber\ löschen\ jegliches\ Kippen\ (X/Z).}}
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ float3\ currentForward\ =\ math.forward(transform.Rotation);}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wir\ berechnen\ eine\ neue\ Rotation,\ die\ nur\ um\ die\ Y-\/Achse\ (oben)\ schaut}}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ math.atan2\ gibt\ uns\ den\ Winkel\ auf\ dem\ Boden}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ currentYAngle\ =\ math.atan2(currentForward.x,\ currentForward.z);}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ transform.Rotation\ =\ quaternion.RotateY(currentYAngle);}
+\DoxyCodeLine{00067\ }
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ 2.\ Bewegung\ -\/-\/-\/}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ float3\ forward\ =\ math.forward(transform.Rotation);}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ currentVerticalVelocity\ =\ velocity.Linear.y;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ float3\ newVelocity\ =\ forward\ *\ data.MovementSpeed;}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ newVelocity.y\ =\ currentVerticalVelocity;\ \textcolor{comment}{//\ Schwerkraft\ beibehalten}}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ velocity.Linear\ =\ newVelocity;}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ WICHTIG:\ Drehimpuls\ komplett\ töten,\ damit\ sie\ nicht\ trudeln}}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ velocity.Angular\ =\ float3.zero;\ }
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ 3.\ Bounds\ Check\ -\/-\/-\/}}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsOutOfBounds(transform.Position,\ data.AreaCenter,\ data.AreaSize))}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ HandleOutOfBounds(ref\ data,\ ref\ transform,\ forward);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_d_o_t_s___scripts_1_1_random_walker_job_a287fa450d5442146bff4f07423a8c00e}\index{DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}!HandleOutOfBounds@{HandleOutOfBounds}}
+\index{HandleOutOfBounds@{HandleOutOfBounds}!DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}}
+\doxysubsubsection{\texorpdfstring{HandleOutOfBounds()}{HandleOutOfBounds()}}
+{\footnotesize\ttfamily \label{struct_d_o_t_s___scripts_1_1_random_walker_job_a287fa450d5442146bff4f07423a8c00e} 
+void DOTS\+\_\+\+Scripts.\+Random\+Walker\+Job.\+Handle\+Out\+Of\+Bounds (\begin{DoxyParamCaption}\item[{ref \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_random_movement_data}{Random\+Movement\+Data}}}]{data}{, }\item[{ref Local\+Transform}]{transform}{, }\item[{float3}]{forward}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Reagiert auf das Verlassen des Bereichs mit Drehung und Nudge. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_system_8cs_source_l00090}{90}} der Datei \doxymbox{\hyperlink{_random_movement_system_8cs_source}{Random\+Movement\+System.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (CurrentTime\ -\/\ data.LastCollisionTime\ <\ data.CooldownDuration)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ data.LastCollisionTime\ =\ CurrentTime;}
+\DoxyCodeLine{00095\ }
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Drehung\ um\ 180\ Grad}}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ angle\ =\ math.radians(180f);}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ transform.Rotation\ =\ math.mul(transform.Rotation,\ quaternion.RotateY(angle));}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ transform.Position\ +=\ forward\ *\ -\/data.BounceNudge;}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{struct_d_o_t_s___scripts_1_1_random_walker_job_ab244e43abfacf45c75061f58dc01a855}\index{DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}!IsOutOfBounds@{IsOutOfBounds}}
+\index{IsOutOfBounds@{IsOutOfBounds}!DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}}
+\doxysubsubsection{\texorpdfstring{IsOutOfBounds()}{IsOutOfBounds()}}
+{\footnotesize\ttfamily \label{struct_d_o_t_s___scripts_1_1_random_walker_job_ab244e43abfacf45c75061f58dc01a855} 
+bool DOTS\+\_\+\+Scripts.\+Random\+Walker\+Job.\+Is\+Out\+Of\+Bounds (\begin{DoxyParamCaption}\item[{float3}]{pos}{, }\item[{float3}]{center}{, }\item[{float3}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Prüft, ob die Entität außerhalb des erlaubten Bereichs ist. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_system_8cs_source_l00105}{105}} der Datei \doxymbox{\hyperlink{_random_movement_system_8cs_source}{Random\+Movement\+System.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ float3\ min\ =\ center\ -\/\ size\ *\ 0.5f;}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ float3\ max\ =\ center\ +\ size\ *\ 0.5f;}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pos.x\ <\ min.x\ ||\ pos.x\ >\ max.x\ ||\ pos.z\ <\ min.z\ ||\ pos.z\ >\ max.z;}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{struct_d_o_t_s___scripts_1_1_random_walker_job_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{struct_d_o_t_s___scripts_1_1_random_walker_job_a760d6c3a3ac678cce5a5609644930c9f}\index{DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}!CurrentTime@{CurrentTime}}
+\index{CurrentTime@{CurrentTime}!DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}}
+\doxysubsubsection{\texorpdfstring{CurrentTime}{CurrentTime}}
+{\footnotesize\ttfamily \label{struct_d_o_t_s___scripts_1_1_random_walker_job_a760d6c3a3ac678cce5a5609644930c9f} 
+double DOTS\+\_\+\+Scripts.\+Random\+Walker\+Job.\+Current\+Time}
+
+
+
+Aktuelle Zeit (für Cooldown). 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_system_8cs_source_l00047}{47}} der Datei \doxymbox{\hyperlink{_random_movement_system_8cs_source}{Random\+Movement\+System.\+cs}}.
+
+\Hypertarget{struct_d_o_t_s___scripts_1_1_random_walker_job_a012565fc0512ec7962779e9bdf542717}\index{DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}!DeltaTime@{DeltaTime}}
+\index{DeltaTime@{DeltaTime}!DOTS\_Scripts.RandomWalkerJob@{DOTS\_Scripts.RandomWalkerJob}}
+\doxysubsubsection{\texorpdfstring{DeltaTime}{DeltaTime}}
+{\footnotesize\ttfamily \label{struct_d_o_t_s___scripts_1_1_random_walker_job_a012565fc0512ec7962779e9bdf542717} 
+float DOTS\+\_\+\+Scripts.\+Random\+Walker\+Job.\+Delta\+Time}
+
+
+
+Delta\+Time für die Bewegung. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_system_8cs_source_l00051}{51}} der Datei \doxymbox{\hyperlink{_random_movement_system_8cs_source}{Random\+Movement\+System.\+cs}}.
+
+
+
+Die Dokumentation für diese Struktur wurde erzeugt aufgrund der Datei:\+\begin{DoxyCompactItemize}
+\item 
+DOTS-\/\+Scripts/\+\doxymbox{\hyperlink{_random_movement_system_8cs}{Random\+Movement\+System.\+cs}}\end{DoxyCompactItemize}

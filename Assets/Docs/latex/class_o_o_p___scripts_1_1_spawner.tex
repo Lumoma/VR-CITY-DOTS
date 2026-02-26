@@ -1,0 +1,814 @@
+\doxysection{OOP\+\_\+\+Scripts.\+Spawner Klassenreferenz}
+\hypertarget{class_o_o_p___scripts_1_1_spawner}{}\label{class_o_o_p___scripts_1_1_spawner}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+
+
+Spawnt und verwaltet Agenten/\+\+Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entfernen.  
+
+
+Klassendiagramm für OOP\+\_\+\+Scripts.\+Spawner:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_o_o_p___scripts_1_1_spawner}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aa23af95ddaee4e505572c09c633be0df}{Set\+Count\+From\+Slider}} (float slider\+Value)
+\begin{DoxyCompactList}\small\item\em Setzt die Agentenanzahl über den UI-\/\+Slider. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a4c20ea64a641544f900420f93e243011}{Respawn\+All\+Agents}} ()
+\begin{DoxyCompactList}\small\item\em Löscht alle Agenten und spawnt die gewünschte Anzahl neu. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab5f11e1da5c3f9a5f4226f52cadbe4dc}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Initialisiert den \doxylink{class_o_o_p___scripts_1_1_spawner}{Spawner} und synchronisiert den UI-\/\+Slider. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a9b36aa0d38aec39408debc264575ac5a}{Add\+Agents}} (int count\+To\+Add)
+\begin{DoxyCompactList}\small\item\em Fügt eine Anzahl von Agenten hinzu. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a63feaaaf3137a539272a9f6bfbf7ea99}{Remove\+Agents}} (int count\+To\+Remove)
+\begin{DoxyCompactList}\small\item\em Entfernt die letzten N Agenten. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a514c4ac46acb57e4bd9d53c5a732ab51}{Clear\+Existing\+Agents}} ()
+\begin{DoxyCompactList}\small\item\em Löscht alle existierenden Agenten. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac9f9fa673fd7ea96fe6d1bb775849edb}{Spawn\+Single\+Agent}} (int index)
+\begin{DoxyCompactList}\small\item\em Spawnt einen einzelnen Agenten. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a144e8b4d7f11b347f8f30a2d88da3a3b}{Has\+Valid\+Prefabs}} ()
+\begin{DoxyCompactList}\small\item\em Prüft, ob gültige Prefabs zugewiesen sind. \end{DoxyCompactList}\item 
+Game\+Object \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a566b4fe17f8d8d3986430a12b09fd578}{Select\+Prefab}} (int index)
+\begin{DoxyCompactList}\small\item\em Wählt das Prefab anhand des Index (abwechselnd männlich/\+weiblich). \end{DoxyCompactList}\item 
+Vector3 \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a4bb7da30ee7b2288511603d4fcf222dc}{Try\+Find\+Spawn\+Position}} (float agent\+Radius)
+\begin{DoxyCompactList}\small\item\em Sucht eine freie Spawnposition im Bereich. \end{DoxyCompactList}\item 
+Vector3 \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5b99816a0891710647395a4088e8a26a}{Get\+Random\+Position\+In\+Area}} ()
+\begin{DoxyCompactList}\small\item\em Gibt eine zufällige Position im Bereich zurück. \end{DoxyCompactList}\item 
+Quaternion \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aa07670db432e7ae6251c9c5fb9f5735c}{Get\+Initial\+Rotation}} ()
+\begin{DoxyCompactList}\small\item\em Gibt die Startrotation zurück. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_add9a0de08dceaf416bd8cbca1b6b0cc4}{Get\+Prefab\+Radius}} (Game\+Object prefab)
+\begin{DoxyCompactList}\small\item\em Ermittelt den Radius des Prefabs anhand des Renderers. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_adabe9302b79054010fcca4c95870a35f}{Setup\+Agent\+Hierarchy}} (Game\+Object agent, string base\+Name, int index)
+\begin{DoxyCompactList}\small\item\em Setzt Name, Skalierung und Hierarchie für den Agenten. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac34fea427fcb9dc3a8177765d660ee11}{Setup\+Random\+Walker}} (Game\+Object agent)
+\begin{DoxyCompactList}\small\item\em Initialisiert das Random\+Movement-\/\+Script des Agenten. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5a6d5344502221b136dc3e3f41ab1e0a}{Update\+Ui\+Text}} ()
+\begin{DoxyCompactList}\small\item\em Aktualisiert die UI-\/\+Anzeige der Agentenzahl. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a902936a7d81aa269ec1137dcc7331748}{On\+Draw\+Gizmos\+Selected}} ()
+\begin{DoxyCompactList}\small\item\em Zeichnet den Spawnbereich im Editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+int \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{spawn\+Count}} = 20
+\begin{DoxyCompactList}\small\item\em Anzahl der Agenten, die generiert werden sollen. \end{DoxyCompactList}\item 
+Vector3 \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a8520b571f0d22429e05bad17b4d63a90}{area\+Size}} = new Vector3(10f, 2f, 10f)
+\begin{DoxyCompactList}\small\item\em Größe des Bereichs, in dem die Agenten platziert werden. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a3d22d61ae0b4d717fb81c6877cbfd819}{max\+Placement\+Attempts}} = 10
+\begin{DoxyCompactList}\small\item\em Wie oft versucht wird, eine freie Position zu finden. \end{DoxyCompactList}\item 
+TMP\+\_\+\+Text \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a9ac5754c12fbe359d38fec493132ddba}{count\+Display}}
+\begin{DoxyCompactList}\small\item\em Zeigt die aktuelle Anzahl der Agenten im UI an. \end{DoxyCompactList}\item 
+Game\+Object \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375}{male\+Prefab}}
+\begin{DoxyCompactList}\small\item\em Prefab für männliche Agenten. \end{DoxyCompactList}\item 
+Game\+Object \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a546bbcae70ecfcc67fe1a8e593ac35ec}{female\+Prefab}}
+\begin{DoxyCompactList}\small\item\em Prefab für weibliche Agenten. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af5c0dce0d064c36d7fb0038c2a5532bf}{agent\+Scale}} = 1f
+\begin{DoxyCompactList}\small\item\em Skalierung der Agenten. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3dbbc8d42dfe09d28bb9ea5c741ed50}{min\+Speed}} = 0.\+5f
+\begin{DoxyCompactList}\small\item\em Minimale Bewegungsgeschwindigkeit der Agenten. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a6bef6e4f92d66b598ad5f24f3d0377d1}{max\+Speed}} = 2f
+\begin{DoxyCompactList}\small\item\em Maximale Bewegungsgeschwindigkeit der Agenten. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aea8e99fcb7c87aa325560406c2902d86}{randomize\+RotationY}} = true
+\begin{DoxyCompactList}\small\item\em Ob die Y-\/\+Rotation zufällig gewählt wird. \end{DoxyCompactList}\item 
+Transform \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af9d60db7441ab4a187fa594adb55d04a}{agent\+Container}}
+\begin{DoxyCompactList}\small\item\em Optional:\+ Container-\/\+Objekt für Agenten. \end{DoxyCompactList}\item 
+Layer\+Mask \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a6e2ec7b1079ffe7f06f84797891ce75a}{collision\+Check\+Layer}} = \texorpdfstring{$\sim$}{\string~}0
+\begin{DoxyCompactList}\small\item\em Layer für Kollisionsprüfung. \end{DoxyCompactList}\item 
+readonly List$<$ Game\+Object $>$ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}{\+\_\+spawned\+Agents}} = new List$<$Game\+Object$>$()
+\item 
+Slider \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac1b9bfe405d10be8bdb41d09322eff9e}{count\+Slider}}
+\begin{DoxyCompactList}\small\item\em Optional:\+ UI Slider, damit Start-\/\+Wert synchronisiert wird. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Spawnt und verwaltet Agenten/\+\+Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entfernen. 
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00024}{24}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a9b36aa0d38aec39408debc264575ac5a}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!AddAgents@{AddAgents}}
+\index{AddAgents@{AddAgents}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{AddAgents()}{AddAgents()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a9b36aa0d38aec39408debc264575ac5a} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Add\+Agents (\begin{DoxyParamCaption}\item[{int}]{count\+To\+Add}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Fügt eine Anzahl von Agenten hinzu. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em count\+To\+Add} & Anzahl der hinzuzufügenden Agenten\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00139}{139}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!HasValidPrefabs())}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}Spawner:\ Keine\ Prefabs\ zugewiesen!\ Keine\ Agenten\ hinzugefügt."{}});}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ countToAdd;\ i++)}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SpawnSingleAgent(\_spawnedAgents.Count);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a514c4ac46acb57e4bd9d53c5a732ab51}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!ClearExistingAgents@{ClearExistingAgents}}
+\index{ClearExistingAgents@{ClearExistingAgents}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{ClearExistingAgents()}{ClearExistingAgents()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a514c4ac46acb57e4bd9d53c5a732ab51} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Clear\+Existing\+Agents (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Löscht alle existierenden Agenten. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00188}{188}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ agent\ \textcolor{keywordflow}{in}\ \_spawnedAgents)}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (agent\ !=\ \textcolor{keyword}{null})\ Destroy(agent);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \_spawnedAgents.Clear();}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_aa07670db432e7ae6251c9c5fb9f5735c}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!GetInitialRotation@{GetInitialRotation}}
+\index{GetInitialRotation@{GetInitialRotation}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{GetInitialRotation()}{GetInitialRotation()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_aa07670db432e7ae6251c9c5fb9f5735c} 
+Quaternion OOP\+\_\+\+Scripts.\+Spawner.\+Get\+Initial\+Rotation (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gibt die Startrotation zurück. 
+
+\begin{DoxyReturn}{Rückgabe}
+Quaternion für die Rotation
+\end{DoxyReturn}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00271}{271}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ yAngle\ =\ randomizeRotationY\ ?\ Random.Range(0f,\ 360f)\ :\ 0f;}
+\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Quaternion.Euler(0f,\ yAngle,\ 0f);}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_add9a0de08dceaf416bd8cbca1b6b0cc4}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!GetPrefabRadius@{GetPrefabRadius}}
+\index{GetPrefabRadius@{GetPrefabRadius}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{GetPrefabRadius()}{GetPrefabRadius()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_add9a0de08dceaf416bd8cbca1b6b0cc4} 
+float OOP\+\_\+\+Scripts.\+Spawner.\+Get\+Prefab\+Radius (\begin{DoxyParamCaption}\item[{Game\+Object}]{prefab}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Ermittelt den Radius des Prefabs anhand des Renderers. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em prefab} & Prefab\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Radius
+\end{DoxyReturn}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00282}{282}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ var\ rend\ =\ prefab.GetComponentInChildren<Renderer>();}
+\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rend\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rend.bounds.extents.magnitude\ *\ agentScale;}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0.5f\ *\ agentScale;\ }
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a5b99816a0891710647395a4088e8a26a}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!GetRandomPositionInArea@{GetRandomPositionInArea}}
+\index{GetRandomPositionInArea@{GetRandomPositionInArea}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{GetRandomPositionInArea()}{GetRandomPositionInArea()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a5b99816a0891710647395a4088e8a26a} 
+Vector3 OOP\+\_\+\+Scripts.\+Spawner.\+Get\+Random\+Position\+In\+Area (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gibt eine zufällige Position im Bereich zurück. 
+
+\begin{DoxyReturn}{Rückgabe}
+Position
+\end{DoxyReturn}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00259}{259}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ halfSize\ =\ areaSize\ *\ 0.5f;}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ randomX\ =\ Random.Range(-\/halfSize.x,\ halfSize.x);}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ randomZ\ =\ Random.Range(-\/halfSize.z,\ halfSize.z);}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Vector3(transform.position.x\ +\ randomX,\ 0f,\ transform.position.z\ +\ randomZ);}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a144e8b4d7f11b347f8f30a2d88da3a3b}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!HasValidPrefabs@{HasValidPrefabs}}
+\index{HasValidPrefabs@{HasValidPrefabs}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{HasValidPrefabs()}{HasValidPrefabs()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a144e8b4d7f11b347f8f30a2d88da3a3b} 
+bool OOP\+\_\+\+Scripts.\+Spawner.\+Has\+Valid\+Prefabs (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Prüft, ob gültige Prefabs zugewiesen sind. 
+
+\begin{DoxyReturn}{Rückgabe}
+True, wenn mindestens ein Prefab vorhanden ist.
+\end{DoxyReturn}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00218}{218}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ malePrefab\ !=\ \textcolor{keyword}{null}\ ||\ femalePrefab\ !=\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a902936a7d81aa269ec1137dcc7331748}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!OnDrawGizmosSelected@{OnDrawGizmosSelected}}
+\index{OnDrawGizmosSelected@{OnDrawGizmosSelected}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmosSelected()}{OnDrawGizmosSelected()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a902936a7d81aa269ec1137dcc7331748} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+On\+Draw\+Gizmos\+Selected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Zeichnet den Spawnbereich im Editor. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00337}{337}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ center\ =\ \textcolor{keyword}{new}\ Vector3(transform.position.x,\ 0f,\ transform.position.z);}
+\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.color\ =\ \textcolor{keyword}{new}\ Color(0f,\ 1f,\ 0f,\ 0.2f);}
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.DrawCube(center,\ areaSize);}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.color\ =\ Color.green;}
+\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.DrawWireCube(center,\ areaSize);}
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a63feaaaf3137a539272a9f6bfbf7ea99}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!RemoveAgents@{RemoveAgents}}
+\index{RemoveAgents@{RemoveAgents}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{RemoveAgents()}{RemoveAgents()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a63feaaaf3137a539272a9f6bfbf7ea99} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Remove\+Agents (\begin{DoxyParamCaption}\item[{int}]{count\+To\+Remove}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Entfernt die letzten N Agenten. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em count\+To\+Remove} & Anzahl der zu entfernenden Agenten\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00156}{156}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ countToRemove\ \&\&\ \_spawnedAgents.Count\ >\ 0;\ i++)}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ lastIndex\ =\ \_spawnedAgents.Count\ -\/\ 1;}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ agent\ =\ \_spawnedAgents[lastIndex];}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (agent\ !=\ \textcolor{keyword}{null})\ Destroy(agent);}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_spawnedAgents.RemoveAt(lastIndex);}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a4c20ea64a641544f900420f93e243011}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!RespawnAllAgents@{RespawnAllAgents}}
+\index{RespawnAllAgents@{RespawnAllAgents}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{RespawnAllAgents()}{RespawnAllAgents()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a4c20ea64a641544f900420f93e243011} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Respawn\+All\+Agents (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Löscht alle Agenten und spawnt die gewünschte Anzahl neu. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00170}{170}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ ClearExistingAgents();}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!HasValidPrefabs())}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}Spawner:\ Keine\ Prefabs\ zugewiesen!"{}});}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ spawnCount;\ i++)}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SpawnSingleAgent(i);}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateUiText();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a566b4fe17f8d8d3986430a12b09fd578}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!SelectPrefab@{SelectPrefab}}
+\index{SelectPrefab@{SelectPrefab}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{SelectPrefab()}{SelectPrefab()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a566b4fe17f8d8d3986430a12b09fd578} 
+Game\+Object OOP\+\_\+\+Scripts.\+Spawner.\+Select\+Prefab (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Wählt das Prefab anhand des Index (abwechselnd männlich/\+weiblich). 
+
+
+\begin{DoxyParams}{Parameter}
+{\em index} & Index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Prefab Game\+Object
+\end{DoxyReturn}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00228}{228}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (malePrefab\ !=\ \textcolor{keyword}{null}\ \&\&\ femalePrefab\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (index\ \%\ 2\ ==\ 0)\ ?\ malePrefab\ :\ femalePrefab;}
+\DoxyCodeLine{00233\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ malePrefab\ !=\ \textcolor{keyword}{null}\ ?\ malePrefab\ :\ femalePrefab;}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_aa23af95ddaee4e505572c09c633be0df}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!SetCountFromSlider@{SetCountFromSlider}}
+\index{SetCountFromSlider@{SetCountFromSlider}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{SetCountFromSlider()}{SetCountFromSlider()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_aa23af95ddaee4e505572c09c633be0df} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Set\+Count\+From\+Slider (\begin{DoxyParamCaption}\item[{float}]{slider\+Value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Setzt die Agentenanzahl über den UI-\/\+Slider. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em slider\+Value} & Neuer Wert des Sliders\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00117}{117}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newCount\ =\ Mathf.Max(0,\ Mathf.RoundToInt(sliderValue));}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (spawnCount\ ==\ newCount)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newCount\ >\ spawnCount)}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ toAdd\ =\ newCount\ -\/\ spawnCount;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddAgents(toAdd);}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ toRemove\ =\ spawnCount\ -\/\ newCount;}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RemoveAgents(toRemove);}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ spawnCount\ =\ newCount;}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateUiText();}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_adabe9302b79054010fcca4c95870a35f}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!SetupAgentHierarchy@{SetupAgentHierarchy}}
+\index{SetupAgentHierarchy@{SetupAgentHierarchy}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{SetupAgentHierarchy()}{SetupAgentHierarchy()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_adabe9302b79054010fcca4c95870a35f} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Setup\+Agent\+Hierarchy (\begin{DoxyParamCaption}\item[{Game\+Object}]{agent}{, }\item[{string}]{base\+Name}{, }\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Setzt Name, Skalierung und Hierarchie für den Agenten. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em agent} & Agent Game\+Object\\
+\hline
+{\em base\+Name} & Basisname\\
+\hline
+{\em index} & Index\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00298}{298}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00299\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \ \ \ \ agent.name\ =\ \$\textcolor{stringliteral}{"{}\{baseName\}\_\{index\}"{}};}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ agent.transform.localScale\ =\ Vector3.one\ *\ agentScale;}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (agentContainer\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ agent.transform.SetParent(agentContainer,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ agent.transform.SetParent(transform,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_ac34fea427fcb9dc3a8177765d660ee11}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!SetupRandomWalker@{SetupRandomWalker}}
+\index{SetupRandomWalker@{SetupRandomWalker}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{SetupRandomWalker()}{SetupRandomWalker()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_ac34fea427fcb9dc3a8177765d660ee11} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Setup\+Random\+Walker (\begin{DoxyParamCaption}\item[{Game\+Object}]{agent}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initialisiert das Random\+Movement-\/\+Script des Agenten. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em agent} & Agent Game\+Object\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00312}{312}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00314\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!agent.TryGetComponent(out\ RandomMovement\ walker))}
+\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ walker\ =\ agent.AddComponent<RandomMovement>();}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ randomSpeed\ =\ Random.Range(minSpeed,\ maxSpeed);}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ areaCenter\ =\ \textcolor{keyword}{new}\ Vector3(transform.position.x,\ 0f,\ transform.position.z);}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \ \ \ \ walker.InitializeMovementSettings(randomSpeed,\ areaCenter,\ areaSize);}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_ac9f9fa673fd7ea96fe6d1bb775849edb}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!SpawnSingleAgent@{SpawnSingleAgent}}
+\index{SpawnSingleAgent@{SpawnSingleAgent}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{SpawnSingleAgent()}{SpawnSingleAgent()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_ac9f9fa673fd7ea96fe6d1bb775849edb} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Spawn\+Single\+Agent (\begin{DoxyParamCaption}\item[{int}]{index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Spawnt einen einzelnen Agenten. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em index} & Index für die Namensgebung und Prefab-\/\+Auswahl\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00201}{201}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ prefabToSpawn\ =\ SelectPrefab(index);}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (prefabToSpawn\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ radius\ =\ GetPrefabRadius(prefabToSpawn);}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ position\ =\ TryFindSpawnPosition(radius);}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ Quaternion\ rotation\ =\ GetInitialRotation();}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ newAgent\ =\ Instantiate(prefabToSpawn,\ position,\ rotation);}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ SetupAgentHierarchy(newAgent,\ prefabToSpawn.name,\ index);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ SetupRandomWalker(newAgent);}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \_spawnedAgents.Add(newAgent);}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_ab5f11e1da5c3f9a5f4226f52cadbe4dc}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!Start@{Start}}
+\index{Start@{Start}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_ab5f11e1da5c3f9a5f4226f52cadbe4dc} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initialisiert den \doxylink{class_o_o_p___scripts_1_1_spawner}{Spawner} und synchronisiert den UI-\/\+Slider. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00104}{104}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (countSlider\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countSlider.SetValueWithoutNotify(spawnCount);}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ RespawnAllAgents();}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a4bb7da30ee7b2288511603d4fcf222dc}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!TryFindSpawnPosition@{TryFindSpawnPosition}}
+\index{TryFindSpawnPosition@{TryFindSpawnPosition}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{TryFindSpawnPosition()}{TryFindSpawnPosition()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a4bb7da30ee7b2288511603d4fcf222dc} 
+Vector3 OOP\+\_\+\+Scripts.\+Spawner.\+Try\+Find\+Spawn\+Position (\begin{DoxyParamCaption}\item[{float}]{agent\+Radius}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sucht eine freie Spawnposition im Bereich. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em agent\+Radius} & Radius des Agenten\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Rückgabe}
+Position im Bereich
+\end{DoxyReturn}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00242}{242}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ attempt\ =\ 0;\ attempt\ <\ maxPlacementAttempts;\ attempt++)}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ candidatePos\ =\ GetRandomPositionInArea();}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Physics.OverlapSphere(candidatePos,\ agentRadius\ *\ 0.6f,\ collisionCheckLayer).Length\ ==\ 0)}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ candidatePos;}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ GetRandomPositionInArea();}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a5a6d5344502221b136dc3e3f41ab1e0a}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!UpdateUiText@{UpdateUiText}}
+\index{UpdateUiText@{UpdateUiText}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{UpdateUiText()}{UpdateUiText()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a5a6d5344502221b136dc3e3f41ab1e0a} 
+void OOP\+\_\+\+Scripts.\+Spawner.\+Update\+Ui\+Text (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Aktualisiert die UI-\/\+Anzeige der Agentenzahl. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00326}{326}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (countDisplay\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countDisplay.text\ =\ \$\textcolor{stringliteral}{"{}\{spawnCount\}"{}};}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!\_spawnedAgents@{\_spawnedAgents}}
+\index{\_spawnedAgents@{\_spawnedAgents}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{\_spawnedAgents}{\_spawnedAgents}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542} 
+readonly List$<$Game\+Object$>$ OOP\+\_\+\+Scripts.\+Spawner.\+\_\+spawned\+Agents = new List$<$Game\+Object$>$()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00093}{93}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_af9d60db7441ab4a187fa594adb55d04a}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!agentContainer@{agentContainer}}
+\index{agentContainer@{agentContainer}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{agentContainer}{agentContainer}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_af9d60db7441ab4a187fa594adb55d04a} 
+Transform OOP\+\_\+\+Scripts.\+Spawner.\+agent\+Container\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Optional:\+ Container-\/\+Objekt für Agenten. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00085}{85}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_af5c0dce0d064c36d7fb0038c2a5532bf}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!agentScale@{agentScale}}
+\index{agentScale@{agentScale}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{agentScale}{agentScale}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_af5c0dce0d064c36d7fb0038c2a5532bf} 
+float OOP\+\_\+\+Scripts.\+Spawner.\+agent\+Scale = 1f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Skalierung der Agenten. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00064}{64}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a8520b571f0d22429e05bad17b4d63a90}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!areaSize@{areaSize}}
+\index{areaSize@{areaSize}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{areaSize}{areaSize}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a8520b571f0d22429e05bad17b4d63a90} 
+Vector3 OOP\+\_\+\+Scripts.\+Spawner.\+area\+Size = new Vector3(10f, 2f, 10f)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Größe des Bereichs, in dem die Agenten platziert werden. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00037}{37}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a6e2ec7b1079ffe7f06f84797891ce75a}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!collisionCheckLayer@{collisionCheckLayer}}
+\index{collisionCheckLayer@{collisionCheckLayer}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{collisionCheckLayer}{collisionCheckLayer}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a6e2ec7b1079ffe7f06f84797891ce75a} 
+Layer\+Mask OOP\+\_\+\+Scripts.\+Spawner.\+collision\+Check\+Layer = \texorpdfstring{$\sim$}{\string~}0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Layer für Kollisionsprüfung. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00091}{91}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a9ac5754c12fbe359d38fec493132ddba}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!countDisplay@{countDisplay}}
+\index{countDisplay@{countDisplay}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{countDisplay}{countDisplay}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a9ac5754c12fbe359d38fec493132ddba} 
+TMP\+\_\+\+Text OOP\+\_\+\+Scripts.\+Spawner.\+count\+Display\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zeigt die aktuelle Anzahl der Agenten im UI an. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00050}{50}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_ac1b9bfe405d10be8bdb41d09322eff9e}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!countSlider@{countSlider}}
+\index{countSlider@{countSlider}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{countSlider}{countSlider}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_ac1b9bfe405d10be8bdb41d09322eff9e} 
+Slider OOP\+\_\+\+Scripts.\+Spawner.\+count\+Slider\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Optional:\+ UI Slider, damit Start-\/\+Wert synchronisiert wird. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00099}{99}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a546bbcae70ecfcc67fe1a8e593ac35ec}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!femalePrefab@{femalePrefab}}
+\index{femalePrefab@{femalePrefab}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{femalePrefab}{femalePrefab}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a546bbcae70ecfcc67fe1a8e593ac35ec} 
+Game\+Object OOP\+\_\+\+Scripts.\+Spawner.\+female\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prefab für weibliche Agenten. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00060}{60}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!malePrefab@{malePrefab}}
+\index{malePrefab@{malePrefab}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{malePrefab}{malePrefab}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375} 
+Game\+Object OOP\+\_\+\+Scripts.\+Spawner.\+male\+Prefab\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Prefab für männliche Agenten. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00056}{56}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a3d22d61ae0b4d717fb81c6877cbfd819}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!maxPlacementAttempts@{maxPlacementAttempts}}
+\index{maxPlacementAttempts@{maxPlacementAttempts}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{maxPlacementAttempts}{maxPlacementAttempts}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a3d22d61ae0b4d717fb81c6877cbfd819} 
+int OOP\+\_\+\+Scripts.\+Spawner.\+max\+Placement\+Attempts = 10\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wie oft versucht wird, eine freie Position zu finden. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00043}{43}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a6bef6e4f92d66b598ad5f24f3d0377d1}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!maxSpeed@{maxSpeed}}
+\index{maxSpeed@{maxSpeed}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{maxSpeed}{maxSpeed}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a6bef6e4f92d66b598ad5f24f3d0377d1} 
+float OOP\+\_\+\+Scripts.\+Spawner.\+max\+Speed = 2f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Maximale Bewegungsgeschwindigkeit der Agenten. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00074}{74}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_ab3dbbc8d42dfe09d28bb9ea5c741ed50}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!minSpeed@{minSpeed}}
+\index{minSpeed@{minSpeed}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{minSpeed}{minSpeed}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_ab3dbbc8d42dfe09d28bb9ea5c741ed50} 
+float OOP\+\_\+\+Scripts.\+Spawner.\+min\+Speed = 0.\+5f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Minimale Bewegungsgeschwindigkeit der Agenten. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00070}{70}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_aea8e99fcb7c87aa325560406c2902d86}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!randomizeRotationY@{randomizeRotationY}}
+\index{randomizeRotationY@{randomizeRotationY}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{randomizeRotationY}{randomizeRotationY}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_aea8e99fcb7c87aa325560406c2902d86} 
+bool OOP\+\_\+\+Scripts.\+Spawner.\+randomize\+RotationY = true\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ob die Y-\/\+Rotation zufällig gewählt wird. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00078}{78}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}\index{OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}!spawnCount@{spawnCount}}
+\index{spawnCount@{spawnCount}!OOP\_Scripts.Spawner@{OOP\_Scripts.Spawner}}
+\doxysubsubsection{\texorpdfstring{spawnCount}{spawnCount}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9} 
+int OOP\+\_\+\+Scripts.\+Spawner.\+spawn\+Count = 20\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Anzahl der Agenten, die generiert werden sollen. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_8cs_source_l00031}{31}} der Datei \doxymbox{\hyperlink{_spawner_8cs_source}{Spawner.\+cs}}.
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:\+\begin{DoxyCompactItemize}
+\item 
+OOP-\/\+Scripts/\+\doxymbox{\hyperlink{_spawner_8cs}{Spawner.\+cs}}\end{DoxyCompactItemize}

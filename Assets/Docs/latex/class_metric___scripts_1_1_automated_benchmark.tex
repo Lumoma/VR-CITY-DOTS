@@ -1,0 +1,516 @@
+\doxysection{Metric\+\_\+\+Scripts.\+Automated\+Benchmark Klassenreferenz}
+\hypertarget{class_metric___scripts_1_1_automated_benchmark}{}\label{class_metric___scripts_1_1_automated_benchmark}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+
+
+Führt automatisierte Benchmarks für verschiedene Agentenzahlen durch und speichert die Ergebnisse als CSV.  
+
+
+Klassendiagramm für Metric\+\_\+\+Scripts.\+Automated\+Benchmark:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_metric___scripts_1_1_automated_benchmark}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Typen}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945f}{Benchmark\+State}} \{ \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c}{Idle}}
+, \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fa5bda814c4aedb126839228f1a3d92f09}{Running}}
+, \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fa8f3d10eb21bd36347c258679eba9e92b}{Finished}}
+ \}
+\begin{DoxyCompactList}\small\item\em Status des Benchmarks. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_ae584179223ed0018c52d58a0fcad01ac}{Start\+Full\+Benchmark\+Chain}} ()
+\begin{DoxyCompactList}\small\item\em Startet die Benchmark-\/\+Sequenz (z.\+B. per Button). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+int\+[$\,$]\+ \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a5a2dd32b1c93174d68cfbca914af628c}{agent\+Counts}} = \{ 100, 500, 1000, 2500, 5000, 7500, 10000 \}
+\begin{DoxyCompactList}\small\item\em Getestete Agentenzahlen. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_afe632670753e3a4b0a26b37590a7b272}{warmup\+Time}} = 2.\+0f
+\begin{DoxyCompactList}\small\item\em Aufwärmzeit vor Messung (Sekunden). \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_aeee132688c3d14100fb272d2c0cca762}{measure\+Time}} = 5.\+0f
+\begin{DoxyCompactList}\small\item\em Messdauer pro Schritt (Sekunden). \end{DoxyCompactList}\item 
+string \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a83227d2a354c1545c090060e2f6e72e2}{base\+File\+Name}} = "{}Benchmark\+Result"{}
+\begin{DoxyCompactList}\small\item\em Basisname für die Ergebnisdatei. \end{DoxyCompactList}\item 
+TMP\+\_\+\+Text \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a8d509a8ee4dc9c34270ae65b41f51587}{status\+Text}}
+\begin{DoxyCompactList}\small\item\em Optionales Textfeld zur Statusanzeige. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerator \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a6b4ed259af930320efc60b6bc3bafbb8}{Init\+And\+Run\+Sequence}} ()
+\begin{DoxyCompactList}\small\item\em Initialisiert und führt die Benchmark-\/\+Sequenz aus. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a264e130bbb3aea42cf13f05f61a65bd7}{Find\+References\+In\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Sucht OOP-\/ oder DOTS-\/\+Spawner in der Szene. \end{DoxyCompactList}\item 
+IEnumerator \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_abcbf7458bb5192023d838e73d3df1650}{Run\+Measurement\+Loop}} ()
+\begin{DoxyCompactList}\small\item\em Führt die Messschleife für alle Agentenzahlen durch. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a7ac1c704ebfde23347746862ea20db3e}{Set\+Agent\+Count}} (int count)
+\begin{DoxyCompactList}\small\item\em Setzt die Agentenzahl im jeweiligen \doxylink{class_o_o_p___scripts_1_1_spawner}{Spawner}. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a2b428685eae6ebcbfeb686429067e7f8}{Record\+Metric}} (String\+Builder csv, string scene\+Name, int count, List$<$ float $>$ frame\+Times)
+\begin{DoxyCompactList}\small\item\em Berechnet und speichert die Metriken für einen Messschritt. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a8bbab868579e6237b0be1314ac8355bb}{Save\+File}} (string scene\+Name, string content)
+\begin{DoxyCompactList}\small\item\em Speichert die CSV-\/\+Datei auf dem Gerät (PC oder Android). \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a6e3ac1436207442db43786bf8bc61b7f}{Log\+Status}} (string msg)
+\begin{DoxyCompactList}\small\item\em Gibt Statusmeldungen im UI und in der Konsole aus. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner}{Spawner}} \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_acfeceb55650effc4f99465e4b7fa0068}{\+\_\+current\+Oop\+Spawner}}
+\item 
+\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_u_i_bridge}{Spawner\+UIBridge}} \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_a8858db1bbc980d7ee8b781394a28325c}{\+\_\+current\+Dots\+Bridge}}
+\item 
+\doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945f}{Benchmark\+State}} \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_ae6859692075466ea401c71f428fbf237}{\+\_\+state}} = \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c}{Benchmark\+State.\+Idle}}
+\item 
+string \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_aaa977ef18127263096efa26a34164dda}{\+\_\+current\+Type\+String}} = "{}Unknown"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Führt automatisierte Benchmarks für verschiedene Agentenzahlen durch und speichert die Ergebnisse als CSV. 
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00024}{24}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_doc-enum-members}
+\doxysubsection{Dokumentation der Aufzählungstypen}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945f}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!BenchmarkState@{BenchmarkState}}
+\index{BenchmarkState@{BenchmarkState}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{BenchmarkState}{BenchmarkState}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945f} 
+enum \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945f}{Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+Benchmark\+State}}}
+
+
+
+Status des Benchmarks. 
+
+\begin{DoxyEnumFields}[2]{Aufzählungswerte}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Idle@{Idle}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!Idle@{Idle}}
+}\Hypertarget{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c}\label{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c} 
+Idle&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Running@{Running}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!Running@{Running}}
+}\Hypertarget{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fa5bda814c4aedb126839228f1a3d92f09}\label{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fa5bda814c4aedb126839228f1a3d92f09} 
+Running&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Finished@{Finished}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!Finished@{Finished}}
+}\Hypertarget{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fa8f3d10eb21bd36347c258679eba9e92b}\label{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fa8f3d10eb21bd36347c258679eba9e92b} 
+Finished&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00029}{29}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00029\ \{\ Idle,\ Running,\ Finished\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a264e130bbb3aea42cf13f05f61a65bd7}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!FindReferencesInScene@{FindReferencesInScene}}
+\index{FindReferencesInScene@{FindReferencesInScene}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{FindReferencesInScene()}{FindReferencesInScene()}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a264e130bbb3aea42cf13f05f61a65bd7} 
+bool Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+Find\+References\+In\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Sucht OOP-\/ oder DOTS-\/\+Spawner in der Szene. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00094}{94}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \_currentOopSpawner\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \_currentDotsBridge\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \_currentOopSpawner\ =\ FindFirstObjectByType<Spawner>();}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_currentOopSpawner\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_currentTypeString\ =\ \textcolor{stringliteral}{"{}OOP"{}};}
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LogStatus(\textcolor{stringliteral}{"{}OOP\ Spawner\ erkannt."{}});}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \_currentDotsBridge\ =\ FindFirstObjectByType<SpawnerUIBridge>();}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_currentDotsBridge\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_currentTypeString\ =\ \textcolor{stringliteral}{"{}DOTS"{}};}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LogStatus(\textcolor{stringliteral}{"{}DOTS\ Bridge\ erkannt."{}});}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a6b4ed259af930320efc60b6bc3bafbb8}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!InitAndRunSequence@{InitAndRunSequence}}
+\index{InitAndRunSequence@{InitAndRunSequence}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{InitAndRunSequence()}{InitAndRunSequence()}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a6b4ed259af930320efc60b6bc3bafbb8} 
+IEnumerator Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+Init\+And\+Run\+Sequence (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initialisiert und führt die Benchmark-\/\+Sequenz aus. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00073}{73}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ LogStatus(\$\textcolor{stringliteral}{"{}Szene:\ \{SceneManager.GetActiveScene().name\}.\ Suche\ Spawner..."{}});}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ foundTarget\ =\ FindReferencesInScene();}
+\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (foundTarget)}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ StartCoroutine(RunMeasurementLoop());}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError(\textcolor{stringliteral}{"{}Keinen\ Spawner\ (weder\ OOP\ noch\ DOTS)\ gefunden!"{}});}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LogStatus(\textcolor{stringliteral}{"{}Fehler:\ Kein\ Spawner\ gefunden."{}});}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \_state\ =\ BenchmarkState.Finished;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ LogStatus(\textcolor{stringliteral}{"{}Benchmark\ beendet.\ Datei\ gespeichert."{}});}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a6e3ac1436207442db43786bf8bc61b7f}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!LogStatus@{LogStatus}}
+\index{LogStatus@{LogStatus}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{LogStatus()}{LogStatus()}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a6e3ac1436207442db43786bf8bc61b7f} 
+void Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+Log\+Status (\begin{DoxyParamCaption}\item[{string}]{msg}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Gibt Statusmeldungen im UI und in der Konsole aus. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00215}{215}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (statusText\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ statusText.text\ =\ msg;}
+\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}[AutoBenchmark]\ \{msg\}"{}});}
+\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a2b428685eae6ebcbfeb686429067e7f8}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!RecordMetric@{RecordMetric}}
+\index{RecordMetric@{RecordMetric}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{RecordMetric()}{RecordMetric()}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a2b428685eae6ebcbfeb686429067e7f8} 
+void Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+Record\+Metric (\begin{DoxyParamCaption}\item[{String\+Builder}]{csv}{, }\item[{string}]{scene\+Name}{, }\item[{int}]{count}{, }\item[{List$<$ float $>$}]{frame\+Times}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Berechnet und speichert die Metriken für einen Messschritt. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00162}{162}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (frameTimes.Count\ ==\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ avgFrameTime\ =\ frameTimes.Average();}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ avgFPS\ =\ 1.0f\ /\ avgFrameTime;}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ minFPS\ =\ 1.0f\ /\ frameTimes.Max();}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ maxFPS\ =\ 1.0f\ /\ frameTimes.Min();}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ frameTimes.Sort((a,\ b)\ =>\ b.CompareTo(a));}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index1Percent\ =\ Mathf.CeilToInt(frameTimes.Count\ *\ 0.01f);}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ p1Low\ =\ 1.0f\ /\ frameTimes[Mathf.Clamp(index1Percent,\ 0,\ frameTimes.Count\ -\/\ 1)];}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ line\ =\ \textcolor{keywordtype}{string}.Format(System.Globalization.CultureInfo.InvariantCulture,}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\{0\};\{1\};\{2\};\{3:F2\};\{4:F2\};\{5:F2\};\{6:F2\};\{7:F4\}"{}},}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sceneName,\ \_currentTypeString,\ count,\ avgFPS,\ minFPS,\ maxFPS,\ p1Low,\ avgFrameTime\ *\ 1000f}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ csv.AppendLine(line);}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_abcbf7458bb5192023d838e73d3df1650}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!RunMeasurementLoop@{RunMeasurementLoop}}
+\index{RunMeasurementLoop@{RunMeasurementLoop}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{RunMeasurementLoop()}{RunMeasurementLoop()}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_abcbf7458bb5192023d838e73d3df1650} 
+IEnumerator Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+Run\+Measurement\+Loop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Führt die Messschleife für alle Agentenzahlen durch. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00118}{118}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ StringBuilder\ csv\ =\ \textcolor{keyword}{new}\ StringBuilder();}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ sceneName\ =\ SceneManager.GetActiveScene().name;}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ csv.AppendLine(\textcolor{stringliteral}{"{}Scene;Type;AgentCount;AvgFPS;MinFPS;MaxFPS;1PercentLowFPS;AvgFrameTime\_ms"{}});}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\textcolor{keywordtype}{int}\ count\ \textcolor{keywordflow}{in}\ agentCounts)}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LogStatus(\$\textcolor{stringliteral}{"{}Messe\ \{count\}\ Agenten\ (\{\_currentTypeString\})..."{}});}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SetAgentCount(count);}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ WaitForSeconds(warmupTime);}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ List<float>\ frames\ =\ \textcolor{keyword}{new}\ List<float>();}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ elapsed\ =\ 0f;}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}\ (elapsed\ <\ measureTime)}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ dt\ =\ Time.unscaledDeltaTime;}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ frames.Add(dt);}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ elapsed\ +=\ dt;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RecordMetric(csv,\ sceneName,\ count,\ frames);}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ SaveFile(sceneName,\ csv.ToString());}
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ SetAgentCount(0);}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ yield\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ WaitForSeconds(1.0f);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a8bbab868579e6237b0be1314ac8355bb}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!SaveFile@{SaveFile}}
+\index{SaveFile@{SaveFile}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{SaveFile()}{SaveFile()}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a8bbab868579e6237b0be1314ac8355bb} 
+void Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+Save\+File (\begin{DoxyParamCaption}\item[{string}]{scene\+Name}{, }\item[{string}]{content}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Speichert die CSV-\/\+Datei auf dem Gerät (PC oder Android). 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00182}{182}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ timestamp\ =\ DateTime.Now.ToString(\textcolor{stringliteral}{"{}yyyy-\/MM-\/dd\_HH-\/mm-\/ss"{}});}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ fileName\ =\ \$\textcolor{stringliteral}{"{}\{baseFileName\}\_\{sceneName\}\_\{\_currentTypeString\}\_\{timestamp\}.csv"{}};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ path;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Application.platform\ ==\ RuntimePlatform.Android)}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ folder\ =\ Path.Combine(Application.persistentDataPath,\ \textcolor{stringliteral}{"{}BenchmarkResults"{}});}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!Directory.Exists(folder))\ }
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Directory.CreateDirectory(folder);}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ path\ =\ Path.Combine(folder,\ fileName);}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ path\ =\ Path.Combine(Application.dataPath,\ \textcolor{stringliteral}{"{}../"{}},\ fileName);}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ File.WriteAllText(path,\ content);}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}<color=green>Gespeichert:\ \{path\}</color>"{}});}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ LogStatus(\textcolor{stringliteral}{"{}CSV\ gespeichert!"{}});}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}\ (Exception\ e)}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError(\$\textcolor{stringliteral}{"{}Fehler\ beim\ Speichern:\ \{e.Message\}"{}});}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a7ac1c704ebfde23347746862ea20db3e}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!SetAgentCount@{SetAgentCount}}
+\index{SetAgentCount@{SetAgentCount}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{SetAgentCount()}{SetAgentCount()}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a7ac1c704ebfde23347746862ea20db3e} 
+void Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+Set\+Agent\+Count (\begin{DoxyParamCaption}\item[{int}]{count}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Setzt die Agentenzahl im jeweiligen \doxylink{class_o_o_p___scripts_1_1_spawner}{Spawner}. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00147}{147}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_currentTypeString\ ==\ \textcolor{stringliteral}{"{}OOP"{}}\ \&\&\ \_currentOopSpawner\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_currentOopSpawner.SetCountFromSlider(count);}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\_currentTypeString\ ==\ \textcolor{stringliteral}{"{}DOTS"{}}\ \&\&\ \_currentDotsBridge\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_currentDotsBridge.OnSliderValueChanged(count);}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_ae584179223ed0018c52d58a0fcad01ac}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!StartFullBenchmarkChain@{StartFullBenchmarkChain}}
+\index{StartFullBenchmarkChain@{StartFullBenchmarkChain}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{StartFullBenchmarkChain()}{StartFullBenchmarkChain()}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_ae584179223ed0018c52d58a0fcad01ac} 
+void Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+Start\+Full\+Benchmark\+Chain (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Startet die Benchmark-\/\+Sequenz (z.\+B. per Button). 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00063}{63}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_state\ ==\ BenchmarkState.Running)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \_state\ =\ BenchmarkState.Running;}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ StartCoroutine(InitAndRunSequence());}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a8858db1bbc980d7ee8b781394a28325c}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!\_currentDotsBridge@{\_currentDotsBridge}}
+\index{\_currentDotsBridge@{\_currentDotsBridge}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{\_currentDotsBridge}{\_currentDotsBridge}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a8858db1bbc980d7ee8b781394a28325c} 
+\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_u_i_bridge}{Spawner\+UIBridge}} Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+\_\+current\+Dots\+Bridge\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00056}{56}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_acfeceb55650effc4f99465e4b7fa0068}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!\_currentOopSpawner@{\_currentOopSpawner}}
+\index{\_currentOopSpawner@{\_currentOopSpawner}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{\_currentOopSpawner}{\_currentOopSpawner}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_acfeceb55650effc4f99465e4b7fa0068} 
+\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner}{Spawner}} Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+\_\+current\+Oop\+Spawner\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00055}{55}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_aaa977ef18127263096efa26a34164dda}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!\_currentTypeString@{\_currentTypeString}}
+\index{\_currentTypeString@{\_currentTypeString}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{\_currentTypeString}{\_currentTypeString}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_aaa977ef18127263096efa26a34164dda} 
+string Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+\_\+current\+Type\+String = "{}Unknown"{}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00058}{58}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_ae6859692075466ea401c71f428fbf237}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!\_state@{\_state}}
+\index{\_state@{\_state}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{\_state}{\_state}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_ae6859692075466ea401c71f428fbf237} 
+\doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945f}{Benchmark\+State}} Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+\_\+state = \doxymbox{\hyperlink{class_metric___scripts_1_1_automated_benchmark_af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c}{Benchmark\+State.\+Idle}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00057}{57}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a5a2dd32b1c93174d68cfbca914af628c}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!agentCounts@{agentCounts}}
+\index{agentCounts@{agentCounts}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{agentCounts}{agentCounts}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a5a2dd32b1c93174d68cfbca914af628c} 
+int \+[$\,$]\+ Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+agent\+Counts = \{ 100, 500, 1000, 2500, 5000, 7500, 10000 \}}
+
+
+
+Getestete Agentenzahlen. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00035}{35}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00035\ \{\ 100,\ 500,\ 1000,\ 2500,\ 5000,\ 7500,\ 10000\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a83227d2a354c1545c090060e2f6e72e2}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!baseFileName@{baseFileName}}
+\index{baseFileName@{baseFileName}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{baseFileName}{baseFileName}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a83227d2a354c1545c090060e2f6e72e2} 
+string Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+base\+File\+Name = "{}Benchmark\+Result"{}}
+
+
+
+Basisname für die Ergebnisdatei. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00047}{47}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_aeee132688c3d14100fb272d2c0cca762}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!measureTime@{measureTime}}
+\index{measureTime@{measureTime}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{measureTime}{measureTime}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_aeee132688c3d14100fb272d2c0cca762} 
+float Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+measure\+Time = 5.\+0f}
+
+
+
+Messdauer pro Schritt (Sekunden). 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00043}{43}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_a8d509a8ee4dc9c34270ae65b41f51587}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!statusText@{statusText}}
+\index{statusText@{statusText}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{statusText}{statusText}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_a8d509a8ee4dc9c34270ae65b41f51587} 
+TMP\+\_\+\+Text Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+status\+Text}
+
+
+
+Optionales Textfeld zur Statusanzeige. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00053}{53}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+\Hypertarget{class_metric___scripts_1_1_automated_benchmark_afe632670753e3a4b0a26b37590a7b272}\index{Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}!warmupTime@{warmupTime}}
+\index{warmupTime@{warmupTime}!Metric\_Scripts.AutomatedBenchmark@{Metric\_Scripts.AutomatedBenchmark}}
+\doxysubsubsection{\texorpdfstring{warmupTime}{warmupTime}}
+{\footnotesize\ttfamily \label{class_metric___scripts_1_1_automated_benchmark_afe632670753e3a4b0a26b37590a7b272} 
+float Metric\+\_\+\+Scripts.\+Automated\+Benchmark.\+warmup\+Time = 2.\+0f}
+
+
+
+Aufwärmzeit vor Messung (Sekunden). 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_automated_benchmark_8cs_source_l00039}{39}} der Datei \doxymbox{\hyperlink{_automated_benchmark_8cs_source}{Automated\+Benchmark.\+cs}}.
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:\+\begin{DoxyCompactItemize}
+\item 
+Metric-\/\+Scripts/\+\doxymbox{\hyperlink{_automated_benchmark_8cs}{Automated\+Benchmark.\+cs}}\end{DoxyCompactItemize}

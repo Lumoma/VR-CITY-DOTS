@@ -1,42 +1,51 @@
-using UnityEngine;
-using TMPro; // Wichtig: Namespace für TextMeshPro
-
-public class VRFPSCounter : MonoBehaviour
+namespace OOP_Scripts
 {
-    [Header("Einstellungen")]
-    [Tooltip("Ziehe hier dein TextMeshPro Objekt rein")]
-    [SerializeField] private TMP_Text fpsText;
-    
-    [Tooltip("Wie oft soll die Anzeige aktualisiert werden? (in Sekunden)")]
-    [SerializeField] private float updateInterval = 0.5f;
+    /**
+     * @file VRFPSCounter.cs
+     * @brief Misst und zeigt die aktuelle Framerate (FPS) im VR-Modus an.
+     *
+     * Dieses Script dient zur Überwachung der Framerate in VR-Anwendungen.
+     */
+    using UnityEngine;
+    using TMPro;
 
-    private float timer = 0.0f;
-    private int frameCount = 0;
-
-    void Update()
+    /// <summary>
+    /// Zeigt die aktuelle Framerate (FPS) im VR-Modus an und färbt den Text je nach Performance.
+    /// </summary>
+    public class VRFPSCounter : MonoBehaviour
     {
-        // Addiere die vergangene Zeit (unabhängig von TimeScale)
-        timer += Time.unscaledDeltaTime;
-        frameCount++;
+        /// <summary>
+        /// TextMeshPro-Objekt zur Anzeige der FPS.
+        /// </summary>
+        [Header("Einstellungen")]
+        [Tooltip("Ziehe hier dein TextMeshPro Objekt rein")]
+        [SerializeField] private TMP_Text fpsText;
+        
+        /// <summary>
+        /// Wie oft die Anzeige aktualisiert wird (in Sekunden).
+        /// </summary>
+        [Tooltip("Wie oft soll die Anzeige aktualisiert werden? (in Sekunden)")]
+        [SerializeField] private float updateInterval = 0.5f;
 
-        // Wenn das Intervall erreicht ist, aktualisiere den Text
-        if (timer >= updateInterval)
+        private float _timer;
+        private int _frameCount;
+
+        /// <summary>
+        /// Zählt die Frames und aktualisiert die Anzeige in festen Intervallen.
+        /// </summary>
+        private void Update()
         {
-            // Berechnung der FPS: Anzahl Frames / vergangene Zeit
-            float fps = frameCount / timer;
+            _timer += Time.unscaledDeltaTime;
+            _frameCount++;
 
-            // Text aktualisieren (Mathf.Ceil rundet zur nächsten Ganzzahl auf)
-            fpsText.text = $"FPS: {Mathf.Ceil(fps)}";
-            
-            // Optional: Farbe ändern, wenn FPS niedrig sind (für VR wichtig)
-            if (fps < 72) // 72Hz ist oft das Minimum für Quest/VR
-                fpsText.color = Color.red;
-            else
-                fpsText.color = Color.green;
-
-            // Timer und Counter zurücksetzen
-            timer = 0.0f;
-            frameCount = 0;
+            if (_timer >= updateInterval)
+            {
+                float fps = _frameCount / _timer;
+                fpsText.text = $"FPS: {Mathf.Ceil(fps)}";
+                fpsText.color = fps < 72 ? Color.red : Color.green;
+                _timer = 0.0f;
+                _frameCount = 0;
+            }
         }
     }
 }

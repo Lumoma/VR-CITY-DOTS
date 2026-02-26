@@ -1,0 +1,360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>VR-CITY-DOTS: OOP-Scripts/RandomMovement.cs Quellcode</title>
+<link rel="icon" href="VR-City-Icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">VR-CITY-DOTS<span id="projectnumber">&#160;2026</span>
+   </div>
+   <div id="projectbrief">Unity C# Projekt für VR City Simulation mit DOTS und OOP.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_random_movement_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RandomMovement.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_random_movement_8cs.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="foldopen" id="foldopen00010" data-start="{" data-end="}">
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="namespace_o_o_p___scripts.html">   10</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_o_o_p___scripts.html">OOP_Scripts</a></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>{</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    [RequireComponent(typeof(Rigidbody))]</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html">   16</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_o_o_p___scripts_1_1_random_movement.html">RandomMovement</a> : MonoBehaviour</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        [Header(<span class="stringliteral">&quot;Bewegungseinstellungen&quot;</span>)]</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Geschwindigkeit der Vorwärtsbewegung.&quot;</span>)]</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a0462d3d7098cf1ef54def82adbb2bb8d">   23</a></span>        <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a0462d3d7098cf1ef54def82adbb2bb8d">movementSpeed</a> = 1f;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Distanz, um die der Walker bei einer Kollision zurückgesetzt wird.&quot;</span>)]</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a1e4a85352bb288d62a6c8b3afbef204d">   29</a></span>        <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a1e4a85352bb288d62a6c8b3afbef204d">bounceNudgeDistance</a> = 0.05f;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Wartezeit in Sekunden zwischen zwei Kollisionsreaktionen.&quot;</span>)]</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#af646de2573819c478cbe2c568aa338a7">   35</a></span>        <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#af646de2573819c478cbe2c568aa338a7">collisionCooldownDuration</a> = 0.15f;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        [Header(<span class="stringliteral">&quot;Gebietsgrenzen&quot;</span>)]</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a38b69cde9783ae2e5922e2a60c0b8180">   41</a></span>        [SerializeField] <span class="keyword">private</span> Vector3 <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a38b69cde9783ae2e5922e2a60c0b8180">areaCenter</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a6de440be1783a62570005d471491b125">   45</a></span>        [SerializeField] <span class="keyword">private</span> Vector3 <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a6de440be1783a62570005d471491b125">areaSize</a>;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#ae7df377f3176443d3e979b6b12b095e9">   50</a></span>        <span class="keyword">private</span> readonly <span class="keywordtype">float</span>[] <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#ae7df377f3176443d3e979b6b12b095e9">_turnAngles</a> = { -90f, 90f, 180f };</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a7af2415d529d73c506cde51e8e1c660d">   51</a></span>        <span class="keyword">private</span> Rigidbody <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a7af2415d529d73c506cde51e8e1c660d">_rigidBody</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a60da1e3cd848aedac7147eac7f66f965">   52</a></span>        <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a60da1e3cd848aedac7147eac7f66f965">_lastCollisionTime</a> = -10f;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a">   57</a></span>        <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code hl_enumeration" href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94">ColliderType</a> { <a class="code hl_enumvalue" href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a">Box</a>, <a class="code hl_enumvalue" href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94ab7095f057db3fefa7325ad93a04e14fd">Sphere</a> }</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span></div>
+<div class="foldopen" id="foldopen00062" data-start="{" data-end="}">
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a2363754ff005c6491372d80c6eeb986b">   62</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a2363754ff005c6491372d80c6eeb986b">Awake</a>()</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        {</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a2b90bea44c00464544b875bb9cd4c9e9">InitializeRigidbody</a>();</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
+</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span></div>
+<div class="foldopen" id="foldopen00070" data-start="{" data-end="}">
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a71d4efbf67f9dd4176e7a70248cc962c">   70</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a71d4efbf67f9dd4176e7a70248cc962c">FixedUpdate</a>()</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#af6c2d70d9d55a0d48fb51843645ab705">MoveForward</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a9ff7bcc7157b1b93573d5ce30f35d960">StabilizePhysics</a>();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#adcaf1bfa5748ac1d4474f932ee60e3de">CheckAndHandleBounds</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>        }</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="foldopen" id="foldopen00081" data-start="{" data-end="}">
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a964bd56feda942d27219704c48dbb1da">   81</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a964bd56feda942d27219704c48dbb1da">OnCollisionEnter</a>(Collision collision)</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#aab179e6ef076eb915dfae2c996e6225d">IsOnCooldown</a>()) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#aeba0a4a32adc86d7e0e34be9c5c254e6">HandleCollisionReaction</a>();</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="foldopen" id="foldopen00093" data-start="{" data-end="}">
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#af1a1e3c747ec8f47ad14fb0d74d21e49">   93</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#af1a1e3c747ec8f47ad14fb0d74d21e49">InitializeMovementSettings</a>(<span class="keywordtype">float</span> speed, Vector3 center, Vector3 size)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a0462d3d7098cf1ef54def82adbb2bb8d">movementSpeed</a> = speed;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a38b69cde9783ae2e5922e2a60c0b8180">areaCenter</a> = center;</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a6de440be1783a62570005d471491b125">areaSize</a> = size;</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        }</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span></div>
+<div class="foldopen" id="foldopen00107" data-start="{" data-end="}">
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a16d2c7245204fc248f45dcc28160a975">  107</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a16d2c7245204fc248f45dcc28160a975">ApplyVisual</a>(Mesh mesh, Material material, <span class="keywordtype">float</span> scale, <a class="code hl_enumeration" href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94">ColliderType</a> colliderType)</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        {</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a3fcb37fde6984c88eeef7d8b88b54f0f">UpdateMeshRenderer</a>(mesh, material);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            transform.localScale = Vector3.one * scale;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a1959724fdebacaf59c7a95abb6b3a5b2">UpdateCollider</a>(mesh, colliderType);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        }</div>
+</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <span class="comment">// --- Interne Logik ---</span></div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span></div>
+<div class="foldopen" id="foldopen00119" data-start="{" data-end="}">
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a2b90bea44c00464544b875bb9cd4c9e9">  119</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a2b90bea44c00464544b875bb9cd4c9e9">InitializeRigidbody</a>()</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a7af2415d529d73c506cde51e8e1c660d">_rigidBody</a> = GetComponent&lt;Rigidbody&gt;();</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            _rigidBody.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>            _rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            _rigidBody.sleepThreshold = 0f;</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <span class="comment">// Die Bitweise-Operation ist hier korrekt, da Unity dies für Constraints vorsieht.</span></div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            _rigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>        }</div>
+</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span></div>
+<div class="foldopen" id="foldopen00132" data-start="{" data-end="}">
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#af6c2d70d9d55a0d48fb51843645ab705">  132</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#af6c2d70d9d55a0d48fb51843645ab705">MoveForward</a>()</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        {</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>            _rigidBody.linearVelocity = transform.forward * <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a0462d3d7098cf1ef54def82adbb2bb8d">movementSpeed</a>;</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>        }</div>
+</div>
+<div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span></div>
+<div class="foldopen" id="foldopen00140" data-start="{" data-end="}">
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a9ff7bcc7157b1b93573d5ce30f35d960">  140</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a9ff7bcc7157b1b93573d5ce30f35d960">StabilizePhysics</a>()</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>        {</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            _rigidBody.angularVelocity = Vector3.zero;</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>        }</div>
+</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span></div>
+<div class="foldopen" id="foldopen00149" data-start="{" data-end="}">
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#aab179e6ef076eb915dfae2c996e6225d">  149</a></span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#aab179e6ef076eb915dfae2c996e6225d">IsOnCooldown</a>()</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="keywordflow">return</span> Time.time - <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a60da1e3cd848aedac7147eac7f66f965">_lastCollisionTime</a> &lt; <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#af646de2573819c478cbe2c568aa338a7">collisionCooldownDuration</a>;</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
+</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span></div>
+<div class="foldopen" id="foldopen00157" data-start="{" data-end="}">
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#adcaf1bfa5748ac1d4474f932ee60e3de">  157</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#adcaf1bfa5748ac1d4474f932ee60e3de">CheckAndHandleBounds</a>()</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        {</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a6de440be1783a62570005d471491b125">areaSize</a> == Vector3.zero) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a543a45a98dacbd526743b8a926e81af4">IsOutOfBounds</a>() &amp;&amp; !<a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#aab179e6ef076eb915dfae2c996e6225d">IsOnCooldown</a>())</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>            {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a177b770a364dfbbeee9ecc30c4299731">PerformTurnAround</a>();</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            }</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        }</div>
+</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span></div>
+<div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a543a45a98dacbd526743b8a926e81af4">  170</a></span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a543a45a98dacbd526743b8a926e81af4">IsOutOfBounds</a>()</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            Vector3 pos = transform.position;</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            Vector3 min = <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a38b69cde9783ae2e5922e2a60c0b8180">areaCenter</a> - <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a6de440be1783a62570005d471491b125">areaSize</a> * 0.5f;</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            Vector3 max = <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a38b69cde9783ae2e5922e2a60c0b8180">areaCenter</a> + <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a6de440be1783a62570005d471491b125">areaSize</a> * 0.5f;</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>            <span class="keywordtype">bool</span> outsideX = pos.x &lt; min.x || pos.x &gt; max.x;</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>            <span class="keywordtype">bool</span> outsideY = pos.y &lt; min.y || pos.y &gt; max.y;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            <span class="keywordtype">bool</span> outsideZ = pos.z &lt; min.z || pos.z &gt; max.z;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="keywordflow">return</span> outsideX || outsideY || outsideZ;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        }</div>
+</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span></div>
+<div class="foldopen" id="foldopen00184" data-start="{" data-end="}">
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a177b770a364dfbbeee9ecc30c4299731">  184</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a177b770a364dfbbeee9ecc30c4299731">PerformTurnAround</a>()</div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>        {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>            <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a60da1e3cd848aedac7147eac7f66f965">_lastCollisionTime</a> = Time.time;</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a46a00b42bf27aeffe323a36f61c1086b">RotateCharacter</a>(180f);</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#ab642a93dcd76469ed20af0b369e7ad6d">ApplyNudge</a>();</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        }</div>
+</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span></div>
+<div class="foldopen" id="foldopen00194" data-start="{" data-end="}">
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#aeba0a4a32adc86d7e0e34be9c5c254e6">  194</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#aeba0a4a32adc86d7e0e34be9c5c254e6">HandleCollisionReaction</a>()</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a60da1e3cd848aedac7147eac7f66f965">_lastCollisionTime</a> = Time.time;</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            <span class="keywordtype">float</span> randomAngle = <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#ae7df377f3176443d3e979b6b12b095e9">_turnAngles</a>[Random.Range(0, <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#ae7df377f3176443d3e979b6b12b095e9">_turnAngles</a>.Length)];</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a46a00b42bf27aeffe323a36f61c1086b">RotateCharacter</a>(randomAngle);</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#af6c2d70d9d55a0d48fb51843645ab705">MoveForward</a>();</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#ab642a93dcd76469ed20af0b369e7ad6d">ApplyNudge</a>();</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>        }</div>
+</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span></div>
+<div class="foldopen" id="foldopen00207" data-start="{" data-end="}">
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a46a00b42bf27aeffe323a36f61c1086b">  207</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a46a00b42bf27aeffe323a36f61c1086b">RotateCharacter</a>(<span class="keywordtype">float</span> angle)</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>        {</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            transform.Rotate(0f, angle, 0f, Space.Self);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>        }</div>
+</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span></div>
+<div class="foldopen" id="foldopen00215" data-start="{" data-end="}">
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#ab642a93dcd76469ed20af0b369e7ad6d">  215</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#ab642a93dcd76469ed20af0b369e7ad6d">ApplyNudge</a>()</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>        {</div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>            transform.position += transform.forward * <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a1e4a85352bb288d62a6c8b3afbef204d">bounceNudgeDistance</a>;</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>        }</div>
+</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span></div>
+<div class="foldopen" id="foldopen00223" data-start="{" data-end="}">
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a3fcb37fde6984c88eeef7d8b88b54f0f">  223</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a3fcb37fde6984c88eeef7d8b88b54f0f">UpdateMeshRenderer</a>(Mesh mesh, Material material)</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>        {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span>            <span class="keywordflow">if</span> (!TryGetComponent(out MeshFilter mf)) mf = gameObject.AddComponent&lt;MeshFilter&gt;();</div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>            <span class="keywordflow">if</span> (!TryGetComponent(out MeshRenderer mr)) mr = gameObject.AddComponent&lt;MeshRenderer&gt;();</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>            mf.mesh = mesh;</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>            mr.sharedMaterial = material;</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        }</div>
+</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span></div>
+<div class="foldopen" id="foldopen00234" data-start="{" data-end="}">
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a1959724fdebacaf59c7a95abb6b3a5b2">  234</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a1959724fdebacaf59c7a95abb6b3a5b2">UpdateCollider</a>(Mesh mesh, <a class="code hl_enumeration" href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94">ColliderType</a> colliderType)</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a2df246df6270c4b5df70ed6a28069683">RemoveExistingColliders</a>();</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            Bounds bounds = mesh != <span class="keyword">null</span> ? mesh.bounds : <span class="keyword">new</span> Bounds(Vector3.zero, Vector3.one);</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>            Vector3 scaledCenter = Vector3.Scale(bounds.center, transform.localScale);</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>            Vector3 scaledSize = Vector3.Scale(bounds.size, transform.localScale);</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>            Vector3 scaledExtents = Vector3.Scale(bounds.extents, transform.localScale);</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>            <span class="keywordflow">if</span> (colliderType == <a class="code hl_enumeration" href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94">ColliderType</a>.Box)</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>            {</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                var boxCollider = gameObject.AddComponent&lt;BoxCollider&gt;();</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                boxCollider.center = scaledCenter;</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                boxCollider.size = scaledSize;</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>            }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>            {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                var sphereCollider = gameObject.AddComponent&lt;SphereCollider&gt;();</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                sphereCollider.center = scaledCenter;</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                sphereCollider.radius = Mathf.Max(scaledExtents.x, scaledExtents.y, scaledExtents.z);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            }</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        }</div>
+</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span></div>
+<div class="foldopen" id="foldopen00258" data-start="{" data-end="}">
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a2df246df6270c4b5df70ed6a28069683">  258</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a2df246df6270c4b5df70ed6a28069683">RemoveExistingColliders</a>()</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        {</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>            <span class="keywordflow">foreach</span> (var c <span class="keywordflow">in</span> GetComponents&lt;Collider&gt;())</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            {</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>                Destroy(c);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            }</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        }</div>
+</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span></div>
+<div class="foldopen" id="foldopen00269" data-start="{" data-end="}">
+<div class="line"><a id="l00269" name="l00269"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_random_movement.html#a470a8fd9641529d6987700e91ae8e883">  269</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_random_movement.html#a470a8fd9641529d6987700e91ae8e883">OnDrawGizmosSelected</a>()</div>
+<div class="line"><a id="l00270" name="l00270"></a><span class="lineno">  270</span>        {</div>
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno">  271</span>            Gizmos.color = Color.yellow;</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>            Gizmos.DrawWireCube(<a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a38b69cde9783ae2e5922e2a60c0b8180">areaCenter</a>, <a class="code hl_variable" href="class_o_o_p___scripts_1_1_random_movement.html#a6de440be1783a62570005d471491b125">areaSize</a>);</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        }</div>
+</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>    }</div>
+</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>}</div>
+</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span> </div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html">OOP_Scripts.RandomMovement</a></div><div class="ttdoc">Steuert die zufällige Bewegung eines Agenten innerhalb eines definierten Bereichs.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">RandomMovement.cs:17</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a0462d3d7098cf1ef54def82adbb2bb8d"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a0462d3d7098cf1ef54def82adbb2bb8d">OOP_Scripts.RandomMovement.movementSpeed</a></div><div class="ttdeci">float movementSpeed</div><div class="ttdoc">Geschwindigkeit der Vorwärtsbewegung.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">RandomMovement.cs:23</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a16d2c7245204fc248f45dcc28160a975"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a16d2c7245204fc248f45dcc28160a975">OOP_Scripts.RandomMovement.ApplyVisual</a></div><div class="ttdeci">void ApplyVisual(Mesh mesh, Material material, float scale, ColliderType colliderType)</div><div class="ttdoc">Konfiguriert Mesh, Material und Collider zur Laufzeit.</div><div class="ttdef"><b>Definition</b> <a href="#l00107">RandomMovement.cs:107</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a177b770a364dfbbeee9ecc30c4299731"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a177b770a364dfbbeee9ecc30c4299731">OOP_Scripts.RandomMovement.PerformTurnAround</a></div><div class="ttdeci">void PerformTurnAround()</div><div class="ttdoc">Dreht den Agenten um 180 Grad und verschiebt ihn leicht.</div><div class="ttdef"><b>Definition</b> <a href="#l00184">RandomMovement.cs:184</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a1959724fdebacaf59c7a95abb6b3a5b2"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a1959724fdebacaf59c7a95abb6b3a5b2">OOP_Scripts.RandomMovement.UpdateCollider</a></div><div class="ttdeci">void UpdateCollider(Mesh mesh, ColliderType colliderType)</div><div class="ttdoc">Erstellt und konfiguriert den Collider.</div><div class="ttdef"><b>Definition</b> <a href="#l00234">RandomMovement.cs:234</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a1e4a85352bb288d62a6c8b3afbef204d"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a1e4a85352bb288d62a6c8b3afbef204d">OOP_Scripts.RandomMovement.bounceNudgeDistance</a></div><div class="ttdeci">float bounceNudgeDistance</div><div class="ttdoc">Distanz, um die der Agent bei einer Kollision zurückgesetzt wird.</div><div class="ttdef"><b>Definition</b> <a href="#l00029">RandomMovement.cs:29</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a2363754ff005c6491372d80c6eeb986b"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a2363754ff005c6491372d80c6eeb986b">OOP_Scripts.RandomMovement.Awake</a></div><div class="ttdeci">void Awake()</div><div class="ttdoc">Initialisiert den Rigidbody und setzt die Constraints.</div><div class="ttdef"><b>Definition</b> <a href="#l00062">RandomMovement.cs:62</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a2b90bea44c00464544b875bb9cd4c9e9"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a2b90bea44c00464544b875bb9cd4c9e9">OOP_Scripts.RandomMovement.InitializeRigidbody</a></div><div class="ttdeci">void InitializeRigidbody()</div><div class="ttdoc">Initialisiert den Rigidbody und setzt die Constraints.</div><div class="ttdef"><b>Definition</b> <a href="#l00119">RandomMovement.cs:119</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a2df246df6270c4b5df70ed6a28069683"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a2df246df6270c4b5df70ed6a28069683">OOP_Scripts.RandomMovement.RemoveExistingColliders</a></div><div class="ttdeci">void RemoveExistingColliders()</div><div class="ttdoc">Entfernt alle vorhandenen Collider.</div><div class="ttdef"><b>Definition</b> <a href="#l00258">RandomMovement.cs:258</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a38b69cde9783ae2e5922e2a60c0b8180"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a38b69cde9783ae2e5922e2a60c0b8180">OOP_Scripts.RandomMovement.areaCenter</a></div><div class="ttdeci">Vector3 areaCenter</div><div class="ttdoc">Zentrum des Bewegungsbereichs.</div><div class="ttdef"><b>Definition</b> <a href="#l00041">RandomMovement.cs:41</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a3fcb37fde6984c88eeef7d8b88b54f0f"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a3fcb37fde6984c88eeef7d8b88b54f0f">OOP_Scripts.RandomMovement.UpdateMeshRenderer</a></div><div class="ttdeci">void UpdateMeshRenderer(Mesh mesh, Material material)</div><div class="ttdoc">Aktualisiert Mesh und Material des Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00223">RandomMovement.cs:223</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a44134d2d533e70bae94bbabb45d6ab94"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94">OOP_Scripts.RandomMovement.ColliderType</a></div><div class="ttdeci">ColliderType</div><div class="ttdoc">Typ des zu verwendenden Colliders.</div><div class="ttdef"><b>Definition</b> <a href="#l00057">RandomMovement.cs:57</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a">OOP_Scripts.RandomMovement.ColliderType.Box</a></div><div class="ttdeci">@ Box</div><div class="ttdef"><b>Definition</b> <a href="#l00057">RandomMovement.cs:57</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a44134d2d533e70bae94bbabb45d6ab94ab7095f057db3fefa7325ad93a04e14fd"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a44134d2d533e70bae94bbabb45d6ab94ab7095f057db3fefa7325ad93a04e14fd">OOP_Scripts.RandomMovement.ColliderType.Sphere</a></div><div class="ttdeci">@ Sphere</div><div class="ttdef"><b>Definition</b> <a href="#l00057">RandomMovement.cs:57</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a46a00b42bf27aeffe323a36f61c1086b"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a46a00b42bf27aeffe323a36f61c1086b">OOP_Scripts.RandomMovement.RotateCharacter</a></div><div class="ttdeci">void RotateCharacter(float angle)</div><div class="ttdoc">Dreht den Agenten um den gegebenen Winkel.</div><div class="ttdef"><b>Definition</b> <a href="#l00207">RandomMovement.cs:207</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a470a8fd9641529d6987700e91ae8e883"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a470a8fd9641529d6987700e91ae8e883">OOP_Scripts.RandomMovement.OnDrawGizmosSelected</a></div><div class="ttdeci">void OnDrawGizmosSelected()</div><div class="ttdoc">Zeichnet den Bewegungsbereich im Editor.</div><div class="ttdef"><b>Definition</b> <a href="#l00269">RandomMovement.cs:269</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a543a45a98dacbd526743b8a926e81af4"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a543a45a98dacbd526743b8a926e81af4">OOP_Scripts.RandomMovement.IsOutOfBounds</a></div><div class="ttdeci">bool IsOutOfBounds()</div><div class="ttdoc">Prüft, ob der Agent außerhalb des erlaubten Bereichs ist.</div><div class="ttdef"><b>Definition</b> <a href="#l00170">RandomMovement.cs:170</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a60da1e3cd848aedac7147eac7f66f965"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a60da1e3cd848aedac7147eac7f66f965">OOP_Scripts.RandomMovement._lastCollisionTime</a></div><div class="ttdeci">float _lastCollisionTime</div><div class="ttdef"><b>Definition</b> <a href="#l00052">RandomMovement.cs:52</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a6de440be1783a62570005d471491b125"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a6de440be1783a62570005d471491b125">OOP_Scripts.RandomMovement.areaSize</a></div><div class="ttdeci">Vector3 areaSize</div><div class="ttdoc">Größe des Bewegungsbereichs.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">RandomMovement.cs:45</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a71d4efbf67f9dd4176e7a70248cc962c"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a71d4efbf67f9dd4176e7a70248cc962c">OOP_Scripts.RandomMovement.FixedUpdate</a></div><div class="ttdeci">void FixedUpdate()</div><div class="ttdoc">Führt die Bewegung und Stabilisierung in jedem FixedUpdate aus.</div><div class="ttdef"><b>Definition</b> <a href="#l00070">RandomMovement.cs:70</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a7af2415d529d73c506cde51e8e1c660d"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a7af2415d529d73c506cde51e8e1c660d">OOP_Scripts.RandomMovement._rigidBody</a></div><div class="ttdeci">Rigidbody _rigidBody</div><div class="ttdef"><b>Definition</b> <a href="#l00051">RandomMovement.cs:51</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a964bd56feda942d27219704c48dbb1da"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a964bd56feda942d27219704c48dbb1da">OOP_Scripts.RandomMovement.OnCollisionEnter</a></div><div class="ttdeci">void OnCollisionEnter(Collision collision)</div><div class="ttdoc">Reagiert auf Kollisionen mit einer Richtungsänderung.</div><div class="ttdef"><b>Definition</b> <a href="#l00081">RandomMovement.cs:81</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_a9ff7bcc7157b1b93573d5ce30f35d960"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#a9ff7bcc7157b1b93573d5ce30f35d960">OOP_Scripts.RandomMovement.StabilizePhysics</a></div><div class="ttdeci">void StabilizePhysics()</div><div class="ttdoc">Setzt die Drehgeschwindigkeit zurück.</div><div class="ttdef"><b>Definition</b> <a href="#l00140">RandomMovement.cs:140</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_aab179e6ef076eb915dfae2c996e6225d"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#aab179e6ef076eb915dfae2c996e6225d">OOP_Scripts.RandomMovement.IsOnCooldown</a></div><div class="ttdeci">bool IsOnCooldown()</div><div class="ttdoc">Prüft, ob der Cooldown nach einer Kollision aktiv ist.</div><div class="ttdef"><b>Definition</b> <a href="#l00149">RandomMovement.cs:149</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_ab642a93dcd76469ed20af0b369e7ad6d"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#ab642a93dcd76469ed20af0b369e7ad6d">OOP_Scripts.RandomMovement.ApplyNudge</a></div><div class="ttdeci">void ApplyNudge()</div><div class="ttdoc">Verschiebt den Agenten leicht nach vorne.</div><div class="ttdef"><b>Definition</b> <a href="#l00215">RandomMovement.cs:215</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_adcaf1bfa5748ac1d4474f932ee60e3de"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#adcaf1bfa5748ac1d4474f932ee60e3de">OOP_Scripts.RandomMovement.CheckAndHandleBounds</a></div><div class="ttdeci">void CheckAndHandleBounds()</div><div class="ttdoc">Prüft, ob der Agent außerhalb des Bereichs ist und dreht ihn ggf. um.</div><div class="ttdef"><b>Definition</b> <a href="#l00157">RandomMovement.cs:157</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_ae7df377f3176443d3e979b6b12b095e9"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#ae7df377f3176443d3e979b6b12b095e9">OOP_Scripts.RandomMovement._turnAngles</a></div><div class="ttdeci">readonly float[] _turnAngles</div><div class="ttdoc">Mögliche Drehwinkel für Richtungsänderungen nach Kollision.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">RandomMovement.cs:50</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_aeba0a4a32adc86d7e0e34be9c5c254e6"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#aeba0a4a32adc86d7e0e34be9c5c254e6">OOP_Scripts.RandomMovement.HandleCollisionReaction</a></div><div class="ttdeci">void HandleCollisionReaction()</div><div class="ttdoc">Reagiert auf eine Kollision mit einer zufälligen Drehung und Nudge.</div><div class="ttdef"><b>Definition</b> <a href="#l00194">RandomMovement.cs:194</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_af1a1e3c747ec8f47ad14fb0d74d21e49"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#af1a1e3c747ec8f47ad14fb0d74d21e49">OOP_Scripts.RandomMovement.InitializeMovementSettings</a></div><div class="ttdeci">void InitializeMovementSettings(float speed, Vector3 center, Vector3 size)</div><div class="ttdoc">Erlaubt externen Skripten (z.B. Spawner), die Bewegungsdaten zu setzen.</div><div class="ttdef"><b>Definition</b> <a href="#l00093">RandomMovement.cs:93</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_af646de2573819c478cbe2c568aa338a7"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#af646de2573819c478cbe2c568aa338a7">OOP_Scripts.RandomMovement.collisionCooldownDuration</a></div><div class="ttdeci">float collisionCooldownDuration</div><div class="ttdoc">Wartezeit in Sekunden zwischen zwei Kollisionsreaktionen.</div><div class="ttdef"><b>Definition</b> <a href="#l00035">RandomMovement.cs:35</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html_af6c2d70d9d55a0d48fb51843645ab705"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html#af6c2d70d9d55a0d48fb51843645ab705">OOP_Scripts.RandomMovement.MoveForward</a></div><div class="ttdeci">void MoveForward()</div><div class="ttdoc">Bewegt den Agenten vorwärts.</div><div class="ttdef"><b>Definition</b> <a href="#l00132">RandomMovement.cs:132</a></div></div>
+<div class="ttc" id="anamespace_o_o_p___scripts_html"><div class="ttname"><a href="namespace_o_o_p___scripts.html">OOP_Scripts</a></div><div class="ttdef"><b>Definition</b> <a href="#l00010">RandomMovement.cs:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_6f24fbc22be5ef266ba547ece90b7c69.html">OOP-Scripts</a></li><li class="navelem"><a href="_random_movement_8cs.html">RandomMovement.cs</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

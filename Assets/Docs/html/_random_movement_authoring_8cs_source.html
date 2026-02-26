@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>VR-CITY-DOTS: DOTS-Scripts/RandomMovementAuthoring.cs Quellcode</title>
+<link rel="icon" href="VR-City-Icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">VR-CITY-DOTS<span id="projectnumber">&#160;2026</span>
+   </div>
+   <div id="projectbrief">Unity C# Projekt für VR City Simulation mit DOTS und OOP.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_random_movement_authoring_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RandomMovementAuthoring.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_random_movement_authoring_8cs.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>Unity.Entities;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>Unity.Mathematics;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_d_o_t_s___scripts.html">DOTS_Scripts</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    [RequireComponent(typeof(Rigidbody))]</div>
+<div class="foldopen" id="foldopen00017" data-start="{" data-end="};">
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html">   17</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html">RandomMovementAuthoring</a> : MonoBehaviour</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    {</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        [Header(<span class="stringliteral">&quot;Settings&quot;</span>)]</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a0e4ef6f447524ddfb9d77c0b6431da44">   23</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a0e4ef6f447524ddfb9d77c0b6431da44">movementSpeed</a> = 5f;</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a84edb4da73a32fb0df533622559cab2c">   27</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a84edb4da73a32fb0df533622559cab2c">bounceNudge</a> = 0.5f;</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a352ef5f9958e7eea388607367da79647">   31</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a352ef5f9958e7eea388607367da79647">cooldown</a> = 0.15f;</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        [Header(<span class="stringliteral">&quot;Area&quot;</span>)]</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a1bf7a59babf2ac01140837b83dd56410">   36</a></span>        <span class="keyword">public</span> Vector3 <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a1bf7a59babf2ac01140837b83dd56410">areaCenter</a>;</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a60afecacad3d49f34de186f0d2714db8">   40</a></span>        <span class="keyword">public</span> Vector3 <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a60afecacad3d49f34de186f0d2714db8">areaSize</a> = <span class="keyword">new</span> Vector3(20, 2, 20);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span></div>
+<div class="foldopen" id="foldopen00045" data-start="{" data-end="};">
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker.html">   45</a></span>        <span class="keyword">class </span><a class="code hl_class" href="class_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker.html">Baker</a> : <a class="code hl_class" href="class_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker.html">Baker</a>&lt;RandomMovementAuthoring&gt;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        {</div>
+<div class="foldopen" id="foldopen00047" data-start="{" data-end="}">
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker.html#ad6552c388e2b6694cd55fa483e545da0">   47</a></span>            <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker.html#ad6552c388e2b6694cd55fa483e545da0">Bake</a>(<a class="code hl_class" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html">RandomMovementAuthoring</a> authoring)</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>                var entity = GetEntity(TransformUsageFlags.Dynamic);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                AddComponent(entity, <span class="keyword">new</span> <a class="code hl_struct" href="struct_d_o_t_s___scripts_1_1_random_movement_data.html">RandomMovementData</a></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>                    MovementSpeed = authoring.<a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a0e4ef6f447524ddfb9d77c0b6431da44">movementSpeed</a>,</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                    BounceNudge = authoring.<a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a84edb4da73a32fb0df533622559cab2c">bounceNudge</a>,</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                    CooldownDuration = authoring.<a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a352ef5f9958e7eea388607367da79647">cooldown</a>,</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>                    AreaCenter = authoring.<a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a1bf7a59babf2ac01140837b83dd56410">areaCenter</a>,</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                    AreaSize = authoring.<a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a60afecacad3d49f34de186f0d2714db8">areaSize</a>,</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                    LastCollisionTime = 0,</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    RandomGenerator = <span class="keyword">new</span> Unity.Mathematics.Random((uint)entity.Index + 1)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                });</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            }</div>
+</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
+</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="foldopen" id="foldopen00066" data-start="{" data-end="}">
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#afc9c05f8d1d0446a722443244cc3119e">   66</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#afc9c05f8d1d0446a722443244cc3119e">OnDrawGizmosSelected</a>()</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            Gizmos.color = Color.yellow;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            Gizmos.DrawWireCube(<a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a1bf7a59babf2ac01140837b83dd56410">areaCenter</a>, <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a60afecacad3d49f34de186f0d2714db8">areaSize</a>);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        }</div>
+</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>}</div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker_html"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker.html">DOTS_Scripts.RandomMovementAuthoring.Baker</a></div><div class="ttdoc">Baker konvertiert Inspector-Daten in DOTS-Komponenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00045">RandomMovementAuthoring.cs:46</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker_html_ad6552c388e2b6694cd55fa483e545da0"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker.html#ad6552c388e2b6694cd55fa483e545da0">DOTS_Scripts.RandomMovementAuthoring.Baker.Bake</a></div><div class="ttdeci">override void Bake(RandomMovementAuthoring authoring)</div><div class="ttdef"><b>Definition</b> <a href="#l00047">RandomMovementAuthoring.cs:47</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_random_movement_authoring_html"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html">DOTS_Scripts.RandomMovementAuthoring</a></div><div class="ttdoc">Authoring-Komponente zur Konfiguration von RandomMovementData für DOTS-Entitäten.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">RandomMovementAuthoring.cs:18</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_random_movement_authoring_html_a0e4ef6f447524ddfb9d77c0b6431da44"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a0e4ef6f447524ddfb9d77c0b6431da44">DOTS_Scripts.RandomMovementAuthoring.movementSpeed</a></div><div class="ttdeci">float movementSpeed</div><div class="ttdoc">Bewegungsgeschwindigkeit der Entität.</div><div class="ttdef"><b>Definition</b> <a href="#l00023">RandomMovementAuthoring.cs:23</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_random_movement_authoring_html_a1bf7a59babf2ac01140837b83dd56410"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a1bf7a59babf2ac01140837b83dd56410">DOTS_Scripts.RandomMovementAuthoring.areaCenter</a></div><div class="ttdeci">Vector3 areaCenter</div><div class="ttdoc">Zentrum des Bewegungsbereichs.</div><div class="ttdef"><b>Definition</b> <a href="#l00036">RandomMovementAuthoring.cs:36</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_random_movement_authoring_html_a352ef5f9958e7eea388607367da79647"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a352ef5f9958e7eea388607367da79647">DOTS_Scripts.RandomMovementAuthoring.cooldown</a></div><div class="ttdeci">float cooldown</div><div class="ttdoc">Cooldown-Zeit nach Kollision.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">RandomMovementAuthoring.cs:31</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_random_movement_authoring_html_a60afecacad3d49f34de186f0d2714db8"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a60afecacad3d49f34de186f0d2714db8">DOTS_Scripts.RandomMovementAuthoring.areaSize</a></div><div class="ttdeci">Vector3 areaSize</div><div class="ttdoc">Größe des Bewegungsbereichs.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">RandomMovementAuthoring.cs:40</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_random_movement_authoring_html_a84edb4da73a32fb0df533622559cab2c"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#a84edb4da73a32fb0df533622559cab2c">DOTS_Scripts.RandomMovementAuthoring.bounceNudge</a></div><div class="ttdeci">float bounceNudge</div><div class="ttdoc">Rückstoß nach Kollision.</div><div class="ttdef"><b>Definition</b> <a href="#l00027">RandomMovementAuthoring.cs:27</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_random_movement_authoring_html_afc9c05f8d1d0446a722443244cc3119e"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_random_movement_authoring.html#afc9c05f8d1d0446a722443244cc3119e">DOTS_Scripts.RandomMovementAuthoring.OnDrawGizmosSelected</a></div><div class="ttdeci">void OnDrawGizmosSelected()</div><div class="ttdoc">Zeichnet den Bewegungsbereich im Editor.</div><div class="ttdef"><b>Definition</b> <a href="#l00066">RandomMovementAuthoring.cs:66</a></div></div>
+<div class="ttc" id="anamespace_d_o_t_s___scripts_html"><div class="ttname"><a href="namespace_d_o_t_s___scripts.html">DOTS_Scripts</a></div><div class="ttdef"><b>Definition</b> <a href="_entity_count_u_i_bridge_8cs_source.html#l00011">EntityCountUIBridge.cs:12</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_movement_data_html"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_movement_data.html">DOTS_Scripts.RandomMovementData</a></div><div class="ttdoc">DOTS-Komponente für zufällige Bewegungen von Entitäten.</div><div class="ttdef"><b>Definition</b> <a href="_random_movement_data_8cs_source.html#l00015">RandomMovementData.cs:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_657e46be123cb4e8ba429fa690d2e77d.html">DOTS-Scripts</a></li><li class="navelem"><a href="_random_movement_authoring_8cs.html">RandomMovementAuthoring.cs</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

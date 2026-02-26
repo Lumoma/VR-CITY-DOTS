@@ -1,0 +1,232 @@
+\doxysection{Spawner.\+cs}
+\hypertarget{_spawner_8cs_source}{}\label{_spawner_8cs_source}\index{OOP-\/Scripts/Spawner.cs@{OOP-\/Scripts/Spawner.cs}}
+\doxymbox{\hyperlink{_spawner_8cs}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00010}00010\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00011}00011\ \textcolor{keyword}{using\ }UnityEngine.UI;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00013}00013\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_o_o_p___scripts}{OOP\_Scripts}}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00014}00014\ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00024}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner}{Spawner}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00025}00025\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Spawn\ Einstellungen"{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ [SerializeField,\ Tooltip(\textcolor{stringliteral}{"{}Anzahl\ der\ Agenten,\ die\ generiert\ werden\ sollen."{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00031}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{00031}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{spawnCount}}\ =\ 20;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ [SerializeField,\ Tooltip(\textcolor{stringliteral}{"{}Größe\ des\ Bereichs,\ in\ dem\ die\ Agenten\ platziert\ werden."{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00037}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a8520b571f0d22429e05bad17b4d63a90}{00037}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a8520b571f0d22429e05bad17b4d63a90}{areaSize}}\ =\ \textcolor{keyword}{new}\ Vector3(10f,\ 2f,\ 10f);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ [SerializeField,\ Tooltip(\textcolor{stringliteral}{"{}Wie\ oft\ versucht\ wird,\ eine\ freie\ Position\ zu\ finden."{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00043}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a3d22d61ae0b4d717fb81c6877cbfd819}{00043}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a3d22d61ae0b4d717fb81c6877cbfd819}{maxPlacementAttempts}}\ =\ 10;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}UI\ Referenzen"{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ [SerializeField,\ Tooltip(\textcolor{stringliteral}{"{}Zeigt\ die\ aktuelle\ Anzahl\ der\ Agenten\ im\ UI\ an."{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00050}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a9ac5754c12fbe359d38fec493132ddba}{00050}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ TMP\_Text\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a9ac5754c12fbe359d38fec493132ddba}{countDisplay}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Visuals"{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00056}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375}{00056}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375}{malePrefab}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00060}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a546bbcae70ecfcc67fe1a8e593ac35ec}{00060}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ GameObject\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a546bbcae70ecfcc67fe1a8e593ac35ec}{femalePrefab}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00064}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af5c0dce0d064c36d7fb0038c2a5532bf}{00064}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af5c0dce0d064c36d7fb0038c2a5532bf}{agentScale}}\ =\ 1f;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00065}00065\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Agenten\ Konfiguration"{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00070}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3dbbc8d42dfe09d28bb9ea5c741ed50}{00070}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3dbbc8d42dfe09d28bb9ea5c741ed50}{minSpeed}}\ =\ 0.5f;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00074}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a6bef6e4f92d66b598ad5f24f3d0377d1}{00074}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a6bef6e4f92d66b598ad5f24f3d0377d1}{maxSpeed}}\ =\ 2f;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00078}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aea8e99fcb7c87aa325560406c2902d86}{00078}}\ \ \ \ \ \ \ \ \ [SerializeField]\ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aea8e99fcb7c87aa325560406c2902d86}{randomizeRotationY}}\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Infrastruktur"{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ [SerializeField,\ Tooltip(\textcolor{stringliteral}{"{}Optional:\ Container-\/Objekt."{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00085}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af9d60db7441ab4a187fa594adb55d04a}{00085}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Transform\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af9d60db7441ab4a187fa594adb55d04a}{agentContainer}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ [SerializeField,\ Tooltip(\textcolor{stringliteral}{"{}Layer\ für\ Kollisionsprüfung."{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00091}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a6e2ec7b1079ffe7f06f84797891ce75a}{00091}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ LayerMask\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a6e2ec7b1079ffe7f06f84797891ce75a}{collisionCheckLayer}}\ =\ \string~0;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00092}00092\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00093}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}{00093}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ readonly\ List<GameObject>\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}{\_spawnedAgents}}\ =\ \textcolor{keyword}{new}\ List<GameObject>();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}Optional\ UI"{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ [SerializeField,\ Tooltip(\textcolor{stringliteral}{"{}Optional:\ UI\ Slider,\ damit\ Start-\/Wert\ synchronisiert\ wird."{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00099}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac1b9bfe405d10be8bdb41d09322eff9e}{00099}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Slider\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac1b9bfe405d10be8bdb41d09322eff9e}{countSlider}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00104}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab5f11e1da5c3f9a5f4226f52cadbe4dc}{00104}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab5f11e1da5c3f9a5f4226f52cadbe4dc}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac1b9bfe405d10be8bdb41d09322eff9e}{countSlider}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac1b9bfe405d10be8bdb41d09322eff9e}{countSlider}}.SetValueWithoutNotify(\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{spawnCount}});}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a4c20ea64a641544f900420f93e243011}{RespawnAllAgents}}();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00117}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aa23af95ddaee4e505572c09c633be0df}{00117}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aa23af95ddaee4e505572c09c633be0df}{SetCountFromSlider}}(\textcolor{keywordtype}{float}\ sliderValue)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newCount\ =\ Mathf.Max(0,\ Mathf.RoundToInt(sliderValue));}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{spawnCount}}\ ==\ newCount)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (newCount\ >\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{spawnCount}})}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ toAdd\ =\ newCount\ -\/\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{spawnCount}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a9b36aa0d38aec39408debc264575ac5a}{AddAgents}}(toAdd);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ toRemove\ =\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{spawnCount}}\ -\/\ newCount;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a63feaaaf3137a539272a9f6bfbf7ea99}{RemoveAgents}}(toRemove);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{spawnCount}}\ =\ newCount;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5a6d5344502221b136dc3e3f41ab1e0a}{UpdateUiText}}();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00139}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a9b36aa0d38aec39408debc264575ac5a}{00139}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a9b36aa0d38aec39408debc264575ac5a}{AddAgents}}(\textcolor{keywordtype}{int}\ countToAdd)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a144e8b4d7f11b347f8f30a2d88da3a3b}{HasValidPrefabs}}())}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}Spawner:\ Keine\ Prefabs\ zugewiesen!\ Keine\ Agenten\ hinzugefügt."{}});}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ countToAdd;\ i++)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac9f9fa673fd7ea96fe6d1bb775849edb}{SpawnSingleAgent}}(\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}{\_spawnedAgents}}.Count);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00151}00151\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00156}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a63feaaaf3137a539272a9f6bfbf7ea99}{00156}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a63feaaaf3137a539272a9f6bfbf7ea99}{RemoveAgents}}(\textcolor{keywordtype}{int}\ countToRemove)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ countToRemove\ \&\&\ \_spawnedAgents.Count\ >\ 0;\ i++)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ lastIndex\ =\ \_spawnedAgents.Count\ -\/\ 1;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ agent\ =\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}{\_spawnedAgents}}[lastIndex];}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (agent\ !=\ \textcolor{keyword}{null})\ Destroy(agent);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}{\_spawnedAgents}}.RemoveAt(lastIndex);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00170}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a4c20ea64a641544f900420f93e243011}{00170}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a4c20ea64a641544f900420f93e243011}{RespawnAllAgents}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a514c4ac46acb57e4bd9d53c5a732ab51}{ClearExistingAgents}}();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a144e8b4d7f11b347f8f30a2d88da3a3b}{HasValidPrefabs}}())}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}Spawner:\ Keine\ Prefabs\ zugewiesen!"{}});}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a7886419b9cee93837deb237f74c913a9}{spawnCount}};\ i++)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac9f9fa673fd7ea96fe6d1bb775849edb}{SpawnSingleAgent}}(i);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5a6d5344502221b136dc3e3f41ab1e0a}{UpdateUiText}}();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00188}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a514c4ac46acb57e4bd9d53c5a732ab51}{00188}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a514c4ac46acb57e4bd9d53c5a732ab51}{ClearExistingAgents}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ agent\ \textcolor{keywordflow}{in}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}{\_spawnedAgents}})}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (agent\ !=\ \textcolor{keyword}{null})\ Destroy(agent);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}{\_spawnedAgents}}.Clear();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00201}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac9f9fa673fd7ea96fe6d1bb775849edb}{00201}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac9f9fa673fd7ea96fe6d1bb775849edb}{SpawnSingleAgent}}(\textcolor{keywordtype}{int}\ index)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ prefabToSpawn\ =\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a566b4fe17f8d8d3986430a12b09fd578}{SelectPrefab}}(index);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (prefabToSpawn\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ radius\ =\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_add9a0de08dceaf416bd8cbca1b6b0cc4}{GetPrefabRadius}}(prefabToSpawn);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ position\ =\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a4bb7da30ee7b2288511603d4fcf222dc}{TryFindSpawnPosition}}(radius);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ Quaternion\ rotation\ =\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aa07670db432e7ae6251c9c5fb9f5735c}{GetInitialRotation}}();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ GameObject\ newAgent\ =\ Instantiate(prefabToSpawn,\ position,\ rotation);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_adabe9302b79054010fcca4c95870a35f}{SetupAgentHierarchy}}(newAgent,\ prefabToSpawn.name,\ index);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac34fea427fcb9dc3a8177765d660ee11}{SetupRandomWalker}}(newAgent);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a29b80ad47e310a86e132e0a94bc9b542}{\_spawnedAgents}}.Add(newAgent);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00213}00213\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00218}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a144e8b4d7f11b347f8f30a2d88da3a3b}{00218}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a144e8b4d7f11b347f8f30a2d88da3a3b}{HasValidPrefabs}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00219}00219\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375}{malePrefab}}\ !=\ \textcolor{keyword}{null}\ ||\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a546bbcae70ecfcc67fe1a8e593ac35ec}{femalePrefab}}\ !=\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00221}00221\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00228}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a566b4fe17f8d8d3986430a12b09fd578}{00228}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ GameObject\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a566b4fe17f8d8d3986430a12b09fd578}{SelectPrefab}}(\textcolor{keywordtype}{int}\ index)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00229}00229\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375}{malePrefab}}\ !=\ \textcolor{keyword}{null}\ \&\&\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a546bbcae70ecfcc67fe1a8e593ac35ec}{femalePrefab}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (index\ \%\ 2\ ==\ 0)\ ?\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375}{malePrefab}}\ :\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a546bbcae70ecfcc67fe1a8e593ac35ec}{femalePrefab}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00233}00233\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375}{malePrefab}}\ !=\ \textcolor{keyword}{null}\ ?\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3ef83b93c13cb39be7fa41569952375}{malePrefab}}\ :\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a546bbcae70ecfcc67fe1a8e593ac35ec}{femalePrefab}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00235}00235\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00242}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a4bb7da30ee7b2288511603d4fcf222dc}{00242}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a4bb7da30ee7b2288511603d4fcf222dc}{TryFindSpawnPosition}}(\textcolor{keywordtype}{float}\ agentRadius)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00243}00243\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00244}00244\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ attempt\ =\ 0;\ attempt\ <\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a3d22d61ae0b4d717fb81c6877cbfd819}{maxPlacementAttempts}};\ attempt++)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00246}00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ candidatePos\ =\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5b99816a0891710647395a4088e8a26a}{GetRandomPositionInArea}}();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00247}00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Physics.OverlapSphere(candidatePos,\ agentRadius\ *\ 0.6f,\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a6e2ec7b1079ffe7f06f84797891ce75a}{collisionCheckLayer}}).Length\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00248}00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ candidatePos;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00251}00251\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00252}00252\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5b99816a0891710647395a4088e8a26a}{GetRandomPositionInArea}}();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00253}00253\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00254}00254\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00259}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5b99816a0891710647395a4088e8a26a}{00259}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Vector3\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5b99816a0891710647395a4088e8a26a}{GetRandomPositionInArea}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00260}00260\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00261}00261\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ halfSize\ =\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a8520b571f0d22429e05bad17b4d63a90}{areaSize}}\ *\ 0.5f;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00262}00262\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ randomX\ =\ Random.Range(-\/halfSize.x,\ halfSize.x);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00263}00263\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ randomZ\ =\ Random.Range(-\/halfSize.z,\ halfSize.z);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00264}00264\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Vector3(transform.position.x\ +\ randomX,\ 0f,\ transform.position.z\ +\ randomZ);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00265}00265\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00266}00266\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00271}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aa07670db432e7ae6251c9c5fb9f5735c}{00271}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Quaternion\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aa07670db432e7ae6251c9c5fb9f5735c}{GetInitialRotation}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00272}00272\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00273}00273\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ yAngle\ =\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_aea8e99fcb7c87aa325560406c2902d86}{randomizeRotationY}}\ ?\ Random.Range(0f,\ 360f)\ :\ 0f;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00274}00274\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Quaternion.Euler(0f,\ yAngle,\ 0f);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00275}00275\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00282}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_add9a0de08dceaf416bd8cbca1b6b0cc4}{00282}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{float}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_add9a0de08dceaf416bd8cbca1b6b0cc4}{GetPrefabRadius}}(GameObject\ prefab)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00283}00283\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00284}00284\ \ \ \ \ \ \ \ \ \ \ \ \ var\ rend\ =\ prefab.GetComponentInChildren<Renderer>();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00285}00285\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (rend\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00286}00286\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00287}00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ rend.bounds.extents.magnitude\ *\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af5c0dce0d064c36d7fb0038c2a5532bf}{agentScale}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00288}00288\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00289}00289\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0.5f\ *\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af5c0dce0d064c36d7fb0038c2a5532bf}{agentScale}};\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00290}00290\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00298}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_adabe9302b79054010fcca4c95870a35f}{00298}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_adabe9302b79054010fcca4c95870a35f}{SetupAgentHierarchy}}(GameObject\ agent,\ \textcolor{keywordtype}{string}\ baseName,\ \textcolor{keywordtype}{int}\ index)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00299}00299\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00300}00300\ \ \ \ \ \ \ \ \ \ \ \ \ agent.name\ =\ \$\textcolor{stringliteral}{"{}\{baseName\}\_\{index\}"{}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00301}00301\ \ \ \ \ \ \ \ \ \ \ \ \ agent.transform.localScale\ =\ Vector3.one\ *\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af5c0dce0d064c36d7fb0038c2a5532bf}{agentScale}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00302}00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af9d60db7441ab4a187fa594adb55d04a}{agentContainer}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00303}00303\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ agent.transform.SetParent(\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_af9d60db7441ab4a187fa594adb55d04a}{agentContainer}},\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00304}00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00305}00305\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ agent.transform.SetParent(transform,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00306}00306\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00307}00307\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00312}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac34fea427fcb9dc3a8177765d660ee11}{00312}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ac34fea427fcb9dc3a8177765d660ee11}{SetupRandomWalker}}(GameObject\ agent)}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00313}00313\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00314}00314\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!agent.TryGetComponent(out\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement}{RandomMovement}}\ walker))}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00315}00315\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00316}00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ walker\ =\ agent.AddComponent<\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement}{RandomMovement}}>();}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00317}00317\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00318}00318\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ randomSpeed\ =\ Random.Range(\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_ab3dbbc8d42dfe09d28bb9ea5c741ed50}{minSpeed}},\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a6bef6e4f92d66b598ad5f24f3d0377d1}{maxSpeed}});}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00319}00319\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ areaCenter\ =\ \textcolor{keyword}{new}\ Vector3(transform.position.x,\ 0f,\ transform.position.z);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ walker.InitializeMovementSettings(randomSpeed,\ areaCenter,\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a8520b571f0d22429e05bad17b4d63a90}{areaSize}});}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00321}00321\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00322}00322\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00326}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5a6d5344502221b136dc3e3f41ab1e0a}{00326}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a5a6d5344502221b136dc3e3f41ab1e0a}{UpdateUiText}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00327}00327\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00328}00328\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a9ac5754c12fbe359d38fec493132ddba}{countDisplay}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00329}00329\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00330}00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ countDisplay.text\ =\ \$\textcolor{stringliteral}{"{}\{spawnCount\}"{}};}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00331}00331\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00332}00332\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00333}00333\ }
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00337}\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a902936a7d81aa269ec1137dcc7331748}{00337}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a902936a7d81aa269ec1137dcc7331748}{OnDrawGizmosSelected}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00338}00338\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00339}00339\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ center\ =\ \textcolor{keyword}{new}\ Vector3(transform.position.x,\ 0f,\ transform.position.z);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00340}00340\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.color\ =\ \textcolor{keyword}{new}\ Color(0f,\ 1f,\ 0f,\ 0.2f);}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.DrawCube(center,\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a8520b571f0d22429e05bad17b4d63a90}{areaSize}});}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.color\ =\ Color.green;}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.DrawWireCube(center,\ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_spawner_a8520b571f0d22429e05bad17b4d63a90}{areaSize}});}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00344}00344\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00345}00345\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00346}00346\ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_8cs_source_l00347}00347\ }
+
+\end{DoxyCode}

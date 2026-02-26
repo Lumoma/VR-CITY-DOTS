@@ -1,0 +1,738 @@
+\doxysection{OOP\+\_\+\+Scripts.\+Random\+Movement Klassenreferenz}
+\hypertarget{class_o_o_p___scripts_1_1_random_movement}{}\label{class_o_o_p___scripts_1_1_random_movement}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+
+
+Steuert die zufällige Bewegung eines Agenten innerhalb eines definierten Bereichs.  
+
+
+Klassendiagramm für OOP\+\_\+\+Scripts.\+Random\+Movement:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_o_o_p___scripts_1_1_random_movement}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Typen}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94}{Collider\+Type}} \{ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a}{Box}}
+, \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94ab7095f057db3fefa7325ad93a04e14fd}{Sphere}}
+ \}
+\begin{DoxyCompactList}\small\item\em Typ des zu verwendenden Colliders. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_af1a1e3c747ec8f47ad14fb0d74d21e49}{Initialize\+Movement\+Settings}} (float speed, Vector3 center, Vector3 size)
+\begin{DoxyCompactList}\small\item\em Erlaubt externen Skripten (z.\+B. \doxylink{class_o_o_p___scripts_1_1_spawner}{Spawner}), die Bewegungsdaten zu setzen. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a16d2c7245204fc248f45dcc28160a975}{Apply\+Visual}} (Mesh mesh, Material material, float scale, \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94}{Collider\+Type}} collider\+Type)
+\begin{DoxyCompactList}\small\item\em Konfiguriert Mesh, Material und Collider zur Laufzeit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a2363754ff005c6491372d80c6eeb986b}{Awake}} ()
+\begin{DoxyCompactList}\small\item\em Initialisiert den Rigidbody und setzt die Constraints. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a71d4efbf67f9dd4176e7a70248cc962c}{Fixed\+Update}} ()
+\begin{DoxyCompactList}\small\item\em Führt die Bewegung und Stabilisierung in jedem Fixed\+Update aus. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a964bd56feda942d27219704c48dbb1da}{On\+Collision\+Enter}} (Collision collision)
+\begin{DoxyCompactList}\small\item\em Reagiert auf Kollisionen mit einer Richtungsänderung. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a2b90bea44c00464544b875bb9cd4c9e9}{Initialize\+Rigidbody}} ()
+\begin{DoxyCompactList}\small\item\em Initialisiert den Rigidbody und setzt die Constraints. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_af6c2d70d9d55a0d48fb51843645ab705}{Move\+Forward}} ()
+\begin{DoxyCompactList}\small\item\em Bewegt den Agenten vorwärts. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a9ff7bcc7157b1b93573d5ce30f35d960}{Stabilize\+Physics}} ()
+\begin{DoxyCompactList}\small\item\em Setzt die Drehgeschwindigkeit zurück. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_aab179e6ef076eb915dfae2c996e6225d}{Is\+On\+Cooldown}} ()
+\begin{DoxyCompactList}\small\item\em Prüft, ob der Cooldown nach einer Kollision aktiv ist. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_adcaf1bfa5748ac1d4474f932ee60e3de}{Check\+And\+Handle\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em Prüft, ob der Agent außerhalb des Bereichs ist und dreht ihn ggf. um. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a543a45a98dacbd526743b8a926e81af4}{Is\+Out\+Of\+Bounds}} ()
+\begin{DoxyCompactList}\small\item\em Prüft, ob der Agent außerhalb des erlaubten Bereichs ist. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a177b770a364dfbbeee9ecc30c4299731}{Perform\+Turn\+Around}} ()
+\begin{DoxyCompactList}\small\item\em Dreht den Agenten um 180 Grad und verschiebt ihn leicht. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_aeba0a4a32adc86d7e0e34be9c5c254e6}{Handle\+Collision\+Reaction}} ()
+\begin{DoxyCompactList}\small\item\em Reagiert auf eine Kollision mit einer zufälligen Drehung und Nudge. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a46a00b42bf27aeffe323a36f61c1086b}{Rotate\+Character}} (float angle)
+\begin{DoxyCompactList}\small\item\em Dreht den Agenten um den gegebenen Winkel. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_ab642a93dcd76469ed20af0b369e7ad6d}{Apply\+Nudge}} ()
+\begin{DoxyCompactList}\small\item\em Verschiebt den Agenten leicht nach vorne. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a3fcb37fde6984c88eeef7d8b88b54f0f}{Update\+Mesh\+Renderer}} (Mesh mesh, Material material)
+\begin{DoxyCompactList}\small\item\em Aktualisiert Mesh und Material des Agenten. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a1959724fdebacaf59c7a95abb6b3a5b2}{Update\+Collider}} (Mesh mesh, \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94}{Collider\+Type}} collider\+Type)
+\begin{DoxyCompactList}\small\item\em Erstellt und konfiguriert den Collider. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a2df246df6270c4b5df70ed6a28069683}{Remove\+Existing\+Colliders}} ()
+\begin{DoxyCompactList}\small\item\em Entfernt alle vorhandenen Collider. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a470a8fd9641529d6987700e91ae8e883}{On\+Draw\+Gizmos\+Selected}} ()
+\begin{DoxyCompactList}\small\item\em Zeichnet den Bewegungsbereich im Editor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+float \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a0462d3d7098cf1ef54def82adbb2bb8d}{movement\+Speed}} = 1f
+\begin{DoxyCompactList}\small\item\em Geschwindigkeit der Vorwärtsbewegung. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a1e4a85352bb288d62a6c8b3afbef204d}{bounce\+Nudge\+Distance}} = 0.\+05f
+\begin{DoxyCompactList}\small\item\em Distanz, um die der Agent bei einer Kollision zurückgesetzt wird. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_af646de2573819c478cbe2c568aa338a7}{collision\+Cooldown\+Duration}} = 0.\+15f
+\begin{DoxyCompactList}\small\item\em Wartezeit in Sekunden zwischen zwei Kollisionsreaktionen. \end{DoxyCompactList}\item 
+Vector3 \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a38b69cde9783ae2e5922e2a60c0b8180}{area\+Center}}
+\begin{DoxyCompactList}\small\item\em Zentrum des Bewegungsbereichs. \end{DoxyCompactList}\item 
+Vector3 \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a6de440be1783a62570005d471491b125}{area\+Size}}
+\begin{DoxyCompactList}\small\item\em Größe des Bewegungsbereichs. \end{DoxyCompactList}\item 
+readonly float\+[$\,$]\+ \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_ae7df377f3176443d3e979b6b12b095e9}{\+\_\+turn\+Angles}} = \{ -\/90f, 90f, 180f \}
+\begin{DoxyCompactList}\small\item\em Mögliche Drehwinkel für Richtungsänderungen nach Kollision. \end{DoxyCompactList}\item 
+Rigidbody \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a7af2415d529d73c506cde51e8e1c660d}{\+\_\+rigid\+Body}}
+\item 
+float \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a60da1e3cd848aedac7147eac7f66f965}{\+\_\+last\+Collision\+Time}} = -\/10f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Steuert die zufällige Bewegung eines Agenten innerhalb eines definierten Bereichs. 
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00016}{16}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_doc-enum-members}
+\doxysubsection{Dokumentation der Aufzählungstypen}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!ColliderType@{ColliderType}}
+\index{ColliderType@{ColliderType}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{ColliderType}{ColliderType}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94} 
+enum \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94}{OOP\+\_\+\+Scripts.\+Random\+Movement.\+Collider\+Type}}}
+
+
+
+Typ des zu verwendenden Colliders. 
+
+\begin{DoxyEnumFields}[2]{Aufzählungswerte}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Box@{Box}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!Box@{Box}}
+}\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a}\label{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a} 
+Box&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Sphere@{Sphere}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!Sphere@{Sphere}}
+}\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94ab7095f057db3fefa7325ad93a04e14fd}\label{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94ab7095f057db3fefa7325ad93a04e14fd} 
+Sphere&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00057}{57}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \{\ Box,\ Sphere\ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_ab642a93dcd76469ed20af0b369e7ad6d}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!ApplyNudge@{ApplyNudge}}
+\index{ApplyNudge@{ApplyNudge}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{ApplyNudge()}{ApplyNudge()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_ab642a93dcd76469ed20af0b369e7ad6d} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Apply\+Nudge (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Verschiebt den Agenten leicht nach vorne. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00215}{215}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00217\ \ \ \ \ \ \ \ \ \ \ \ \ transform.position\ +=\ transform.forward\ *\ bounceNudgeDistance;}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a16d2c7245204fc248f45dcc28160a975}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!ApplyVisual@{ApplyVisual}}
+\index{ApplyVisual@{ApplyVisual}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{ApplyVisual()}{ApplyVisual()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a16d2c7245204fc248f45dcc28160a975} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Apply\+Visual (\begin{DoxyParamCaption}\item[{Mesh}]{mesh}{, }\item[{Material}]{material}{, }\item[{float}]{scale}{, }\item[{\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94}{Collider\+Type}}}]{collider\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konfiguriert Mesh, Material und Collider zur Laufzeit. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em mesh} & Mesh für das Objekt\\
+\hline
+{\em material} & Material für das Objekt\\
+\hline
+{\em scale} & Skalierung\\
+\hline
+{\em collider\+Type} & Typ des Colliders\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00107}{107}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateMeshRenderer(mesh,\ material);}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ transform.localScale\ =\ Vector3.one\ *\ scale;}
+\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ UpdateCollider(mesh,\ colliderType);}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a2363754ff005c6491372d80c6eeb986b}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!Awake@{Awake}}
+\index{Awake@{Awake}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a2363754ff005c6491372d80c6eeb986b} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initialisiert den Rigidbody und setzt die Constraints. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00062}{62}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ InitializeRigidbody();}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_adcaf1bfa5748ac1d4474f932ee60e3de}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!CheckAndHandleBounds@{CheckAndHandleBounds}}
+\index{CheckAndHandleBounds@{CheckAndHandleBounds}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{CheckAndHandleBounds()}{CheckAndHandleBounds()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_adcaf1bfa5748ac1d4474f932ee60e3de} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Check\+And\+Handle\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Prüft, ob der Agent außerhalb des Bereichs ist und dreht ihn ggf. um. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00157}{157}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (areaSize\ ==\ Vector3.zero)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsOutOfBounds()\ \&\&\ !IsOnCooldown())}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PerformTurnAround();}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a71d4efbf67f9dd4176e7a70248cc962c}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!FixedUpdate@{FixedUpdate}}
+\index{FixedUpdate@{FixedUpdate}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{FixedUpdate()}{FixedUpdate()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a71d4efbf67f9dd4176e7a70248cc962c} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Fixed\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Führt die Bewegung und Stabilisierung in jedem Fixed\+Update aus. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00070}{70}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ MoveForward();}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ StabilizePhysics();}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ CheckAndHandleBounds();}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_aeba0a4a32adc86d7e0e34be9c5c254e6}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!HandleCollisionReaction@{HandleCollisionReaction}}
+\index{HandleCollisionReaction@{HandleCollisionReaction}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{HandleCollisionReaction()}{HandleCollisionReaction()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_aeba0a4a32adc86d7e0e34be9c5c254e6} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Handle\+Collision\+Reaction (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Reagiert auf eine Kollision mit einer zufälligen Drehung und Nudge. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00194}{194}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \_lastCollisionTime\ =\ Time.time;}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ randomAngle\ =\ \_turnAngles[Random.Range(0,\ \_turnAngles.Length)];}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ RotateCharacter(randomAngle);}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ MoveForward();}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ ApplyNudge();}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_af1a1e3c747ec8f47ad14fb0d74d21e49}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!InitializeMovementSettings@{InitializeMovementSettings}}
+\index{InitializeMovementSettings@{InitializeMovementSettings}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{InitializeMovementSettings()}{InitializeMovementSettings()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_af1a1e3c747ec8f47ad14fb0d74d21e49} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Initialize\+Movement\+Settings (\begin{DoxyParamCaption}\item[{float}]{speed}{, }\item[{Vector3}]{center}{, }\item[{Vector3}]{size}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Erlaubt externen Skripten (z.\+B. \doxylink{class_o_o_p___scripts_1_1_spawner}{Spawner}), die Bewegungsdaten zu setzen. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em speed} & Bewegungsgeschwindigkeit\\
+\hline
+{\em center} & Zentrum des Bereichs\\
+\hline
+{\em size} & Größe des Bereichs\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00093}{93}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ movementSpeed\ =\ speed;}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ areaCenter\ =\ center;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ areaSize\ =\ size;}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a2b90bea44c00464544b875bb9cd4c9e9}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!InitializeRigidbody@{InitializeRigidbody}}
+\index{InitializeRigidbody@{InitializeRigidbody}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{InitializeRigidbody()}{InitializeRigidbody()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a2b90bea44c00464544b875bb9cd4c9e9} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Initialize\+Rigidbody (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initialisiert den Rigidbody und setzt die Constraints. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00119}{119}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \_rigidBody\ =\ GetComponent<Rigidbody>();}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \_rigidBody.useGravity\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \_rigidBody.collisionDetectionMode\ =\ CollisionDetectionMode.ContinuousDynamic;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \_rigidBody.sleepThreshold\ =\ 0f;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Die\ Bitweise-\/Operation\ ist\ hier\ korrekt,\ da\ Unity\ dies\ für\ Constraints\ vorsieht.}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \_rigidBody.constraints\ =\ RigidbodyConstraints.FreezeRotationX\ |\ RigidbodyConstraints.FreezeRotationZ;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_aab179e6ef076eb915dfae2c996e6225d}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!IsOnCooldown@{IsOnCooldown}}
+\index{IsOnCooldown@{IsOnCooldown}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{IsOnCooldown()}{IsOnCooldown()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_aab179e6ef076eb915dfae2c996e6225d} 
+bool OOP\+\_\+\+Scripts.\+Random\+Movement.\+Is\+On\+Cooldown (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Prüft, ob der Cooldown nach einer Kollision aktiv ist. 
+
+\begin{DoxyReturn}{Rückgabe}
+True, wenn Cooldown aktiv ist.
+\end{DoxyReturn}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00149}{149}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Time.time\ -\/\ \_lastCollisionTime\ <\ collisionCooldownDuration;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a543a45a98dacbd526743b8a926e81af4}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!IsOutOfBounds@{IsOutOfBounds}}
+\index{IsOutOfBounds@{IsOutOfBounds}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{IsOutOfBounds()}{IsOutOfBounds()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a543a45a98dacbd526743b8a926e81af4} 
+bool OOP\+\_\+\+Scripts.\+Random\+Movement.\+Is\+Out\+Of\+Bounds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Prüft, ob der Agent außerhalb des erlaubten Bereichs ist. 
+
+\begin{DoxyReturn}{Rückgabe}
+True, wenn außerhalb.
+\end{DoxyReturn}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00170}{170}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ pos\ =\ transform.position;}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ min\ =\ areaCenter\ -\/\ areaSize\ *\ 0.5f;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ max\ =\ areaCenter\ +\ areaSize\ *\ 0.5f;}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ outsideX\ =\ pos.x\ <\ min.x\ ||\ pos.x\ >\ max.x;}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ outsideY\ =\ pos.y\ <\ min.y\ ||\ pos.y\ >\ max.y;}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ outsideZ\ =\ pos.z\ <\ min.z\ ||\ pos.z\ >\ max.z;}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ outsideX\ ||\ outsideY\ ||\ outsideZ;}
+\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_af6c2d70d9d55a0d48fb51843645ab705}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!MoveForward@{MoveForward}}
+\index{MoveForward@{MoveForward}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{MoveForward()}{MoveForward()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_af6c2d70d9d55a0d48fb51843645ab705} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Move\+Forward (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Bewegt den Agenten vorwärts. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00132}{132}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \_rigidBody.linearVelocity\ =\ transform.forward\ *\ movementSpeed;}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a964bd56feda942d27219704c48dbb1da}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!OnCollisionEnter@{OnCollisionEnter}}
+\index{OnCollisionEnter@{OnCollisionEnter}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{OnCollisionEnter()}{OnCollisionEnter()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a964bd56feda942d27219704c48dbb1da} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+On\+Collision\+Enter (\begin{DoxyParamCaption}\item[{Collision}]{collision}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Reagiert auf Kollisionen mit einer Richtungsänderung. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em collision} & Die Kollisionsdaten (nicht verwendet).\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00081}{81}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (IsOnCooldown())\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ HandleCollisionReaction();}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a470a8fd9641529d6987700e91ae8e883}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!OnDrawGizmosSelected@{OnDrawGizmosSelected}}
+\index{OnDrawGizmosSelected@{OnDrawGizmosSelected}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{OnDrawGizmosSelected()}{OnDrawGizmosSelected()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a470a8fd9641529d6987700e91ae8e883} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+On\+Draw\+Gizmos\+Selected (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Zeichnet den Bewegungsbereich im Editor. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00269}{269}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.color\ =\ Color.yellow;}
+\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ Gizmos.DrawWireCube(areaCenter,\ areaSize);}
+\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a177b770a364dfbbeee9ecc30c4299731}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!PerformTurnAround@{PerformTurnAround}}
+\index{PerformTurnAround@{PerformTurnAround}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{PerformTurnAround()}{PerformTurnAround()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a177b770a364dfbbeee9ecc30c4299731} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Perform\+Turn\+Around (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Dreht den Agenten um 180 Grad und verschiebt ihn leicht. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00184}{184}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \_lastCollisionTime\ =\ Time.time;}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ RotateCharacter(180f);}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ ApplyNudge();}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a2df246df6270c4b5df70ed6a28069683}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!RemoveExistingColliders@{RemoveExistingColliders}}
+\index{RemoveExistingColliders@{RemoveExistingColliders}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{RemoveExistingColliders()}{RemoveExistingColliders()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a2df246df6270c4b5df70ed6a28069683} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Remove\+Existing\+Colliders (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Entfernt alle vorhandenen Collider. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00258}{258}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (var\ c\ \textcolor{keywordflow}{in}\ GetComponents<Collider>())}
+\DoxyCodeLine{00261\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Destroy(c);}
+\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a46a00b42bf27aeffe323a36f61c1086b}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!RotateCharacter@{RotateCharacter}}
+\index{RotateCharacter@{RotateCharacter}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{RotateCharacter()}{RotateCharacter()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a46a00b42bf27aeffe323a36f61c1086b} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Rotate\+Character (\begin{DoxyParamCaption}\item[{float}]{angle}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Dreht den Agenten um den gegebenen Winkel. 
+
+
+\begin{DoxyParams}{Parameter}
+{\em angle} & Winkel in Grad\\
+\hline
+\end{DoxyParams}
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00207}{207}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ transform.Rotate(0f,\ angle,\ 0f,\ Space.Self);}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a9ff7bcc7157b1b93573d5ce30f35d960}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!StabilizePhysics@{StabilizePhysics}}
+\index{StabilizePhysics@{StabilizePhysics}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{StabilizePhysics()}{StabilizePhysics()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a9ff7bcc7157b1b93573d5ce30f35d960} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Stabilize\+Physics (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Setzt die Drehgeschwindigkeit zurück. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00140}{140}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \_rigidBody.angularVelocity\ =\ Vector3.zero;}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a1959724fdebacaf59c7a95abb6b3a5b2}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!UpdateCollider@{UpdateCollider}}
+\index{UpdateCollider@{UpdateCollider}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{UpdateCollider()}{UpdateCollider()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a1959724fdebacaf59c7a95abb6b3a5b2} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Update\+Collider (\begin{DoxyParamCaption}\item[{Mesh}]{mesh}{, }\item[{\doxymbox{\hyperlink{class_o_o_p___scripts_1_1_random_movement_a44134d2d533e70bae94bbabb45d6ab94}{Collider\+Type}}}]{collider\+Type}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Erstellt und konfiguriert den Collider. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00234}{234}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \ \ \ \ \ \ \ \ RemoveExistingColliders();}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \ \ \ \ Bounds\ bounds\ =\ mesh\ !=\ \textcolor{keyword}{null}\ ?\ mesh.bounds\ :\ \textcolor{keyword}{new}\ Bounds(Vector3.zero,\ Vector3.one);}
+\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ scaledCenter\ =\ Vector3.Scale(bounds.center,\ transform.localScale);}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ scaledSize\ =\ Vector3.Scale(bounds.size,\ transform.localScale);}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ scaledExtents\ =\ Vector3.Scale(bounds.extents,\ transform.localScale);}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (colliderType\ ==\ ColliderType.Box)}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ boxCollider\ =\ gameObject.AddComponent<BoxCollider>();}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boxCollider.center\ =\ scaledCenter;}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ boxCollider.size\ =\ scaledSize;}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ sphereCollider\ =\ gameObject.AddComponent<SphereCollider>();}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sphereCollider.center\ =\ scaledCenter;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sphereCollider.radius\ =\ Mathf.Max(scaledExtents.x,\ scaledExtents.y,\ scaledExtents.z);}
+\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a3fcb37fde6984c88eeef7d8b88b54f0f}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!UpdateMeshRenderer@{UpdateMeshRenderer}}
+\index{UpdateMeshRenderer@{UpdateMeshRenderer}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{UpdateMeshRenderer()}{UpdateMeshRenderer()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a3fcb37fde6984c88eeef7d8b88b54f0f} 
+void OOP\+\_\+\+Scripts.\+Random\+Movement.\+Update\+Mesh\+Renderer (\begin{DoxyParamCaption}\item[{Mesh}]{mesh}{, }\item[{Material}]{material}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Aktualisiert Mesh und Material des Agenten. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00223}{223}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryGetComponent(out\ MeshFilter\ mf))\ mf\ =\ gameObject.AddComponent<MeshFilter>();}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!TryGetComponent(out\ MeshRenderer\ mr))\ mr\ =\ gameObject.AddComponent<MeshRenderer>();}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \ \ \ \ mf.mesh\ =\ mesh;}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \ \ \ \ mr.sharedMaterial\ =\ material;}
+\DoxyCodeLine{00229\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a60da1e3cd848aedac7147eac7f66f965}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!\_lastCollisionTime@{\_lastCollisionTime}}
+\index{\_lastCollisionTime@{\_lastCollisionTime}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{\_lastCollisionTime}{\_lastCollisionTime}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a60da1e3cd848aedac7147eac7f66f965} 
+float OOP\+\_\+\+Scripts.\+Random\+Movement.\+\_\+last\+Collision\+Time = -\/10f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00052}{52}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a7af2415d529d73c506cde51e8e1c660d}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!\_rigidBody@{\_rigidBody}}
+\index{\_rigidBody@{\_rigidBody}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{\_rigidBody}{\_rigidBody}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a7af2415d529d73c506cde51e8e1c660d} 
+Rigidbody OOP\+\_\+\+Scripts.\+Random\+Movement.\+\_\+rigid\+Body\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00051}{51}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_ae7df377f3176443d3e979b6b12b095e9}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!\_turnAngles@{\_turnAngles}}
+\index{\_turnAngles@{\_turnAngles}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{\_turnAngles}{\_turnAngles}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_ae7df377f3176443d3e979b6b12b095e9} 
+readonly float \+[$\,$]\+ OOP\+\_\+\+Scripts.\+Random\+Movement.\+\_\+turn\+Angles = \{ -\/90f, 90f, 180f \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Mögliche Drehwinkel für Richtungsänderungen nach Kollision. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00050}{50}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \{\ -\/90f,\ 90f,\ 180f\ \};}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a38b69cde9783ae2e5922e2a60c0b8180}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!areaCenter@{areaCenter}}
+\index{areaCenter@{areaCenter}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{areaCenter}{areaCenter}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a38b69cde9783ae2e5922e2a60c0b8180} 
+Vector3 OOP\+\_\+\+Scripts.\+Random\+Movement.\+area\+Center\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Zentrum des Bewegungsbereichs. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00041}{41}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a6de440be1783a62570005d471491b125}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!areaSize@{areaSize}}
+\index{areaSize@{areaSize}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{areaSize}{areaSize}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a6de440be1783a62570005d471491b125} 
+Vector3 OOP\+\_\+\+Scripts.\+Random\+Movement.\+area\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Größe des Bewegungsbereichs. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00045}{45}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a1e4a85352bb288d62a6c8b3afbef204d}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!bounceNudgeDistance@{bounceNudgeDistance}}
+\index{bounceNudgeDistance@{bounceNudgeDistance}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{bounceNudgeDistance}{bounceNudgeDistance}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a1e4a85352bb288d62a6c8b3afbef204d} 
+float OOP\+\_\+\+Scripts.\+Random\+Movement.\+bounce\+Nudge\+Distance = 0.\+05f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Distanz, um die der Agent bei einer Kollision zurückgesetzt wird. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00029}{29}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_af646de2573819c478cbe2c568aa338a7}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!collisionCooldownDuration@{collisionCooldownDuration}}
+\index{collisionCooldownDuration@{collisionCooldownDuration}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{collisionCooldownDuration}{collisionCooldownDuration}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_af646de2573819c478cbe2c568aa338a7} 
+float OOP\+\_\+\+Scripts.\+Random\+Movement.\+collision\+Cooldown\+Duration = 0.\+15f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Wartezeit in Sekunden zwischen zwei Kollisionsreaktionen. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00035}{35}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_random_movement_a0462d3d7098cf1ef54def82adbb2bb8d}\index{OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}!movementSpeed@{movementSpeed}}
+\index{movementSpeed@{movementSpeed}!OOP\_Scripts.RandomMovement@{OOP\_Scripts.RandomMovement}}
+\doxysubsubsection{\texorpdfstring{movementSpeed}{movementSpeed}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_random_movement_a0462d3d7098cf1ef54def82adbb2bb8d} 
+float OOP\+\_\+\+Scripts.\+Random\+Movement.\+movement\+Speed = 1f\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Geschwindigkeit der Vorwärtsbewegung. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_random_movement_8cs_source_l00023}{23}} der Datei \doxymbox{\hyperlink{_random_movement_8cs_source}{Random\+Movement.\+cs}}.
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:\+\begin{DoxyCompactItemize}
+\item 
+OOP-\/\+Scripts/\+\doxymbox{\hyperlink{_random_movement_8cs}{Random\+Movement.\+cs}}\end{DoxyCompactItemize}

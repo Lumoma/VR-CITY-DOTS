@@ -1,21 +1,44 @@
+/**
+ * @file SpawnerData.cs
+ * @brief Datenstruktur für das Spawnen von Entitäten (DOTS).
+ *
+ * Enthält die Datenkomponenten für das Spawnen von DOTS-Entitäten.
+ */
 using Unity.Entities;
 using Unity.Mathematics;
 
 namespace DOTS_Scripts
 {
-    // Daten des Spawners
+    /// <summary>
+    /// DOTS-Komponente mit Konfigurationsdaten für das Spawnen von Entitäten.
+    /// </summary>
     public struct SpawnerData : IComponentData
     {
+        /// <summary>
+        /// Prefab-Entity, die instanziiert werden soll.
+        /// </summary>
         public Entity PrefabEntity;
+        /// <summary>
+        /// Anzahl der zu spawnenden Entitäten.
+        /// </summary>
         public int Count;
+        /// <summary>
+        /// Größe des Spawnbereichs.
+        /// </summary>
         public float3 AreaSize;
+        /// <summary>
+        /// Zentrum des Spawnbereichs.
+        /// </summary>
         public float3 SpawnCenter;
     }
 
-    // Ein "Tag" (leeres Struct), mit dem wir alle gespawnten Agenten markieren
-    // Damit wissen wir: "Diese Entity gehört zum Spawner und muss gelöscht werden"
+    /// <summary>
+    /// Tag-Komponente zur Markierung gespawnter Agenten.
+    /// </summary>
     public struct SpawnedAgentTag : IComponentData { }
 
-    // Der Befehl: Wenn diese Komponente auf dem Spawner liegt, arbeitet das System
+    /// <summary>
+    /// Tag-Komponente als Befehl für das Respawn-System.
+    /// </summary>
     public struct RespawnRequest : IComponentData { }
 }

@@ -1,0 +1,63 @@
+\chapter{Doxygen Dokumentation für KIT-\/\+VR-\/\+CITY }
+\hypertarget{index}{}\label{index}\index{Doxygen Dokumentation für KIT-\/VR-\/CITY@{Doxygen Dokumentation für KIT-\/VR-\/CITY}}
+\label{index_md__doxygen_overview}%
+\Hypertarget{index_md__doxygen_overview}%
+
+
+Dieses Dokument beschreibt die Struktur und den Zweck der wichtigsten Scripte in den folgenden Ordnern:\+
+\begin{DoxyItemize}
+\item OOP-\/\+Scripts
+\item DOTS-\/\+Scripts
+\item Metric-\/\+Scripts
+\end{DoxyItemize}
+
+\hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{OOP-\/\+Scripts}{OOP-\/\+Scripts}}\label{index_autotoc_md1}
+Enthält klassische objektorientierte Scripte für das Verhalten von Agenten und die Steuerung der Szene.
+
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Datei  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Beschreibung  \\
+\doxylink{_random_movement_8cs}{Random\+Movement.\+cs}  &Implementiert zufällige Bewegungen für Agenten/\+\+Prefabs.  \\
+\doxylink{_spawner_8cs}{Spawner.\+cs}  &Verantwortlich für das Erzeugen (Spawnen) von Agenten/\+\+Prefabs in der Szene.  \\
+\end{DoxyTable}
+
+
+\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{DOTS-\/\+Scripts}{DOTS-\/\+Scripts}}\label{index_autotoc_md2}
+Enthält Scripte, die auf Unity DOTS (Data-\/\+Oriented Technology Stack) basieren und für performante Simulationen mit vielen Entitäten optimiert sind.
+
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Datei  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Beschreibung  \\
+\doxylink{_entity_count_u_i_bridge_8cs}{Entity\+Count\+UIBridge.\+cs}  &Bindeglied zwischen DOTS-\/\+Entitäten und UI zur Anzeige der Entitätsanzahl.  \\
+\doxylink{_random_movement_authoring_8cs}{Random\+Movement\+Authoring.\+cs}  &Authoring-\/\+Komponente für zufällige Bewegungen (DOTS).  \\
+\doxylink{_random_movement_data_8cs}{Random\+Movement\+Data.\+cs}  &Datenstruktur für zufällige Bewegungen (DOTS).  \\
+\doxylink{_random_movement_system_8cs}{Random\+Movement\+System.\+cs}  &System zur Steuerung der zufälligen Bewegungen (DOTS).  \\
+\doxylink{_spawner_authoring_8cs}{Spawner\+Authoring.\+cs}  &Authoring-\/\+Komponente für das Spawnen von Entitäten (DOTS).  \\
+\doxylink{_spawner_data_8cs}{Spawner\+Data.\+cs}  &Datenstruktur für das Spawnen von Entitäten (DOTS).  \\
+\doxylink{_spawner_system_8cs}{Spawner\+System.\+cs}  &System zum Spawnen von Entitäten (DOTS).  \\
+\doxylink{_spawner_u_i_bridge_8cs}{Spawner\+UIBridge.\+cs}  &Bindeglied zwischen Spawner-\/\+System und UI (DOTS).  \\
+\end{DoxyTable}
+
+
+\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Metric-\/\+Scripts}{Metric-\/\+Scripts}}\label{index_autotoc_md3}
+Enthält Scripte zur Messung und Auswertung von Performance-\/\+Metriken.
+
+
+\begin{DoxyTable}{2}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Datei  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Beschreibung  \\
+\doxylink{_automated_benchmark_8cs}{Automated\+Benchmark.\+cs}  &Automatisiertes Benchmarking-\/\+Script zur Messung von Performance-\/\+Kennzahlen.  \\
+\doxylink{_v_r_f_p_s_counter_8cs}{VRFPSCounter.\+cs}  &Misst und zeigt die aktuelle Framerate (FPS) im VR-\/\+Modus an.  \\
+\doxylink{_v_r_scene_switcher_8cs}{VRScene\+Switcher.\+cs}  &Ermöglicht das Wechseln zwischen verschiedenen Szenen im VR-\/\+Modus.  \\
+\end{DoxyTable}
+
+
+
+
+\DoxyHorRuler{0}
+
+
+{\bfseries{Hinweis:\+}}
+\begin{DoxyItemize}
+\item Die .cs.\+meta-\/Dateien werden für die Doxygen-\/\+Dokumentation ignoriert.
+\item Weitere Doxygen-\/\+Kommentare können an Klassen, Methoden und Feldern ergänzt werden. 
+\end{DoxyItemize}

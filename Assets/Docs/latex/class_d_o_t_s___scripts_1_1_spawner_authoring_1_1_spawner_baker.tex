@@ -1,0 +1,62 @@
+\doxysection{DOTS\+\_\+\+Scripts.\+Spawner\+Authoring.\+Spawner\+Baker Klassenreferenz}
+\hypertarget{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker}{}\label{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker}\index{DOTS\_Scripts.SpawnerAuthoring.SpawnerBaker@{DOTS\_Scripts.SpawnerAuthoring.SpawnerBaker}}
+
+
+Baker konvertiert Inspector-\/\+Daten in DOTS-\/\+Komponenten.  
+
+
+Klassendiagramm für DOTS\+\_\+\+Scripts.\+Spawner\+Authoring.\+Spawner\+Baker:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+override void \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker_a8f0eb4bfd64f54f7923fea614b55978b}{Bake}} (\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring}{Spawner\+Authoring}} authoring)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Baker konvertiert Inspector-\/\+Daten in DOTS-\/\+Komponenten. 
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_authoring_8cs_source_l00038}{38}} der Datei \doxymbox{\hyperlink{_spawner_authoring_8cs_source}{Spawner\+Authoring.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker_a8f0eb4bfd64f54f7923fea614b55978b}\index{DOTS\_Scripts.SpawnerAuthoring.SpawnerBaker@{DOTS\_Scripts.SpawnerAuthoring.SpawnerBaker}!Bake@{Bake}}
+\index{Bake@{Bake}!DOTS\_Scripts.SpawnerAuthoring.SpawnerBaker@{DOTS\_Scripts.SpawnerAuthoring.SpawnerBaker}}
+\doxysubsubsection{\texorpdfstring{Bake()}{Bake()}}
+{\footnotesize\ttfamily \label{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker_a8f0eb4bfd64f54f7923fea614b55978b} 
+override void DOTS\+\_\+\+Scripts.\+Spawner\+Authoring.\+Spawner\+Baker.\+Bake (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring}{Spawner\+Authoring}}}]{authoring}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_spawner_authoring_8cs_source_l00040}{40}} der Datei \doxymbox{\hyperlink{_spawner_authoring_8cs_source}{Spawner\+Authoring.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ entity\ =\ GetEntity(TransformUsageFlags.None);}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddComponent(entity,\ \textcolor{keyword}{new}\ SpawnerData}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PrefabEntity\ =\ GetEntity(authoring.prefabToBake,\ TransformUsageFlags.Dynamic),}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Count\ =\ authoring.spawnCount,}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AreaSize\ =\ authoring.spawnAreaSize,}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SpawnCenter\ =\ authoring.transform.position}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fügt\ direkt\ zu\ Beginn\ den\ Request\ hinzu,\ damit\ einmalig\ beim\ Start\ gespawnt\ wird}}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddComponent<RespawnRequest>(entity);}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:\+\begin{DoxyCompactItemize}
+\item 
+DOTS-\/\+Scripts/\+\doxymbox{\hyperlink{_spawner_authoring_8cs}{Spawner\+Authoring.\+cs}}\end{DoxyCompactItemize}

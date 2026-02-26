@@ -1,0 +1,1272 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>VR-CITY-DOTS: OOP_Scripts.Spawner Klassenreferenz</title>
+<link rel="icon" href="VR-City-Icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">VR-CITY-DOTS<span id="projectnumber">&#160;2026</span>
+   </div>
+   <div id="projectbrief">Unity C# Projekt für VR City Simulation mit DOTS und OOP.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_o_o_p___scripts_1_1_spawner.html','','class_o_o_p___scripts_1_1_spawner-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">OOP_Scripts.Spawner Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entfernen.  
+ <a href="#details">Mehr ...</a></p>
+<div class="dynheader">
+Klassendiagramm für OOP_Scripts.Spawner:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_o_o_p___scripts_1_1_spawner.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:aa23af95ddaee4e505572c09c633be0df" id="r_aa23af95ddaee4e505572c09c633be0df"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aa23af95ddaee4e505572c09c633be0df">SetCountFromSlider</a> (float sliderValue)</td></tr>
+<tr class="memdesc:aa23af95ddaee4e505572c09c633be0df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setzt die Agentenanzahl über den UI-Slider.  <br /></td></tr>
+<tr class="memitem:a4c20ea64a641544f900420f93e243011" id="r_a4c20ea64a641544f900420f93e243011"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a4c20ea64a641544f900420f93e243011">RespawnAllAgents</a> ()</td></tr>
+<tr class="memdesc:a4c20ea64a641544f900420f93e243011"><td class="mdescLeft">&#160;</td><td class="mdescRight">Löscht alle Agenten und spawnt die gewünschte Anzahl neu.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:ab5f11e1da5c3f9a5f4226f52cadbe4dc" id="r_ab5f11e1da5c3f9a5f4226f52cadbe4dc"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab5f11e1da5c3f9a5f4226f52cadbe4dc">Start</a> ()</td></tr>
+<tr class="memdesc:ab5f11e1da5c3f9a5f4226f52cadbe4dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert den <a class="el" href="class_o_o_p___scripts_1_1_spawner.html" title="Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne...">Spawner</a> und synchronisiert den UI-Slider.  <br /></td></tr>
+<tr class="memitem:a9b36aa0d38aec39408debc264575ac5a" id="r_a9b36aa0d38aec39408debc264575ac5a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9b36aa0d38aec39408debc264575ac5a">AddAgents</a> (int countToAdd)</td></tr>
+<tr class="memdesc:a9b36aa0d38aec39408debc264575ac5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fügt eine Anzahl von Agenten hinzu.  <br /></td></tr>
+<tr class="memitem:a63feaaaf3137a539272a9f6bfbf7ea99" id="r_a63feaaaf3137a539272a9f6bfbf7ea99"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a63feaaaf3137a539272a9f6bfbf7ea99">RemoveAgents</a> (int countToRemove)</td></tr>
+<tr class="memdesc:a63feaaaf3137a539272a9f6bfbf7ea99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entfernt die letzten N Agenten.  <br /></td></tr>
+<tr class="memitem:a514c4ac46acb57e4bd9d53c5a732ab51" id="r_a514c4ac46acb57e4bd9d53c5a732ab51"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a514c4ac46acb57e4bd9d53c5a732ab51">ClearExistingAgents</a> ()</td></tr>
+<tr class="memdesc:a514c4ac46acb57e4bd9d53c5a732ab51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Löscht alle existierenden Agenten.  <br /></td></tr>
+<tr class="memitem:ac9f9fa673fd7ea96fe6d1bb775849edb" id="r_ac9f9fa673fd7ea96fe6d1bb775849edb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac9f9fa673fd7ea96fe6d1bb775849edb">SpawnSingleAgent</a> (int index)</td></tr>
+<tr class="memdesc:ac9f9fa673fd7ea96fe6d1bb775849edb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawnt einen einzelnen Agenten.  <br /></td></tr>
+<tr class="memitem:a144e8b4d7f11b347f8f30a2d88da3a3b" id="r_a144e8b4d7f11b347f8f30a2d88da3a3b"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a144e8b4d7f11b347f8f30a2d88da3a3b">HasValidPrefabs</a> ()</td></tr>
+<tr class="memdesc:a144e8b4d7f11b347f8f30a2d88da3a3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft, ob gültige Prefabs zugewiesen sind.  <br /></td></tr>
+<tr class="memitem:a566b4fe17f8d8d3986430a12b09fd578" id="r_a566b4fe17f8d8d3986430a12b09fd578"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#a566b4fe17f8d8d3986430a12b09fd578">SelectPrefab</a> (int index)</td></tr>
+<tr class="memdesc:a566b4fe17f8d8d3986430a12b09fd578"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wählt das Prefab anhand des Index (abwechselnd männlich/weiblich).  <br /></td></tr>
+<tr class="memitem:a4bb7da30ee7b2288511603d4fcf222dc" id="r_a4bb7da30ee7b2288511603d4fcf222dc"><td class="memItemLeft">Vector3&#160;</td><td class="memItemRight"><a class="el" href="#a4bb7da30ee7b2288511603d4fcf222dc">TryFindSpawnPosition</a> (float agentRadius)</td></tr>
+<tr class="memdesc:a4bb7da30ee7b2288511603d4fcf222dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sucht eine freie Spawnposition im Bereich.  <br /></td></tr>
+<tr class="memitem:a5b99816a0891710647395a4088e8a26a" id="r_a5b99816a0891710647395a4088e8a26a"><td class="memItemLeft">Vector3&#160;</td><td class="memItemRight"><a class="el" href="#a5b99816a0891710647395a4088e8a26a">GetRandomPositionInArea</a> ()</td></tr>
+<tr class="memdesc:a5b99816a0891710647395a4088e8a26a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt eine zufällige Position im Bereich zurück.  <br /></td></tr>
+<tr class="memitem:aa07670db432e7ae6251c9c5fb9f5735c" id="r_aa07670db432e7ae6251c9c5fb9f5735c"><td class="memItemLeft">Quaternion&#160;</td><td class="memItemRight"><a class="el" href="#aa07670db432e7ae6251c9c5fb9f5735c">GetInitialRotation</a> ()</td></tr>
+<tr class="memdesc:aa07670db432e7ae6251c9c5fb9f5735c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt die Startrotation zurück.  <br /></td></tr>
+<tr class="memitem:add9a0de08dceaf416bd8cbca1b6b0cc4" id="r_add9a0de08dceaf416bd8cbca1b6b0cc4"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#add9a0de08dceaf416bd8cbca1b6b0cc4">GetPrefabRadius</a> (GameObject prefab)</td></tr>
+<tr class="memdesc:add9a0de08dceaf416bd8cbca1b6b0cc4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ermittelt den Radius des Prefabs anhand des Renderers.  <br /></td></tr>
+<tr class="memitem:adabe9302b79054010fcca4c95870a35f" id="r_adabe9302b79054010fcca4c95870a35f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adabe9302b79054010fcca4c95870a35f">SetupAgentHierarchy</a> (GameObject agent, string baseName, int index)</td></tr>
+<tr class="memdesc:adabe9302b79054010fcca4c95870a35f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setzt Name, Skalierung und Hierarchie für den Agenten.  <br /></td></tr>
+<tr class="memitem:ac34fea427fcb9dc3a8177765d660ee11" id="r_ac34fea427fcb9dc3a8177765d660ee11"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ac34fea427fcb9dc3a8177765d660ee11">SetupRandomWalker</a> (GameObject agent)</td></tr>
+<tr class="memdesc:ac34fea427fcb9dc3a8177765d660ee11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert das RandomMovement-Script des Agenten.  <br /></td></tr>
+<tr class="memitem:a5a6d5344502221b136dc3e3f41ab1e0a" id="r_a5a6d5344502221b136dc3e3f41ab1e0a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a5a6d5344502221b136dc3e3f41ab1e0a">UpdateUiText</a> ()</td></tr>
+<tr class="memdesc:a5a6d5344502221b136dc3e3f41ab1e0a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktualisiert die UI-Anzeige der Agentenzahl.  <br /></td></tr>
+<tr class="memitem:a902936a7d81aa269ec1137dcc7331748" id="r_a902936a7d81aa269ec1137dcc7331748"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a902936a7d81aa269ec1137dcc7331748">OnDrawGizmosSelected</a> ()</td></tr>
+<tr class="memdesc:a902936a7d81aa269ec1137dcc7331748"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeichnet den Spawnbereich im Editor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:a7886419b9cee93837deb237f74c913a9" id="r_a7886419b9cee93837deb237f74c913a9"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a7886419b9cee93837deb237f74c913a9">spawnCount</a> = 20</td></tr>
+<tr class="memdesc:a7886419b9cee93837deb237f74c913a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Anzahl der Agenten, die generiert werden sollen.  <br /></td></tr>
+<tr class="memitem:a8520b571f0d22429e05bad17b4d63a90" id="r_a8520b571f0d22429e05bad17b4d63a90"><td class="memItemLeft">Vector3&#160;</td><td class="memItemRight"><a class="el" href="#a8520b571f0d22429e05bad17b4d63a90">areaSize</a> = new Vector3(10f, 2f, 10f)</td></tr>
+<tr class="memdesc:a8520b571f0d22429e05bad17b4d63a90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Größe des Bereichs, in dem die Agenten platziert werden.  <br /></td></tr>
+<tr class="memitem:a3d22d61ae0b4d717fb81c6877cbfd819" id="r_a3d22d61ae0b4d717fb81c6877cbfd819"><td class="memItemLeft">int&#160;</td><td class="memItemRight"><a class="el" href="#a3d22d61ae0b4d717fb81c6877cbfd819">maxPlacementAttempts</a> = 10</td></tr>
+<tr class="memdesc:a3d22d61ae0b4d717fb81c6877cbfd819"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wie oft versucht wird, eine freie Position zu finden.  <br /></td></tr>
+<tr class="memitem:a9ac5754c12fbe359d38fec493132ddba" id="r_a9ac5754c12fbe359d38fec493132ddba"><td class="memItemLeft">TMP_Text&#160;</td><td class="memItemRight"><a class="el" href="#a9ac5754c12fbe359d38fec493132ddba">countDisplay</a></td></tr>
+<tr class="memdesc:a9ac5754c12fbe359d38fec493132ddba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeigt die aktuelle Anzahl der Agenten im UI an.  <br /></td></tr>
+<tr class="memitem:ab3ef83b93c13cb39be7fa41569952375" id="r_ab3ef83b93c13cb39be7fa41569952375"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#ab3ef83b93c13cb39be7fa41569952375">malePrefab</a></td></tr>
+<tr class="memdesc:ab3ef83b93c13cb39be7fa41569952375"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefab für männliche Agenten.  <br /></td></tr>
+<tr class="memitem:a546bbcae70ecfcc67fe1a8e593ac35ec" id="r_a546bbcae70ecfcc67fe1a8e593ac35ec"><td class="memItemLeft">GameObject&#160;</td><td class="memItemRight"><a class="el" href="#a546bbcae70ecfcc67fe1a8e593ac35ec">femalePrefab</a></td></tr>
+<tr class="memdesc:a546bbcae70ecfcc67fe1a8e593ac35ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prefab für weibliche Agenten.  <br /></td></tr>
+<tr class="memitem:af5c0dce0d064c36d7fb0038c2a5532bf" id="r_af5c0dce0d064c36d7fb0038c2a5532bf"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af5c0dce0d064c36d7fb0038c2a5532bf">agentScale</a> = 1f</td></tr>
+<tr class="memdesc:af5c0dce0d064c36d7fb0038c2a5532bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Skalierung der Agenten.  <br /></td></tr>
+<tr class="memitem:ab3dbbc8d42dfe09d28bb9ea5c741ed50" id="r_ab3dbbc8d42dfe09d28bb9ea5c741ed50"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#ab3dbbc8d42dfe09d28bb9ea5c741ed50">minSpeed</a> = 0.5f</td></tr>
+<tr class="memdesc:ab3dbbc8d42dfe09d28bb9ea5c741ed50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Minimale Bewegungsgeschwindigkeit der Agenten.  <br /></td></tr>
+<tr class="memitem:a6bef6e4f92d66b598ad5f24f3d0377d1" id="r_a6bef6e4f92d66b598ad5f24f3d0377d1"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a6bef6e4f92d66b598ad5f24f3d0377d1">maxSpeed</a> = 2f</td></tr>
+<tr class="memdesc:a6bef6e4f92d66b598ad5f24f3d0377d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Maximale Bewegungsgeschwindigkeit der Agenten.  <br /></td></tr>
+<tr class="memitem:aea8e99fcb7c87aa325560406c2902d86" id="r_aea8e99fcb7c87aa325560406c2902d86"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aea8e99fcb7c87aa325560406c2902d86">randomizeRotationY</a> = true</td></tr>
+<tr class="memdesc:aea8e99fcb7c87aa325560406c2902d86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ob die Y-Rotation zufällig gewählt wird.  <br /></td></tr>
+<tr class="memitem:af9d60db7441ab4a187fa594adb55d04a" id="r_af9d60db7441ab4a187fa594adb55d04a"><td class="memItemLeft">Transform&#160;</td><td class="memItemRight"><a class="el" href="#af9d60db7441ab4a187fa594adb55d04a">agentContainer</a></td></tr>
+<tr class="memdesc:af9d60db7441ab4a187fa594adb55d04a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional: Container-Objekt für Agenten.  <br /></td></tr>
+<tr class="memitem:a6e2ec7b1079ffe7f06f84797891ce75a" id="r_a6e2ec7b1079ffe7f06f84797891ce75a"><td class="memItemLeft">LayerMask&#160;</td><td class="memItemRight"><a class="el" href="#a6e2ec7b1079ffe7f06f84797891ce75a">collisionCheckLayer</a> = ~0</td></tr>
+<tr class="memdesc:a6e2ec7b1079ffe7f06f84797891ce75a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Layer für Kollisionsprüfung.  <br /></td></tr>
+<tr class="memitem:a29b80ad47e310a86e132e0a94bc9b542" id="r_a29b80ad47e310a86e132e0a94bc9b542"><td class="memItemLeft">readonly List&lt; GameObject &gt;&#160;</td><td class="memItemRight"><a class="el" href="#a29b80ad47e310a86e132e0a94bc9b542">_spawnedAgents</a> = new List&lt;GameObject&gt;()</td></tr>
+<tr class="memitem:ac1b9bfe405d10be8bdb41d09322eff9e" id="r_ac1b9bfe405d10be8bdb41d09322eff9e"><td class="memItemLeft">Slider&#160;</td><td class="memItemRight"><a class="el" href="#ac1b9bfe405d10be8bdb41d09322eff9e">countSlider</a></td></tr>
+<tr class="memdesc:ac1b9bfe405d10be8bdb41d09322eff9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional: UI Slider, damit Start-Wert synchronisiert wird.  <br /></td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entfernen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00024">24</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a9b36aa0d38aec39408debc264575ac5a" name="a9b36aa0d38aec39408debc264575ac5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b36aa0d38aec39408debc264575ac5a">&#9670;&#160;</a></span>AddAgents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.AddAgents </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>countToAdd</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Fügt eine Anzahl von Agenten hinzu. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">countToAdd</td><td>Anzahl der hinzuzufügenden Agenten</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00139">139</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  140</span>        {</div>
+<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">if</span> (!HasValidPrefabs())</div>
+<div class="line"><span class="lineno">  142</span>            {</div>
+<div class="line"><span class="lineno">  143</span>                Debug.LogWarning(<span class="stringliteral">&quot;Spawner: Keine Prefabs zugewiesen! Keine Agenten hinzugefügt.&quot;</span>);</div>
+<div class="line"><span class="lineno">  144</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  145</span>            }</div>
+<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; countToAdd; i++)</div>
+<div class="line"><span class="lineno">  147</span>            {</div>
+<div class="line"><span class="lineno">  148</span>                SpawnSingleAgent(_spawnedAgents.Count);</div>
+<div class="line"><span class="lineno">  149</span>            }</div>
+<div class="line"><span class="lineno">  150</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a514c4ac46acb57e4bd9d53c5a732ab51" name="a514c4ac46acb57e4bd9d53c5a732ab51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a514c4ac46acb57e4bd9d53c5a732ab51">&#9670;&#160;</a></span>ClearExistingAgents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.ClearExistingAgents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Löscht alle existierenden Agenten. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00188">188</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  189</span>        {</div>
+<div class="line"><span class="lineno">  190</span>            <span class="keywordflow">foreach</span> (var agent <span class="keywordflow">in</span> _spawnedAgents)</div>
+<div class="line"><span class="lineno">  191</span>            {</div>
+<div class="line"><span class="lineno">  192</span>                <span class="keywordflow">if</span> (agent != <span class="keyword">null</span>) Destroy(agent);</div>
+<div class="line"><span class="lineno">  193</span>            }</div>
+<div class="line"><span class="lineno">  194</span>            _spawnedAgents.Clear();</div>
+<div class="line"><span class="lineno">  195</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa07670db432e7ae6251c9c5fb9f5735c" name="aa07670db432e7ae6251c9c5fb9f5735c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa07670db432e7ae6251c9c5fb9f5735c">&#9670;&#160;</a></span>GetInitialRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Quaternion OOP_Scripts.Spawner.GetInitialRotation </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gibt die Startrotation zurück. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Quaternion für die Rotation</dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00271">271</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  272</span>        {</div>
+<div class="line"><span class="lineno">  273</span>            <span class="keywordtype">float</span> yAngle = randomizeRotationY ? Random.Range(0f, 360f) : 0f;</div>
+<div class="line"><span class="lineno">  274</span>            <span class="keywordflow">return</span> Quaternion.Euler(0f, yAngle, 0f);</div>
+<div class="line"><span class="lineno">  275</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="add9a0de08dceaf416bd8cbca1b6b0cc4" name="add9a0de08dceaf416bd8cbca1b6b0cc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add9a0de08dceaf416bd8cbca1b6b0cc4">&#9670;&#160;</a></span>GetPrefabRadius()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float OOP_Scripts.Spawner.GetPrefabRadius </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>prefab</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ermittelt den Radius des Prefabs anhand des Renderers. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">prefab</td><td>Prefab</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Radius</dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00282">282</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  283</span>        {</div>
+<div class="line"><span class="lineno">  284</span>            var rend = prefab.GetComponentInChildren&lt;Renderer&gt;();</div>
+<div class="line"><span class="lineno">  285</span>            <span class="keywordflow">if</span> (rend != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  286</span>            {</div>
+<div class="line"><span class="lineno">  287</span>                <span class="keywordflow">return</span> rend.bounds.extents.magnitude * agentScale;</div>
+<div class="line"><span class="lineno">  288</span>            }</div>
+<div class="line"><span class="lineno">  289</span>            <span class="keywordflow">return</span> 0.5f * agentScale; </div>
+<div class="line"><span class="lineno">  290</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5b99816a0891710647395a4088e8a26a" name="a5b99816a0891710647395a4088e8a26a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b99816a0891710647395a4088e8a26a">&#9670;&#160;</a></span>GetRandomPositionInArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 OOP_Scripts.Spawner.GetRandomPositionInArea </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gibt eine zufällige Position im Bereich zurück. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>Position</dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00259">259</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  260</span>        {</div>
+<div class="line"><span class="lineno">  261</span>            Vector3 halfSize = areaSize * 0.5f;</div>
+<div class="line"><span class="lineno">  262</span>            <span class="keywordtype">float</span> randomX = Random.Range(-halfSize.x, halfSize.x);</div>
+<div class="line"><span class="lineno">  263</span>            <span class="keywordtype">float</span> randomZ = Random.Range(-halfSize.z, halfSize.z);</div>
+<div class="line"><span class="lineno">  264</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector3(transform.position.x + randomX, 0f, transform.position.z + randomZ);</div>
+<div class="line"><span class="lineno">  265</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a144e8b4d7f11b347f8f30a2d88da3a3b" name="a144e8b4d7f11b347f8f30a2d88da3a3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a144e8b4d7f11b347f8f30a2d88da3a3b">&#9670;&#160;</a></span>HasValidPrefabs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OOP_Scripts.Spawner.HasValidPrefabs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prüft, ob gültige Prefabs zugewiesen sind. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>True, wenn mindestens ein Prefab vorhanden ist.</dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00218">218</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  219</span>        {</div>
+<div class="line"><span class="lineno">  220</span>            <span class="keywordflow">return</span> malePrefab != <span class="keyword">null</span> || femalePrefab != <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  221</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a902936a7d81aa269ec1137dcc7331748" name="a902936a7d81aa269ec1137dcc7331748"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a902936a7d81aa269ec1137dcc7331748">&#9670;&#160;</a></span>OnDrawGizmosSelected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.OnDrawGizmosSelected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zeichnet den Spawnbereich im Editor. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00337">337</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  338</span>        {</div>
+<div class="line"><span class="lineno">  339</span>            Vector3 center = <span class="keyword">new</span> Vector3(transform.position.x, 0f, transform.position.z);</div>
+<div class="line"><span class="lineno">  340</span>            Gizmos.color = <span class="keyword">new</span> Color(0f, 1f, 0f, 0.2f);</div>
+<div class="line"><span class="lineno">  341</span>            Gizmos.DrawCube(center, areaSize);</div>
+<div class="line"><span class="lineno">  342</span>            Gizmos.color = Color.green;</div>
+<div class="line"><span class="lineno">  343</span>            Gizmos.DrawWireCube(center, areaSize);</div>
+<div class="line"><span class="lineno">  344</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a63feaaaf3137a539272a9f6bfbf7ea99" name="a63feaaaf3137a539272a9f6bfbf7ea99"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63feaaaf3137a539272a9f6bfbf7ea99">&#9670;&#160;</a></span>RemoveAgents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.RemoveAgents </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>countToRemove</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Entfernt die letzten N Agenten. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">countToRemove</td><td>Anzahl der zu entfernenden Agenten</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00156">156</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  157</span>        {</div>
+<div class="line"><span class="lineno">  158</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; countToRemove &amp;&amp; _spawnedAgents.Count &gt; 0; i++)</div>
+<div class="line"><span class="lineno">  159</span>            {</div>
+<div class="line"><span class="lineno">  160</span>                <span class="keywordtype">int</span> lastIndex = _spawnedAgents.Count - 1;</div>
+<div class="line"><span class="lineno">  161</span>                GameObject agent = _spawnedAgents[lastIndex];</div>
+<div class="line"><span class="lineno">  162</span>                <span class="keywordflow">if</span> (agent != <span class="keyword">null</span>) Destroy(agent);</div>
+<div class="line"><span class="lineno">  163</span>                _spawnedAgents.RemoveAt(lastIndex);</div>
+<div class="line"><span class="lineno">  164</span>            }</div>
+<div class="line"><span class="lineno">  165</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4c20ea64a641544f900420f93e243011" name="a4c20ea64a641544f900420f93e243011"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c20ea64a641544f900420f93e243011">&#9670;&#160;</a></span>RespawnAllAgents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.RespawnAllAgents </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Löscht alle Agenten und spawnt die gewünschte Anzahl neu. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00170">170</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>        {</div>
+<div class="line"><span class="lineno">  172</span>            ClearExistingAgents();</div>
+<div class="line"><span class="lineno">  173</span>            <span class="keywordflow">if</span> (!HasValidPrefabs())</div>
+<div class="line"><span class="lineno">  174</span>            {</div>
+<div class="line"><span class="lineno">  175</span>                Debug.LogWarning(<span class="stringliteral">&quot;Spawner: Keine Prefabs zugewiesen!&quot;</span>);</div>
+<div class="line"><span class="lineno">  176</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  177</span>            }</div>
+<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; spawnCount; i++)</div>
+<div class="line"><span class="lineno">  179</span>            {</div>
+<div class="line"><span class="lineno">  180</span>                SpawnSingleAgent(i);</div>
+<div class="line"><span class="lineno">  181</span>            }</div>
+<div class="line"><span class="lineno">  182</span>            UpdateUiText();</div>
+<div class="line"><span class="lineno">  183</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a566b4fe17f8d8d3986430a12b09fd578" name="a566b4fe17f8d8d3986430a12b09fd578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a566b4fe17f8d8d3986430a12b09fd578">&#9670;&#160;</a></span>SelectPrefab()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject OOP_Scripts.Spawner.SelectPrefab </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wählt das Prefab anhand des Index (abwechselnd männlich/weiblich). </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Prefab GameObject</dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00228">228</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  229</span>        {</div>
+<div class="line"><span class="lineno">  230</span>            <span class="keywordflow">if</span> (malePrefab != <span class="keyword">null</span> &amp;&amp; femalePrefab != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  231</span>            {</div>
+<div class="line"><span class="lineno">  232</span>                <span class="keywordflow">return</span> (index % 2 == 0) ? malePrefab : femalePrefab;</div>
+<div class="line"><span class="lineno">  233</span>            }</div>
+<div class="line"><span class="lineno">  234</span>            <span class="keywordflow">return</span> malePrefab != <span class="keyword">null</span> ? malePrefab : femalePrefab;</div>
+<div class="line"><span class="lineno">  235</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aa23af95ddaee4e505572c09c633be0df" name="aa23af95ddaee4e505572c09c633be0df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa23af95ddaee4e505572c09c633be0df">&#9670;&#160;</a></span>SetCountFromSlider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.SetCountFromSlider </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>sliderValue</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setzt die Agentenanzahl über den UI-Slider. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">sliderValue</td><td>Neuer Wert des Sliders</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00117">117</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  118</span>        {</div>
+<div class="line"><span class="lineno">  119</span>            <span class="keywordtype">int</span> newCount = Mathf.Max(0, Mathf.RoundToInt(sliderValue));</div>
+<div class="line"><span class="lineno">  120</span>            <span class="keywordflow">if</span> (spawnCount == newCount) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordflow">if</span> (newCount &gt; spawnCount)</div>
+<div class="line"><span class="lineno">  122</span>            {</div>
+<div class="line"><span class="lineno">  123</span>                <span class="keywordtype">int</span> toAdd = newCount - spawnCount;</div>
+<div class="line"><span class="lineno">  124</span>                AddAgents(toAdd);</div>
+<div class="line"><span class="lineno">  125</span>            }</div>
+<div class="line"><span class="lineno">  126</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  127</span>            {</div>
+<div class="line"><span class="lineno">  128</span>                <span class="keywordtype">int</span> toRemove = spawnCount - newCount;</div>
+<div class="line"><span class="lineno">  129</span>                RemoveAgents(toRemove);</div>
+<div class="line"><span class="lineno">  130</span>            }</div>
+<div class="line"><span class="lineno">  131</span>            spawnCount = newCount;</div>
+<div class="line"><span class="lineno">  132</span>            UpdateUiText();</div>
+<div class="line"><span class="lineno">  133</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adabe9302b79054010fcca4c95870a35f" name="adabe9302b79054010fcca4c95870a35f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adabe9302b79054010fcca4c95870a35f">&#9670;&#160;</a></span>SetupAgentHierarchy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.SetupAgentHierarchy </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>agent</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>baseName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setzt Name, Skalierung und Hierarchie für den Agenten. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">agent</td><td>Agent GameObject</td></tr>
+    <tr><td class="paramname">baseName</td><td>Basisname</td></tr>
+    <tr><td class="paramname">index</td><td>Index</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00298">298</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  299</span>        {</div>
+<div class="line"><span class="lineno">  300</span>            agent.name = $<span class="stringliteral">&quot;{baseName}_{index}&quot;</span>;</div>
+<div class="line"><span class="lineno">  301</span>            agent.transform.localScale = Vector3.one * agentScale;</div>
+<div class="line"><span class="lineno">  302</span>            <span class="keywordflow">if</span> (agentContainer != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  303</span>                agent.transform.SetParent(agentContainer, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  304</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  305</span>                agent.transform.SetParent(transform, <span class="keyword">true</span>);</div>
+<div class="line"><span class="lineno">  306</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac34fea427fcb9dc3a8177765d660ee11" name="ac34fea427fcb9dc3a8177765d660ee11"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac34fea427fcb9dc3a8177765d660ee11">&#9670;&#160;</a></span>SetupRandomWalker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.SetupRandomWalker </td>
+          <td>(</td>
+          <td class="paramtype">GameObject</td>          <td class="paramname"><span class="paramname"><em>agent</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialisiert das RandomMovement-Script des Agenten. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">agent</td><td>Agent GameObject</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00312">312</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  313</span>        {</div>
+<div class="line"><span class="lineno">  314</span>            <span class="keywordflow">if</span> (!agent.TryGetComponent(out RandomMovement walker))</div>
+<div class="line"><span class="lineno">  315</span>            {</div>
+<div class="line"><span class="lineno">  316</span>                walker = agent.AddComponent&lt;RandomMovement&gt;();</div>
+<div class="line"><span class="lineno">  317</span>            }</div>
+<div class="line"><span class="lineno">  318</span>            <span class="keywordtype">float</span> randomSpeed = Random.Range(minSpeed, maxSpeed);</div>
+<div class="line"><span class="lineno">  319</span>            Vector3 areaCenter = <span class="keyword">new</span> Vector3(transform.position.x, 0f, transform.position.z);</div>
+<div class="line"><span class="lineno">  320</span>            walker.InitializeMovementSettings(randomSpeed, areaCenter, areaSize);</div>
+<div class="line"><span class="lineno">  321</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ac9f9fa673fd7ea96fe6d1bb775849edb" name="ac9f9fa673fd7ea96fe6d1bb775849edb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9f9fa673fd7ea96fe6d1bb775849edb">&#9670;&#160;</a></span>SpawnSingleAgent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.SpawnSingleAgent </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>index</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Spawnt einen einzelnen Agenten. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>Index für die Namensgebung und Prefab-Auswahl</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00201">201</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  202</span>        {</div>
+<div class="line"><span class="lineno">  203</span>            GameObject prefabToSpawn = SelectPrefab(index);</div>
+<div class="line"><span class="lineno">  204</span>            <span class="keywordflow">if</span> (prefabToSpawn == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  205</span>            <span class="keywordtype">float</span> radius = GetPrefabRadius(prefabToSpawn);</div>
+<div class="line"><span class="lineno">  206</span>            Vector3 position = TryFindSpawnPosition(radius);</div>
+<div class="line"><span class="lineno">  207</span>            Quaternion rotation = GetInitialRotation();</div>
+<div class="line"><span class="lineno">  208</span>            GameObject newAgent = Instantiate(prefabToSpawn, position, rotation);</div>
+<div class="line"><span class="lineno">  209</span>            SetupAgentHierarchy(newAgent, prefabToSpawn.name, index);</div>
+<div class="line"><span class="lineno">  210</span>            SetupRandomWalker(newAgent);</div>
+<div class="line"><span class="lineno">  211</span>            _spawnedAgents.Add(newAgent);</div>
+<div class="line"><span class="lineno">  212</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ab5f11e1da5c3f9a5f4226f52cadbe4dc" name="ab5f11e1da5c3f9a5f4226f52cadbe4dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5f11e1da5c3f9a5f4226f52cadbe4dc">&#9670;&#160;</a></span>Start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.Start </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialisiert den <a class="el" href="class_o_o_p___scripts_1_1_spawner.html" title="Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne...">Spawner</a> und synchronisiert den UI-Slider. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00104">104</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  105</span>        {</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (countSlider != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  107</span>            {</div>
+<div class="line"><span class="lineno">  108</span>                countSlider.SetValueWithoutNotify(spawnCount);</div>
+<div class="line"><span class="lineno">  109</span>            }</div>
+<div class="line"><span class="lineno">  110</span>            RespawnAllAgents();</div>
+<div class="line"><span class="lineno">  111</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a4bb7da30ee7b2288511603d4fcf222dc" name="a4bb7da30ee7b2288511603d4fcf222dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bb7da30ee7b2288511603d4fcf222dc">&#9670;&#160;</a></span>TryFindSpawnPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 OOP_Scripts.Spawner.TryFindSpawnPosition </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>agentRadius</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sucht eine freie Spawnposition im Bereich. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">agentRadius</td><td>Radius des Agenten</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Rückgabe</dt><dd>Position im Bereich</dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00242">242</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  243</span>        {</div>
+<div class="line"><span class="lineno">  244</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> attempt = 0; attempt &lt; maxPlacementAttempts; attempt++)</div>
+<div class="line"><span class="lineno">  245</span>            {</div>
+<div class="line"><span class="lineno">  246</span>                Vector3 candidatePos = GetRandomPositionInArea();</div>
+<div class="line"><span class="lineno">  247</span>                <span class="keywordflow">if</span> (Physics.OverlapSphere(candidatePos, agentRadius * 0.6f, collisionCheckLayer).Length == 0)</div>
+<div class="line"><span class="lineno">  248</span>                {</div>
+<div class="line"><span class="lineno">  249</span>                    <span class="keywordflow">return</span> candidatePos;</div>
+<div class="line"><span class="lineno">  250</span>                }</div>
+<div class="line"><span class="lineno">  251</span>            }</div>
+<div class="line"><span class="lineno">  252</span>            <span class="keywordflow">return</span> GetRandomPositionInArea();</div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a5a6d5344502221b136dc3e3f41ab1e0a" name="a5a6d5344502221b136dc3e3f41ab1e0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a6d5344502221b136dc3e3f41ab1e0a">&#9670;&#160;</a></span>UpdateUiText()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.Spawner.UpdateUiText </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Aktualisiert die UI-Anzeige der Agentenzahl. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00326">326</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  327</span>        {</div>
+<div class="line"><span class="lineno">  328</span>            <span class="keywordflow">if</span> (countDisplay != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  329</span>            {</div>
+<div class="line"><span class="lineno">  330</span>                countDisplay.text = $<span class="stringliteral">&quot;{spawnCount}&quot;</span>;</div>
+<div class="line"><span class="lineno">  331</span>            }</div>
+<div class="line"><span class="lineno">  332</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a29b80ad47e310a86e132e0a94bc9b542" name="a29b80ad47e310a86e132e0a94bc9b542"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29b80ad47e310a86e132e0a94bc9b542">&#9670;&#160;</a></span>_spawnedAgents</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly List&lt;GameObject&gt; OOP_Scripts.Spawner._spawnedAgents = new List&lt;GameObject&gt;()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00093">93</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="af9d60db7441ab4a187fa594adb55d04a" name="af9d60db7441ab4a187fa594adb55d04a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af9d60db7441ab4a187fa594adb55d04a">&#9670;&#160;</a></span>agentContainer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Transform OOP_Scripts.Spawner.agentContainer</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optional: Container-Objekt für Agenten. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00085">85</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="af5c0dce0d064c36d7fb0038c2a5532bf" name="af5c0dce0d064c36d7fb0038c2a5532bf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5c0dce0d064c36d7fb0038c2a5532bf">&#9670;&#160;</a></span>agentScale</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float OOP_Scripts.Spawner.agentScale = 1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Skalierung der Agenten. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00064">64</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8520b571f0d22429e05bad17b4d63a90" name="a8520b571f0d22429e05bad17b4d63a90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8520b571f0d22429e05bad17b4d63a90">&#9670;&#160;</a></span>areaSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 OOP_Scripts.Spawner.areaSize = new Vector3(10f, 2f, 10f)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Größe des Bereichs, in dem die Agenten platziert werden. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00037">37</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6e2ec7b1079ffe7f06f84797891ce75a" name="a6e2ec7b1079ffe7f06f84797891ce75a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e2ec7b1079ffe7f06f84797891ce75a">&#9670;&#160;</a></span>collisionCheckLayer</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">LayerMask OOP_Scripts.Spawner.collisionCheckLayer = ~0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Layer für Kollisionsprüfung. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00091">91</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9ac5754c12fbe359d38fec493132ddba" name="a9ac5754c12fbe359d38fec493132ddba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac5754c12fbe359d38fec493132ddba">&#9670;&#160;</a></span>countDisplay</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text OOP_Scripts.Spawner.countDisplay</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zeigt die aktuelle Anzahl der Agenten im UI an. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00050">50</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="ac1b9bfe405d10be8bdb41d09322eff9e" name="ac1b9bfe405d10be8bdb41d09322eff9e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac1b9bfe405d10be8bdb41d09322eff9e">&#9670;&#160;</a></span>countSlider</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Slider OOP_Scripts.Spawner.countSlider</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Optional: UI Slider, damit Start-Wert synchronisiert wird. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00099">99</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="a546bbcae70ecfcc67fe1a8e593ac35ec" name="a546bbcae70ecfcc67fe1a8e593ac35ec"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546bbcae70ecfcc67fe1a8e593ac35ec">&#9670;&#160;</a></span>femalePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject OOP_Scripts.Spawner.femalePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prefab für weibliche Agenten. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00060">60</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab3ef83b93c13cb39be7fa41569952375" name="ab3ef83b93c13cb39be7fa41569952375"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3ef83b93c13cb39be7fa41569952375">&#9670;&#160;</a></span>malePrefab</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject OOP_Scripts.Spawner.malePrefab</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prefab für männliche Agenten. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00056">56</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="a3d22d61ae0b4d717fb81c6877cbfd819" name="a3d22d61ae0b4d717fb81c6877cbfd819"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d22d61ae0b4d717fb81c6877cbfd819">&#9670;&#160;</a></span>maxPlacementAttempts</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OOP_Scripts.Spawner.maxPlacementAttempts = 10</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wie oft versucht wird, eine freie Position zu finden. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00043">43</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6bef6e4f92d66b598ad5f24f3d0377d1" name="a6bef6e4f92d66b598ad5f24f3d0377d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bef6e4f92d66b598ad5f24f3d0377d1">&#9670;&#160;</a></span>maxSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float OOP_Scripts.Spawner.maxSpeed = 2f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Maximale Bewegungsgeschwindigkeit der Agenten. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00074">74</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab3dbbc8d42dfe09d28bb9ea5c741ed50" name="ab3dbbc8d42dfe09d28bb9ea5c741ed50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3dbbc8d42dfe09d28bb9ea5c741ed50">&#9670;&#160;</a></span>minSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float OOP_Scripts.Spawner.minSpeed = 0.5f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Minimale Bewegungsgeschwindigkeit der Agenten. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00070">70</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="aea8e99fcb7c87aa325560406c2902d86" name="aea8e99fcb7c87aa325560406c2902d86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea8e99fcb7c87aa325560406c2902d86">&#9670;&#160;</a></span>randomizeRotationY</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OOP_Scripts.Spawner.randomizeRotationY = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Ob die Y-Rotation zufällig gewählt wird. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00078">78</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7886419b9cee93837deb237f74c913a9" name="a7886419b9cee93837deb237f74c913a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7886419b9cee93837deb237f74c913a9">&#9670;&#160;</a></span>spawnCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int OOP_Scripts.Spawner.spawnCount = 20</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Anzahl der Agenten, die generiert werden sollen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_spawner_8cs_source.html#l00031">31</a> der Datei <a class="el" href="_spawner_8cs_source.html">Spawner.cs</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>OOP-Scripts/<a class="el" href="_spawner_8cs_source.html">Spawner.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_o_o_p___scripts.html">OOP_Scripts</a></li><li class="navelem"><a href="class_o_o_p___scripts_1_1_spawner.html">Spawner</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

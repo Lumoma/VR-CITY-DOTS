@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>VR-CITY-DOTS: DOTS-Scripts/RandomMovementSystem.cs Quellcode</title>
+<link rel="icon" href="VR-City-Icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">VR-CITY-DOTS<span id="projectnumber">&#160;2026</span>
+   </div>
+   <div id="projectbrief">Unity C# Projekt für VR City Simulation mit DOTS und OOP.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_random_movement_system_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">RandomMovementSystem.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_random_movement_system_8cs.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>Unity.Burst;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>Unity.Entities;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>Unity.Physics;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>Unity.Transforms;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using </span>Unity.Mathematics;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_d_o_t_s___scripts.html">DOTS_Scripts</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    [BurstCompile]</div>
+<div class="foldopen" id="foldopen00019" data-start="{" data-end="};">
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="struct_d_o_t_s___scripts_1_1_random_movement_system.html">   19</a></span>    <span class="keyword">public</span> <span class="keyword">partial struct </span><a class="code hl_struct" href="struct_d_o_t_s___scripts_1_1_random_movement_system.html">RandomMovementSystem</a> : ISystem</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        [BurstCompile]</div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="struct_d_o_t_s___scripts_1_1_random_movement_system.html#a9934bac0de7fdfe086771dff0b5b0322">   26</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_d_o_t_s___scripts_1_1_random_movement_system.html#a9934bac0de7fdfe086771dff0b5b0322">OnUpdate</a>(ref SystemState state)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>            var job = <span class="keyword">new</span> <a class="code hl_struct" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html">RandomWalkerJob</a></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>            {</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>                CurrentTime = SystemAPI.Time.ElapsedTime,</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>                DeltaTime = SystemAPI.Time.DeltaTime</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            };</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            state.Dependency = job.ScheduleParallel(state.Dependency);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>        }</div>
+</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    }</div>
+</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    [BurstCompile]</div>
+<div class="foldopen" id="foldopen00042" data-start="{" data-end="};">
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html">   42</a></span>    <span class="keyword">public</span> <span class="keyword">partial struct </span><a class="code hl_struct" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html">RandomWalkerJob</a> : IJobEntity</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    {</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno"><a class="line" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a760d6c3a3ac678cce5a5609644930c9f">   47</a></span>        <span class="keyword">public</span> <span class="keywordtype">double</span> <a class="code hl_variable" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a760d6c3a3ac678cce5a5609644930c9f">CurrentTime</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a012565fc0512ec7962779e9bdf542717">   51</a></span>        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a012565fc0512ec7962779e9bdf542717">DeltaTime</a>;</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span></div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#ae8590014727f08a9bb167879e3e6ca89">   56</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#ae8590014727f08a9bb167879e3e6ca89">Execute</a>(ref <a class="code hl_struct" href="struct_d_o_t_s___scripts_1_1_random_movement_data.html">RandomMovementData</a> data, ref LocalTransform transform, ref PhysicsVelocity velocity)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>            <span class="comment">// --- 1. Rotation korrigieren (Der Zombie-Fix) ---</span></div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <span class="comment">// Wir zwingen die Entity, absolut aufrecht zu stehen.</span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="comment">// Wir nehmen die aktuelle Rotation, aber löschen jegliches Kippen (X/Z).</span></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            float3 currentForward = math.forward(transform.Rotation);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>            <span class="comment">// Wir berechnen eine neue Rotation, die nur um die Y-Achse (oben) schaut</span></div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="comment">// math.atan2 gibt uns den Winkel auf dem Boden</span></div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <span class="keywordtype">float</span> currentYAngle = math.atan2(currentForward.x, currentForward.z);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            transform.Rotation = quaternion.RotateY(currentYAngle);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="comment">// --- 2. Bewegung ---</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            float3 forward = math.forward(transform.Rotation);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordtype">float</span> currentVerticalVelocity = velocity.Linear.y;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            float3 newVelocity = forward * data.MovementSpeed;</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>            newVelocity.y = currentVerticalVelocity; <span class="comment">// Schwerkraft beibehalten</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>            velocity.Linear = newVelocity;</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>            </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>            <span class="comment">// WICHTIG: Drehimpuls komplett töten, damit sie nicht trudeln</span></div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>            velocity.Angular = float3.zero; </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>            <span class="comment">// --- 3. Bounds Check ---</span></div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>            <span class="keywordflow">if</span> (<a class="code hl_function" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#ab244e43abfacf45c75061f58dc01a855">IsOutOfBounds</a>(transform.Position, data.AreaCenter, data.AreaSize))</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>            {</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>                <a class="code hl_function" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a287fa450d5442146bff4f07423a8c00e">HandleOutOfBounds</a>(ref data, ref transform, forward);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>            }</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        }</div>
+</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span></div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a287fa450d5442146bff4f07423a8c00e">   90</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a287fa450d5442146bff4f07423a8c00e">HandleOutOfBounds</a>(ref <a class="code hl_struct" href="struct_d_o_t_s___scripts_1_1_random_movement_data.html">RandomMovementData</a> data, ref LocalTransform transform, float3 forward)</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        {</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a760d6c3a3ac678cce5a5609644930c9f">CurrentTime</a> - data.LastCollisionTime &lt; data.CooldownDuration) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>            data.LastCollisionTime = <a class="code hl_variable" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a760d6c3a3ac678cce5a5609644930c9f">CurrentTime</a>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span> </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            <span class="comment">// Drehung um 180 Grad</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordtype">float</span> angle = math.radians(180f);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>            transform.Rotation = math.mul(transform.Rotation, quaternion.RotateY(angle));</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>            transform.Position += forward * -data.BounceNudge;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        }</div>
+</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span></div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#ab244e43abfacf45c75061f58dc01a855">  105</a></span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#ab244e43abfacf45c75061f58dc01a855">IsOutOfBounds</a>(float3 pos, float3 center, float3 size)</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        {</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            float3 min = center - size * 0.5f;</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>            float3 max = center + size * 0.5f;</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            <span class="keywordflow">return</span> pos.x &lt; min.x || pos.x &gt; max.x || pos.z &lt; min.z || pos.z &gt; max.z;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        }</div>
+</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>}</div>
+<div class="ttc" id="anamespace_d_o_t_s___scripts_html"><div class="ttname"><a href="namespace_d_o_t_s___scripts.html">DOTS_Scripts</a></div><div class="ttdef"><b>Definition</b> <a href="_entity_count_u_i_bridge_8cs_source.html#l00011">EntityCountUIBridge.cs:12</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_movement_data_html"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_movement_data.html">DOTS_Scripts.RandomMovementData</a></div><div class="ttdoc">DOTS-Komponente für zufällige Bewegungen von Entitäten.</div><div class="ttdef"><b>Definition</b> <a href="_random_movement_data_8cs_source.html#l00015">RandomMovementData.cs:16</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_movement_system_html"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_movement_system.html">DOTS_Scripts.RandomMovementSystem</a></div><div class="ttdoc">DOTS-System zur Steuerung der zufälligen Bewegungen von Entitäten.</div><div class="ttdef"><b>Definition</b> <a href="#l00019">RandomMovementSystem.cs:20</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_movement_system_html_a9934bac0de7fdfe086771dff0b5b0322"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_movement_system.html#a9934bac0de7fdfe086771dff0b5b0322">DOTS_Scripts.RandomMovementSystem.OnUpdate</a></div><div class="ttdeci">void OnUpdate(ref SystemState state)</div><div class="ttdoc">Führt das System-Update aus und plant den RandomWalkerJob.</div><div class="ttdef"><b>Definition</b> <a href="#l00026">RandomMovementSystem.cs:26</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_walker_job_html"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_walker_job.html">DOTS_Scripts.RandomWalkerJob</a></div><div class="ttdoc">Job zur Steuerung der Bewegung und Bounds-Prüfung für jede Entität.</div><div class="ttdef"><b>Definition</b> <a href="#l00042">RandomMovementSystem.cs:43</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_walker_job_html_a012565fc0512ec7962779e9bdf542717"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a012565fc0512ec7962779e9bdf542717">DOTS_Scripts.RandomWalkerJob.DeltaTime</a></div><div class="ttdeci">float DeltaTime</div><div class="ttdoc">DeltaTime für die Bewegung.</div><div class="ttdef"><b>Definition</b> <a href="#l00051">RandomMovementSystem.cs:51</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_walker_job_html_a287fa450d5442146bff4f07423a8c00e"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a287fa450d5442146bff4f07423a8c00e">DOTS_Scripts.RandomWalkerJob.HandleOutOfBounds</a></div><div class="ttdeci">void HandleOutOfBounds(ref RandomMovementData data, ref LocalTransform transform, float3 forward)</div><div class="ttdoc">Reagiert auf das Verlassen des Bereichs mit Drehung und Nudge.</div><div class="ttdef"><b>Definition</b> <a href="#l00090">RandomMovementSystem.cs:90</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_walker_job_html_a760d6c3a3ac678cce5a5609644930c9f"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#a760d6c3a3ac678cce5a5609644930c9f">DOTS_Scripts.RandomWalkerJob.CurrentTime</a></div><div class="ttdeci">double CurrentTime</div><div class="ttdoc">Aktuelle Zeit (für Cooldown).</div><div class="ttdef"><b>Definition</b> <a href="#l00047">RandomMovementSystem.cs:47</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_walker_job_html_ab244e43abfacf45c75061f58dc01a855"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#ab244e43abfacf45c75061f58dc01a855">DOTS_Scripts.RandomWalkerJob.IsOutOfBounds</a></div><div class="ttdeci">bool IsOutOfBounds(float3 pos, float3 center, float3 size)</div><div class="ttdoc">Prüft, ob die Entität außerhalb des erlaubten Bereichs ist.</div><div class="ttdef"><b>Definition</b> <a href="#l00105">RandomMovementSystem.cs:105</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_random_walker_job_html_ae8590014727f08a9bb167879e3e6ca89"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_random_walker_job.html#ae8590014727f08a9bb167879e3e6ca89">DOTS_Scripts.RandomWalkerJob.Execute</a></div><div class="ttdeci">void Execute(ref RandomMovementData data, ref LocalTransform transform, ref PhysicsVelocity velocity)</div><div class="ttdoc">Führt die Bewegungs- und Bounds-Logik für eine Entität aus.</div><div class="ttdef"><b>Definition</b> <a href="#l00056">RandomMovementSystem.cs:56</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_657e46be123cb4e8ba429fa690d2e77d.html">DOTS-Scripts</a></li><li class="navelem"><a href="_random_movement_system_8cs.html">RandomMovementSystem.cs</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

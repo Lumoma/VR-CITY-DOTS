@@ -1,3 +1,9 @@
+/**
+ * @file SpawnerSystem.cs
+ * @brief System zum Spawnen von Entitäten (DOTS).
+ *
+ * Dieses System steuert das Spawnen von DOTS-Entitäten basierend auf SpawnerData.
+ */
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Transforms;
@@ -6,15 +12,25 @@ using Unity.Mathematics;
 
 namespace DOTS_Scripts
 {
+    /// <summary>
+    /// DOTS-System zum Spawnen und Löschen von Entitäten gemäß SpawnerData.
+    /// </summary>
     [BurstCompile]
     public partial struct SpawnerSystem : ISystem
     {
+        /// <summary>
+        /// Initialisiert das System und setzt die Update-Bedingung.
+        /// </summary>
+        /// <param name="state">SystemState</param>
         public void OnCreate(ref SystemState state)
         {
-            // Wir führen das System nur aus, wenn es einen aktiven RespawnRequest gibt
             state.RequireForUpdate<RespawnRequest>();
         }
 
+        /// <summary>
+        /// Führt das Spawnen und Löschen der Entitäten aus, wenn ein RespawnRequest vorliegt.
+        /// </summary>
+        /// <param name="state">SystemState</param>
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {

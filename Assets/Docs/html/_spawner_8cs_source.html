@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>VR-CITY-DOTS: OOP-Scripts/Spawner.cs Quellcode</title>
+<link rel="icon" href="VR-City-Icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">VR-CITY-DOTS<span id="projectnumber">&#160;2026</span>
+   </div>
+   <div id="projectbrief">Unity C# Projekt für VR City Simulation mit DOTS und OOP.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_spawner_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Spawner.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_spawner_8cs.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>System.Collections.Generic;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>TMPro;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">using </span>UnityEngine.UI;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_o_o_p___scripts.html">OOP_Scripts</a></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>{</div>
+<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html">   24</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_o_o_p___scripts_1_1_spawner.html">Spawner</a> : MonoBehaviour</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    {</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        [Header(<span class="stringliteral">&quot;Spawn Einstellungen&quot;</span>)]</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Anzahl der Agenten, die generiert werden sollen.&quot;</span>)]</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">   31</a></span>        <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">spawnCount</a> = 20;</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Größe des Bereichs, in dem die Agenten platziert werden.&quot;</span>)]</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a8520b571f0d22429e05bad17b4d63a90">   37</a></span>        <span class="keyword">private</span> Vector3 <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a8520b571f0d22429e05bad17b4d63a90">areaSize</a> = <span class="keyword">new</span> Vector3(10f, 2f, 10f);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Wie oft versucht wird, eine freie Position zu finden.&quot;</span>)]</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a3d22d61ae0b4d717fb81c6877cbfd819">   43</a></span>        <span class="keyword">private</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a3d22d61ae0b4d717fb81c6877cbfd819">maxPlacementAttempts</a> = 10;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>        </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        [Header(<span class="stringliteral">&quot;UI Referenzen&quot;</span>)]</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Zeigt die aktuelle Anzahl der Agenten im UI an.&quot;</span>)]</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a9ac5754c12fbe359d38fec493132ddba">   50</a></span>        <span class="keyword">private</span> TMP_Text <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a9ac5754c12fbe359d38fec493132ddba">countDisplay</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span></div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        [Header(<span class="stringliteral">&quot;Visuals&quot;</span>)]</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#ab3ef83b93c13cb39be7fa41569952375">   56</a></span>        [SerializeField] <span class="keyword">private</span> GameObject <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ab3ef83b93c13cb39be7fa41569952375">malePrefab</a>;</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a546bbcae70ecfcc67fe1a8e593ac35ec">   60</a></span>        [SerializeField] <span class="keyword">private</span> GameObject <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a546bbcae70ecfcc67fe1a8e593ac35ec">femalePrefab</a>;</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#af5c0dce0d064c36d7fb0038c2a5532bf">   64</a></span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#af5c0dce0d064c36d7fb0038c2a5532bf">agentScale</a> = 1f;</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        [Header(<span class="stringliteral">&quot;Agenten Konfiguration&quot;</span>)]</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#ab3dbbc8d42dfe09d28bb9ea5c741ed50">   70</a></span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ab3dbbc8d42dfe09d28bb9ea5c741ed50">minSpeed</a> = 0.5f;</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a6bef6e4f92d66b598ad5f24f3d0377d1">   74</a></span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a6bef6e4f92d66b598ad5f24f3d0377d1">maxSpeed</a> = 2f;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#aea8e99fcb7c87aa325560406c2902d86">   78</a></span>        [SerializeField] <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#aea8e99fcb7c87aa325560406c2902d86">randomizeRotationY</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>        [Header(<span class="stringliteral">&quot;Infrastruktur&quot;</span>)]</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Optional: Container-Objekt.&quot;</span>)]</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#af9d60db7441ab4a187fa594adb55d04a">   85</a></span>        <span class="keyword">private</span> Transform <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#af9d60db7441ab4a187fa594adb55d04a">agentContainer</a>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Layer für Kollisionsprüfung.&quot;</span>)]</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a6e2ec7b1079ffe7f06f84797891ce75a">   91</a></span>        <span class="keyword">private</span> LayerMask <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a6e2ec7b1079ffe7f06f84797891ce75a">collisionCheckLayer</a> = ~0;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a29b80ad47e310a86e132e0a94bc9b542">   93</a></span>        <span class="keyword">private</span> readonly List&lt;GameObject&gt; <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a29b80ad47e310a86e132e0a94bc9b542">_spawnedAgents</a> = <span class="keyword">new</span> List&lt;GameObject&gt;();</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>        [Header(<span class="stringliteral">&quot;Optional UI&quot;</span>)]</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>        [SerializeField, Tooltip(<span class="stringliteral">&quot;Optional: UI Slider, damit Start-Wert synchronisiert wird.&quot;</span>)]</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#ac1b9bfe405d10be8bdb41d09322eff9e">   99</a></span>        <span class="keyword">private</span> Slider <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ac1b9bfe405d10be8bdb41d09322eff9e">countSlider</a>;</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span></div>
+<div class="foldopen" id="foldopen00104" data-start="{" data-end="}">
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#ab5f11e1da5c3f9a5f4226f52cadbe4dc">  104</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#ab5f11e1da5c3f9a5f4226f52cadbe4dc">Start</a>()</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ac1b9bfe405d10be8bdb41d09322eff9e">countSlider</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            {</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>                <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ac1b9bfe405d10be8bdb41d09322eff9e">countSlider</a>.SetValueWithoutNotify(<a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">spawnCount</a>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>            }</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a4c20ea64a641544f900420f93e243011">RespawnAllAgents</a>();</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>        }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span></div>
+<div class="foldopen" id="foldopen00117" data-start="{" data-end="}">
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#aa23af95ddaee4e505572c09c633be0df">  117</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#aa23af95ddaee4e505572c09c633be0df">SetCountFromSlider</a>(<span class="keywordtype">float</span> sliderValue)</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>        {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordtype">int</span> newCount = Mathf.Max(0, Mathf.RoundToInt(sliderValue));</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">spawnCount</a> == newCount) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            <span class="keywordflow">if</span> (newCount &gt; <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">spawnCount</a>)</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            {</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>                <span class="keywordtype">int</span> toAdd = newCount - <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">spawnCount</a>;</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>                <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a9b36aa0d38aec39408debc264575ac5a">AddAgents</a>(toAdd);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            }</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                <span class="keywordtype">int</span> toRemove = <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">spawnCount</a> - newCount;</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>                <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a63feaaaf3137a539272a9f6bfbf7ea99">RemoveAgents</a>(toRemove);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            }</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">spawnCount</a> = newCount;</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a5a6d5344502221b136dc3e3f41ab1e0a">UpdateUiText</a>();</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="foldopen" id="foldopen00139" data-start="{" data-end="}">
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a9b36aa0d38aec39408debc264575ac5a">  139</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a9b36aa0d38aec39408debc264575ac5a">AddAgents</a>(<span class="keywordtype">int</span> countToAdd)</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        {</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a144e8b4d7f11b347f8f30a2d88da3a3b">HasValidPrefabs</a>())</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>            {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>                Debug.LogWarning(<span class="stringliteral">&quot;Spawner: Keine Prefabs zugewiesen! Keine Agenten hinzugefügt.&quot;</span>);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            }</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; countToAdd; i++)</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>            {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>                <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#ac9f9fa673fd7ea96fe6d1bb775849edb">SpawnSingleAgent</a>(<a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a29b80ad47e310a86e132e0a94bc9b542">_spawnedAgents</a>.Count);</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>            }</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        }</div>
+</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span></div>
+<div class="foldopen" id="foldopen00156" data-start="{" data-end="}">
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a63feaaaf3137a539272a9f6bfbf7ea99">  156</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a63feaaaf3137a539272a9f6bfbf7ea99">RemoveAgents</a>(<span class="keywordtype">int</span> countToRemove)</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>        {</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; countToRemove &amp;&amp; _spawnedAgents.Count &gt; 0; i++)</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>            {</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                <span class="keywordtype">int</span> lastIndex = _spawnedAgents.Count - 1;</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>                GameObject agent = <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a29b80ad47e310a86e132e0a94bc9b542">_spawnedAgents</a>[lastIndex];</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                <span class="keywordflow">if</span> (agent != <span class="keyword">null</span>) Destroy(agent);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a29b80ad47e310a86e132e0a94bc9b542">_spawnedAgents</a>.RemoveAt(lastIndex);</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>            }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        }</div>
+</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span></div>
+<div class="foldopen" id="foldopen00170" data-start="{" data-end="}">
+<div class="line"><a id="l00170" name="l00170"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a4c20ea64a641544f900420f93e243011">  170</a></span>        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a4c20ea64a641544f900420f93e243011">RespawnAllAgents</a>()</div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>        {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a514c4ac46acb57e4bd9d53c5a732ab51">ClearExistingAgents</a>();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>            <span class="keywordflow">if</span> (!<a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a144e8b4d7f11b347f8f30a2d88da3a3b">HasValidPrefabs</a>())</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>            {</div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                Debug.LogWarning(<span class="stringliteral">&quot;Spawner: Keine Prefabs zugewiesen!&quot;</span>);</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>            }</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">spawnCount</a>; i++)</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>            {</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>                <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#ac9f9fa673fd7ea96fe6d1bb775849edb">SpawnSingleAgent</a>(i);</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            }</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a5a6d5344502221b136dc3e3f41ab1e0a">UpdateUiText</a>();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>        }</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span></div>
+<div class="foldopen" id="foldopen00188" data-start="{" data-end="}">
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a514c4ac46acb57e4bd9d53c5a732ab51">  188</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a514c4ac46acb57e4bd9d53c5a732ab51">ClearExistingAgents</a>()</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>        {</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <span class="keywordflow">foreach</span> (var agent <span class="keywordflow">in</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a29b80ad47e310a86e132e0a94bc9b542">_spawnedAgents</a>)</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>                <span class="keywordflow">if</span> (agent != <span class="keyword">null</span>) Destroy(agent);</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>            }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a29b80ad47e310a86e132e0a94bc9b542">_spawnedAgents</a>.Clear();</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        }</div>
+</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span></div>
+<div class="foldopen" id="foldopen00201" data-start="{" data-end="}">
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#ac9f9fa673fd7ea96fe6d1bb775849edb">  201</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#ac9f9fa673fd7ea96fe6d1bb775849edb">SpawnSingleAgent</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>        {</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>            GameObject prefabToSpawn = <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a566b4fe17f8d8d3986430a12b09fd578">SelectPrefab</a>(index);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>            <span class="keywordflow">if</span> (prefabToSpawn == <span class="keyword">null</span>) <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <span class="keywordtype">float</span> radius = <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#add9a0de08dceaf416bd8cbca1b6b0cc4">GetPrefabRadius</a>(prefabToSpawn);</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            Vector3 position = <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a4bb7da30ee7b2288511603d4fcf222dc">TryFindSpawnPosition</a>(radius);</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            Quaternion rotation = <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#aa07670db432e7ae6251c9c5fb9f5735c">GetInitialRotation</a>();</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            GameObject newAgent = Instantiate(prefabToSpawn, position, rotation);</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#adabe9302b79054010fcca4c95870a35f">SetupAgentHierarchy</a>(newAgent, prefabToSpawn.name, index);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span>            <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#ac34fea427fcb9dc3a8177765d660ee11">SetupRandomWalker</a>(newAgent);</div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a29b80ad47e310a86e132e0a94bc9b542">_spawnedAgents</a>.Add(newAgent);</div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        }</div>
+</div>
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span></div>
+<div class="foldopen" id="foldopen00218" data-start="{" data-end="}">
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a144e8b4d7f11b347f8f30a2d88da3a3b">  218</a></span>        <span class="keyword">private</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a144e8b4d7f11b347f8f30a2d88da3a3b">HasValidPrefabs</a>()</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>        {</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ab3ef83b93c13cb39be7fa41569952375">malePrefab</a> != <span class="keyword">null</span> || <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a546bbcae70ecfcc67fe1a8e593ac35ec">femalePrefab</a> != <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span>        }</div>
+</div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span></div>
+<div class="foldopen" id="foldopen00228" data-start="{" data-end="}">
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a566b4fe17f8d8d3986430a12b09fd578">  228</a></span>        <span class="keyword">private</span> GameObject <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a566b4fe17f8d8d3986430a12b09fd578">SelectPrefab</a>(<span class="keywordtype">int</span> index)</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        {</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ab3ef83b93c13cb39be7fa41569952375">malePrefab</a> != <span class="keyword">null</span> &amp;&amp; <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a546bbcae70ecfcc67fe1a8e593ac35ec">femalePrefab</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            {</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>                <span class="keywordflow">return</span> (index % 2 == 0) ? <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ab3ef83b93c13cb39be7fa41569952375">malePrefab</a> : <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a546bbcae70ecfcc67fe1a8e593ac35ec">femalePrefab</a>;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span>            }</div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>            <span class="keywordflow">return</span> <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ab3ef83b93c13cb39be7fa41569952375">malePrefab</a> != <span class="keyword">null</span> ? <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ab3ef83b93c13cb39be7fa41569952375">malePrefab</a> : <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a546bbcae70ecfcc67fe1a8e593ac35ec">femalePrefab</a>;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        }</div>
+</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span></div>
+<div class="foldopen" id="foldopen00242" data-start="{" data-end="}">
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a4bb7da30ee7b2288511603d4fcf222dc">  242</a></span>        <span class="keyword">private</span> Vector3 <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a4bb7da30ee7b2288511603d4fcf222dc">TryFindSpawnPosition</a>(<span class="keywordtype">float</span> agentRadius)</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>        {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> attempt = 0; attempt &lt; <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a3d22d61ae0b4d717fb81c6877cbfd819">maxPlacementAttempts</a>; attempt++)</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>            {</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                Vector3 candidatePos = <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a5b99816a0891710647395a4088e8a26a">GetRandomPositionInArea</a>();</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>                <span class="keywordflow">if</span> (Physics.OverlapSphere(candidatePos, agentRadius * 0.6f, <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a6e2ec7b1079ffe7f06f84797891ce75a">collisionCheckLayer</a>).Length == 0)</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                {</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                    <span class="keywordflow">return</span> candidatePos;</div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>                }</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            }</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <span class="keywordflow">return</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a5b99816a0891710647395a4088e8a26a">GetRandomPositionInArea</a>();</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>        }</div>
+</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span></div>
+<div class="foldopen" id="foldopen00259" data-start="{" data-end="}">
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a5b99816a0891710647395a4088e8a26a">  259</a></span>        <span class="keyword">private</span> Vector3 <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a5b99816a0891710647395a4088e8a26a">GetRandomPositionInArea</a>()</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span>        {</div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>            Vector3 halfSize = <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a8520b571f0d22429e05bad17b4d63a90">areaSize</a> * 0.5f;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>            <span class="keywordtype">float</span> randomX = Random.Range(-halfSize.x, halfSize.x);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>            <span class="keywordtype">float</span> randomZ = Random.Range(-halfSize.z, halfSize.z);</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector3(transform.position.x + randomX, 0f, transform.position.z + randomZ);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>        }</div>
+</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span></div>
+<div class="foldopen" id="foldopen00271" data-start="{" data-end="}">
+<div class="line"><a id="l00271" name="l00271"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#aa07670db432e7ae6251c9c5fb9f5735c">  271</a></span>        <span class="keyword">private</span> Quaternion <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#aa07670db432e7ae6251c9c5fb9f5735c">GetInitialRotation</a>()</div>
+<div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span>        {</div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>            <span class="keywordtype">float</span> yAngle = <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#aea8e99fcb7c87aa325560406c2902d86">randomizeRotationY</a> ? Random.Range(0f, 360f) : 0f;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>            <span class="keywordflow">return</span> Quaternion.Euler(0f, yAngle, 0f);</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        }</div>
+</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span></div>
+<div class="foldopen" id="foldopen00282" data-start="{" data-end="}">
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#add9a0de08dceaf416bd8cbca1b6b0cc4">  282</a></span>        <span class="keyword">private</span> <span class="keywordtype">float</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#add9a0de08dceaf416bd8cbca1b6b0cc4">GetPrefabRadius</a>(GameObject prefab)</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>        {</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span>            var rend = prefab.GetComponentInChildren&lt;Renderer&gt;();</div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>            <span class="keywordflow">if</span> (rend != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>            {</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>                <span class="keywordflow">return</span> rend.bounds.extents.magnitude * <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#af5c0dce0d064c36d7fb0038c2a5532bf">agentScale</a>;</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            }</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <span class="keywordflow">return</span> 0.5f * <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#af5c0dce0d064c36d7fb0038c2a5532bf">agentScale</a>; </div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>        }</div>
+</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span></div>
+<div class="foldopen" id="foldopen00298" data-start="{" data-end="}">
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#adabe9302b79054010fcca4c95870a35f">  298</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#adabe9302b79054010fcca4c95870a35f">SetupAgentHierarchy</a>(GameObject agent, <span class="keywordtype">string</span> baseName, <span class="keywordtype">int</span> index)</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span>        {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>            agent.name = $<span class="stringliteral">&quot;{baseName}_{index}&quot;</span>;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>            agent.transform.localScale = Vector3.one * <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#af5c0dce0d064c36d7fb0038c2a5532bf">agentScale</a>;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#af9d60db7441ab4a187fa594adb55d04a">agentContainer</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>                agent.transform.SetParent(<a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#af9d60db7441ab4a187fa594adb55d04a">agentContainer</a>, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span>            <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>                agent.transform.SetParent(transform, <span class="keyword">true</span>);</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>        }</div>
+</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span></div>
+<div class="foldopen" id="foldopen00312" data-start="{" data-end="}">
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#ac34fea427fcb9dc3a8177765d660ee11">  312</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#ac34fea427fcb9dc3a8177765d660ee11">SetupRandomWalker</a>(GameObject agent)</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>        {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>            <span class="keywordflow">if</span> (!agent.TryGetComponent(out <a class="code hl_class" href="class_o_o_p___scripts_1_1_random_movement.html">RandomMovement</a> walker))</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>            {</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>                walker = agent.AddComponent&lt;<a class="code hl_class" href="class_o_o_p___scripts_1_1_random_movement.html">RandomMovement</a>&gt;();</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>            }</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span>            <span class="keywordtype">float</span> randomSpeed = Random.Range(<a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#ab3dbbc8d42dfe09d28bb9ea5c741ed50">minSpeed</a>, <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a6bef6e4f92d66b598ad5f24f3d0377d1">maxSpeed</a>);</div>
+<div class="line"><a id="l00319" name="l00319"></a><span class="lineno">  319</span>            Vector3 areaCenter = <span class="keyword">new</span> Vector3(transform.position.x, 0f, transform.position.z);</div>
+<div class="line"><a id="l00320" name="l00320"></a><span class="lineno">  320</span>            walker.InitializeMovementSettings(randomSpeed, areaCenter, <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a8520b571f0d22429e05bad17b4d63a90">areaSize</a>);</div>
+<div class="line"><a id="l00321" name="l00321"></a><span class="lineno">  321</span>        }</div>
+</div>
+<div class="line"><a id="l00322" name="l00322"></a><span class="lineno">  322</span></div>
+<div class="foldopen" id="foldopen00326" data-start="{" data-end="}">
+<div class="line"><a id="l00326" name="l00326"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a5a6d5344502221b136dc3e3f41ab1e0a">  326</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a5a6d5344502221b136dc3e3f41ab1e0a">UpdateUiText</a>()</div>
+<div class="line"><a id="l00327" name="l00327"></a><span class="lineno">  327</span>        {</div>
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno">  328</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a9ac5754c12fbe359d38fec493132ddba">countDisplay</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>            {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>                countDisplay.text = $<span class="stringliteral">&quot;{spawnCount}&quot;</span>;</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>            }</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        }</div>
+</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span></div>
+<div class="foldopen" id="foldopen00337" data-start="{" data-end="}">
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno"><a class="line" href="class_o_o_p___scripts_1_1_spawner.html#a902936a7d81aa269ec1137dcc7331748">  337</a></span>        <span class="keyword">private</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_o_o_p___scripts_1_1_spawner.html#a902936a7d81aa269ec1137dcc7331748">OnDrawGizmosSelected</a>()</div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>        {</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span>            Vector3 center = <span class="keyword">new</span> Vector3(transform.position.x, 0f, transform.position.z);</div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>            Gizmos.color = <span class="keyword">new</span> Color(0f, 1f, 0f, 0.2f);</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>            Gizmos.DrawCube(center, <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a8520b571f0d22429e05bad17b4d63a90">areaSize</a>);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>            Gizmos.color = Color.green;</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            Gizmos.DrawWireCube(center, <a class="code hl_variable" href="class_o_o_p___scripts_1_1_spawner.html#a8520b571f0d22429e05bad17b4d63a90">areaSize</a>);</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>        }</div>
+</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>    }</div>
+</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>}</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span> </div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_random_movement_html"><div class="ttname"><a href="class_o_o_p___scripts_1_1_random_movement.html">OOP_Scripts.RandomMovement</a></div><div class="ttdoc">Steuert die zufällige Bewegung eines Agenten innerhalb eines definierten Bereichs.</div><div class="ttdef"><b>Definition</b> <a href="_random_movement_8cs_source.html#l00016">RandomMovement.cs:17</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html">OOP_Scripts.Spawner</a></div><div class="ttdoc">Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne...</div><div class="ttdef"><b>Definition</b> <a href="#l00024">Spawner.cs:25</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a144e8b4d7f11b347f8f30a2d88da3a3b"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a144e8b4d7f11b347f8f30a2d88da3a3b">OOP_Scripts.Spawner.HasValidPrefabs</a></div><div class="ttdeci">bool HasValidPrefabs()</div><div class="ttdoc">Prüft, ob gültige Prefabs zugewiesen sind.</div><div class="ttdef"><b>Definition</b> <a href="#l00218">Spawner.cs:218</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a29b80ad47e310a86e132e0a94bc9b542"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a29b80ad47e310a86e132e0a94bc9b542">OOP_Scripts.Spawner._spawnedAgents</a></div><div class="ttdeci">readonly List&lt; GameObject &gt; _spawnedAgents</div><div class="ttdef"><b>Definition</b> <a href="#l00093">Spawner.cs:93</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a3d22d61ae0b4d717fb81c6877cbfd819"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a3d22d61ae0b4d717fb81c6877cbfd819">OOP_Scripts.Spawner.maxPlacementAttempts</a></div><div class="ttdeci">int maxPlacementAttempts</div><div class="ttdoc">Wie oft versucht wird, eine freie Position zu finden.</div><div class="ttdef"><b>Definition</b> <a href="#l00043">Spawner.cs:43</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a4bb7da30ee7b2288511603d4fcf222dc"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a4bb7da30ee7b2288511603d4fcf222dc">OOP_Scripts.Spawner.TryFindSpawnPosition</a></div><div class="ttdeci">Vector3 TryFindSpawnPosition(float agentRadius)</div><div class="ttdoc">Sucht eine freie Spawnposition im Bereich.</div><div class="ttdef"><b>Definition</b> <a href="#l00242">Spawner.cs:242</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a4c20ea64a641544f900420f93e243011"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a4c20ea64a641544f900420f93e243011">OOP_Scripts.Spawner.RespawnAllAgents</a></div><div class="ttdeci">void RespawnAllAgents()</div><div class="ttdoc">Löscht alle Agenten und spawnt die gewünschte Anzahl neu.</div><div class="ttdef"><b>Definition</b> <a href="#l00170">Spawner.cs:170</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a514c4ac46acb57e4bd9d53c5a732ab51"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a514c4ac46acb57e4bd9d53c5a732ab51">OOP_Scripts.Spawner.ClearExistingAgents</a></div><div class="ttdeci">void ClearExistingAgents()</div><div class="ttdoc">Löscht alle existierenden Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00188">Spawner.cs:188</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a546bbcae70ecfcc67fe1a8e593ac35ec"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a546bbcae70ecfcc67fe1a8e593ac35ec">OOP_Scripts.Spawner.femalePrefab</a></div><div class="ttdeci">GameObject femalePrefab</div><div class="ttdoc">Prefab für weibliche Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00060">Spawner.cs:60</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a566b4fe17f8d8d3986430a12b09fd578"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a566b4fe17f8d8d3986430a12b09fd578">OOP_Scripts.Spawner.SelectPrefab</a></div><div class="ttdeci">GameObject SelectPrefab(int index)</div><div class="ttdoc">Wählt das Prefab anhand des Index (abwechselnd männlich/weiblich).</div><div class="ttdef"><b>Definition</b> <a href="#l00228">Spawner.cs:228</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a5a6d5344502221b136dc3e3f41ab1e0a"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a5a6d5344502221b136dc3e3f41ab1e0a">OOP_Scripts.Spawner.UpdateUiText</a></div><div class="ttdeci">void UpdateUiText()</div><div class="ttdoc">Aktualisiert die UI-Anzeige der Agentenzahl.</div><div class="ttdef"><b>Definition</b> <a href="#l00326">Spawner.cs:326</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a5b99816a0891710647395a4088e8a26a"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a5b99816a0891710647395a4088e8a26a">OOP_Scripts.Spawner.GetRandomPositionInArea</a></div><div class="ttdeci">Vector3 GetRandomPositionInArea()</div><div class="ttdoc">Gibt eine zufällige Position im Bereich zurück.</div><div class="ttdef"><b>Definition</b> <a href="#l00259">Spawner.cs:259</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a63feaaaf3137a539272a9f6bfbf7ea99"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a63feaaaf3137a539272a9f6bfbf7ea99">OOP_Scripts.Spawner.RemoveAgents</a></div><div class="ttdeci">void RemoveAgents(int countToRemove)</div><div class="ttdoc">Entfernt die letzten N Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00156">Spawner.cs:156</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a6bef6e4f92d66b598ad5f24f3d0377d1"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a6bef6e4f92d66b598ad5f24f3d0377d1">OOP_Scripts.Spawner.maxSpeed</a></div><div class="ttdeci">float maxSpeed</div><div class="ttdoc">Maximale Bewegungsgeschwindigkeit der Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00074">Spawner.cs:74</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a6e2ec7b1079ffe7f06f84797891ce75a"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a6e2ec7b1079ffe7f06f84797891ce75a">OOP_Scripts.Spawner.collisionCheckLayer</a></div><div class="ttdeci">LayerMask collisionCheckLayer</div><div class="ttdoc">Layer für Kollisionsprüfung.</div><div class="ttdef"><b>Definition</b> <a href="#l00091">Spawner.cs:91</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a7886419b9cee93837deb237f74c913a9"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a7886419b9cee93837deb237f74c913a9">OOP_Scripts.Spawner.spawnCount</a></div><div class="ttdeci">int spawnCount</div><div class="ttdoc">Anzahl der Agenten, die generiert werden sollen.</div><div class="ttdef"><b>Definition</b> <a href="#l00031">Spawner.cs:31</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a8520b571f0d22429e05bad17b4d63a90"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a8520b571f0d22429e05bad17b4d63a90">OOP_Scripts.Spawner.areaSize</a></div><div class="ttdeci">Vector3 areaSize</div><div class="ttdoc">Größe des Bereichs, in dem die Agenten platziert werden.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">Spawner.cs:37</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a902936a7d81aa269ec1137dcc7331748"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a902936a7d81aa269ec1137dcc7331748">OOP_Scripts.Spawner.OnDrawGizmosSelected</a></div><div class="ttdeci">void OnDrawGizmosSelected()</div><div class="ttdoc">Zeichnet den Spawnbereich im Editor.</div><div class="ttdef"><b>Definition</b> <a href="#l00337">Spawner.cs:337</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a9ac5754c12fbe359d38fec493132ddba"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a9ac5754c12fbe359d38fec493132ddba">OOP_Scripts.Spawner.countDisplay</a></div><div class="ttdeci">TMP_Text countDisplay</div><div class="ttdoc">Zeigt die aktuelle Anzahl der Agenten im UI an.</div><div class="ttdef"><b>Definition</b> <a href="#l00050">Spawner.cs:50</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_a9b36aa0d38aec39408debc264575ac5a"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#a9b36aa0d38aec39408debc264575ac5a">OOP_Scripts.Spawner.AddAgents</a></div><div class="ttdeci">void AddAgents(int countToAdd)</div><div class="ttdoc">Fügt eine Anzahl von Agenten hinzu.</div><div class="ttdef"><b>Definition</b> <a href="#l00139">Spawner.cs:139</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_aa07670db432e7ae6251c9c5fb9f5735c"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#aa07670db432e7ae6251c9c5fb9f5735c">OOP_Scripts.Spawner.GetInitialRotation</a></div><div class="ttdeci">Quaternion GetInitialRotation()</div><div class="ttdoc">Gibt die Startrotation zurück.</div><div class="ttdef"><b>Definition</b> <a href="#l00271">Spawner.cs:271</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_aa23af95ddaee4e505572c09c633be0df"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#aa23af95ddaee4e505572c09c633be0df">OOP_Scripts.Spawner.SetCountFromSlider</a></div><div class="ttdeci">void SetCountFromSlider(float sliderValue)</div><div class="ttdoc">Setzt die Agentenanzahl über den UI-Slider.</div><div class="ttdef"><b>Definition</b> <a href="#l00117">Spawner.cs:117</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_ab3dbbc8d42dfe09d28bb9ea5c741ed50"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#ab3dbbc8d42dfe09d28bb9ea5c741ed50">OOP_Scripts.Spawner.minSpeed</a></div><div class="ttdeci">float minSpeed</div><div class="ttdoc">Minimale Bewegungsgeschwindigkeit der Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00070">Spawner.cs:70</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_ab3ef83b93c13cb39be7fa41569952375"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#ab3ef83b93c13cb39be7fa41569952375">OOP_Scripts.Spawner.malePrefab</a></div><div class="ttdeci">GameObject malePrefab</div><div class="ttdoc">Prefab für männliche Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00056">Spawner.cs:56</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_ab5f11e1da5c3f9a5f4226f52cadbe4dc"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#ab5f11e1da5c3f9a5f4226f52cadbe4dc">OOP_Scripts.Spawner.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Initialisiert den Spawner und synchronisiert den UI-Slider.</div><div class="ttdef"><b>Definition</b> <a href="#l00104">Spawner.cs:104</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_ac1b9bfe405d10be8bdb41d09322eff9e"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#ac1b9bfe405d10be8bdb41d09322eff9e">OOP_Scripts.Spawner.countSlider</a></div><div class="ttdeci">Slider countSlider</div><div class="ttdoc">Optional: UI Slider, damit Start-Wert synchronisiert wird.</div><div class="ttdef"><b>Definition</b> <a href="#l00099">Spawner.cs:99</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_ac34fea427fcb9dc3a8177765d660ee11"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#ac34fea427fcb9dc3a8177765d660ee11">OOP_Scripts.Spawner.SetupRandomWalker</a></div><div class="ttdeci">void SetupRandomWalker(GameObject agent)</div><div class="ttdoc">Initialisiert das RandomMovement-Script des Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00312">Spawner.cs:312</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_ac9f9fa673fd7ea96fe6d1bb775849edb"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#ac9f9fa673fd7ea96fe6d1bb775849edb">OOP_Scripts.Spawner.SpawnSingleAgent</a></div><div class="ttdeci">void SpawnSingleAgent(int index)</div><div class="ttdoc">Spawnt einen einzelnen Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00201">Spawner.cs:201</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_adabe9302b79054010fcca4c95870a35f"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#adabe9302b79054010fcca4c95870a35f">OOP_Scripts.Spawner.SetupAgentHierarchy</a></div><div class="ttdeci">void SetupAgentHierarchy(GameObject agent, string baseName, int index)</div><div class="ttdoc">Setzt Name, Skalierung und Hierarchie für den Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00298">Spawner.cs:298</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_add9a0de08dceaf416bd8cbca1b6b0cc4"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#add9a0de08dceaf416bd8cbca1b6b0cc4">OOP_Scripts.Spawner.GetPrefabRadius</a></div><div class="ttdeci">float GetPrefabRadius(GameObject prefab)</div><div class="ttdoc">Ermittelt den Radius des Prefabs anhand des Renderers.</div><div class="ttdef"><b>Definition</b> <a href="#l00282">Spawner.cs:282</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_aea8e99fcb7c87aa325560406c2902d86"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#aea8e99fcb7c87aa325560406c2902d86">OOP_Scripts.Spawner.randomizeRotationY</a></div><div class="ttdeci">bool randomizeRotationY</div><div class="ttdoc">Ob die Y-Rotation zufällig gewählt wird.</div><div class="ttdef"><b>Definition</b> <a href="#l00078">Spawner.cs:78</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_af5c0dce0d064c36d7fb0038c2a5532bf"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#af5c0dce0d064c36d7fb0038c2a5532bf">OOP_Scripts.Spawner.agentScale</a></div><div class="ttdeci">float agentScale</div><div class="ttdoc">Skalierung der Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00064">Spawner.cs:64</a></div></div>
+<div class="ttc" id="aclass_o_o_p___scripts_1_1_spawner_html_af9d60db7441ab4a187fa594adb55d04a"><div class="ttname"><a href="class_o_o_p___scripts_1_1_spawner.html#af9d60db7441ab4a187fa594adb55d04a">OOP_Scripts.Spawner.agentContainer</a></div><div class="ttdeci">Transform agentContainer</div><div class="ttdoc">Optional: Container-Objekt für Agenten.</div><div class="ttdef"><b>Definition</b> <a href="#l00085">Spawner.cs:85</a></div></div>
+<div class="ttc" id="anamespace_o_o_p___scripts_html"><div class="ttname"><a href="namespace_o_o_p___scripts.html">OOP_Scripts</a></div><div class="ttdef"><b>Definition</b> <a href="_random_movement_8cs_source.html#l00010">RandomMovement.cs:11</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_6f24fbc22be5ef266ba547ece90b7c69.html">OOP-Scripts</a></li><li class="navelem"><a href="_spawner_8cs.html">Spawner.cs</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,16 +1,26 @@
+/**
+ * @file SpawnerUIBridge.cs
+ * @brief Bindeglied zwischen Spawner-System und UI (DOTS).
+ *
+ * Dieses Script verbindet das DOTS-Spawner-System mit der Benutzeroberfläche.
+ */
 using UnityEngine;
 using Unity.Entities;
 using Unity.Collections;
 
 namespace DOTS_Scripts
 {
-    // Dieses Script lebt in der "normalen" Welt (Main Scene)
-    // Es leitet UI-Eingaben an die ECS-Welt weiter.
+    /// <summary>
+    /// Brücke zwischen UI (z.B. Slider) und DOTS-Spawner-System.
+    /// </summary>
     public class SpawnerUIBridge : MonoBehaviour
     {
         private EntityManager _entityManager;
         private EntityQuery _spawnerQuery;
 
+        /// <summary>
+        /// Initialisiert EntityManager und EntityQuery für die UI-Interaktion.
+        /// </summary>
         void Start()
         {
             // Verbindung zur DOTS-Welt herstellen
@@ -21,7 +31,10 @@ namespace DOTS_Scripts
             _spawnerQuery = _entityManager.CreateEntityQuery(typeof(SpawnerData));
         }
 
-        // Verknüpfe diese Methode mit deinem Slider (Dynamic float)
+        /// <summary>
+        /// Setzt die Anzahl der zu spawnenden Entitäten über einen UI-Slider.
+        /// </summary>
+        /// <param name="value">Neuer Wert des Sliders</param>
         public void OnSliderValueChanged(float value)
         {
             // Sicherheitscheck: Gibt es die Spawner-Entity schon?

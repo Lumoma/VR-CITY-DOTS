@@ -1,0 +1,193 @@
+\doxysection{OOP\+\_\+\+Scripts.\+VRScene\+Switcher Klassenreferenz}
+\hypertarget{class_o_o_p___scripts_1_1_v_r_scene_switcher}{}\label{class_o_o_p___scripts_1_1_v_r_scene_switcher}\index{OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}}
+
+
+Ermöglicht das Wechseln zwischen Szenen im VR-\/\+Modus durch Tastendruck auf dem Controller.  
+
+
+Klassendiagramm für OOP\+\_\+\+Scripts.\+VRScene\+Switcher:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_o_o_p___scripts_1_1_v_r_scene_switcher}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_v_r_scene_switcher_a0f833ff22a7c8d38f32401501e8cb4de}{Switch\+Scene}} ()
+\begin{DoxyCompactList}\small\item\em Wechselt zur angegebenen Szene, sofern ein Name eingetragen ist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+string \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_v_r_scene_switcher_a7ab30bf7ae62e41a2b566b9fa3000c70}{target\+Scene\+Name}}
+\begin{DoxyCompactList}\small\item\em Der Name der Szene, die geladen werden soll. \end{DoxyCompactList}\item 
+XRNode \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_v_r_scene_switcher_a2f9b52bf982d6ebfda2819865c8a2ae9}{controller\+Node}} = XRNode.\+Right\+Hand
+\begin{DoxyCompactList}\small\item\em Welcher Controller überwacht werden soll (z.\+B. rechte Hand). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_v_r_scene_switcher_a347aec56704e58cd75f20e6a2bd807ca}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Überprüft in jedem Frame, ob die relevanten Tasten gedrückt wurden und wechselt ggf. die Szene. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_v_r_scene_switcher_a650e750d07dd63f67dfae6da617fbf16}{Initialize\+Device}} ()
+\begin{DoxyCompactList}\small\item\em Initialisiert das Input\+Device für den gewünschten Controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+Input\+Device \doxymbox{\hyperlink{class_o_o_p___scripts_1_1_v_r_scene_switcher_ae1e6be3134e9dce857e04e6eed59ec4f}{\+\_\+target\+Device}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Ermöglicht das Wechseln zwischen Szenen im VR-\/\+Modus durch Tastendruck auf dem Controller. 
+
+Definiert in Zeile \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source_l00017}{17}} der Datei \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source}{VRScene\+Switcher.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_o_o_p___scripts_1_1_v_r_scene_switcher_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_o_o_p___scripts_1_1_v_r_scene_switcher_a650e750d07dd63f67dfae6da617fbf16}\index{OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}!InitializeDevice@{InitializeDevice}}
+\index{InitializeDevice@{InitializeDevice}!OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}}
+\doxysubsubsection{\texorpdfstring{InitializeDevice()}{InitializeDevice()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_v_r_scene_switcher_a650e750d07dd63f67dfae6da617fbf16} 
+void OOP\+\_\+\+Scripts.\+VRScene\+Switcher.\+Initialize\+Device (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initialisiert das Input\+Device für den gewünschten Controller. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source_l00065}{65}} der Datei \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source}{VRScene\+Switcher.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ List<InputDevice>\ devices\ =\ \textcolor{keyword}{new}\ List<InputDevice>();}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ InputDevices.GetDevicesAtXRNode(controllerNode,\ devices);}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (devices.Count\ >\ 0)}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_targetDevice\ =\ devices[0];}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_v_r_scene_switcher_a0f833ff22a7c8d38f32401501e8cb4de}\index{OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}!SwitchScene@{SwitchScene}}
+\index{SwitchScene@{SwitchScene}!OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}}
+\doxysubsubsection{\texorpdfstring{SwitchScene()}{SwitchScene()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_v_r_scene_switcher_a0f833ff22a7c8d38f32401501e8cb4de} 
+void OOP\+\_\+\+Scripts.\+VRScene\+Switcher.\+Switch\+Scene (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Wechselt zur angegebenen Szene, sofern ein Name eingetragen ist. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source_l00078}{78}} der Datei \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source}{VRScene\+Switcher.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\textcolor{keywordtype}{string}.IsNullOrEmpty(targetSceneName))}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.Log(\$\textcolor{stringliteral}{"{}Wechsle\ zu\ Szene:\ \{targetSceneName\}"{}});}
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SceneManager.LoadScene(targetSceneName);}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError(\textcolor{stringliteral}{"{}Kein\ Szenenname\ im\ Inspector\ eingetragen!"{}});}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_o_o_p___scripts_1_1_v_r_scene_switcher_a347aec56704e58cd75f20e6a2bd807ca}\index{OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}!Update@{Update}}
+\index{Update@{Update}!OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_v_r_scene_switcher_a347aec56704e58cd75f20e6a2bd807ca} 
+void OOP\+\_\+\+Scripts.\+VRScene\+Switcher.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Überprüft in jedem Frame, ob die relevanten Tasten gedrückt wurden und wechselt ggf. die Szene. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source_l00037}{37}} der Datei \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source}{VRScene\+Switcher.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\_targetDevice.isValid)}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ InitializeDevice();}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_targetDevice.isValid)}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isAPressed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ isBPressed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_targetDevice.TryGetFeatureValue(CommonUsages.primaryButton,\ out\ \textcolor{keywordtype}{bool}\ primaryValue)\ \&\&\ primaryValue)}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isAPressed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton,\ out\ \textcolor{keywordtype}{bool}\ secondaryValue)\ \&\&\ secondaryValue)}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isBPressed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (isAPressed\ ||\ isBPressed)}
+\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SwitchScene();}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_o_o_p___scripts_1_1_v_r_scene_switcher_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_o_o_p___scripts_1_1_v_r_scene_switcher_ae1e6be3134e9dce857e04e6eed59ec4f}\index{OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}!\_targetDevice@{\_targetDevice}}
+\index{\_targetDevice@{\_targetDevice}!OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}}
+\doxysubsubsection{\texorpdfstring{\_targetDevice}{\_targetDevice}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_v_r_scene_switcher_ae1e6be3134e9dce857e04e6eed59ec4f} 
+Input\+Device OOP\+\_\+\+Scripts.\+VRScene\+Switcher.\+\_\+target\+Device\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source_l00032}{32}} der Datei \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source}{VRScene\+Switcher.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_v_r_scene_switcher_a2f9b52bf982d6ebfda2819865c8a2ae9}\index{OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}!controllerNode@{controllerNode}}
+\index{controllerNode@{controllerNode}!OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}}
+\doxysubsubsection{\texorpdfstring{controllerNode}{controllerNode}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_v_r_scene_switcher_a2f9b52bf982d6ebfda2819865c8a2ae9} 
+XRNode OOP\+\_\+\+Scripts.\+VRScene\+Switcher.\+controller\+Node = XRNode.\+Right\+Hand}
+
+
+
+Welcher Controller überwacht werden soll (z.\+B. rechte Hand). 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source_l00030}{30}} der Datei \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source}{VRScene\+Switcher.\+cs}}.
+
+\Hypertarget{class_o_o_p___scripts_1_1_v_r_scene_switcher_a7ab30bf7ae62e41a2b566b9fa3000c70}\index{OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}!targetSceneName@{targetSceneName}}
+\index{targetSceneName@{targetSceneName}!OOP\_Scripts.VRSceneSwitcher@{OOP\_Scripts.VRSceneSwitcher}}
+\doxysubsubsection{\texorpdfstring{targetSceneName}{targetSceneName}}
+{\footnotesize\ttfamily \label{class_o_o_p___scripts_1_1_v_r_scene_switcher_a7ab30bf7ae62e41a2b566b9fa3000c70} 
+string OOP\+\_\+\+Scripts.\+VRScene\+Switcher.\+target\+Scene\+Name}
+
+
+
+Der Name der Szene, die geladen werden soll. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source_l00024}{24}} der Datei \doxymbox{\hyperlink{_v_r_scene_switcher_8cs_source}{VRScene\+Switcher.\+cs}}.
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:\+\begin{DoxyCompactItemize}
+\item 
+OOP-\/\+Scripts/\+\doxymbox{\hyperlink{_v_r_scene_switcher_8cs}{VRScene\+Switcher.\+cs}}\end{DoxyCompactItemize}

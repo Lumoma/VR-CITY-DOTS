@@ -1,46 +1,68 @@
+/**
+ * @file RandomMovementAuthoring.cs
+ * @brief Authoring-Komponente für zufällige Bewegungen (DOTS).
+ *
+ * Dieses Script ermöglicht die Konfiguration von zufälligen Bewegungen für DOTS-Entitäten im Editor.
+ */
 using UnityEngine;
 using Unity.Entities;
 using Unity.Mathematics;
 
 namespace DOTS_Scripts
-{      
-    // WICHTIG: Diese Zeile wieder reinnehmen!
-    // Sie garantiert, dass dein Prefab einen Rigidbody hat, den Unity "baken" kann.
+{
+    /// <summary>
+    /// Authoring-Komponente zur Konfiguration von RandomMovementData für DOTS-Entitäten.
+    /// </summary>
     [RequireComponent(typeof(Rigidbody))]
     public class RandomMovementAuthoring : MonoBehaviour
     {
+        /// <summary>
+        /// Bewegungsgeschwindigkeit der Entität.
+        /// </summary>
         [Header("Settings")]
         public float movementSpeed = 5f;
+        /// <summary>
+        /// Rückstoß nach Kollision.
+        /// </summary>
         public float bounceNudge = 0.5f;
+        /// <summary>
+        /// Cooldown-Zeit nach Kollision.
+        /// </summary>
         public float cooldown = 0.15f;
-        
+        /// <summary>
+        /// Zentrum des Bewegungsbereichs.
+        /// </summary>
         [Header("Area")]
         public Vector3 areaCenter;
+        /// <summary>
+        /// Größe des Bewegungsbereichs.
+        /// </summary>
         public Vector3 areaSize = new Vector3(20, 2, 20);
 
-        // Der Baker konvertiert die Inspector-Daten in ECS-Daten
+        /// <summary>
+        /// Baker konvertiert Inspector-Daten in DOTS-Komponenten.
+        /// </summary>
         class Baker : Baker<RandomMovementAuthoring>
         {
             public override void Bake(RandomMovementAuthoring authoring)
             {
                 var entity = GetEntity(TransformUsageFlags.Dynamic);
-
-                // Initialisierung der Component Data
                 AddComponent(entity, new RandomMovementData
                 {
                     MovementSpeed = authoring.movementSpeed,
                     BounceNudge = authoring.bounceNudge,
                     CooldownDuration = authoring.cooldown,
-                    AreaCenter = authoring.areaCenter, // Autom. Cast Vector3 -> float3
+                    AreaCenter = authoring.areaCenter,
                     AreaSize = authoring.areaSize,
                     LastCollisionTime = 0,
-                    // Wichtig: Zufallsgenerator mit Seed initialisieren
                     RandomGenerator = new Unity.Mathematics.Random((uint)entity.Index + 1)
                 });
             }
         }
-        
-        // Gizmos funktionieren weiterhin im Authoring Script
+
+        /// <summary>
+        /// Zeichnet den Bewegungsbereich im Editor.
+        /// </summary>
         private void OnDrawGizmosSelected()
         {
             Gizmos.color = Color.yellow;

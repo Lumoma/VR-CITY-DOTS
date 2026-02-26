@@ -1,0 +1,1151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>VR-CITY-DOTS: OOP_Scripts.RandomMovement Klassenreferenz</title>
+<link rel="icon" href="VR-City-Icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">VR-CITY-DOTS<span id="projectnumber">&#160;2026</span>
+   </div>
+   <div id="projectbrief">Unity C# Projekt für VR City Simulation mit DOTS und OOP.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_o_o_p___scripts_1_1_random_movement.html','','class_o_o_p___scripts_1_1_random_movement-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">OOP_Scripts.RandomMovement Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Steuert die zufällige Bewegung eines Agenten innerhalb eines definierten Bereichs.  
+ <a href="#details">Mehr ...</a></p>
+<div class="dynheader">
+Klassendiagramm für OOP_Scripts.RandomMovement:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_o_o_p___scripts_1_1_random_movement.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Öffentliche Typen</h2></td></tr>
+<tr class="memitem:a44134d2d533e70bae94bbabb45d6ab94" id="r_a44134d2d533e70bae94bbabb45d6ab94"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#a44134d2d533e70bae94bbabb45d6ab94">ColliderType</a> { <a class="el" href="#a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a">Box</a>
+, <a class="el" href="#a44134d2d533e70bae94bbabb45d6ab94ab7095f057db3fefa7325ad93a04e14fd">Sphere</a>
+ }</td></tr>
+<tr class="memdesc:a44134d2d533e70bae94bbabb45d6ab94"><td class="mdescLeft">&#160;</td><td class="mdescRight">Typ des zu verwendenden Colliders.  <a href="#a44134d2d533e70bae94bbabb45d6ab94">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:af1a1e3c747ec8f47ad14fb0d74d21e49" id="r_af1a1e3c747ec8f47ad14fb0d74d21e49"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af1a1e3c747ec8f47ad14fb0d74d21e49">InitializeMovementSettings</a> (float speed, Vector3 center, Vector3 size)</td></tr>
+<tr class="memdesc:af1a1e3c747ec8f47ad14fb0d74d21e49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erlaubt externen Skripten (z.B. <a class="el" href="class_o_o_p___scripts_1_1_spawner.html" title="Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne...">Spawner</a>), die Bewegungsdaten zu setzen.  <br /></td></tr>
+<tr class="memitem:a16d2c7245204fc248f45dcc28160a975" id="r_a16d2c7245204fc248f45dcc28160a975"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a16d2c7245204fc248f45dcc28160a975">ApplyVisual</a> (Mesh mesh, Material material, float scale, <a class="el" href="#a44134d2d533e70bae94bbabb45d6ab94">ColliderType</a> colliderType)</td></tr>
+<tr class="memdesc:a16d2c7245204fc248f45dcc28160a975"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konfiguriert Mesh, Material und Collider zur Laufzeit.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:a2363754ff005c6491372d80c6eeb986b" id="r_a2363754ff005c6491372d80c6eeb986b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2363754ff005c6491372d80c6eeb986b">Awake</a> ()</td></tr>
+<tr class="memdesc:a2363754ff005c6491372d80c6eeb986b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert den Rigidbody und setzt die Constraints.  <br /></td></tr>
+<tr class="memitem:a71d4efbf67f9dd4176e7a70248cc962c" id="r_a71d4efbf67f9dd4176e7a70248cc962c"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a71d4efbf67f9dd4176e7a70248cc962c">FixedUpdate</a> ()</td></tr>
+<tr class="memdesc:a71d4efbf67f9dd4176e7a70248cc962c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Führt die Bewegung und Stabilisierung in jedem FixedUpdate aus.  <br /></td></tr>
+<tr class="memitem:a964bd56feda942d27219704c48dbb1da" id="r_a964bd56feda942d27219704c48dbb1da"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a964bd56feda942d27219704c48dbb1da">OnCollisionEnter</a> (Collision collision)</td></tr>
+<tr class="memdesc:a964bd56feda942d27219704c48dbb1da"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reagiert auf Kollisionen mit einer Richtungsänderung.  <br /></td></tr>
+<tr class="memitem:a2b90bea44c00464544b875bb9cd4c9e9" id="r_a2b90bea44c00464544b875bb9cd4c9e9"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b90bea44c00464544b875bb9cd4c9e9">InitializeRigidbody</a> ()</td></tr>
+<tr class="memdesc:a2b90bea44c00464544b875bb9cd4c9e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert den Rigidbody und setzt die Constraints.  <br /></td></tr>
+<tr class="memitem:af6c2d70d9d55a0d48fb51843645ab705" id="r_af6c2d70d9d55a0d48fb51843645ab705"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#af6c2d70d9d55a0d48fb51843645ab705">MoveForward</a> ()</td></tr>
+<tr class="memdesc:af6c2d70d9d55a0d48fb51843645ab705"><td class="mdescLeft">&#160;</td><td class="mdescRight">Bewegt den Agenten vorwärts.  <br /></td></tr>
+<tr class="memitem:a9ff7bcc7157b1b93573d5ce30f35d960" id="r_a9ff7bcc7157b1b93573d5ce30f35d960"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a9ff7bcc7157b1b93573d5ce30f35d960">StabilizePhysics</a> ()</td></tr>
+<tr class="memdesc:a9ff7bcc7157b1b93573d5ce30f35d960"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setzt die Drehgeschwindigkeit zurück.  <br /></td></tr>
+<tr class="memitem:aab179e6ef076eb915dfae2c996e6225d" id="r_aab179e6ef076eb915dfae2c996e6225d"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#aab179e6ef076eb915dfae2c996e6225d">IsOnCooldown</a> ()</td></tr>
+<tr class="memdesc:aab179e6ef076eb915dfae2c996e6225d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft, ob der Cooldown nach einer Kollision aktiv ist.  <br /></td></tr>
+<tr class="memitem:adcaf1bfa5748ac1d4474f932ee60e3de" id="r_adcaf1bfa5748ac1d4474f932ee60e3de"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#adcaf1bfa5748ac1d4474f932ee60e3de">CheckAndHandleBounds</a> ()</td></tr>
+<tr class="memdesc:adcaf1bfa5748ac1d4474f932ee60e3de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft, ob der Agent außerhalb des Bereichs ist und dreht ihn ggf. um.  <br /></td></tr>
+<tr class="memitem:a543a45a98dacbd526743b8a926e81af4" id="r_a543a45a98dacbd526743b8a926e81af4"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a543a45a98dacbd526743b8a926e81af4">IsOutOfBounds</a> ()</td></tr>
+<tr class="memdesc:a543a45a98dacbd526743b8a926e81af4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prüft, ob der Agent außerhalb des erlaubten Bereichs ist.  <br /></td></tr>
+<tr class="memitem:a177b770a364dfbbeee9ecc30c4299731" id="r_a177b770a364dfbbeee9ecc30c4299731"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a177b770a364dfbbeee9ecc30c4299731">PerformTurnAround</a> ()</td></tr>
+<tr class="memdesc:a177b770a364dfbbeee9ecc30c4299731"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dreht den Agenten um 180 Grad und verschiebt ihn leicht.  <br /></td></tr>
+<tr class="memitem:aeba0a4a32adc86d7e0e34be9c5c254e6" id="r_aeba0a4a32adc86d7e0e34be9c5c254e6"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#aeba0a4a32adc86d7e0e34be9c5c254e6">HandleCollisionReaction</a> ()</td></tr>
+<tr class="memdesc:aeba0a4a32adc86d7e0e34be9c5c254e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reagiert auf eine Kollision mit einer zufälligen Drehung und Nudge.  <br /></td></tr>
+<tr class="memitem:a46a00b42bf27aeffe323a36f61c1086b" id="r_a46a00b42bf27aeffe323a36f61c1086b"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a46a00b42bf27aeffe323a36f61c1086b">RotateCharacter</a> (float angle)</td></tr>
+<tr class="memdesc:a46a00b42bf27aeffe323a36f61c1086b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dreht den Agenten um den gegebenen Winkel.  <br /></td></tr>
+<tr class="memitem:ab642a93dcd76469ed20af0b369e7ad6d" id="r_ab642a93dcd76469ed20af0b369e7ad6d"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ab642a93dcd76469ed20af0b369e7ad6d">ApplyNudge</a> ()</td></tr>
+<tr class="memdesc:ab642a93dcd76469ed20af0b369e7ad6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verschiebt den Agenten leicht nach vorne.  <br /></td></tr>
+<tr class="memitem:a3fcb37fde6984c88eeef7d8b88b54f0f" id="r_a3fcb37fde6984c88eeef7d8b88b54f0f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3fcb37fde6984c88eeef7d8b88b54f0f">UpdateMeshRenderer</a> (Mesh mesh, Material material)</td></tr>
+<tr class="memdesc:a3fcb37fde6984c88eeef7d8b88b54f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktualisiert Mesh und Material des Agenten.  <br /></td></tr>
+<tr class="memitem:a1959724fdebacaf59c7a95abb6b3a5b2" id="r_a1959724fdebacaf59c7a95abb6b3a5b2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a1959724fdebacaf59c7a95abb6b3a5b2">UpdateCollider</a> (Mesh mesh, <a class="el" href="#a44134d2d533e70bae94bbabb45d6ab94">ColliderType</a> colliderType)</td></tr>
+<tr class="memdesc:a1959724fdebacaf59c7a95abb6b3a5b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Erstellt und konfiguriert den Collider.  <br /></td></tr>
+<tr class="memitem:a2df246df6270c4b5df70ed6a28069683" id="r_a2df246df6270c4b5df70ed6a28069683"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2df246df6270c4b5df70ed6a28069683">RemoveExistingColliders</a> ()</td></tr>
+<tr class="memdesc:a2df246df6270c4b5df70ed6a28069683"><td class="mdescLeft">&#160;</td><td class="mdescRight">Entfernt alle vorhandenen Collider.  <br /></td></tr>
+<tr class="memitem:a470a8fd9641529d6987700e91ae8e883" id="r_a470a8fd9641529d6987700e91ae8e883"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a470a8fd9641529d6987700e91ae8e883">OnDrawGizmosSelected</a> ()</td></tr>
+<tr class="memdesc:a470a8fd9641529d6987700e91ae8e883"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zeichnet den Bewegungsbereich im Editor.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:a0462d3d7098cf1ef54def82adbb2bb8d" id="r_a0462d3d7098cf1ef54def82adbb2bb8d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a0462d3d7098cf1ef54def82adbb2bb8d">movementSpeed</a> = 1f</td></tr>
+<tr class="memdesc:a0462d3d7098cf1ef54def82adbb2bb8d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Geschwindigkeit der Vorwärtsbewegung.  <br /></td></tr>
+<tr class="memitem:a1e4a85352bb288d62a6c8b3afbef204d" id="r_a1e4a85352bb288d62a6c8b3afbef204d"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a1e4a85352bb288d62a6c8b3afbef204d">bounceNudgeDistance</a> = 0.05f</td></tr>
+<tr class="memdesc:a1e4a85352bb288d62a6c8b3afbef204d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Distanz, um die der Agent bei einer Kollision zurückgesetzt wird.  <br /></td></tr>
+<tr class="memitem:af646de2573819c478cbe2c568aa338a7" id="r_af646de2573819c478cbe2c568aa338a7"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#af646de2573819c478cbe2c568aa338a7">collisionCooldownDuration</a> = 0.15f</td></tr>
+<tr class="memdesc:af646de2573819c478cbe2c568aa338a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wartezeit in Sekunden zwischen zwei Kollisionsreaktionen.  <br /></td></tr>
+<tr class="memitem:a38b69cde9783ae2e5922e2a60c0b8180" id="r_a38b69cde9783ae2e5922e2a60c0b8180"><td class="memItemLeft">Vector3&#160;</td><td class="memItemRight"><a class="el" href="#a38b69cde9783ae2e5922e2a60c0b8180">areaCenter</a></td></tr>
+<tr class="memdesc:a38b69cde9783ae2e5922e2a60c0b8180"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zentrum des Bewegungsbereichs.  <br /></td></tr>
+<tr class="memitem:a6de440be1783a62570005d471491b125" id="r_a6de440be1783a62570005d471491b125"><td class="memItemLeft">Vector3&#160;</td><td class="memItemRight"><a class="el" href="#a6de440be1783a62570005d471491b125">areaSize</a></td></tr>
+<tr class="memdesc:a6de440be1783a62570005d471491b125"><td class="mdescLeft">&#160;</td><td class="mdescRight">Größe des Bewegungsbereichs.  <br /></td></tr>
+<tr class="memitem:ae7df377f3176443d3e979b6b12b095e9" id="r_ae7df377f3176443d3e979b6b12b095e9"><td class="memItemLeft">readonly float[]&#160;</td><td class="memItemRight"><a class="el" href="#ae7df377f3176443d3e979b6b12b095e9">_turnAngles</a> = { -90f, 90f, 180f }</td></tr>
+<tr class="memdesc:ae7df377f3176443d3e979b6b12b095e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mögliche Drehwinkel für Richtungsänderungen nach Kollision.  <br /></td></tr>
+<tr class="memitem:a7af2415d529d73c506cde51e8e1c660d" id="r_a7af2415d529d73c506cde51e8e1c660d"><td class="memItemLeft">Rigidbody&#160;</td><td class="memItemRight"><a class="el" href="#a7af2415d529d73c506cde51e8e1c660d">_rigidBody</a></td></tr>
+<tr class="memitem:a60da1e3cd848aedac7147eac7f66f965" id="r_a60da1e3cd848aedac7147eac7f66f965"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#a60da1e3cd848aedac7147eac7f66f965">_lastCollisionTime</a> = -10f</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Steuert die zufällige Bewegung eines Agenten innerhalb eines definierten Bereichs. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00016">16</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a id="a44134d2d533e70bae94bbabb45d6ab94" name="a44134d2d533e70bae94bbabb45d6ab94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44134d2d533e70bae94bbabb45d6ab94">&#9670;&#160;</a></span>ColliderType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a44134d2d533e70bae94bbabb45d6ab94">OOP_Scripts.RandomMovement.ColliderType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Typ des zu verwendenden Colliders. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a" name="a44134d2d533e70bae94bbabb45d6ab94a3cfce651e667ab85486dd42a8185f98a"></a>Box&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a44134d2d533e70bae94bbabb45d6ab94ab7095f057db3fefa7325ad93a04e14fd" name="a44134d2d533e70bae94bbabb45d6ab94ab7095f057db3fefa7325ad93a04e14fd"></a>Sphere&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00057">57</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   57</span>{ Box, Sphere }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="ab642a93dcd76469ed20af0b369e7ad6d" name="ab642a93dcd76469ed20af0b369e7ad6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab642a93dcd76469ed20af0b369e7ad6d">&#9670;&#160;</a></span>ApplyNudge()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.ApplyNudge </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verschiebt den Agenten leicht nach vorne. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00215">215</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            transform.position += transform.forward * bounceNudgeDistance;</div>
+<div class="line"><span class="lineno">  218</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a16d2c7245204fc248f45dcc28160a975" name="a16d2c7245204fc248f45dcc28160a975"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d2c7245204fc248f45dcc28160a975">&#9670;&#160;</a></span>ApplyVisual()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.ApplyVisual </td>
+          <td>(</td>
+          <td class="paramtype">Mesh</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Material</td>          <td class="paramname"><span class="paramname"><em>material</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a44134d2d533e70bae94bbabb45d6ab94">ColliderType</a></td>          <td class="paramname"><span class="paramname"><em>colliderType</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Konfiguriert Mesh, Material und Collider zur Laufzeit. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">mesh</td><td>Mesh für das Objekt</td></tr>
+    <tr><td class="paramname">material</td><td>Material für das Objekt</td></tr>
+    <tr><td class="paramname">scale</td><td>Skalierung</td></tr>
+    <tr><td class="paramname">colliderType</td><td>Typ des Colliders</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00107">107</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  108</span>        {</div>
+<div class="line"><span class="lineno">  109</span>            UpdateMeshRenderer(mesh, material);</div>
+<div class="line"><span class="lineno">  110</span>            transform.localScale = Vector3.one * scale;</div>
+<div class="line"><span class="lineno">  111</span>            UpdateCollider(mesh, colliderType);</div>
+<div class="line"><span class="lineno">  112</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2363754ff005c6491372d80c6eeb986b" name="a2363754ff005c6491372d80c6eeb986b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2363754ff005c6491372d80c6eeb986b">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialisiert den Rigidbody und setzt die Constraints. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00062">62</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   63</span>        {</div>
+<div class="line"><span class="lineno">   64</span>            InitializeRigidbody();</div>
+<div class="line"><span class="lineno">   65</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="adcaf1bfa5748ac1d4474f932ee60e3de" name="adcaf1bfa5748ac1d4474f932ee60e3de"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcaf1bfa5748ac1d4474f932ee60e3de">&#9670;&#160;</a></span>CheckAndHandleBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.CheckAndHandleBounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prüft, ob der Agent außerhalb des Bereichs ist und dreht ihn ggf. um. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00157">157</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  158</span>        {</div>
+<div class="line"><span class="lineno">  159</span>            <span class="keywordflow">if</span> (areaSize == Vector3.zero) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  160</span>            <span class="keywordflow">if</span> (IsOutOfBounds() &amp;&amp; !IsOnCooldown())</div>
+<div class="line"><span class="lineno">  161</span>            {</div>
+<div class="line"><span class="lineno">  162</span>                PerformTurnAround();</div>
+<div class="line"><span class="lineno">  163</span>            }</div>
+<div class="line"><span class="lineno">  164</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a71d4efbf67f9dd4176e7a70248cc962c" name="a71d4efbf67f9dd4176e7a70248cc962c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a71d4efbf67f9dd4176e7a70248cc962c">&#9670;&#160;</a></span>FixedUpdate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.FixedUpdate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Führt die Bewegung und Stabilisierung in jedem FixedUpdate aus. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00070">70</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   71</span>        {</div>
+<div class="line"><span class="lineno">   72</span>            MoveForward();</div>
+<div class="line"><span class="lineno">   73</span>            StabilizePhysics();</div>
+<div class="line"><span class="lineno">   74</span>            CheckAndHandleBounds();</div>
+<div class="line"><span class="lineno">   75</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aeba0a4a32adc86d7e0e34be9c5c254e6" name="aeba0a4a32adc86d7e0e34be9c5c254e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeba0a4a32adc86d7e0e34be9c5c254e6">&#9670;&#160;</a></span>HandleCollisionReaction()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.HandleCollisionReaction </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reagiert auf eine Kollision mit einer zufälligen Drehung und Nudge. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00194">194</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  195</span>        {</div>
+<div class="line"><span class="lineno">  196</span>            _lastCollisionTime = Time.time;</div>
+<div class="line"><span class="lineno">  197</span>            <span class="keywordtype">float</span> randomAngle = _turnAngles[Random.Range(0, _turnAngles.Length)];</div>
+<div class="line"><span class="lineno">  198</span>            RotateCharacter(randomAngle);</div>
+<div class="line"><span class="lineno">  199</span>            MoveForward();</div>
+<div class="line"><span class="lineno">  200</span>            ApplyNudge();</div>
+<div class="line"><span class="lineno">  201</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af1a1e3c747ec8f47ad14fb0d74d21e49" name="af1a1e3c747ec8f47ad14fb0d74d21e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1a1e3c747ec8f47ad14fb0d74d21e49">&#9670;&#160;</a></span>InitializeMovementSettings()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.InitializeMovementSettings </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>speed</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>center</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Vector3</td>          <td class="paramname"><span class="paramname"><em>size</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erlaubt externen Skripten (z.B. <a class="el" href="class_o_o_p___scripts_1_1_spawner.html" title="Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne...">Spawner</a>), die Bewegungsdaten zu setzen. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">speed</td><td>Bewegungsgeschwindigkeit</td></tr>
+    <tr><td class="paramname">center</td><td>Zentrum des Bereichs</td></tr>
+    <tr><td class="paramname">size</td><td>Größe des Bereichs</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00093">93</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   94</span>        {</div>
+<div class="line"><span class="lineno">   95</span>            movementSpeed = speed;</div>
+<div class="line"><span class="lineno">   96</span>            areaCenter = center;</div>
+<div class="line"><span class="lineno">   97</span>            areaSize = size;</div>
+<div class="line"><span class="lineno">   98</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2b90bea44c00464544b875bb9cd4c9e9" name="a2b90bea44c00464544b875bb9cd4c9e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b90bea44c00464544b875bb9cd4c9e9">&#9670;&#160;</a></span>InitializeRigidbody()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.InitializeRigidbody </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialisiert den Rigidbody und setzt die Constraints. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00119">119</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  120</span>        {</div>
+<div class="line"><span class="lineno">  121</span>            _rigidBody = GetComponent&lt;Rigidbody&gt;();</div>
+<div class="line"><span class="lineno">  122</span>            _rigidBody.useGravity = <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  123</span>            _rigidBody.collisionDetectionMode = CollisionDetectionMode.ContinuousDynamic;</div>
+<div class="line"><span class="lineno">  124</span>            _rigidBody.sleepThreshold = 0f;</div>
+<div class="line"><span class="lineno">  125</span>            <span class="comment">// Die Bitweise-Operation ist hier korrekt, da Unity dies für Constraints vorsieht.</span></div>
+<div class="line"><span class="lineno">  126</span>            _rigidBody.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;</div>
+<div class="line"><span class="lineno">  127</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aab179e6ef076eb915dfae2c996e6225d" name="aab179e6ef076eb915dfae2c996e6225d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab179e6ef076eb915dfae2c996e6225d">&#9670;&#160;</a></span>IsOnCooldown()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OOP_Scripts.RandomMovement.IsOnCooldown </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prüft, ob der Cooldown nach einer Kollision aktiv ist. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>True, wenn Cooldown aktiv ist.</dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00149">149</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  150</span>        {</div>
+<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">return</span> Time.time - _lastCollisionTime &lt; collisionCooldownDuration;</div>
+<div class="line"><span class="lineno">  152</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a543a45a98dacbd526743b8a926e81af4" name="a543a45a98dacbd526743b8a926e81af4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a543a45a98dacbd526743b8a926e81af4">&#9670;&#160;</a></span>IsOutOfBounds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool OOP_Scripts.RandomMovement.IsOutOfBounds </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prüft, ob der Agent außerhalb des erlaubten Bereichs ist. </p>
+<dl class="section return"><dt>Rückgabe</dt><dd>True, wenn außerhalb.</dd></dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00170">170</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  171</span>        {</div>
+<div class="line"><span class="lineno">  172</span>            Vector3 pos = transform.position;</div>
+<div class="line"><span class="lineno">  173</span>            Vector3 min = areaCenter - areaSize * 0.5f;</div>
+<div class="line"><span class="lineno">  174</span>            Vector3 max = areaCenter + areaSize * 0.5f;</div>
+<div class="line"><span class="lineno">  175</span>            <span class="keywordtype">bool</span> outsideX = pos.x &lt; min.x || pos.x &gt; max.x;</div>
+<div class="line"><span class="lineno">  176</span>            <span class="keywordtype">bool</span> outsideY = pos.y &lt; min.y || pos.y &gt; max.y;</div>
+<div class="line"><span class="lineno">  177</span>            <span class="keywordtype">bool</span> outsideZ = pos.z &lt; min.z || pos.z &gt; max.z;</div>
+<div class="line"><span class="lineno">  178</span>            <span class="keywordflow">return</span> outsideX || outsideY || outsideZ;</div>
+<div class="line"><span class="lineno">  179</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="af6c2d70d9d55a0d48fb51843645ab705" name="af6c2d70d9d55a0d48fb51843645ab705"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af6c2d70d9d55a0d48fb51843645ab705">&#9670;&#160;</a></span>MoveForward()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.MoveForward </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Bewegt den Agenten vorwärts. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00132">132</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  133</span>        {</div>
+<div class="line"><span class="lineno">  134</span>            _rigidBody.linearVelocity = transform.forward * movementSpeed;</div>
+<div class="line"><span class="lineno">  135</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a964bd56feda942d27219704c48dbb1da" name="a964bd56feda942d27219704c48dbb1da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a964bd56feda942d27219704c48dbb1da">&#9670;&#160;</a></span>OnCollisionEnter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.OnCollisionEnter </td>
+          <td>(</td>
+          <td class="paramtype">Collision</td>          <td class="paramname"><span class="paramname"><em>collision</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reagiert auf Kollisionen mit einer Richtungsänderung. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">collision</td><td>Die Kollisionsdaten (nicht verwendet).</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00081">81</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   82</span>        {</div>
+<div class="line"><span class="lineno">   83</span>            <span class="keywordflow">if</span> (IsOnCooldown()) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   84</span>            HandleCollisionReaction();</div>
+<div class="line"><span class="lineno">   85</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a470a8fd9641529d6987700e91ae8e883" name="a470a8fd9641529d6987700e91ae8e883"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a470a8fd9641529d6987700e91ae8e883">&#9670;&#160;</a></span>OnDrawGizmosSelected()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.OnDrawGizmosSelected </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zeichnet den Bewegungsbereich im Editor. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00269">269</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  270</span>        {</div>
+<div class="line"><span class="lineno">  271</span>            Gizmos.color = Color.yellow;</div>
+<div class="line"><span class="lineno">  272</span>            Gizmos.DrawWireCube(areaCenter, areaSize);</div>
+<div class="line"><span class="lineno">  273</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a177b770a364dfbbeee9ecc30c4299731" name="a177b770a364dfbbeee9ecc30c4299731"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a177b770a364dfbbeee9ecc30c4299731">&#9670;&#160;</a></span>PerformTurnAround()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.PerformTurnAround </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dreht den Agenten um 180 Grad und verschiebt ihn leicht. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00184">184</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  185</span>        {</div>
+<div class="line"><span class="lineno">  186</span>            _lastCollisionTime = Time.time;</div>
+<div class="line"><span class="lineno">  187</span>            RotateCharacter(180f);</div>
+<div class="line"><span class="lineno">  188</span>            ApplyNudge();</div>
+<div class="line"><span class="lineno">  189</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2df246df6270c4b5df70ed6a28069683" name="a2df246df6270c4b5df70ed6a28069683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2df246df6270c4b5df70ed6a28069683">&#9670;&#160;</a></span>RemoveExistingColliders()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.RemoveExistingColliders </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Entfernt alle vorhandenen Collider. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00258">258</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  259</span>        {</div>
+<div class="line"><span class="lineno">  260</span>            <span class="keywordflow">foreach</span> (var c <span class="keywordflow">in</span> GetComponents&lt;Collider&gt;())</div>
+<div class="line"><span class="lineno">  261</span>            {</div>
+<div class="line"><span class="lineno">  262</span>                Destroy(c);</div>
+<div class="line"><span class="lineno">  263</span>            }</div>
+<div class="line"><span class="lineno">  264</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a46a00b42bf27aeffe323a36f61c1086b" name="a46a00b42bf27aeffe323a36f61c1086b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46a00b42bf27aeffe323a36f61c1086b">&#9670;&#160;</a></span>RotateCharacter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.RotateCharacter </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>angle</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Dreht den Agenten um den gegebenen Winkel. </p>
+<dl class="params"><dt>Parameter</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">angle</td><td>Winkel in Grad</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00207">207</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  208</span>        {</div>
+<div class="line"><span class="lineno">  209</span>            transform.Rotate(0f, angle, 0f, Space.Self);</div>
+<div class="line"><span class="lineno">  210</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a9ff7bcc7157b1b93573d5ce30f35d960" name="a9ff7bcc7157b1b93573d5ce30f35d960"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff7bcc7157b1b93573d5ce30f35d960">&#9670;&#160;</a></span>StabilizePhysics()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.StabilizePhysics </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setzt die Drehgeschwindigkeit zurück. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00140">140</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  141</span>        {</div>
+<div class="line"><span class="lineno">  142</span>            _rigidBody.angularVelocity = Vector3.zero;</div>
+<div class="line"><span class="lineno">  143</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a1959724fdebacaf59c7a95abb6b3a5b2" name="a1959724fdebacaf59c7a95abb6b3a5b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1959724fdebacaf59c7a95abb6b3a5b2">&#9670;&#160;</a></span>UpdateCollider()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.UpdateCollider </td>
+          <td>(</td>
+          <td class="paramtype">Mesh</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="#a44134d2d533e70bae94bbabb45d6ab94">ColliderType</a></td>          <td class="paramname"><span class="paramname"><em>colliderType</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Erstellt und konfiguriert den Collider. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00234">234</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  235</span>        {</div>
+<div class="line"><span class="lineno">  236</span>            RemoveExistingColliders();</div>
+<div class="line"><span class="lineno">  237</span>            Bounds bounds = mesh != <span class="keyword">null</span> ? mesh.bounds : <span class="keyword">new</span> Bounds(Vector3.zero, Vector3.one);</div>
+<div class="line"><span class="lineno">  238</span>            Vector3 scaledCenter = Vector3.Scale(bounds.center, transform.localScale);</div>
+<div class="line"><span class="lineno">  239</span>            Vector3 scaledSize = Vector3.Scale(bounds.size, transform.localScale);</div>
+<div class="line"><span class="lineno">  240</span>            Vector3 scaledExtents = Vector3.Scale(bounds.extents, transform.localScale);</div>
+<div class="line"><span class="lineno">  241</span>            <span class="keywordflow">if</span> (colliderType == ColliderType.Box)</div>
+<div class="line"><span class="lineno">  242</span>            {</div>
+<div class="line"><span class="lineno">  243</span>                var boxCollider = gameObject.AddComponent&lt;BoxCollider&gt;();</div>
+<div class="line"><span class="lineno">  244</span>                boxCollider.center = scaledCenter;</div>
+<div class="line"><span class="lineno">  245</span>                boxCollider.size = scaledSize;</div>
+<div class="line"><span class="lineno">  246</span>            }</div>
+<div class="line"><span class="lineno">  247</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  248</span>            {</div>
+<div class="line"><span class="lineno">  249</span>                var sphereCollider = gameObject.AddComponent&lt;SphereCollider&gt;();</div>
+<div class="line"><span class="lineno">  250</span>                sphereCollider.center = scaledCenter;</div>
+<div class="line"><span class="lineno">  251</span>                sphereCollider.radius = Mathf.Max(scaledExtents.x, scaledExtents.y, scaledExtents.z);</div>
+<div class="line"><span class="lineno">  252</span>            }</div>
+<div class="line"><span class="lineno">  253</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a3fcb37fde6984c88eeef7d8b88b54f0f" name="a3fcb37fde6984c88eeef7d8b88b54f0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fcb37fde6984c88eeef7d8b88b54f0f">&#9670;&#160;</a></span>UpdateMeshRenderer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void OOP_Scripts.RandomMovement.UpdateMeshRenderer </td>
+          <td>(</td>
+          <td class="paramtype">Mesh</td>          <td class="paramname"><span class="paramname"><em>mesh</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Material</td>          <td class="paramname"><span class="paramname"><em>material</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Aktualisiert Mesh und Material des Agenten. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00223">223</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  224</span>        {</div>
+<div class="line"><span class="lineno">  225</span>            <span class="keywordflow">if</span> (!TryGetComponent(out MeshFilter mf)) mf = gameObject.AddComponent&lt;MeshFilter&gt;();</div>
+<div class="line"><span class="lineno">  226</span>            <span class="keywordflow">if</span> (!TryGetComponent(out MeshRenderer mr)) mr = gameObject.AddComponent&lt;MeshRenderer&gt;();</div>
+<div class="line"><span class="lineno">  227</span>            mf.mesh = mesh;</div>
+<div class="line"><span class="lineno">  228</span>            mr.sharedMaterial = material;</div>
+<div class="line"><span class="lineno">  229</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a60da1e3cd848aedac7147eac7f66f965" name="a60da1e3cd848aedac7147eac7f66f965"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60da1e3cd848aedac7147eac7f66f965">&#9670;&#160;</a></span>_lastCollisionTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float OOP_Scripts.RandomMovement._lastCollisionTime = -10f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00052">52</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7af2415d529d73c506cde51e8e1c660d" name="a7af2415d529d73c506cde51e8e1c660d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7af2415d529d73c506cde51e8e1c660d">&#9670;&#160;</a></span>_rigidBody</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rigidbody OOP_Scripts.RandomMovement._rigidBody</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00051">51</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae7df377f3176443d3e979b6b12b095e9" name="ae7df377f3176443d3e979b6b12b095e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7df377f3176443d3e979b6b12b095e9">&#9670;&#160;</a></span>_turnAngles</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">readonly float [] OOP_Scripts.RandomMovement._turnAngles = { -90f, 90f, 180f }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mögliche Drehwinkel für Richtungsänderungen nach Kollision. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00050">50</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   50</span>{ -90f, 90f, 180f };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a38b69cde9783ae2e5922e2a60c0b8180" name="a38b69cde9783ae2e5922e2a60c0b8180"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38b69cde9783ae2e5922e2a60c0b8180">&#9670;&#160;</a></span>areaCenter</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 OOP_Scripts.RandomMovement.areaCenter</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zentrum des Bewegungsbereichs. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00041">41</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+
+</div>
+</div>
+<a id="a6de440be1783a62570005d471491b125" name="a6de440be1783a62570005d471491b125"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6de440be1783a62570005d471491b125">&#9670;&#160;</a></span>areaSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Vector3 OOP_Scripts.RandomMovement.areaSize</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Größe des Bewegungsbereichs. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00045">45</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1e4a85352bb288d62a6c8b3afbef204d" name="a1e4a85352bb288d62a6c8b3afbef204d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e4a85352bb288d62a6c8b3afbef204d">&#9670;&#160;</a></span>bounceNudgeDistance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float OOP_Scripts.RandomMovement.bounceNudgeDistance = 0.05f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Distanz, um die der Agent bei einer Kollision zurückgesetzt wird. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00029">29</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+
+</div>
+</div>
+<a id="af646de2573819c478cbe2c568aa338a7" name="af646de2573819c478cbe2c568aa338a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af646de2573819c478cbe2c568aa338a7">&#9670;&#160;</a></span>collisionCooldownDuration</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float OOP_Scripts.RandomMovement.collisionCooldownDuration = 0.15f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wartezeit in Sekunden zwischen zwei Kollisionsreaktionen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00035">35</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0462d3d7098cf1ef54def82adbb2bb8d" name="a0462d3d7098cf1ef54def82adbb2bb8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0462d3d7098cf1ef54def82adbb2bb8d">&#9670;&#160;</a></span>movementSpeed</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float OOP_Scripts.RandomMovement.movementSpeed = 1f</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Geschwindigkeit der Vorwärtsbewegung. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_random_movement_8cs_source.html#l00023">23</a> der Datei <a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>OOP-Scripts/<a class="el" href="_random_movement_8cs_source.html">RandomMovement.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_o_o_p___scripts.html">OOP_Scripts</a></li><li class="navelem"><a href="class_o_o_p___scripts_1_1_random_movement.html">RandomMovement</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

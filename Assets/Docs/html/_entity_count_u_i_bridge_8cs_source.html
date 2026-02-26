@@ -1,0 +1,154 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>VR-CITY-DOTS: DOTS-Scripts/EntityCountUIBridge.cs Quellcode</title>
+<link rel="icon" href="VR-City-Icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">VR-CITY-DOTS<span id="projectnumber">&#160;2026</span>
+   </div>
+   <div id="projectbrief">Unity C# Projekt für VR City Simulation mit DOTS und OOP.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('_entity_count_u_i_bridge_8cs_source.html','',''); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">EntityCountUIBridge.cs</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_entity_count_u_i_bridge_8cs.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">using </span>UnityEngine;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">using </span>Unity.Entities;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">using </span>TMPro;</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="}">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="namespace_d_o_t_s___scripts.html">   11</a></span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespace_d_o_t_s___scripts.html">DOTS_Scripts</a></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>{</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html">   16</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html">EntityCountUIBridge</a> : MonoBehaviour</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>        [Tooltip(<span class="stringliteral">&quot;Zieh hier dein TextMeshPro Textfeld rein&quot;</span>)]</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#aaae6b237251fcfa2850264c5372e2ad6">   22</a></span>        <span class="keyword">public</span> TMP_Text <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#aaae6b237251fcfa2850264c5372e2ad6">textDisplay</a>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a644a3fd126edfdbade7fba9ab1b6372e">   24</a></span>        <span class="keyword">private</span> EntityManager <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a644a3fd126edfdbade7fba9ab1b6372e">_entityManager</a>;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a8d5fef164d76973234dfbde2fa5c5e3e">   25</a></span>        <span class="keyword">private</span> EntityQuery <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a8d5fef164d76973234dfbde2fa5c5e3e">_agentQuery</a>;</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
+<div class="foldopen" id="foldopen00030" data-start="{" data-end="}">
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a79cd1c6ee88b89ad6dece3046ddd4e66">   30</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a79cd1c6ee88b89ad6dece3046ddd4e66">Start</a>()</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>            <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a644a3fd126edfdbade7fba9ab1b6372e">_entityManager</a> = World.DefaultGameObjectInjectionWorld.EntityManager;</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>            <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a8d5fef164d76973234dfbde2fa5c5e3e">_agentQuery</a> = <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a644a3fd126edfdbade7fba9ab1b6372e">_entityManager</a>.CreateEntityQuery(typeof(<a class="code hl_struct" href="struct_d_o_t_s___scripts_1_1_spawned_agent_tag.html">SpawnedAgentTag</a>));</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>        }</div>
+</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a056b0aaa9d1b824352f79848297db6a8">   39</a></span>        <span class="keywordtype">void</span> <a class="code hl_function" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a056b0aaa9d1b824352f79848297db6a8">Update</a>()</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>            <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#aaae6b237251fcfa2850264c5372e2ad6">textDisplay</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>            {</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>                <span class="keywordtype">int</span> count = <a class="code hl_variable" href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a8d5fef164d76973234dfbde2fa5c5e3e">_agentQuery</a>.CalculateEntityCount();</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>                textDisplay.text = $<span class="stringliteral">&quot;{count}&quot;</span>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            }</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    }</div>
+</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>}</div>
+</div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_html"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html">DOTS_Scripts.EntityCountUIBridge</a></div><div class="ttdoc">Zeigt die aktuelle Anzahl der DOTS-Entitäten (z.B. Agenten) im UI an.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">EntityCountUIBridge.cs:17</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_html_a056b0aaa9d1b824352f79848297db6a8"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a056b0aaa9d1b824352f79848297db6a8">DOTS_Scripts.EntityCountUIBridge.Update</a></div><div class="ttdeci">void Update()</div><div class="ttdoc">Aktualisiert die Anzeige der Entitätsanzahl in jedem Frame.</div><div class="ttdef"><b>Definition</b> <a href="#l00039">EntityCountUIBridge.cs:39</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_html_a644a3fd126edfdbade7fba9ab1b6372e"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a644a3fd126edfdbade7fba9ab1b6372e">DOTS_Scripts.EntityCountUIBridge._entityManager</a></div><div class="ttdeci">EntityManager _entityManager</div><div class="ttdef"><b>Definition</b> <a href="#l00024">EntityCountUIBridge.cs:24</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_html_a79cd1c6ee88b89ad6dece3046ddd4e66"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a79cd1c6ee88b89ad6dece3046ddd4e66">DOTS_Scripts.EntityCountUIBridge.Start</a></div><div class="ttdeci">void Start()</div><div class="ttdoc">Initialisiert EntityManager und EntityQuery für die Anzeige.</div><div class="ttdef"><b>Definition</b> <a href="#l00030">EntityCountUIBridge.cs:30</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_html_a8d5fef164d76973234dfbde2fa5c5e3e"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#a8d5fef164d76973234dfbde2fa5c5e3e">DOTS_Scripts.EntityCountUIBridge._agentQuery</a></div><div class="ttdeci">EntityQuery _agentQuery</div><div class="ttdef"><b>Definition</b> <a href="#l00025">EntityCountUIBridge.cs:25</a></div></div>
+<div class="ttc" id="aclass_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_html_aaae6b237251fcfa2850264c5372e2ad6"><div class="ttname"><a href="class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html#aaae6b237251fcfa2850264c5372e2ad6">DOTS_Scripts.EntityCountUIBridge.textDisplay</a></div><div class="ttdeci">TMP_Text textDisplay</div><div class="ttdoc">TextMeshPro-Objekt zur Anzeige der Entitätsanzahl.</div><div class="ttdef"><b>Definition</b> <a href="#l00022">EntityCountUIBridge.cs:22</a></div></div>
+<div class="ttc" id="anamespace_d_o_t_s___scripts_html"><div class="ttname"><a href="namespace_d_o_t_s___scripts.html">DOTS_Scripts</a></div><div class="ttdef"><b>Definition</b> <a href="#l00011">EntityCountUIBridge.cs:12</a></div></div>
+<div class="ttc" id="astruct_d_o_t_s___scripts_1_1_spawned_agent_tag_html"><div class="ttname"><a href="struct_d_o_t_s___scripts_1_1_spawned_agent_tag.html">DOTS_Scripts.SpawnedAgentTag</a></div><div class="ttdoc">Tag-Komponente zur Markierung gespawnter Agenten.</div><div class="ttdef"><b>Definition</b> <a href="_spawner_data_8cs_source.html#l00038">SpawnerData.cs:38</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="dir_657e46be123cb4e8ba429fa690d2e77d.html">DOTS-Scripts</a></li><li class="navelem"><a href="_entity_count_u_i_bridge_8cs.html">EntityCountUIBridge.cs</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>

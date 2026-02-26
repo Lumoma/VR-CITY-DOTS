@@ -1,0 +1,37 @@
+\doxysection{Entity\+Count\+UIBridge.\+cs}
+\hypertarget{_entity_count_u_i_bridge_8cs_source}{}\label{_entity_count_u_i_bridge_8cs_source}\index{DOTS-\/Scripts/EntityCountUIBridge.cs@{DOTS-\/Scripts/EntityCountUIBridge.cs}}
+\doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }Unity.Entities;}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00009}00009\ \textcolor{keyword}{using\ }TMPro;}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00011}\doxymbox{\hyperlink{namespace_d_o_t_s___scripts}{00011}}\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_d_o_t_s___scripts}{DOTS\_Scripts}}}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00016}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge}{EntityCountUIBridge}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00017}00017\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ [Tooltip(\textcolor{stringliteral}{"{}Zieh\ hier\ dein\ TextMeshPro\ Textfeld\ rein"{}})]}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00022}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_aaae6b237251fcfa2850264c5372e2ad6}{00022}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ TMP\_Text\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_aaae6b237251fcfa2850264c5372e2ad6}{textDisplay}};}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00024}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a644a3fd126edfdbade7fba9ab1b6372e}{00024}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ EntityManager\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a644a3fd126edfdbade7fba9ab1b6372e}{\_entityManager}};}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00025}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a8d5fef164d76973234dfbde2fa5c5e3e}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ EntityQuery\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a8d5fef164d76973234dfbde2fa5c5e3e}{\_agentQuery}};}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00030}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a79cd1c6ee88b89ad6dece3046ddd4e66}{00030}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a79cd1c6ee88b89ad6dece3046ddd4e66}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a644a3fd126edfdbade7fba9ab1b6372e}{\_entityManager}}\ =\ World.DefaultGameObjectInjectionWorld.EntityManager;}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a8d5fef164d76973234dfbde2fa5c5e3e}{\_agentQuery}}\ =\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a644a3fd126edfdbade7fba9ab1b6372e}{\_entityManager}}.CreateEntityQuery(typeof(\doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_spawned_agent_tag}{SpawnedAgentTag}}));}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00039}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a056b0aaa9d1b824352f79848297db6a8}{00039}}\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a056b0aaa9d1b824352f79848297db6a8}{Update}}()}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_aaae6b237251fcfa2850264c5372e2ad6}{textDisplay}}\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a8d5fef164d76973234dfbde2fa5c5e3e}{\_agentQuery}}.CalculateEntityCount();}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textDisplay.text\ =\ \$\textcolor{stringliteral}{"{}\{count\}"{}};}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_entity_count_u_i_bridge_8cs_source_l00048}00048\ \}}
+
+\end{DoxyCode}

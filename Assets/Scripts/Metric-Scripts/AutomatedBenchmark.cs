@@ -1,3 +1,9 @@
+/**
+ * @file AutomatedBenchmark.cs
+ * @brief Automatisiertes Benchmarking-Script zur Messung von Performance-Kennzahlen.
+ *
+ * Dieses Script misst automatisch verschiedene Performance-Metriken in der Szene.
+ */
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
@@ -6,214 +12,213 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using TMPro;
-using OOP_Scripts;  
-using DOTS_Scripts; 
+using OOP_Scripts;
+using DOTS_Scripts;
 using System;
 
-public class AutomatedBenchmark : MonoBehaviour
+namespace Metric_Scripts
 {
-    public enum BenchmarkState { Idle, Running, Finished }
-
-    [Header("Benchmark Einstellungen")]
-    // Wir testen nur die aktuelle Szene
-
-    [Header("Metrik Konfiguration")]
-    public int[] agentCounts = { 100, 500, 1000, 2500, 5000, 7500, 10000 };
-    public float warmupTime = 2.0f;
-    public float measureTime = 5.0f;
-    public string baseFileName = "BenchmarkResult";
-
-    [Header("Optional UI")]
-    public TMP_Text statusText;
-
-    // Interne Referenzen
-    private Spawner _currentOopSpawner;
-    private SpawnerUIBridge _currentDotsBridge;
-    private BenchmarkState _state = BenchmarkState.Idle;
-    
-    // Damit wir wissen, was wir gerade testen (wird automatisch erkannt)
-    private string _currentTypeString = "Unknown"; 
-
-    // Button-Methode zum Starten des Benchmarks in der aktuellen Szene
-    public void StartFullBenchmarkChain()
+    /// <summary>
+    /// Führt automatisierte Benchmarks für verschiedene Agentenzahlen durch und speichert die Ergebnisse als CSV.
+    /// </summary>
+    public class AutomatedBenchmark : MonoBehaviour
     {
-        if (_state == BenchmarkState.Running) return;
-        
-        _state = BenchmarkState.Running;
-        StartCoroutine(InitAndRunSequence());
-    }
+        /// <summary>
+        /// Status des Benchmarks.
+        /// </summary>
+        public enum BenchmarkState { Idle, Running, Finished }
 
-    private IEnumerator InitAndRunSequence()
-    {
-        // Warte kurz einen Frame, damit alle anderen Scripts bereit sind
-        yield return null;
+        [Header("Benchmark Einstellungen")]
+        /// <summary>
+        /// Getestete Agentenzahlen.
+        /// </summary>
+        public int[] agentCounts = { 100, 500, 1000, 2500, 5000, 7500, 10000 };
+        /// <summary>
+        /// Aufwärmzeit vor Messung (Sekunden).
+        /// </summary>
+        public float warmupTime = 2.0f;
+        /// <summary>
+        /// Messdauer pro Schritt (Sekunden).
+        /// </summary>
+        public float measureTime = 5.0f;
+        /// <summary>
+        /// Basisname für die Ergebnisdatei.
+        /// </summary>
+        public string baseFileName = "BenchmarkResult";
 
-        LogStatus($"Szene: {SceneManager.GetActiveScene().name}. Suche Spawner...");
+        [Header("Optional UI")]
+        /// <summary>
+        /// Optionales Textfeld zur Statusanzeige.
+        /// </summary>
+        public TMP_Text statusText;
 
-        // AUTOMATISCHE ERKENNUNG: OOP oder DOTS?
-        bool foundTarget = FindReferencesInScene();
+        private Spawner _currentOopSpawner;
+        private SpawnerUIBridge _currentDotsBridge;
+        private BenchmarkState _state = BenchmarkState.Idle;
+        private string _currentTypeString = "Unknown";
 
-        if (foundTarget)
+        /// <summary>
+        /// Startet die Benchmark-Sequenz (z.B. per Button).
+        /// </summary>
+        public void StartFullBenchmarkChain()
         {
-            yield return StartCoroutine(RunMeasurementLoop());
-        }
-        else
-        {
-            Debug.LogError("Keinen Spawner (weder OOP noch DOTS) gefunden!");
-            LogStatus("Fehler: Kein Spawner gefunden.");
+            if (_state == BenchmarkState.Running) return;
+            _state = BenchmarkState.Running;
+            StartCoroutine(InitAndRunSequence());
         }
 
-        _state = BenchmarkState.Finished;
-        LogStatus("Benchmark beendet. Datei gespeichert.");
-    }
-
-    private bool FindReferencesInScene()
-    {
-        _currentOopSpawner = null;
-        _currentDotsBridge = null;
-
-        // Versuch 1: OOP Spawner finden
-        // Hinweis: FindFirstObjectByType ist performanter ab Unity 2023, sonst FindObjectOfType nutzen
-        _currentOopSpawner = FindFirstObjectByType<Spawner>(); 
-        if (_currentOopSpawner != null)
+        /// <summary>
+        /// Initialisiert und führt die Benchmark-Sequenz aus.
+        /// </summary>
+        private IEnumerator InitAndRunSequence()
         {
-            _currentTypeString = "OOP";
-            LogStatus("OOP Spawner erkannt.");
-            return true;
-        }
-
-        // Versuch 2: DOTS Bridge finden
-        _currentDotsBridge = FindFirstObjectByType<SpawnerUIBridge>();
-        if (_currentDotsBridge != null)
-        {
-            _currentTypeString = "DOTS";
-            LogStatus("DOTS Bridge erkannt.");
-            return true;
-        }
-
-        return false;
-    }
-
-    private IEnumerator RunMeasurementLoop()
-    {
-        StringBuilder csv = new StringBuilder();
-        string sceneName = SceneManager.GetActiveScene().name;
-
-        // CSV Header
-        csv.AppendLine("Scene;Type;AgentCount;AvgFPS;MinFPS;MaxFPS;1PercentLowFPS;AvgFrameTime_ms");
-
-        foreach (int count in agentCounts)
-        {
-            LogStatus($"Messe {count} Agenten ({_currentTypeString})...");
-
-            // 1. Setzen
-            SetAgentCount(count);
-
-            // 2. Warmup
-            yield return new WaitForSeconds(warmupTime);
-
-            // 3. Messen
-            List<float> frames = new List<float>();
-            float elapsed = 0f;
-            while (elapsed < measureTime)
+            yield return null;
+            LogStatus($"Szene: {SceneManager.GetActiveScene().name}. Suche Spawner...");
+            bool foundTarget = FindReferencesInScene();
+            if (foundTarget)
             {
-                float dt = Time.unscaledDeltaTime;
-                frames.Add(dt);
-                elapsed += dt;
-                yield return null;
+                yield return StartCoroutine(RunMeasurementLoop());
             }
-
-            // 4. Daten temporär erfassen
-            RecordMetric(csv, sceneName, count, frames);
-        }
-
-        // Speichern
-        SaveFile(sceneName, csv.ToString());
-        
-        // Aufräumen: Agenten auf 0 setzen
-        SetAgentCount(0);
-        yield return new WaitForSeconds(1.0f);
-    }
-
-    private void SetAgentCount(int count)
-    {
-        if (_currentTypeString == "OOP" && _currentOopSpawner != null)
-        {
-            _currentOopSpawner.SetCountFromSlider((float)count);
-        }
-        else if (_currentTypeString == "DOTS" && _currentDotsBridge != null)
-        {
-            _currentDotsBridge.OnSliderValueChanged((float)count);
-        }
-    }
-
-    private void RecordMetric(StringBuilder csv, string sceneName, int count, List<float> frameTimes)
-    {
-        if (frameTimes.Count == 0) return;
-
-        float avgFrameTime = frameTimes.Average();
-        float avgFPS = 1.0f / avgFrameTime;
-        float minFPS = 1.0f / frameTimes.Max();
-        float maxFPS = 1.0f / frameTimes.Min();
-
-        // 1% Low Berechnung
-        frameTimes.Sort((a, b) => b.CompareTo(a)); 
-        int index1Percent = Mathf.CeilToInt(frameTimes.Count * 0.01f);
-        float p1Low = 1.0f / frameTimes[Mathf.Clamp(index1Percent, 0, frameTimes.Count - 1)];
-
-        string line = string.Format(System.Globalization.CultureInfo.InvariantCulture,
-            "{0};{1};{2};{3:F2};{4:F2};{5:F2};{6:F2};{7:F4}",
-            sceneName, _currentTypeString, count, avgFPS, minFPS, maxFPS, p1Low, avgFrameTime * 1000f
-        );
-        csv.AppendLine(line);
-    }
-
-    // SPEICHERFUNKTION FÜR QUEST 3 / ANDROID & PC
-    private void SaveFile(string sceneName, string content)
-    {
-        string timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
-        string fileName = $"{baseFileName}_{sceneName}_{_currentTypeString}_{timestamp}.csv";
-        string path;
-
-        // Prüfen, ob wir auf Android (Quest 3) sind
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            // Wir erstellen einen Unterordner "BenchmarkResults"
-            string folder = Path.Combine(Application.persistentDataPath, "BenchmarkResults");
-            
-            // Falls der Ordner noch nicht existiert -> erstellen
-            if (!Directory.Exists(folder)) 
+            else
             {
-                Directory.CreateDirectory(folder);
+                Debug.LogError("Keinen Spawner (weder OOP noch DOTS) gefunden!");
+                LogStatus("Fehler: Kein Spawner gefunden.");
             }
-
-            path = Path.Combine(folder, fileName);
-        }
-        else
-        {
-            // PC-Pfad: Im Projektordner (neben dem Assets Ordner)
-            path = Path.Combine(Application.dataPath, "../", fileName);
+            _state = BenchmarkState.Finished;
+            LogStatus("Benchmark beendet. Datei gespeichert.");
         }
 
-        try
+        /// <summary>
+        /// Sucht OOP- oder DOTS-Spawner in der Szene.
+        /// </summary>
+        private bool FindReferencesInScene()
         {
-            File.WriteAllText(path, content);
-            Debug.Log($"<color=green>Gespeichert: {path}</color>");
-            LogStatus("CSV gespeichert!");
+            _currentOopSpawner = null;
+            _currentDotsBridge = null;
+            _currentOopSpawner = FindFirstObjectByType<Spawner>();
+            if (_currentOopSpawner != null)
+            {
+                _currentTypeString = "OOP";
+                LogStatus("OOP Spawner erkannt.");
+                return true;
+            }
+            _currentDotsBridge = FindFirstObjectByType<SpawnerUIBridge>();
+            if (_currentDotsBridge != null)
+            {
+                _currentTypeString = "DOTS";
+                LogStatus("DOTS Bridge erkannt.");
+                return true;
+            }
+            return false;
         }
-        catch (Exception e)
-        {
-            Debug.LogError($"Fehler beim Speichern: {e.Message}");
-        }
-    }
 
-    private void LogStatus(string msg)
-    {
-        if (statusText != null)
+        /// <summary>
+        /// Führt die Messschleife für alle Agentenzahlen durch.
+        /// </summary>
+        private IEnumerator RunMeasurementLoop()
         {
-            statusText.text = msg;
+            StringBuilder csv = new StringBuilder();
+            string sceneName = SceneManager.GetActiveScene().name;
+            csv.AppendLine("Scene;Type;AgentCount;AvgFPS;MinFPS;MaxFPS;1PercentLowFPS;AvgFrameTime_ms");
+            foreach (int count in agentCounts)
+            {
+                LogStatus($"Messe {count} Agenten ({_currentTypeString})...");
+                SetAgentCount(count);
+                yield return new WaitForSeconds(warmupTime);
+                List<float> frames = new List<float>();
+                float elapsed = 0f;
+                while (elapsed < measureTime)
+                {
+                    float dt = Time.unscaledDeltaTime;
+                    frames.Add(dt);
+                    elapsed += dt;
+                    yield return null;
+                }
+                RecordMetric(csv, sceneName, count, frames);
+            }
+            SaveFile(sceneName, csv.ToString());
+            SetAgentCount(0);
+            yield return new WaitForSeconds(1.0f);
         }
-        Debug.Log($"[AutoBenchmark] {msg}");
+
+        /// <summary>
+        /// Setzt die Agentenzahl im jeweiligen Spawner.
+        /// </summary>
+        private void SetAgentCount(int count)
+        {
+            if (_currentTypeString == "OOP" && _currentOopSpawner != null)
+            {
+                _currentOopSpawner.SetCountFromSlider(count);
+            }
+            else if (_currentTypeString == "DOTS" && _currentDotsBridge != null)
+            {
+                _currentDotsBridge.OnSliderValueChanged(count);
+            }
+        }
+
+        /// <summary>
+        /// Berechnet und speichert die Metriken für einen Messschritt.
+        /// </summary>
+        private void RecordMetric(StringBuilder csv, string sceneName, int count, List<float> frameTimes)
+        {
+            if (frameTimes.Count == 0) return;
+            float avgFrameTime = frameTimes.Average();
+            float avgFPS = 1.0f / avgFrameTime;
+            float minFPS = 1.0f / frameTimes.Max();
+            float maxFPS = 1.0f / frameTimes.Min();
+            frameTimes.Sort((a, b) => b.CompareTo(a));
+            int index1Percent = Mathf.CeilToInt(frameTimes.Count * 0.01f);
+            float p1Low = 1.0f / frameTimes[Mathf.Clamp(index1Percent, 0, frameTimes.Count - 1)];
+            string line = string.Format(System.Globalization.CultureInfo.InvariantCulture,
+                "{0};{1};{2};{3:F2};{4:F2};{5:F2};{6:F2};{7:F4}",
+                sceneName, _currentTypeString, count, avgFPS, minFPS, maxFPS, p1Low, avgFrameTime * 1000f
+            );
+            csv.AppendLine(line);
+        }
+
+        /// <summary>
+        /// Speichert die CSV-Datei auf dem Gerät (PC oder Android).
+        /// </summary>
+        private void SaveFile(string sceneName, string content)
+        {
+            string timestamp = DateTime.Now.ToString("yyyy-MM-dd_HH-mm-ss");
+            string fileName = $"{baseFileName}_{sceneName}_{_currentTypeString}_{timestamp}.csv";
+            string path;
+            if (Application.platform == RuntimePlatform.Android)
+            {
+                string folder = Path.Combine(Application.persistentDataPath, "BenchmarkResults");
+                if (!Directory.Exists(folder)) 
+                {
+                    Directory.CreateDirectory(folder);
+                }
+                path = Path.Combine(folder, fileName);
+            }
+            else
+            {
+                path = Path.Combine(Application.dataPath, "../", fileName);
+            }
+            try
+            {
+                File.WriteAllText(path, content);
+                Debug.Log($"<color=green>Gespeichert: {path}</color>");
+                LogStatus("CSV gespeichert!");
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Fehler beim Speichern: {e.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Gibt Statusmeldungen im UI und in der Konsole aus.
+        /// </summary>
+        private void LogStatus(string msg)
+        {
+            if (statusText != null)
+            {
+                statusText.text = msg;
+            }
+            Debug.Log($"[AutoBenchmark] {msg}");
+        }
     }
 }
-

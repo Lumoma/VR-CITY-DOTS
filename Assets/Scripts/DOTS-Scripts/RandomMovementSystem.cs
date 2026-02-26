@@ -1,3 +1,9 @@
+/**
+ * @file RandomMovementSystem.cs
+ * @brief System zur Steuerung der zufälligen Bewegungen (DOTS).
+ *
+ * Dieses System steuert die Bewegung von DOTS-Entitäten basierend auf RandomMovementData.
+ */
 using Unity.Burst;
 using Unity.Entities;
 using Unity.Physics;
@@ -6,9 +12,16 @@ using Unity.Mathematics;
 
 namespace DOTS_Scripts
 {
+    /// <summary>
+    /// DOTS-System zur Steuerung der zufälligen Bewegungen von Entitäten.
+    /// </summary>
     [BurstCompile]
     public partial struct RandomMovementSystem : ISystem
     {
+        /// <summary>
+        /// Führt das System-Update aus und plant den RandomWalkerJob.
+        /// </summary>
+        /// <param name="state">SystemState</param>
         [BurstCompile]
         public void OnUpdate(ref SystemState state)
         {
@@ -22,12 +35,24 @@ namespace DOTS_Scripts
         }
     }
 
+    /// <summary>
+    /// Job zur Steuerung der Bewegung und Bounds-Prüfung für jede Entität.
+    /// </summary>
     [BurstCompile]
     public partial struct RandomWalkerJob : IJobEntity
     {
+        /// <summary>
+        /// Aktuelle Zeit (für Cooldown).
+        /// </summary>
         public double CurrentTime;
+        /// <summary>
+        /// DeltaTime für die Bewegung.
+        /// </summary>
         public float DeltaTime;
 
+        /// <summary>
+        /// Führt die Bewegungs- und Bounds-Logik für eine Entität aus.
+        /// </summary>
         private void Execute(ref RandomMovementData data, ref LocalTransform transform, ref PhysicsVelocity velocity)
         {
             // --- 1. Rotation korrigieren (Der Zombie-Fix) ---
@@ -59,6 +84,9 @@ namespace DOTS_Scripts
             }
         }
 
+        /// <summary>
+        /// Reagiert auf das Verlassen des Bereichs mit Drehung und Nudge.
+        /// </summary>
         private void HandleOutOfBounds(ref RandomMovementData data, ref LocalTransform transform, float3 forward)
         {
             if (CurrentTime - data.LastCollisionTime < data.CooldownDuration) return;
@@ -71,6 +99,9 @@ namespace DOTS_Scripts
             transform.Position += forward * -data.BounceNudge;
         }
 
+        /// <summary>
+        /// Prüft, ob die Entität außerhalb des erlaubten Bereichs ist.
+        /// </summary>
         private bool IsOutOfBounds(float3 pos, float3 center, float3 size)
         {
             float3 min = center - size * 0.5f;

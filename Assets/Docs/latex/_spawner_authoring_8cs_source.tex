@@ -1,0 +1,86 @@
+\doxysection{Spawner\+Authoring.\+cs}
+\hypertarget{_spawner_authoring_8cs_source}{}\label{_spawner_authoring_8cs_source}\index{DOTS-\/Scripts/SpawnerAuthoring.cs@{DOTS-\/Scripts/SpawnerAuthoring.cs}}
+\doxymbox{\hyperlink{_spawner_authoring_8cs}{gehe zur Dokumentation dieser Datei}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00008}00008\ \textcolor{keyword}{using\ }Unity.Entities;}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00010}00010\ \textcolor{keyword}{namespace\ }\doxymbox{\hyperlink{namespace_d_o_t_s___scripts}{DOTS\_Scripts}}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00015}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring}{00015}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring}{SpawnerAuthoring}}\ :\ MonoBehaviour}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00016}00016\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ [Header(\textcolor{stringliteral}{"{}DOTS\ Settings"{}})]}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00021}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_aef273024b015d160a6a5ef077b2bd37d}{00021}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ GameObject\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_aef273024b015d160a6a5ef077b2bd37d}{prefabToBake}};}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00025}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_ad38f6cb55f20472d6b2dcc5f3a734b1e}{00025}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_ad38f6cb55f20472d6b2dcc5f3a734b1e}{spawnCount}}\ =\ 1000;}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00029}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3244cdf067fa579dbf26db4e396a2c52}{00029}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector3\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3244cdf067fa579dbf26db4e396a2c52}{spawnAreaSize}}\ =\ \textcolor{keyword}{new}\ Vector3(20,\ 0,\ 20);}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wir\ merken\ uns\ die\ Entity,\ die\ dieser\ Spawner\ repräsentiert}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00032}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a74ab64de65a31ff1b1640322c846cfce}{00032}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ Entity\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a74ab64de65a31ff1b1640322c846cfce}{\_spawnerEntity}};}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00033}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3a78baf0fb519c280a0da7d3e77d7c8f}{00033}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ EntityManager\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3a78baf0fb519c280a0da7d3e77d7c8f}{\_entityManager}};}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00038}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker}{00038}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker}{SpawnerBaker}}\ :\ Baker<SpawnerAuthoring>}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00040}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker_a8f0eb4bfd64f54f7923fea614b55978b}{00040}}\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker_a8f0eb4bfd64f54f7923fea614b55978b}{Bake}}(\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring}{SpawnerAuthoring}}\ authoring)}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ entity\ =\ GetEntity(TransformUsageFlags.None);}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddComponent(entity,\ \textcolor{keyword}{new}\ \doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_spawner_data}{SpawnerData}}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ PrefabEntity\ =\ GetEntity(authoring.\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_aef273024b015d160a6a5ef077b2bd37d}{prefabToBake}},\ TransformUsageFlags.Dynamic),}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Count\ =\ authoring.\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_ad38f6cb55f20472d6b2dcc5f3a734b1e}{spawnCount}},}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AreaSize\ =\ authoring.\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3244cdf067fa579dbf26db4e396a2c52}{spawnAreaSize}},}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SpawnCenter\ =\ authoring.transform.position}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Fügt\ direkt\ zu\ Beginn\ den\ Request\ hinzu,\ damit\ einmalig\ beim\ Start\ gespawnt\ wird}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ AddComponent<RespawnRequest>(entity);}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00055}00055\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00059}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_ad285c1850532a48bc5b1d453cb0a6f9f}{00059}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_ad285c1850532a48bc5b1d453cb0a6f9f}{Start}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wir\ holen\ uns\ den\ EntityManager,\ um\ später\ mit\ ECS\ zu\ sprechen}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3a78baf0fb519c280a0da7d3e77d7c8f}{\_entityManager}}\ =\ World.DefaultGameObjectInjectionWorld.EntityManager;}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00069}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a975d14ec7bb4f868c7d3842348bf597f}{00069}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a975d14ec7bb4f868c7d3842348bf597f}{SetCountFromSlider}}(\textcolor{keywordtype}{float}\ sliderValue)}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ newCount\ =\ Mathf.RoundToInt(sliderValue);}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_ad38f6cb55f20472d6b2dcc5f3a734b1e}{spawnCount}}\ !=\ newCount)}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_ad38f6cb55f20472d6b2dcc5f3a734b1e}{spawnCount}}\ =\ newCount;}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a7bd4bb9b3d98e92f388113662ed45be2}{TriggerRespawn}}();}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00083}\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a7bd4bb9b3d98e92f388113662ed45be2}{00083}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a7bd4bb9b3d98e92f388113662ed45be2}{TriggerRespawn}}()}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00084}00084\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 1.\ Finde\ Spawner-\/Entity\ in\ der\ ECS-\/Welt}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a74ab64de65a31ff1b1640322c846cfce}{\_spawnerEntity}}\ ==\ Entity.Null)}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ query\ =\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3a78baf0fb519c280a0da7d3e77d7c8f}{\_entityManager}}.CreateEntityQuery(typeof(\doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_spawner_data}{SpawnerData}}));}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (query.CalculateEntityCount()\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Wir\ nehmen\ einfach\ den\ ersten\ Spawner\ (Singleton-\/Prinzip)}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a74ab64de65a31ff1b1640322c846cfce}{\_spawnerEntity}}\ =\ query.GetSingletonEntity();}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{return};\ \textcolor{comment}{//\ Noch\ nicht\ initialisiert}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 2.\ Aktualisieren\ der\ Daten\ (Count)\ auf\ der\ Entity}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ var\ data\ =\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3a78baf0fb519c280a0da7d3e77d7c8f}{\_entityManager}}.GetComponentData<\doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_spawner_data}{SpawnerData}}>(\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a74ab64de65a31ff1b1640322c846cfce}{\_spawnerEntity}});}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ data.Count\ =\ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_ad38f6cb55f20472d6b2dcc5f3a734b1e}{spawnCount}};}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3a78baf0fb519c280a0da7d3e77d7c8f}{\_entityManager}}.SetComponentData(\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a74ab64de65a31ff1b1640322c846cfce}{\_spawnerEntity}},\ data);}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3.\ Hinzufügen\ der\ "{}RespawnRequest"{}-\/Komponente}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Das\ System\ sieht\ das\ im\ nächsten\ Frame\ und\ reagiert\ (aktualisiert\ die\ Anzahl).}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3a78baf0fb519c280a0da7d3e77d7c8f}{\_entityManager}}.HasComponent<\doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_respawn_request}{RespawnRequest}}>(\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a74ab64de65a31ff1b1640322c846cfce}{\_spawnerEntity}}))}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a3a78baf0fb519c280a0da7d3e77d7c8f}{\_entityManager}}.AddComponent<\doxymbox{\hyperlink{struct_d_o_t_s___scripts_1_1_respawn_request}{RespawnRequest}}>(\doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_spawner_authoring_a74ab64de65a31ff1b1640322c846cfce}{\_spawnerEntity}});}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00109}00109\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_spawner_authoring_8cs_source_l00110}00110\ \}}
+
+\end{DoxyCode}

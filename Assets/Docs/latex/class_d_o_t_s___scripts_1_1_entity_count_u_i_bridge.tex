@@ -1,0 +1,135 @@
+\doxysection{DOTS\+\_\+\+Scripts.\+Entity\+Count\+UIBridge Klassenreferenz}
+\hypertarget{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge}{}\label{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge}\index{DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}}
+
+
+Zeigt die aktuelle Anzahl der DOTS-\/\+Entitäten (z.\+B. Agenten) im UI an.  
+
+
+Klassendiagramm für DOTS\+\_\+\+Scripts.\+Entity\+Count\+UIBridge:\+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Öffentliche Attribute}
+\begin{DoxyCompactItemize}
+\item 
+TMP\+\_\+\+Text \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_aaae6b237251fcfa2850264c5372e2ad6}{text\+Display}}
+\begin{DoxyCompactList}\small\item\em Text\+Mesh\+Pro-\/\+Objekt zur Anzeige der Entitätsanzahl. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Methoden}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a79cd1c6ee88b89ad6dece3046ddd4e66}{Start}} ()
+\begin{DoxyCompactList}\small\item\em Initialisiert Entity\+Manager und Entity\+Query für die Anzeige. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a056b0aaa9d1b824352f79848297db6a8}{Update}} ()
+\begin{DoxyCompactList}\small\item\em Aktualisiert die Anzeige der Entitätsanzahl in jedem Frame. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attribute}
+\begin{DoxyCompactItemize}
+\item 
+Entity\+Manager \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a644a3fd126edfdbade7fba9ab1b6372e}{\+\_\+entity\+Manager}}
+\item 
+Entity\+Query \doxymbox{\hyperlink{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a8d5fef164d76973234dfbde2fa5c5e3e}{\+\_\+agent\+Query}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Ausführliche Beschreibung}
+Zeigt die aktuelle Anzahl der DOTS-\/\+Entitäten (z.\+B. Agenten) im UI an. 
+
+Definiert in Zeile \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source_l00016}{16}} der Datei \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source}{Entity\+Count\+UIBridge.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_doc-func-members}
+\doxysubsection{Dokumentation der Elementfunktionen}
+\Hypertarget{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a79cd1c6ee88b89ad6dece3046ddd4e66}\index{DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}!Start@{Start}}
+\index{Start@{Start}!DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a79cd1c6ee88b89ad6dece3046ddd4e66} 
+void DOTS\+\_\+\+Scripts.\+Entity\+Count\+UIBridge.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Initialisiert Entity\+Manager und Entity\+Query für die Anzeige. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source_l00030}{30}} der Datei \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source}{Entity\+Count\+UIBridge.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \_entityManager\ =\ World.DefaultGameObjectInjectionWorld.EntityManager;}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \ \ \ \ \_agentQuery\ =\ \_entityManager.CreateEntityQuery(typeof(SpawnedAgentTag));}
+\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a056b0aaa9d1b824352f79848297db6a8}\index{DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}!Update@{Update}}
+\index{Update@{Update}!DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a056b0aaa9d1b824352f79848297db6a8} 
+void DOTS\+\_\+\+Scripts.\+Entity\+Count\+UIBridge.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+
+
+Aktualisiert die Anzeige der Entitätsanzahl in jedem Frame. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source_l00039}{39}} der Datei \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source}{Entity\+Count\+UIBridge.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (textDisplay\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ count\ =\ \_agentQuery.CalculateEntityCount();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ textDisplay.text\ =\ \$\textcolor{stringliteral}{"{}\{count\}"{}};}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_doc-variable-members}
+\doxysubsection{Dokumentation der Datenelemente}
+\Hypertarget{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a8d5fef164d76973234dfbde2fa5c5e3e}\index{DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}!\_agentQuery@{\_agentQuery}}
+\index{\_agentQuery@{\_agentQuery}!DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}}
+\doxysubsubsection{\texorpdfstring{\_agentQuery}{\_agentQuery}}
+{\footnotesize\ttfamily \label{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a8d5fef164d76973234dfbde2fa5c5e3e} 
+Entity\+Query DOTS\+\_\+\+Scripts.\+Entity\+Count\+UIBridge.\+\_\+agent\+Query\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source_l00025}{25}} der Datei \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source}{Entity\+Count\+UIBridge.\+cs}}.
+
+\Hypertarget{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a644a3fd126edfdbade7fba9ab1b6372e}\index{DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}!\_entityManager@{\_entityManager}}
+\index{\_entityManager@{\_entityManager}!DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}}
+\doxysubsubsection{\texorpdfstring{\_entityManager}{\_entityManager}}
+{\footnotesize\ttfamily \label{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_a644a3fd126edfdbade7fba9ab1b6372e} 
+Entity\+Manager DOTS\+\_\+\+Scripts.\+Entity\+Count\+UIBridge.\+\_\+entity\+Manager\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source_l00024}{24}} der Datei \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source}{Entity\+Count\+UIBridge.\+cs}}.
+
+\Hypertarget{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_aaae6b237251fcfa2850264c5372e2ad6}\index{DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}!textDisplay@{textDisplay}}
+\index{textDisplay@{textDisplay}!DOTS\_Scripts.EntityCountUIBridge@{DOTS\_Scripts.EntityCountUIBridge}}
+\doxysubsubsection{\texorpdfstring{textDisplay}{textDisplay}}
+{\footnotesize\ttfamily \label{class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge_aaae6b237251fcfa2850264c5372e2ad6} 
+TMP\+\_\+\+Text DOTS\+\_\+\+Scripts.\+Entity\+Count\+UIBridge.\+text\+Display}
+
+
+
+Text\+Mesh\+Pro-\/\+Objekt zur Anzeige der Entitätsanzahl. 
+
+
+
+Definiert in Zeile \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source_l00022}{22}} der Datei \doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs_source}{Entity\+Count\+UIBridge.\+cs}}.
+
+
+
+Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:\+\begin{DoxyCompactItemize}
+\item 
+DOTS-\/\+Scripts/\+\doxymbox{\hyperlink{_entity_count_u_i_bridge_8cs}{Entity\+Count\+UIBridge.\+cs}}\end{DoxyCompactItemize}

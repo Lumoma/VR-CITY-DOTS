@@ -1,79 +1,91 @@
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.XR;
-using UnityEngine.SceneManagement;
-
-public class VRSceneSwitcher : MonoBehaviour
+namespace OOP_Scripts
 {
-    [Header("Einstellungen")]
-    [Tooltip("Der Name der Szene, die geladen werden soll.")]
-    public string targetSceneName;
+    /**
+     * @file VRSceneSwitcher.cs
+     * @brief Ermöglicht das Wechseln zwischen verschiedenen Szenen im VR-Modus.
+     *
+     * Dieses Script erlaubt das Umschalten zwischen Szenen in einer VR-Umgebung.
+     */
+    using System.Collections.Generic;
+    using UnityEngine;
+    using UnityEngine.XR;
+    using UnityEngine.SceneManagement;
 
-    [Tooltip("Welcher Controller soll überwacht werden?")]
-    public XRNode controllerNode = XRNode.RightHand; // Standardmäßig Rechte Hand (wo meist A/B sind)
-
-    // Interne Referenz zum Input-Gerät
-    private InputDevice _targetDevice;
-
-    void Update()
+    /// <summary>
+    /// Ermöglicht das Wechseln zwischen Szenen im VR-Modus durch Tastendruck auf dem Controller.
+    /// </summary>
+    public class VRSceneSwitcher : MonoBehaviour
     {
-        // 1. Gerät abrufen, falls noch nicht vorhanden oder verloren gegangen
-        if (!_targetDevice.isValid)
-        {
-            InitializeDevice();
-        }
+        /// <summary>
+        /// Der Name der Szene, die geladen werden soll.
+        /// </summary>
+        [Header("Einstellungen")]
+        [Tooltip("Der Name der Szene, die geladen werden soll.")]
+        public string targetSceneName;
 
-        // 2. Tasten überprüfen
-        // In Unity XR ist "PrimaryButton" meistens die A-Taste (oder X links)
-        // und "SecondaryButton" meistens die B-Taste (oder Y links).
-        
-        if (_targetDevice.isValid)
-        {
-            bool isAPressed = false;
-            bool isBPressed = false;
+        /// <summary>
+        /// Welcher Controller überwacht werden soll (z.B. rechte Hand).
+        /// </summary>
+        [Tooltip("Welcher Controller soll überwacht werden?")]
+        public XRNode controllerNode = XRNode.RightHand;
 
-            // Prüfe auf A-Taste (Primary)
-            if (_targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryValue) && primaryValue)
+        private InputDevice _targetDevice;
+
+        /// <summary>
+        /// Überprüft in jedem Frame, ob die relevanten Tasten gedrückt wurden und wechselt ggf. die Szene.
+        /// </summary>
+        private void Update()
+        {
+            if (!_targetDevice.isValid)
             {
-                isAPressed = true;
+                InitializeDevice();
             }
-
-            // Prüfe auf B-Taste (Secondary)
-            if (_targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryValue) && secondaryValue)
+            if (_targetDevice.isValid)
             {
-                isBPressed = true;
+                bool isAPressed = false;
+                bool isBPressed = false;
+                if (_targetDevice.TryGetFeatureValue(CommonUsages.primaryButton, out bool primaryValue) && primaryValue)
+                {
+                    isAPressed = true;
+                }
+                if (_targetDevice.TryGetFeatureValue(CommonUsages.secondaryButton, out bool secondaryValue) && secondaryValue)
+                {
+                    isBPressed = true;
+                }
+                if (isAPressed || isBPressed)
+                {
+                    SwitchScene();
+                }
             }
+        }
 
-            // Wenn eine der beiden gedrückt wurde -> Szene wechseln
-            if (isAPressed || isBPressed)
+        /// <summary>
+        /// Initialisiert das InputDevice für den gewünschten Controller.
+        /// </summary>
+        private void InitializeDevice()
+        {
+            List<InputDevice> devices = new List<InputDevice>();
+            InputDevices.GetDevicesAtXRNode(controllerNode, devices);
+            if (devices.Count > 0)
             {
-                SwitchScene();
+                _targetDevice = devices[0];
             }
         }
-    }
 
-    private void InitializeDevice()
-    {
-        List<InputDevice> devices = new List<InputDevice>();
-        InputDevices.GetDevicesAtXRNode(controllerNode, devices);
-
-        if (devices.Count > 0)
+        /// <summary>
+        /// Wechselt zur angegebenen Szene, sofern ein Name eingetragen ist.
+        /// </summary>
+        public void SwitchScene()
         {
-            _targetDevice = devices[0];
-        }
-    }
-
-    public void SwitchScene()
-    {
-        // Sicherheitscheck, ob ein Szenenname eingetragen wurde
-        if (!string.IsNullOrEmpty(targetSceneName))
-        {
-            Debug.Log($"Wechsle zu Szene: {targetSceneName}");
-            SceneManager.LoadScene(targetSceneName);
-        }
-        else
-        {
-            Debug.LogError("Kein Szenenname im Inspector eingetragen!");
+            if (!string.IsNullOrEmpty(targetSceneName))
+            {
+                Debug.Log($"Wechsle zu Szene: {targetSceneName}");
+                SceneManager.LoadScene(targetSceneName);
+            }
+            else
+            {
+                Debug.LogError("Kein Szenenname im Inspector eingetragen!");
+            }
         }
     }
 }

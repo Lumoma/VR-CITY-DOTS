@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.16.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>VR-CITY-DOTS: Metric_Scripts.AutomatedBenchmark Klassenreferenz</title>
+<link rel="icon" href="VR-City-Icon.png" type="image/x-icon" />
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">VR-CITY-DOTS<span id="projectnumber">&#160;2026</span>
+   </div>
+   <div id="projectbrief">Unity C# Projekt für VR City Simulation mit DOTS und OOP.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Erzeugt von Doxygen 1.16.1 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+</script>
+<script type="text/javascript">
+$(function() { codefold.init(); });
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Suchen',true);
+  $(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){initNavTree('class_metric___scripts_1_1_automated_benchmark.html','','class_metric___scripts_1_1_automated_benchmark-members'); });
+</script>
+<div id="container">
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Lade ...</div>
+<div class="SRStatus" id="Searching">Suche ...</div>
+<div class="SRStatus" id="NoMatches">Keine Treffer</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Metric_Scripts.AutomatedBenchmark Klassenreferenz</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Führt automatisierte Benchmarks für verschiedene Agentenzahlen durch und speichert die Ergebnisse als CSV.  
+ <a href="#details">Mehr ...</a></p>
+<div class="dynheader">
+Klassendiagramm für Metric_Scripts.AutomatedBenchmark:</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_metric___scripts_1_1_automated_benchmark.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
+Öffentliche Typen</h2></td></tr>
+<tr class="memitem:af205654c30e1f27b029657764174945f" id="r_af205654c30e1f27b029657764174945f"><td class="memItemLeft">enum &#160;</td><td class="memItemRight"><a class="el" href="#af205654c30e1f27b029657764174945f">BenchmarkState</a> { <a class="el" href="#af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c">Idle</a>
+, <a class="el" href="#af205654c30e1f27b029657764174945fa5bda814c4aedb126839228f1a3d92f09">Running</a>
+, <a class="el" href="#af205654c30e1f27b029657764174945fa8f3d10eb21bd36347c258679eba9e92b">Finished</a>
+ }</td></tr>
+<tr class="memdesc:af205654c30e1f27b029657764174945f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Status des Benchmarks.  <a href="#af205654c30e1f27b029657764174945f">Mehr ...</a><br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Öffentliche Methoden</h2></td></tr>
+<tr class="memitem:ae584179223ed0018c52d58a0fcad01ac" id="r_ae584179223ed0018c52d58a0fcad01ac"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ae584179223ed0018c52d58a0fcad01ac">StartFullBenchmarkChain</a> ()</td></tr>
+<tr class="memdesc:ae584179223ed0018c52d58a0fcad01ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Startet die Benchmark-Sequenz (z.B. per Button).  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
+Öffentliche Attribute</h2></td></tr>
+<tr class="memitem:a5a2dd32b1c93174d68cfbca914af628c" id="r_a5a2dd32b1c93174d68cfbca914af628c"><td class="memItemLeft">int[]&#160;</td><td class="memItemRight"><a class="el" href="#a5a2dd32b1c93174d68cfbca914af628c">agentCounts</a> = { 100, 500, 1000, 2500, 5000, 7500, 10000 }</td></tr>
+<tr class="memdesc:a5a2dd32b1c93174d68cfbca914af628c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getestete Agentenzahlen.  <br /></td></tr>
+<tr class="memitem:afe632670753e3a4b0a26b37590a7b272" id="r_afe632670753e3a4b0a26b37590a7b272"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#afe632670753e3a4b0a26b37590a7b272">warmupTime</a> = 2.0f</td></tr>
+<tr class="memdesc:afe632670753e3a4b0a26b37590a7b272"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aufwärmzeit vor Messung (Sekunden).  <br /></td></tr>
+<tr class="memitem:aeee132688c3d14100fb272d2c0cca762" id="r_aeee132688c3d14100fb272d2c0cca762"><td class="memItemLeft">float&#160;</td><td class="memItemRight"><a class="el" href="#aeee132688c3d14100fb272d2c0cca762">measureTime</a> = 5.0f</td></tr>
+<tr class="memdesc:aeee132688c3d14100fb272d2c0cca762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Messdauer pro Schritt (Sekunden).  <br /></td></tr>
+<tr class="memitem:a83227d2a354c1545c090060e2f6e72e2" id="r_a83227d2a354c1545c090060e2f6e72e2"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#a83227d2a354c1545c090060e2f6e72e2">baseFileName</a> = &quot;BenchmarkResult&quot;</td></tr>
+<tr class="memdesc:a83227d2a354c1545c090060e2f6e72e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Basisname für die Ergebnisdatei.  <br /></td></tr>
+<tr class="memitem:a8d509a8ee4dc9c34270ae65b41f51587" id="r_a8d509a8ee4dc9c34270ae65b41f51587"><td class="memItemLeft">TMP_Text&#160;</td><td class="memItemRight"><a class="el" href="#a8d509a8ee4dc9c34270ae65b41f51587">statusText</a></td></tr>
+<tr class="memdesc:a8d509a8ee4dc9c34270ae65b41f51587"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optionales Textfeld zur Statusanzeige.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Methoden</h2></td></tr>
+<tr class="memitem:a6b4ed259af930320efc60b6bc3bafbb8" id="r_a6b4ed259af930320efc60b6bc3bafbb8"><td class="memItemLeft">IEnumerator&#160;</td><td class="memItemRight"><a class="el" href="#a6b4ed259af930320efc60b6bc3bafbb8">InitAndRunSequence</a> ()</td></tr>
+<tr class="memdesc:a6b4ed259af930320efc60b6bc3bafbb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialisiert und führt die Benchmark-Sequenz aus.  <br /></td></tr>
+<tr class="memitem:a264e130bbb3aea42cf13f05f61a65bd7" id="r_a264e130bbb3aea42cf13f05f61a65bd7"><td class="memItemLeft">bool&#160;</td><td class="memItemRight"><a class="el" href="#a264e130bbb3aea42cf13f05f61a65bd7">FindReferencesInScene</a> ()</td></tr>
+<tr class="memdesc:a264e130bbb3aea42cf13f05f61a65bd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sucht OOP- oder DOTS-Spawner in der Szene.  <br /></td></tr>
+<tr class="memitem:abcbf7458bb5192023d838e73d3df1650" id="r_abcbf7458bb5192023d838e73d3df1650"><td class="memItemLeft">IEnumerator&#160;</td><td class="memItemRight"><a class="el" href="#abcbf7458bb5192023d838e73d3df1650">RunMeasurementLoop</a> ()</td></tr>
+<tr class="memdesc:abcbf7458bb5192023d838e73d3df1650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Führt die Messschleife für alle Agentenzahlen durch.  <br /></td></tr>
+<tr class="memitem:a7ac1c704ebfde23347746862ea20db3e" id="r_a7ac1c704ebfde23347746862ea20db3e"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a7ac1c704ebfde23347746862ea20db3e">SetAgentCount</a> (int count)</td></tr>
+<tr class="memdesc:a7ac1c704ebfde23347746862ea20db3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setzt die Agentenzahl im jeweiligen <a class="el" href="class_o_o_p___scripts_1_1_spawner.html" title="Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne...">Spawner</a>.  <br /></td></tr>
+<tr class="memitem:a2b428685eae6ebcbfeb686429067e7f8" id="r_a2b428685eae6ebcbfeb686429067e7f8"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a2b428685eae6ebcbfeb686429067e7f8">RecordMetric</a> (StringBuilder csv, string sceneName, int count, List&lt; float &gt; frameTimes)</td></tr>
+<tr class="memdesc:a2b428685eae6ebcbfeb686429067e7f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Berechnet und speichert die Metriken für einen Messschritt.  <br /></td></tr>
+<tr class="memitem:a8bbab868579e6237b0be1314ac8355bb" id="r_a8bbab868579e6237b0be1314ac8355bb"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a8bbab868579e6237b0be1314ac8355bb">SaveFile</a> (string sceneName, string content)</td></tr>
+<tr class="memdesc:a8bbab868579e6237b0be1314ac8355bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Speichert die CSV-Datei auf dem Gerät (PC oder Android).  <br /></td></tr>
+<tr class="memitem:a6e3ac1436207442db43786bf8bc61b7f" id="r_a6e3ac1436207442db43786bf8bc61b7f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6e3ac1436207442db43786bf8bc61b7f">LogStatus</a> (string msg)</td></tr>
+<tr class="memdesc:a6e3ac1436207442db43786bf8bc61b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gibt Statusmeldungen im UI und in der Konsole aus.  <br /></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attribute</h2></td></tr>
+<tr class="memitem:acfeceb55650effc4f99465e4b7fa0068" id="r_acfeceb55650effc4f99465e4b7fa0068"><td class="memItemLeft"><a class="el" href="class_o_o_p___scripts_1_1_spawner.html">Spawner</a>&#160;</td><td class="memItemRight"><a class="el" href="#acfeceb55650effc4f99465e4b7fa0068">_currentOopSpawner</a></td></tr>
+<tr class="memitem:a8858db1bbc980d7ee8b781394a28325c" id="r_a8858db1bbc980d7ee8b781394a28325c"><td class="memItemLeft"><a class="el" href="class_d_o_t_s___scripts_1_1_spawner_u_i_bridge.html">SpawnerUIBridge</a>&#160;</td><td class="memItemRight"><a class="el" href="#a8858db1bbc980d7ee8b781394a28325c">_currentDotsBridge</a></td></tr>
+<tr class="memitem:ae6859692075466ea401c71f428fbf237" id="r_ae6859692075466ea401c71f428fbf237"><td class="memItemLeft"><a class="el" href="#af205654c30e1f27b029657764174945f">BenchmarkState</a>&#160;</td><td class="memItemRight"><a class="el" href="#ae6859692075466ea401c71f428fbf237">_state</a> = <a class="el" href="#af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c">BenchmarkState.Idle</a></td></tr>
+<tr class="memitem:aaa977ef18127263096efa26a34164dda" id="r_aaa977ef18127263096efa26a34164dda"><td class="memItemLeft">string&#160;</td><td class="memItemRight"><a class="el" href="#aaa977ef18127263096efa26a34164dda">_currentTypeString</a> = &quot;Unknown&quot;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Ausführliche Beschreibung</h2>
+<div class="textblock"><p>Führt automatisierte Benchmarks für verschiedene Agentenzahlen durch und speichert die Ergebnisse als CSV. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00024">24</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+</div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Dokumentation der Aufzählungstypen</h2>
+<a id="af205654c30e1f27b029657764174945f" name="af205654c30e1f27b029657764174945f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af205654c30e1f27b029657764174945f">&#9670;&#160;</a></span>BenchmarkState</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#af205654c30e1f27b029657764174945f">Metric_Scripts.AutomatedBenchmark.BenchmarkState</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Status des Benchmarks. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Aufzählungswerte</th></tr><tr><td class="fieldname"><a id="af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c" name="af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c"></a>Idle&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af205654c30e1f27b029657764174945fa5bda814c4aedb126839228f1a3d92f09" name="af205654c30e1f27b029657764174945fa5bda814c4aedb126839228f1a3d92f09"></a>Running&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="af205654c30e1f27b029657764174945fa8f3d10eb21bd36347c258679eba9e92b" name="af205654c30e1f27b029657764174945fa8f3d10eb21bd36347c258679eba9e92b"></a>Finished&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00029">29</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   29</span>{ Idle, Running, Finished }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Dokumentation der Elementfunktionen</h2>
+<a id="a264e130bbb3aea42cf13f05f61a65bd7" name="a264e130bbb3aea42cf13f05f61a65bd7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a264e130bbb3aea42cf13f05f61a65bd7">&#9670;&#160;</a></span>FindReferencesInScene()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Metric_Scripts.AutomatedBenchmark.FindReferencesInScene </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sucht OOP- oder DOTS-Spawner in der Szene. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00094">94</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   95</span>        {</div>
+<div class="line"><span class="lineno">   96</span>            _currentOopSpawner = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   97</span>            _currentDotsBridge = <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   98</span>            _currentOopSpawner = FindFirstObjectByType&lt;Spawner&gt;();</div>
+<div class="line"><span class="lineno">   99</span>            <span class="keywordflow">if</span> (_currentOopSpawner != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  100</span>            {</div>
+<div class="line"><span class="lineno">  101</span>                _currentTypeString = <span class="stringliteral">&quot;OOP&quot;</span>;</div>
+<div class="line"><span class="lineno">  102</span>                LogStatus(<span class="stringliteral">&quot;OOP Spawner erkannt.&quot;</span>);</div>
+<div class="line"><span class="lineno">  103</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  104</span>            }</div>
+<div class="line"><span class="lineno">  105</span>            _currentDotsBridge = FindFirstObjectByType&lt;SpawnerUIBridge&gt;();</div>
+<div class="line"><span class="lineno">  106</span>            <span class="keywordflow">if</span> (_currentDotsBridge != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  107</span>            {</div>
+<div class="line"><span class="lineno">  108</span>                _currentTypeString = <span class="stringliteral">&quot;DOTS&quot;</span>;</div>
+<div class="line"><span class="lineno">  109</span>                LogStatus(<span class="stringliteral">&quot;DOTS Bridge erkannt.&quot;</span>);</div>
+<div class="line"><span class="lineno">  110</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><span class="lineno">  111</span>            }</div>
+<div class="line"><span class="lineno">  112</span>            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><span class="lineno">  113</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6b4ed259af930320efc60b6bc3bafbb8" name="a6b4ed259af930320efc60b6bc3bafbb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b4ed259af930320efc60b6bc3bafbb8">&#9670;&#160;</a></span>InitAndRunSequence()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator Metric_Scripts.AutomatedBenchmark.InitAndRunSequence </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialisiert und führt die Benchmark-Sequenz aus. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00073">73</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   74</span>        {</div>
+<div class="line"><span class="lineno">   75</span>            yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">   76</span>            LogStatus($<span class="stringliteral">&quot;Szene: {SceneManager.GetActiveScene().name}. Suche Spawner...&quot;</span>);</div>
+<div class="line"><span class="lineno">   77</span>            <span class="keywordtype">bool</span> foundTarget = FindReferencesInScene();</div>
+<div class="line"><span class="lineno">   78</span>            <span class="keywordflow">if</span> (foundTarget)</div>
+<div class="line"><span class="lineno">   79</span>            {</div>
+<div class="line"><span class="lineno">   80</span>                yield <span class="keywordflow">return</span> StartCoroutine(RunMeasurementLoop());</div>
+<div class="line"><span class="lineno">   81</span>            }</div>
+<div class="line"><span class="lineno">   82</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">   83</span>            {</div>
+<div class="line"><span class="lineno">   84</span>                Debug.LogError(<span class="stringliteral">&quot;Keinen Spawner (weder OOP noch DOTS) gefunden!&quot;</span>);</div>
+<div class="line"><span class="lineno">   85</span>                LogStatus(<span class="stringliteral">&quot;Fehler: Kein Spawner gefunden.&quot;</span>);</div>
+<div class="line"><span class="lineno">   86</span>            }</div>
+<div class="line"><span class="lineno">   87</span>            _state = BenchmarkState.Finished;</div>
+<div class="line"><span class="lineno">   88</span>            LogStatus(<span class="stringliteral">&quot;Benchmark beendet. Datei gespeichert.&quot;</span>);</div>
+<div class="line"><span class="lineno">   89</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a6e3ac1436207442db43786bf8bc61b7f" name="a6e3ac1436207442db43786bf8bc61b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6e3ac1436207442db43786bf8bc61b7f">&#9670;&#160;</a></span>LogStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metric_Scripts.AutomatedBenchmark.LogStatus </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>msg</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gibt Statusmeldungen im UI und in der Konsole aus. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00215">215</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  216</span>        {</div>
+<div class="line"><span class="lineno">  217</span>            <span class="keywordflow">if</span> (statusText != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  218</span>            {</div>
+<div class="line"><span class="lineno">  219</span>                statusText.text = msg;</div>
+<div class="line"><span class="lineno">  220</span>            }</div>
+<div class="line"><span class="lineno">  221</span>            Debug.Log($<span class="stringliteral">&quot;[AutoBenchmark] {msg}&quot;</span>);</div>
+<div class="line"><span class="lineno">  222</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a2b428685eae6ebcbfeb686429067e7f8" name="a2b428685eae6ebcbfeb686429067e7f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b428685eae6ebcbfeb686429067e7f8">&#9670;&#160;</a></span>RecordMetric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metric_Scripts.AutomatedBenchmark.RecordMetric </td>
+          <td>(</td>
+          <td class="paramtype">StringBuilder</td>          <td class="paramname"><span class="paramname"><em>csv</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>sceneName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>count</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">List&lt; float &gt;</td>          <td class="paramname"><span class="paramname"><em>frameTimes</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Berechnet und speichert die Metriken für einen Messschritt. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00162">162</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  163</span>        {</div>
+<div class="line"><span class="lineno">  164</span>            <span class="keywordflow">if</span> (frameTimes.Count == 0) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">  165</span>            <span class="keywordtype">float</span> avgFrameTime = frameTimes.Average();</div>
+<div class="line"><span class="lineno">  166</span>            <span class="keywordtype">float</span> avgFPS = 1.0f / avgFrameTime;</div>
+<div class="line"><span class="lineno">  167</span>            <span class="keywordtype">float</span> minFPS = 1.0f / frameTimes.Max();</div>
+<div class="line"><span class="lineno">  168</span>            <span class="keywordtype">float</span> maxFPS = 1.0f / frameTimes.Min();</div>
+<div class="line"><span class="lineno">  169</span>            frameTimes.Sort((a, b) =&gt; b.CompareTo(a));</div>
+<div class="line"><span class="lineno">  170</span>            <span class="keywordtype">int</span> index1Percent = Mathf.CeilToInt(frameTimes.Count * 0.01f);</div>
+<div class="line"><span class="lineno">  171</span>            <span class="keywordtype">float</span> p1Low = 1.0f / frameTimes[Mathf.Clamp(index1Percent, 0, frameTimes.Count - 1)];</div>
+<div class="line"><span class="lineno">  172</span>            <span class="keywordtype">string</span> line = <span class="keywordtype">string</span>.Format(System.Globalization.CultureInfo.InvariantCulture,</div>
+<div class="line"><span class="lineno">  173</span>                <span class="stringliteral">&quot;{0};{1};{2};{3:F2};{4:F2};{5:F2};{6:F2};{7:F4}&quot;</span>,</div>
+<div class="line"><span class="lineno">  174</span>                sceneName, _currentTypeString, count, avgFPS, minFPS, maxFPS, p1Low, avgFrameTime * 1000f</div>
+<div class="line"><span class="lineno">  175</span>            );</div>
+<div class="line"><span class="lineno">  176</span>            csv.AppendLine(line);</div>
+<div class="line"><span class="lineno">  177</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="abcbf7458bb5192023d838e73d3df1650" name="abcbf7458bb5192023d838e73d3df1650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcbf7458bb5192023d838e73d3df1650">&#9670;&#160;</a></span>RunMeasurementLoop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">IEnumerator Metric_Scripts.AutomatedBenchmark.RunMeasurementLoop </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Führt die Messschleife für alle Agentenzahlen durch. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00118">118</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  119</span>        {</div>
+<div class="line"><span class="lineno">  120</span>            StringBuilder csv = <span class="keyword">new</span> StringBuilder();</div>
+<div class="line"><span class="lineno">  121</span>            <span class="keywordtype">string</span> sceneName = SceneManager.GetActiveScene().name;</div>
+<div class="line"><span class="lineno">  122</span>            csv.AppendLine(<span class="stringliteral">&quot;Scene;Type;AgentCount;AvgFPS;MinFPS;MaxFPS;1PercentLowFPS;AvgFrameTime_ms&quot;</span>);</div>
+<div class="line"><span class="lineno">  123</span>            <span class="keywordflow">foreach</span> (<span class="keywordtype">int</span> count <span class="keywordflow">in</span> agentCounts)</div>
+<div class="line"><span class="lineno">  124</span>            {</div>
+<div class="line"><span class="lineno">  125</span>                LogStatus($<span class="stringliteral">&quot;Messe {count} Agenten ({_currentTypeString})...&quot;</span>);</div>
+<div class="line"><span class="lineno">  126</span>                SetAgentCount(count);</div>
+<div class="line"><span class="lineno">  127</span>                yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(warmupTime);</div>
+<div class="line"><span class="lineno">  128</span>                List&lt;float&gt; frames = <span class="keyword">new</span> List&lt;float&gt;();</div>
+<div class="line"><span class="lineno">  129</span>                <span class="keywordtype">float</span> elapsed = 0f;</div>
+<div class="line"><span class="lineno">  130</span>                <span class="keywordflow">while</span> (elapsed &lt; measureTime)</div>
+<div class="line"><span class="lineno">  131</span>                {</div>
+<div class="line"><span class="lineno">  132</span>                    <span class="keywordtype">float</span> dt = Time.unscaledDeltaTime;</div>
+<div class="line"><span class="lineno">  133</span>                    frames.Add(dt);</div>
+<div class="line"><span class="lineno">  134</span>                    elapsed += dt;</div>
+<div class="line"><span class="lineno">  135</span>                    yield <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
+<div class="line"><span class="lineno">  136</span>                }</div>
+<div class="line"><span class="lineno">  137</span>                RecordMetric(csv, sceneName, count, frames);</div>
+<div class="line"><span class="lineno">  138</span>            }</div>
+<div class="line"><span class="lineno">  139</span>            SaveFile(sceneName, csv.ToString());</div>
+<div class="line"><span class="lineno">  140</span>            SetAgentCount(0);</div>
+<div class="line"><span class="lineno">  141</span>            yield <span class="keywordflow">return</span> <span class="keyword">new</span> WaitForSeconds(1.0f);</div>
+<div class="line"><span class="lineno">  142</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a8bbab868579e6237b0be1314ac8355bb" name="a8bbab868579e6237b0be1314ac8355bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bbab868579e6237b0be1314ac8355bb">&#9670;&#160;</a></span>SaveFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metric_Scripts.AutomatedBenchmark.SaveFile </td>
+          <td>(</td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>sceneName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string</td>          <td class="paramname"><span class="paramname"><em>content</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Speichert die CSV-Datei auf dem Gerät (PC oder Android). </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00182">182</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  183</span>        {</div>
+<div class="line"><span class="lineno">  184</span>            <span class="keywordtype">string</span> timestamp = DateTime.Now.ToString(<span class="stringliteral">&quot;yyyy-MM-dd_HH-mm-ss&quot;</span>);</div>
+<div class="line"><span class="lineno">  185</span>            <span class="keywordtype">string</span> fileName = $<span class="stringliteral">&quot;{baseFileName}_{sceneName}_{_currentTypeString}_{timestamp}.csv&quot;</span>;</div>
+<div class="line"><span class="lineno">  186</span>            <span class="keywordtype">string</span> path;</div>
+<div class="line"><span class="lineno">  187</span>            <span class="keywordflow">if</span> (Application.platform == RuntimePlatform.Android)</div>
+<div class="line"><span class="lineno">  188</span>            {</div>
+<div class="line"><span class="lineno">  189</span>                <span class="keywordtype">string</span> folder = Path.Combine(Application.persistentDataPath, <span class="stringliteral">&quot;BenchmarkResults&quot;</span>);</div>
+<div class="line"><span class="lineno">  190</span>                <span class="keywordflow">if</span> (!Directory.Exists(folder)) </div>
+<div class="line"><span class="lineno">  191</span>                {</div>
+<div class="line"><span class="lineno">  192</span>                    Directory.CreateDirectory(folder);</div>
+<div class="line"><span class="lineno">  193</span>                }</div>
+<div class="line"><span class="lineno">  194</span>                path = Path.Combine(folder, fileName);</div>
+<div class="line"><span class="lineno">  195</span>            }</div>
+<div class="line"><span class="lineno">  196</span>            <span class="keywordflow">else</span></div>
+<div class="line"><span class="lineno">  197</span>            {</div>
+<div class="line"><span class="lineno">  198</span>                path = Path.Combine(Application.dataPath, <span class="stringliteral">&quot;../&quot;</span>, fileName);</div>
+<div class="line"><span class="lineno">  199</span>            }</div>
+<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">try</span></div>
+<div class="line"><span class="lineno">  201</span>            {</div>
+<div class="line"><span class="lineno">  202</span>                File.WriteAllText(path, content);</div>
+<div class="line"><span class="lineno">  203</span>                Debug.Log($<span class="stringliteral">&quot;&lt;color=green&gt;Gespeichert: {path}&lt;/color&gt;&quot;</span>);</div>
+<div class="line"><span class="lineno">  204</span>                LogStatus(<span class="stringliteral">&quot;CSV gespeichert!&quot;</span>);</div>
+<div class="line"><span class="lineno">  205</span>            }</div>
+<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">catch</span> (Exception e)</div>
+<div class="line"><span class="lineno">  207</span>            {</div>
+<div class="line"><span class="lineno">  208</span>                Debug.LogError($<span class="stringliteral">&quot;Fehler beim Speichern: {e.Message}&quot;</span>);</div>
+<div class="line"><span class="lineno">  209</span>            }</div>
+<div class="line"><span class="lineno">  210</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a7ac1c704ebfde23347746862ea20db3e" name="a7ac1c704ebfde23347746862ea20db3e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ac1c704ebfde23347746862ea20db3e">&#9670;&#160;</a></span>SetAgentCount()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metric_Scripts.AutomatedBenchmark.SetAgentCount </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>count</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setzt die Agentenzahl im jeweiligen <a class="el" href="class_o_o_p___scripts_1_1_spawner.html" title="Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne...">Spawner</a>. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00147">147</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">  148</span>        {</div>
+<div class="line"><span class="lineno">  149</span>            <span class="keywordflow">if</span> (_currentTypeString == <span class="stringliteral">&quot;OOP&quot;</span> &amp;&amp; _currentOopSpawner != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  150</span>            {</div>
+<div class="line"><span class="lineno">  151</span>                _currentOopSpawner.SetCountFromSlider(count);</div>
+<div class="line"><span class="lineno">  152</span>            }</div>
+<div class="line"><span class="lineno">  153</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (_currentTypeString == <span class="stringliteral">&quot;DOTS&quot;</span> &amp;&amp; _currentDotsBridge != <span class="keyword">null</span>)</div>
+<div class="line"><span class="lineno">  154</span>            {</div>
+<div class="line"><span class="lineno">  155</span>                _currentDotsBridge.OnSliderValueChanged(count);</div>
+<div class="line"><span class="lineno">  156</span>            }</div>
+<div class="line"><span class="lineno">  157</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ae584179223ed0018c52d58a0fcad01ac" name="ae584179223ed0018c52d58a0fcad01ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae584179223ed0018c52d58a0fcad01ac">&#9670;&#160;</a></span>StartFullBenchmarkChain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Metric_Scripts.AutomatedBenchmark.StartFullBenchmarkChain </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel inline">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Startet die Benchmark-Sequenz (z.B. per Button). </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00063">63</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   64</span>        {</div>
+<div class="line"><span class="lineno">   65</span>            <span class="keywordflow">if</span> (_state == BenchmarkState.Running) <span class="keywordflow">return</span>;</div>
+<div class="line"><span class="lineno">   66</span>            _state = BenchmarkState.Running;</div>
+<div class="line"><span class="lineno">   67</span>            StartCoroutine(InitAndRunSequence());</div>
+<div class="line"><span class="lineno">   68</span>        }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Dokumentation der Datenelemente</h2>
+<a id="a8858db1bbc980d7ee8b781394a28325c" name="a8858db1bbc980d7ee8b781394a28325c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8858db1bbc980d7ee8b781394a28325c">&#9670;&#160;</a></span>_currentDotsBridge</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_d_o_t_s___scripts_1_1_spawner_u_i_bridge.html">SpawnerUIBridge</a> Metric_Scripts.AutomatedBenchmark._currentDotsBridge</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00056">56</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+
+</div>
+</div>
+<a id="acfeceb55650effc4f99465e4b7fa0068" name="acfeceb55650effc4f99465e4b7fa0068"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acfeceb55650effc4f99465e4b7fa0068">&#9670;&#160;</a></span>_currentOopSpawner</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_o_p___scripts_1_1_spawner.html">Spawner</a> Metric_Scripts.AutomatedBenchmark._currentOopSpawner</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00055">55</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+
+</div>
+</div>
+<a id="aaa977ef18127263096efa26a34164dda" name="aaa977ef18127263096efa26a34164dda"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa977ef18127263096efa26a34164dda">&#9670;&#160;</a></span>_currentTypeString</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Metric_Scripts.AutomatedBenchmark._currentTypeString = &quot;Unknown&quot;</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00058">58</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae6859692075466ea401c71f428fbf237" name="ae6859692075466ea401c71f428fbf237"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6859692075466ea401c71f428fbf237">&#9670;&#160;</a></span>_state</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#af205654c30e1f27b029657764174945f">BenchmarkState</a> Metric_Scripts.AutomatedBenchmark._state = <a class="el" href="#af205654c30e1f27b029657764174945fae599161956d626eda4cb0a5ffb85271c">BenchmarkState.Idle</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00057">57</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5a2dd32b1c93174d68cfbca914af628c" name="a5a2dd32b1c93174d68cfbca914af628c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2dd32b1c93174d68cfbca914af628c">&#9670;&#160;</a></span>agentCounts</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int [] Metric_Scripts.AutomatedBenchmark.agentCounts = { 100, 500, 1000, 2500, 5000, 7500, 10000 }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Getestete Agentenzahlen. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00035">35</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+<div class="fragment"><div class="line"><span class="lineno">   35</span>{ 100, 500, 1000, 2500, 5000, 7500, 10000 };</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="a83227d2a354c1545c090060e2f6e72e2" name="a83227d2a354c1545c090060e2f6e72e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a83227d2a354c1545c090060e2f6e72e2">&#9670;&#160;</a></span>baseFileName</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Metric_Scripts.AutomatedBenchmark.baseFileName = &quot;BenchmarkResult&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Basisname für die Ergebnisdatei. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00047">47</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+
+</div>
+</div>
+<a id="aeee132688c3d14100fb272d2c0cca762" name="aeee132688c3d14100fb272d2c0cca762"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeee132688c3d14100fb272d2c0cca762">&#9670;&#160;</a></span>measureTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Metric_Scripts.AutomatedBenchmark.measureTime = 5.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Messdauer pro Schritt (Sekunden). </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00043">43</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+
+</div>
+</div>
+<a id="a8d509a8ee4dc9c34270ae65b41f51587" name="a8d509a8ee4dc9c34270ae65b41f51587"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d509a8ee4dc9c34270ae65b41f51587">&#9670;&#160;</a></span>statusText</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">TMP_Text Metric_Scripts.AutomatedBenchmark.statusText</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Optionales Textfeld zur Statusanzeige. </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00053">53</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+
+</div>
+</div>
+<a id="afe632670753e3a4b0a26b37590a7b272" name="afe632670753e3a4b0a26b37590a7b272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe632670753e3a4b0a26b37590a7b272">&#9670;&#160;</a></span>warmupTime</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Metric_Scripts.AutomatedBenchmark.warmupTime = 2.0f</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Aufwärmzeit vor Messung (Sekunden). </p>
+
+<p class="definition">Definiert in Zeile <a class="el" href="_automated_benchmark_8cs_source.html#l00039">39</a> der Datei <a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a>.</p>
+
+</div>
+</div>
+<hr/>Die Dokumentation für diese Klasse wurde erzeugt aufgrund der Datei:<ul>
+<li>Metric-Scripts/<a class="el" href="_automated_benchmark_8cs_source.html">AutomatedBenchmark.cs</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<div id="page-nav" class="page-nav-panel">
+<div id="page-nav-resize-handle"></div>
+<div id="page-nav-tree">
+<div id="page-nav-contents">
+</div><!-- page-nav-contents -->
+</div><!-- page-nav-tree -->
+</div><!-- page-nav -->
+</div><!-- container -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a href="namespace_metric___scripts.html">Metric_Scripts</a></li><li class="navelem"><a href="class_metric___scripts_1_1_automated_benchmark.html">AutomatedBenchmark</a></li>
+    <li class="footer">Erzeugt von <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.16.1 </li>
+  </ul>
+</div>
+</body>
+</html>
