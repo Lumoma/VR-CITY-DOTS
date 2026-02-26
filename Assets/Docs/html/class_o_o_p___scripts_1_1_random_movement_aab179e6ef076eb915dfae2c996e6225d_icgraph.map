@@ -1,0 +1,9 @@
+<map id="OOP_Scripts.RandomMovement.IsOnCooldown" name="OOP_Scripts.RandomMovement.IsOnCooldown">
+<area shape="rect" id="Node000001" title="Prüft, ob der Cooldown nach einer Kollision aktiv ist." alt="" coords="534,39,750,79"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_random_movement.html#adcaf1bfa5748ac1d4474f932ee60e3de" title="Prüft, ob der Agent außerhalb des Bereichs ist und dreht ihn ggf. um." alt="" coords="270,5,486,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="516,43,487,42,487,37,521,43"/>
+<area shape="rect" id="Node000004" href="$class_o_o_p___scripts_1_1_random_movement.html#a964bd56feda942d27219704c48dbb1da" title="Reagiert auf Kollisionen mit einer Richtungsänderung." alt="" coords="270,71,486,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="521,74,487,81,486,75,516,74"/>
+<area shape="rect" id="Node000003" href="$class_o_o_p___scripts_1_1_random_movement.html#a71d4efbf67f9dd4176e7a70248cc962c" title="Führt die Bewegung und Stabilisierung in jedem FixedUpdate aus." alt="" coords="5,5,222,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="252,26,223,28,222,23,257,25"/>
+</map>

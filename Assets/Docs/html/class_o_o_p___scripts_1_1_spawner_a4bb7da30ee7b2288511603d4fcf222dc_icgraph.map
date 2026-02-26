@@ -1,0 +1,13 @@
+<map id="OOP_Scripts.Spawner.TryFindSpawnPosition" name="OOP_Scripts.Spawner.TryFindSpawnPosition">
+<area shape="rect" id="Node000001" title="Sucht eine freie Spawnposition im Bereich." alt="" coords="777,35,978,75"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_spawner.html#ac9f9fa673fd7ea96fe6d1bb775849edb" title="Spawnt einen einzelnen Agenten." alt="" coords="533,35,729,75"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="759,55,730,58,730,52,764,55"/>
+<area shape="rect" id="Node000003" href="$class_o_o_p___scripts_1_1_spawner.html#a9b36aa0d38aec39408debc264575ac5a" title="Fügt eine Anzahl von Agenten hinzu." alt="" coords="265,13,485,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="515,42,486,41,486,36,520,42"/>
+<area shape="rect" id="Node000005" href="$class_o_o_p___scripts_1_1_spawner.html#a4c20ea64a641544f900420f93e243011" title="Löscht alle Agenten und spawnt die gewünschte Anzahl neu." alt="" coords="269,63,480,103"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="520,67,481,74,481,69,515,68"/>
+<area shape="rect" id="Node000004" href="$class_o_o_p___scripts_1_1_spawner.html#aa23af95ddaee4e505572c09c633be0df" title="Setzt die Agentenanzahl über den UI&#45;Slider." alt="" coords="5,5,217,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="247,26,217,28,217,23,252,25"/>
+<area shape="rect" id="Node000006" href="$class_o_o_p___scripts_1_1_spawner.html#ab5f11e1da5c3f9a5f4226f52cadbe4dc" title="Initialisiert den Spawner und synchronisiert den UI&#45;Slider." alt="" coords="19,70,203,96"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="251,83,204,86,204,80,256,83"/>
+</map>

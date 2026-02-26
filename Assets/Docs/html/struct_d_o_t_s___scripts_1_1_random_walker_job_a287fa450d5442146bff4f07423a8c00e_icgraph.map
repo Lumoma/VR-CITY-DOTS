@@ -1,0 +1,5 @@
+<map id="DOTS_Scripts.RandomWalkerJob.HandleOutOfBounds" name="DOTS_Scripts.RandomWalkerJob.HandleOutOfBounds">
+<area shape="rect" id="Node000001" title="Reagiert auf das Verlassen des Bereichs mit Drehung und Nudge." alt="" coords="253,5,452,46"/>
+<area shape="rect" id="Node000002" href="$struct_d_o_t_s___scripts_1_1_random_walker_job.html#ae8590014727f08a9bb167879e3e6ca89" title="Führt die Bewegungs&#45; und Bounds&#45;Logik für eine Entität aus." alt="" coords="5,5,205,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,26,205,28,205,23,240,26"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="Metric_Scripts.AutomatedBenchmark.SetAgentCount" name="Metric_Scripts.AutomatedBenchmark.SetAgentCount">
+<area shape="rect" id="Node000001" title="Setzt die Agentenzahl im jeweiligen Spawner." alt="" coords="826,5,1007,46"/>
+<area shape="rect" id="Node000002" href="$class_metric___scripts_1_1_automated_benchmark.html#abcbf7458bb5192023d838e73d3df1650" title="Führt die Messschleife für alle Agentenzahlen durch." alt="" coords="556,5,778,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="808,26,779,28,779,23,813,26"/>
+<area shape="rect" id="Node000003" href="$class_metric___scripts_1_1_automated_benchmark.html#a6b4ed259af930320efc60b6bc3bafbb8" title="Initialisiert und führt die Benchmark&#45;Sequenz aus." alt="" coords="294,5,508,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="538,26,509,28,509,23,543,26"/>
+<area shape="rect" id="Node000004" href="$class_metric___scripts_1_1_automated_benchmark.html#ae584179223ed0018c52d58a0fcad01ac" title="Startet die Benchmark&#45;Sequenz (z.B. per Button)." alt="" coords="5,5,246,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="275,26,246,28,246,23,281,26"/>
+</map>

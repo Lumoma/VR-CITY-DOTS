@@ -1,0 +1,5 @@
+<map id="OOP_Scripts.Spawner.AddAgents" name="OOP_Scripts.Spawner.AddAgents">
+<area shape="rect" id="Node000001" title="Fügt eine Anzahl von Agenten hinzu." alt="" coords="265,13,485,38"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_spawner.html#aa23af95ddaee4e505572c09c633be0df" title="Setzt die Agentenanzahl über den UI&#45;Slider." alt="" coords="5,5,217,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="246,26,217,28,217,23,252,26"/>
+</map>

@@ -1,0 +1,21 @@
+<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,242,117,268"/>
+<area shape="rect" id="Node000001" href="$class_d_o_t_s___scripts_1_1_entity_count_u_i_bridge.html" title="Zeigt die aktuelle Anzahl der DOTS&#45;Entitäten (z.B. Agenten) im UI an." alt="" coords="185,5,364,46"/>
+<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="67,226,79,188,99,143,127,97,163,57,186,44,183,48,166,61,131,100,104,145,84,190,72,228"/>
+<area shape="rect" id="Node000002" href="$class_d_o_t_s___scripts_1_1_random_movement_authoring.html" title="Authoring&#45;Komponente zur Konfiguration von RandomMovementData für DOTS&#45;Entitäten." alt="" coords="165,71,385,111"/>
+<area shape="poly" id="edge11_Node000000_Node000002" title=" " alt="" coords="74,227,110,173,134,145,163,121,186,110,183,114,166,125,138,149,114,176,79,230"/>
+<area shape="rect" id="Node000003" href="$class_d_o_t_s___scripts_1_1_spawner_authoring.html" title="Authoring&#45;Komponente zur Konfiguration von SpawnerData für DOTS&#45;Entitäten." alt="" coords="167,136,383,161"/>
+<area shape="poly" id="edge12_Node000000_Node000003" title=" " alt="" coords="83,229,119,198,163,170,194,160,190,164,166,175,123,202,88,233"/>
+<area shape="rect" id="Node000004" href="$class_d_o_t_s___scripts_1_1_spawner_u_i_bridge.html" title="Brücke zwischen UI (z.B. Slider) und DOTS&#45;Spawner&#45;System." alt="" coords="169,185,381,210"/>
+<area shape="poly" id="edge13_Node000000_Node000004" title=" " alt="" coords="116,235,164,220,214,209,210,213,165,226,119,239"/>
+<area shape="rect" id="Node000005" href="$class_metric___scripts_1_1_automated_benchmark.html" title="Führt automatisierte Benchmarks für verschiedene Agentenzahlen durch und speichert die Ergebnisse als..." alt="" coords="189,235,361,275"/>
+<area shape="poly" id="edge14_Node000000_Node000005" title=" " alt="" coords="132,253,190,253,186,257,133,257"/>
+<area shape="rect" id="Node000006" href="$class_o_o_p___scripts_1_1_random_movement.html" title="Steuert die zufällige Bewegung eines Agenten innerhalb eines definierten Bereichs." alt="" coords="169,300,381,325"/>
+<area shape="poly" id="edge15_Node000000_Node000006" title=" " alt="" coords="117,270,165,284,215,298,210,300,164,290,118,276"/>
+<area shape="rect" id="Node000007" href="$class_o_o_p___scripts_1_1_spawner.html" title="Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne..." alt="" coords="198,349,352,374"/>
+<area shape="poly" id="edge16_Node000000_Node000007" title=" " alt="" coords="86,276,123,308,166,335,200,349,195,350,163,340,119,312,86,282"/>
+<area shape="rect" id="Node000008" href="$class_o_o_p___scripts_1_1_v_r_f_p_s_counter.html" title="Zeigt die aktuelle Framerate (FPS) im VR&#45;Modus an und färbt den Text je nach Performance." alt="" coords="178,398,372,424"/>
+<area shape="poly" id="edge17_Node000000_Node000008" title=" " alt="" coords="76,279,113,334,137,362,166,385,189,397,184,398,163,389,134,366,109,338,75,284"/>
+<area shape="rect" id="Node000009" href="$class_o_o_p___scripts_1_1_v_r_scene_switcher.html" title="Ermöglicht das Wechseln zwischen Szenen im VR&#45;Modus durch Tastendruck auf dem Controller." alt="" coords="170,448,380,473"/>
+<area shape="poly" id="edge18_Node000000_Node000009" title=" " alt="" coords="71,280,85,318,105,359,132,400,166,434,186,447,181,447,163,438,128,403,100,362,81,320,70,286"/>
+</map>

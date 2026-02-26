@@ -1,0 +1,5 @@
+<map id="OOP_Scripts.RandomMovement" name="OOP_Scripts.RandomMovement">
+<area shape="rect" id="Node000001" title="Steuert die zufällige Bewegung eines Agenten innerhalb eines definierten Bereichs." alt="" coords="5,120,207,572"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="56,5,156,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,84,109,121,104,120,106,89"/>
+</map>

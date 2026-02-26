@@ -1,0 +1,16 @@
+<map id="Metric_Scripts.AutomatedBenchmark.LogStatus" name="Metric_Scripts.AutomatedBenchmark.LogStatus">
+<area shape="rect" id="Node000001" title="Gibt Statusmeldungen im UI und in der Konsole aus." alt="" coords="1056,88,1228,129"/>
+<area shape="rect" id="Node000002" href="$class_metric___scripts_1_1_automated_benchmark.html#a264e130bbb3aea42cf13f05f61a65bd7" title="Sucht OOP&#45; oder DOTS&#45;Spawner in der Szene." alt="" coords="556,5,787,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1069,82,1007,67,895,47,788,36,788,30,895,42,1008,62,1074,83"/>
+<area shape="rect" id="Node000003" href="$class_metric___scripts_1_1_automated_benchmark.html#a6b4ed259af930320efc60b6bc3bafbb8" title="Initialisiert und führt die Benchmark&#45;Sequenz aus." alt="" coords="294,63,508,103"/>
+<area shape="poly" id="edge4_Node000001_Node000003" title=" " alt="" coords="1038,107,508,89,508,84,1042,103"/>
+<area shape="rect" id="Node000005" href="$class_metric___scripts_1_1_automated_benchmark.html#abcbf7458bb5192023d838e73d3df1650" title="Führt die Messschleife für alle Agentenzahlen durch." alt="" coords="560,120,783,161"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="1037,115,783,135,783,130,1043,115"/>
+<area shape="rect" id="Node000006" href="$class_metric___scripts_1_1_automated_benchmark.html#a8bbab868579e6237b0be1314ac8355bb" title="Speichert die CSV&#45;Datei auf dem Gerät (PC oder Android)." alt="" coords="835,171,1008,211"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="1074,134,979,173,978,167,1069,135"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="555,50,501,65,500,59,560,49"/>
+<area shape="rect" id="Node000004" href="$class_metric___scripts_1_1_automated_benchmark.html#ae584179223ed0018c52d58a0fcad01ac" title="Startet die Benchmark&#45;Sequenz (z.B. per Button)." alt="" coords="5,63,246,103"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="275,84,247,86,246,80,281,82"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="555,116,500,107,500,101,561,116"/>
+<area shape="poly" id="edge8_Node000006_Node000005" title=" " alt="" coords="817,170,775,164,775,159,823,171"/>
+</map>

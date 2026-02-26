@@ -1,0 +1,5 @@
+<map id="OOP_Scripts.VRFPSCounter" name="OOP_Scripts.VRFPSCounter">
+<area shape="rect" id="Node000001" title="Zeigt die aktuelle Framerate (FPS) im VR&#45;Modus an und färbt den Text je nach Performance." alt="" coords="5,120,188,247"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="46,5,147,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,84,99,121,94,120,96,89"/>
+</map>

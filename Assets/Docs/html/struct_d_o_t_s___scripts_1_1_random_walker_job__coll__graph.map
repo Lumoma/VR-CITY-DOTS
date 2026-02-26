@@ -1,0 +1,5 @@
+<map id="DOTS_Scripts.RandomWalkerJob" name="DOTS_Scripts.RandomWalkerJob">
+<area shape="rect" id="Node000001" title="Job zur Steuerung der Bewegung und Bounds&#45;Prüfung für jede Entität." alt="" coords="5,120,215,247"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="75,5,145,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,84,113,121,108,120,109,89"/>
+</map>

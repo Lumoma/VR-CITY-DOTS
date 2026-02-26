@@ -1,0 +1,5 @@
+<map id="OOP_Scripts.VRSceneSwitcher" name="OOP_Scripts.VRSceneSwitcher">
+<area shape="rect" id="Node000001" title="Ermöglicht das Wechseln zwischen Szenen im VR&#45;Modus durch Tastendruck auf dem Controller." alt="" coords="5,120,204,267"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="54,5,155,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,84,107,120,102,119,104,89"/>
+</map>

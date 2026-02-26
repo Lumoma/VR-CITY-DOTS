@@ -1,0 +1,13 @@
+<map id="OOP_Scripts.RandomMovement.OnCollisionEnter" name="OOP_Scripts.RandomMovement.OnCollisionEnter">
+<area shape="rect" id="Node000001" title="Reagiert auf Kollisionen mit einer Richtungsänderung." alt="" coords="5,104,222,145"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_random_movement.html#aeba0a4a32adc86d7e0e34be9c5c254e6" title="Reagiert auf eine Kollision mit einer zufälligen Drehung und Nudge." alt="" coords="270,71,486,111"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,108,257,106,251,107,223,113"/>
+<area shape="rect" id="Node000006" href="$class_o_o_p___scripts_1_1_random_movement.html#aab179e6ef076eb915dfae2c996e6225d" title="Prüft, ob der Cooldown nach einer Kollision aktiv ist." alt="" coords="270,136,486,177"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="222,135,257,141,251,141,222,140"/>
+<area shape="rect" id="Node000003" href="$class_o_o_p___scripts_1_1_random_movement.html#ab642a93dcd76469ed20af0b369e7ad6d" title="Verschiebt den Agenten leicht nach vorne." alt="" coords="534,5,750,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="462,67,540,51,545,50,464,73"/>
+<area shape="rect" id="Node000004" href="$class_o_o_p___scripts_1_1_random_movement.html#af6c2d70d9d55a0d48fb51843645ab705" title="Bewegt den Agenten vorwärts." alt="" coords="534,71,750,111"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="486,88,521,91,516,91,487,94"/>
+<area shape="rect" id="Node000005" href="$class_o_o_p___scripts_1_1_random_movement.html#a46a00b42bf27aeffe323a36f61c1086b" title="Dreht den Agenten um den gegebenen Winkel." alt="" coords="534,136,750,177"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="463,109,545,132,540,132,463,115"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="DOTS_Scripts.SpawnerUIBridge" name="DOTS_Scripts.SpawnerUIBridge">
+<area shape="rect" id="Node000001" title="Brücke zwischen UI (z.B. Slider) und DOTS&#45;Spawner&#45;System." alt="" coords="5,120,207,227"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="56,5,156,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,84,109,121,104,119,105,89"/>
+</map>

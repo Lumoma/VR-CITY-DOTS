@@ -1,0 +1,7 @@
+<map id="OOP_Scripts.VRSceneSwitcher.Update" name="OOP_Scripts.VRSceneSwitcher.Update">
+<area shape="rect" id="Node000001" title="Überprüft in jedem Frame, ob die relevanten Tasten gedrückt wurden und wechselt ggf...." alt="" coords="5,39,218,79"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_v_r_scene_switcher.html#a650e750d07dd63f67dfae6da617fbf16" title="Initialisiert das InputDevice für den gewünschten Controller." alt="" coords="266,5,478,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="217,43,253,41,248,42,219,48"/>
+<area shape="rect" id="Node000003" href="$class_o_o_p___scripts_1_1_v_r_scene_switcher.html#a0f833ff22a7c8d38f32401501e8cb4de" title="Wechselt zur angegebenen Szene, sofern ein Name eingetragen ist." alt="" coords="266,71,478,111"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="218,69,253,76,247,76,218,75"/>
+</map>

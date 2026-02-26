@@ -1,0 +1,11 @@
+<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,80,126,106"/>
+<area shape="rect" id="Node000001" href="$struct_d_o_t_s___scripts_1_1_random_movement_data.html" title="DOTS&#45;Komponente für zufällige Bewegungen von Entitäten." alt="" coords="174,5,422,31"/>
+<area shape="poly" id="edge3_Node000000_Node000001" title=" " alt="" coords="103,70,173,40,215,30,210,33,175,45,106,75"/>
+<area shape="rect" id="Node000002" href="$struct_d_o_t_s___scripts_1_1_respawn_request.html" title="Tag&#45;Komponente als Befehl für das Respawn&#45;System." alt="" coords="191,55,405,80"/>
+<area shape="poly" id="edge4_Node000000_Node000002" title=" " alt="" coords="141,82,193,78,188,80,142,87"/>
+<area shape="rect" id="Node000003" href="$struct_d_o_t_s___scripts_1_1_spawned_agent_tag.html" title="Tag&#45;Komponente zur Markierung gespawnter Agenten." alt="" coords="188,104,408,130"/>
+<area shape="poly" id="edge5_Node000000_Node000003" title=" " alt="" coords="141,98,190,105,185,106,141,103"/>
+<area shape="rect" id="Node000004" href="$struct_d_o_t_s___scripts_1_1_spawner_data.html" title="DOTS&#45;Komponente mit Konfigurationsdaten für das Spawnen von Entitäten." alt="" coords="203,153,392,179"/>
+<area shape="poly" id="edge6_Node000000_Node000004" title=" " alt="" coords="105,110,175,140,216,153,211,153,173,145,104,116"/>
+</map>

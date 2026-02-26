@@ -1,0 +1,7 @@
+<map id="Grafische Darstellung der Klassenhierarchie" name="Grafische Darstellung der Klassenhierarchie">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,46,61,72"/>
+<area shape="rect" id="Node000001" href="$class_d_o_t_s___scripts_1_1_random_movement_authoring_1_1_baker.html" title="Baker konvertiert Inspector&#45;Daten in DOTS&#45;Komponenten." alt="" coords="109,5,329,46"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="75,49,110,44,106,47,77,54"/>
+<area shape="rect" id="Node000002" href="$class_d_o_t_s___scripts_1_1_spawner_authoring_1_1_spawner_baker.html" title="Baker konvertiert Inspector&#45;Daten in DOTS&#45;Komponenten." alt="" coords="109,71,329,111"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="76,64,111,71,106,73,76,69"/>
+</map>

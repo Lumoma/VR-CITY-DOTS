@@ -1,0 +1,9 @@
+<map id="OOP_Scripts.Spawner.UpdateUiText" name="OOP_Scripts.Spawner.UpdateUiText">
+<area shape="rect" id="Node000001" title="Aktualisiert die UI&#45;Anzeige der Agentenzahl." alt="" coords="497,39,695,79"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_spawner.html#a4c20ea64a641544f900420f93e243011" title="Löscht alle Agenten und spawnt die gewünschte Anzahl neu." alt="" coords="238,5,449,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="479,44,450,42,450,37,484,44"/>
+<area shape="rect" id="Node000004" href="$class_o_o_p___scripts_1_1_spawner.html#aa23af95ddaee4e505572c09c633be0df" title="Setzt die Agentenanzahl über den UI&#45;Slider." alt="" coords="238,71,449,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="484,73,450,80,449,75,479,74"/>
+<area shape="rect" id="Node000003" href="$class_o_o_p___scripts_1_1_spawner.html#ab5f11e1da5c3f9a5f4226f52cadbe4dc" title="Initialisiert den Spawner und synchronisiert den UI&#45;Slider." alt="" coords="5,13,190,38"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="219,26,190,28,190,23,225,25"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="OOP_Scripts.Spawner" name="OOP_Scripts.Spawner">
+<area shape="rect" id="Node000001" title="Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne..." alt="" coords="5,120,192,776"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="48,5,149,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,84,101,120,96,120,99,89"/>
+</map>

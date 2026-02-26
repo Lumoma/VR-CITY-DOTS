@@ -1,0 +1,5 @@
+<map id="DOTS_Scripts.SpawnerAuthoring.SetCountFromSlider" name="DOTS_Scripts.SpawnerAuthoring.SetCountFromSlider">
+<area shape="rect" id="Node000001" title="Setzt die Anzahl der zu spawnenden Entitäten über einen UI&#45;Slider." alt="" coords="5,5,226,46"/>
+<area shape="rect" id="Node000002" href="$class_d_o_t_s___scripts_1_1_spawner_authoring.html#a7bd4bb9b3d98e92f388113662ed45be2" title="Löst das Respawn der Entitäten in der DOTS&#45;Welt aus." alt="" coords="274,5,494,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,23,261,26,256,26,226,28"/>
+</map>

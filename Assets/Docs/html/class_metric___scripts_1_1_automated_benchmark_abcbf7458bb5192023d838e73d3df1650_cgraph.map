@@ -1,0 +1,12 @@
+<map id="Metric_Scripts.AutomatedBenchmark.RunMeasurementLoop" name="Metric_Scripts.AutomatedBenchmark.RunMeasurementLoop">
+<area shape="rect" id="Node000001" title="Führt die Messschleife für alle Agentenzahlen durch." alt="" coords="5,60,228,101"/>
+<area shape="rect" id="Node000002" href="$class_metric___scripts_1_1_automated_benchmark.html#a6e3ac1436207442db43786bf8bc61b7f" title="Gibt Statusmeldungen im UI und in der Konsole aus." alt="" coords="504,31,676,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="155,58,211,33,275,13,326,5,366,3,456,13,513,26,508,27,456,18,365,8,326,10,276,18,212,38,157,62"/>
+<area shape="rect" id="Node000003" href="$class_metric___scripts_1_1_automated_benchmark.html#a2b428685eae6ebcbfeb686429067e7f8" title="Berechnet und speichert die Metriken für einen Messschritt." alt="" coords="280,27,452,68"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,63,267,60,262,62,229,68"/>
+<area shape="rect" id="Node000004" href="$class_metric___scripts_1_1_automated_benchmark.html#a8bbab868579e6237b0be1314ac8355bb" title="Speichert die CSV&#45;Datei auf dem Gerät (PC oder Android)." alt="" coords="280,92,452,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="228,92,267,99,262,100,228,98"/>
+<area shape="rect" id="Node000005" href="$class_metric___scripts_1_1_automated_benchmark.html#a7ac1c704ebfde23347746862ea20db3e" title="Setzt die Agentenzahl im jeweiligen Spawner." alt="" coords="276,158,456,198"/>
+<area shape="poly" id="edge5_Node000001_Node000005" title=" " alt="" coords="169,99,277,142,296,152,291,152,275,147,168,104"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="442,89,496,77,501,76,444,94"/>
+</map>

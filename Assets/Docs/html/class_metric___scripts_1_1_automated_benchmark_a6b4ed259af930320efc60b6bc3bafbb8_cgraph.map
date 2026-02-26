@@ -1,0 +1,18 @@
+<map id="Metric_Scripts.AutomatedBenchmark.InitAndRunSequence" name="Metric_Scripts.AutomatedBenchmark.InitAndRunSequence">
+<area shape="rect" id="Node000001" title="Initialisiert und führt die Benchmark&#45;Sequenz aus." alt="" coords="5,63,220,103"/>
+<area shape="rect" id="Node000002" href="$class_metric___scripts_1_1_automated_benchmark.html#a264e130bbb3aea42cf13f05f61a65bd7" title="Sucht OOP&#45; oder DOTS&#45;Spawner in der Szene." alt="" coords="268,5,499,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="211,60,272,48,267,51,213,64"/>
+<area shape="rect" id="Node000003" href="$class_metric___scripts_1_1_automated_benchmark.html#a6e3ac1436207442db43786bf8bc61b7f" title="Gibt Statusmeldungen im UI und in der Konsole aus." alt="" coords="775,88,948,129"/>
+<area shape="poly" id="edge3_Node000001_Node000003" title=" " alt="" coords="220,84,761,102,759,107,220,89"/>
+<area shape="rect" id="Node000004" href="$class_metric___scripts_1_1_automated_benchmark.html#abcbf7458bb5192023d838e73d3df1650" title="Führt die Messschleife für alle Agentenzahlen durch." alt="" coords="272,171,494,211"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="166,101,318,163,314,166,165,106"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="499,30,611,42,728,62,794,82,789,83,727,67,610,47,500,35"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="487,167,547,156,763,123,758,124,547,162,489,173"/>
+<area shape="rect" id="Node000005" href="$class_metric___scripts_1_1_automated_benchmark.html#a2b428685eae6ebcbfeb686429067e7f8" title="Berechnet und speichert die Metriken für einen Messschritt." alt="" coords="551,171,723,211"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="494,188,538,191,533,191,495,194"/>
+<area shape="rect" id="Node000006" href="$class_metric___scripts_1_1_automated_benchmark.html#a8bbab868579e6237b0be1314ac8355bb" title="Speichert die CSV&#45;Datei auf dem Gerät (PC oder Android)." alt="" coords="551,236,723,277"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="465,209,543,231,538,232,465,215"/>
+<area shape="rect" id="Node000007" href="$class_metric___scripts_1_1_automated_benchmark.html#a7ac1c704ebfde23347746862ea20db3e" title="Setzt die Agentenzahl im jeweiligen Spawner." alt="" coords="547,301,727,342"/>
+<area shape="poly" id="edge9_Node000004_Node000007" title=" " alt="" coords="416,209,477,247,548,286,564,295,559,294,546,291,474,252,415,214"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="702,233,726,221,782,180,828,141,832,139,785,184,729,225,703,238"/>
+</map>

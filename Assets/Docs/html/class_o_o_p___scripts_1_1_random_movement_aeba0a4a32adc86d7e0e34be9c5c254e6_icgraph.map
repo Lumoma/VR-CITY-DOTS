@@ -1,0 +1,5 @@
+<map id="OOP_Scripts.RandomMovement.HandleCollisionReaction" name="OOP_Scripts.RandomMovement.HandleCollisionReaction">
+<area shape="rect" id="Node000001" title="Reagiert auf eine Kollision mit einer zufälligen Drehung und Nudge." alt="" coords="270,5,486,46"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_random_movement.html#a964bd56feda942d27219704c48dbb1da" title="Reagiert auf Kollisionen mit einer Richtungsänderung." alt="" coords="5,5,222,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="252,26,222,28,222,23,257,26"/>
+</map>

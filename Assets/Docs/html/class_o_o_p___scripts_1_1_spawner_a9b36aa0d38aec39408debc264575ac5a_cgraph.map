@@ -1,0 +1,21 @@
+<map id="OOP_Scripts.Spawner.AddAgents" name="OOP_Scripts.Spawner.AddAgents">
+<area shape="rect" id="Node000001" title="Fügt eine Anzahl von Agenten hinzu." alt="" coords="5,145,226,170"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_spawner.html#a144e8b4d7f11b347f8f30a2d88da3a3b" title="Prüft, ob gültige Prefabs zugewiesen sind." alt="" coords="274,104,482,145"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="221,142,261,138,256,141,223,147"/>
+<area shape="rect" id="Node000003" href="$class_o_o_p___scripts_1_1_spawner.html#ac9f9fa673fd7ea96fe6d1bb775849edb" title="Spawnt einen einzelnen Agenten." alt="" coords="280,169,476,210"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,169,267,175,262,177,227,174"/>
+<area shape="rect" id="Node000004" href="$class_o_o_p___scripts_1_1_spawner.html#aa07670db432e7ae6251c9c5fb9f5735c" title="Gibt die Startrotation zurück." alt="" coords="534,5,742,46"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="462,166,480,154,491,143,497,131,503,107,510,82,517,69,528,57,534,56,538,53,532,61,521,72,515,84,509,108,502,133,495,146,484,158,465,171"/>
+<area shape="rect" id="Node000005" href="$class_o_o_p___scripts_1_1_spawner.html#add9a0de08dceaf416bd8cbca1b6b0cc4" title="Ermittelt den Radius des Prefabs anhand des Renderers." alt="" coords="530,71,745,111"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="451,166,481,154,505,138,529,122,549,116,544,118,531,127,507,143,483,159,453,171"/>
+<area shape="rect" id="Node000006" href="$class_o_o_p___scripts_1_1_spawner.html#a566b4fe17f8d8d3986430a12b09fd578" title="Wählt das Prefab anhand des Index (abwechselnd männlich/weiblich)." alt="" coords="541,136,734,177"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="476,174,528,170,523,171,477,180"/>
+<area shape="rect" id="Node000007" href="$class_o_o_p___scripts_1_1_spawner.html#adabe9302b79054010fcca4c95870a35f" title="Setzt Name, Skalierung und Hierarchie für den Agenten." alt="" coords="542,201,733,242"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="476,199,529,208,524,208,477,204"/>
+<area shape="rect" id="Node000008" href="$class_o_o_p___scripts_1_1_spawner.html#ac34fea427fcb9dc3a8177765d660ee11" title="Initialisiert das RandomMovement&#45;Script des Agenten." alt="" coords="542,267,733,307"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="425,208,531,251,555,261,549,261,529,256,425,213"/>
+<area shape="rect" id="Node000009" href="$class_o_o_p___scripts_1_1_spawner.html#a4bb7da30ee7b2288511603d4fcf222dc" title="Sucht eine freie Spawnposition im Bereich." alt="" coords="538,332,738,373"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="399,208,456,262,492,291,531,317,546,326,541,325,529,321,489,296,452,266,397,213"/>
+<area shape="rect" id="Node000010" href="$class_o_o_p___scripts_1_1_spawner.html#a5b99816a0891710647395a4088e8a26a" title="Gibt eine zufällige Position im Bereich zurück." alt="" coords="793,332,1020,373"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="738,350,780,352,775,352,739,355"/>
+</map>

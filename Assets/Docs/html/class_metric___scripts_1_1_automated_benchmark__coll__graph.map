@@ -1,0 +1,11 @@
+<map id="Metric_Scripts.AutomatedBenchmark" name="Metric_Scripts.AutomatedBenchmark">
+<area shape="rect" id="Node000001" title="Führt automatisierte Benchmarks für verschiedene Agentenzahlen durch und speichert die Ergebnisse als..." alt="" coords="94,848,275,1194"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="134,5,234,72"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,76,99,96,81,122,42,213,19,294,9,368,11,440,21,513,38,590,81,776,102,848,97,848,76,778,33,591,16,513,6,440,4,368,13,293,37,212,76,120,95,93,123,71"/>
+<area shape="rect" id="Node000003" href="$class_o_o_p___scripts_1_1_spawner.html" title="Spawnt und verwaltet Agenten/Prefabs in der Szene. Unterstützt inkrementelles Hinzufügen und Entferne..." alt="" coords="91,121,278,777"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="184,84,187,121,181,121,184,89"/>
+<area shape="rect" id="Node000004" href="$class_d_o_t_s___scripts_1_1_spawner_u_i_bridge.html" title="Brücke zwischen UI (z.B. Slider) und DOTS&#45;Spawner&#45;System." alt="" coords="302,396,504,502"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="246,76,271,96,292,119,332,189,362,264,384,335,397,396,392,396,378,337,357,266,327,191,287,123,268,100,247,81"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="185,774,187,831,181,830,183,779"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="400,499,393,569,379,651,357,739,326,825,286,898,282,895,322,823,352,737,374,649,388,568,398,504"/>
+</map>

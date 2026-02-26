@@ -1,0 +1,5 @@
+<map id="OOP_Scripts.Spawner.TryFindSpawnPosition" name="OOP_Scripts.Spawner.TryFindSpawnPosition">
+<area shape="rect" id="Node000001" title="Sucht eine freie Spawnposition im Bereich." alt="" coords="5,5,206,46"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_spawner.html#a5b99816a0891710647395a4088e8a26a" title="Gibt eine zufällige Position im Bereich zurück." alt="" coords="254,5,480,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="206,23,241,26,235,26,206,28"/>
+</map>

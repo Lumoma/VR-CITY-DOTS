@@ -1,0 +1,13 @@
+<map id="OOP_Scripts.RandomMovement.RotateCharacter" name="OOP_Scripts.RandomMovement.RotateCharacter">
+<area shape="rect" id="Node000001" title="Dreht den Agenten um den gegebenen Winkel." alt="" coords="798,39,1015,79"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_random_movement.html#aeba0a4a32adc86d7e0e34be9c5c254e6" title="Reagiert auf eine Kollision mit einer zufälligen Drehung und Nudge." alt="" coords="534,5,750,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="780,43,751,42,751,37,786,43"/>
+<area shape="rect" id="Node000004" href="$class_o_o_p___scripts_1_1_random_movement.html#a177b770a364dfbbeee9ecc30c4299731" title="Dreht den Agenten um 180 Grad und verschiebt ihn leicht." alt="" coords="534,71,750,111"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="786,74,751,81,751,75,780,74"/>
+<area shape="rect" id="Node000003" href="$class_o_o_p___scripts_1_1_random_movement.html#a964bd56feda942d27219704c48dbb1da" title="Reagiert auf Kollisionen mit einer Richtungsänderung." alt="" coords="270,5,486,46"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="516,26,487,28,486,23,521,25"/>
+<area shape="rect" id="Node000005" href="$class_o_o_p___scripts_1_1_random_movement.html#adcaf1bfa5748ac1d4474f932ee60e3de" title="Prüft, ob der Agent außerhalb des Bereichs ist und dreht ihn ggf. um." alt="" coords="270,71,486,111"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="516,91,487,94,487,88,521,91"/>
+<area shape="rect" id="Node000006" href="$class_o_o_p___scripts_1_1_random_movement.html#a71d4efbf67f9dd4176e7a70248cc962c" title="Führt die Bewegung und Stabilisierung in jedem FixedUpdate aus." alt="" coords="5,71,222,111"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="252,91,222,94,222,88,257,91"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="OOP_Scripts.RandomMovement.UpdateCollider" name="OOP_Scripts.RandomMovement.UpdateCollider">
+<area shape="rect" id="Node000001" title="Erstellt und konfiguriert den Collider." alt="" coords="5,5,222,46"/>
+<area shape="rect" id="Node000002" href="$class_o_o_p___scripts_1_1_random_movement.html#a2df246df6270c4b5df70ed6a28069683" title="Entfernt alle vorhandenen Collider." alt="" coords="270,5,486,46"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="222,23,257,26,251,26,222,28"/>
+</map>
